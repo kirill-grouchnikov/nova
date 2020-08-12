@@ -402,3 +402,17 @@ And this is what is generated for `values-v23`:
 The same two color attributes, accompanied by `android:windowLightStatiusBar` that comes from the `version(23)` block.
 
 If you add more attributes to the original Nova snippet for `MainTheme.CustomToolbar.LightStatusBar`, they will be added to all three generated `<style>` sections in the three `values` folders. No need to remember where to copy-paste those attributes any more.
+
+## Notes
+
+Nova is a layer of syntactic sugar on top of the existing Android resource system. It aims to bring more structure, readability and expressiveness to working with themes and styles.
+
+Nova is also restricted by the limitations of the Android resource system. If you can't express a certain construct in the existing system, Nova is not going to be of help.
+
+For example, the Android resource system (and by that we refer to the compile time, XML expression part of it) does not have dynamic modifiers such as:
+
+* Always maintain a 2:1 ratio of the specific view width:height
+* If the specific text view has more than 20 characters, use red color as the foreground
+* If some other view is visible, make this view use bold text
+
+These cannot be expressed in Nova, and you're probably looking for [Compose](https://developer.android.com/jetpack/compose).
