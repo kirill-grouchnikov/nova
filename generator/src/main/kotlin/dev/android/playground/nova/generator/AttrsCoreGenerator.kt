@@ -15,10 +15,10 @@
  */
 package dev.android.playground.nova.generator
 
-import dev.android.playground.nova.core.base.*
-import org.w3c.dom.Document
+import dev.android.playground.nova.core.base.BaseStyleable
+import dev.android.playground.nova.core.base.Inlineable
+import dev.android.playground.nova.core.base.SkipForDSL
 import org.w3c.dom.Node
-import org.w3c.dom.NodeList
 import java.io.File
 import java.io.PrintWriter
 import javax.xml.parsers.DocumentBuilderFactory
@@ -59,7 +59,7 @@ fun scanForStyleables(klass: KClass<out BaseStyleable>) {
 
         val isInlineable =
                 (attributeClass.annotations.find { it.annotationClass == Inlineable::class } != null)
-        if (isInlineable) {// || isReused) {
+        if (isInlineable) {
             val inlineableClass = getInlineableClass(attributeClass)
             if (inlineableClass != null) {
                 stylesToScan.add(inlineableClass)
@@ -128,20 +128,19 @@ fun generateAttrs(publicXml: String, outputFolder: String) {
     versionMapping["P"] = 28
     versionMapping["Q"] = 29
 
-    val xlmFile: File = File(publicXml)
-    val xmlDoc: Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xlmFile)
+    val xlmFile = File(publicXml)
+    val xmlDoc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xlmFile)
 
     xmlDoc.documentElement.normalize()
 
     println("Root Node:" + xmlDoc.documentElement.nodeName)
 
-    var currentSdkLevel: Int = 0
-    val nodeList: NodeList = xmlDoc.documentElement.childNodes
-    for (i in 0..nodeList.length - 1) {
+    var currentSdkLevel = 0
+    val nodeList = xmlDoc.documentElement.childNodes
+    for (i in 0 until nodeList.length) {
         val node = nodeList.item(i)
         if (node.nodeType == Node.COMMENT_NODE) {
             if (node.nodeValue.contains("version") && node.nodeValue.contains("platform")) {
-                //println(node.nodeValue)
                 val versionCommentSplit = node.nodeValue.split(" ")
                 val versionIndex = versionCommentSplit.indexOf("version")
                 if (versionMapping.containsKey(versionCommentSplit[versionIndex + 1] + versionCommentSplit[versionIndex + 2])) {
@@ -149,7 +148,6 @@ fun generateAttrs(publicXml: String, outputFolder: String) {
                 } else if (versionMapping.containsKey(versionCommentSplit[versionIndex + 1])) {
                     currentSdkLevel = versionMapping[versionCommentSplit[versionIndex + 1]]!!
                 }
-                //println("FOR LEVEL $currentSdkLevel")
             }
         }
 
@@ -206,8 +204,6 @@ fun generateAttrs(publicXml: String, outputFolder: String) {
 
     for (attributeType in attributeGroups.keys.sorted()) {
         for (attributeName in attributeGroups[attributeType]!!.sorted()) {
-            //println("${attributeVersions[attributeName]} $attributeType.$attributeName")
-
             val sdkVersion = attributeVersions[attributeName]
             if ((sdkVersion != null) && (sdkVersion > 1)) {
                 writerAttrs.println("@RequiresApiLevel($sdkVersion)")

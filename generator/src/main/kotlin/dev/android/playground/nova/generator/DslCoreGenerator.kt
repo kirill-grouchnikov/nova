@@ -35,29 +35,25 @@ fun getAnnotationSource(attributeClass: KClass<*>): String {
 }
 
 fun getEnumClassNameForRendering(enumClass: KClass<out StyleableEnum>): String {
-//    return enumClass.simpleName!!
     val split = enumClass.qualifiedName!!.split('.')
     val last = split[split.lastIndex]
     val prev = split[split.lastIndex - 1]
     if (prev.endsWith("Styleable")) {
-        return prev + "." + last
+        return "$prev.$last"
     } else {
         return last
     }
-//    return enumClass.qualifiedName!!.substring(11)
 }
 
 fun getFlagClassNameForRendering(flagClass: KClass<out StyleableFlag>): String {
-//    return enumClass.simpleName!!
     val split = flagClass.qualifiedName!!.split('.')
     val last = split[split.lastIndex]
     val prev = split[split.lastIndex - 1]
     if (prev.endsWith("Styleable")) {
-        return prev + "." + last
+        return "$prev.$last"
     } else {
         return last
     }
-//    return flagClass.qualifiedName!!.substring(11)
 }
 
 fun typeAnnotations(attributeClass: KClass<*>): List<Annotation> {
@@ -783,32 +779,10 @@ fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<
         }
 
         if (!isInlineable(attributeClass)) {
-//        if ((attributeClass.annotations.find { it.annotationClass == Inlineable::class }) == null) {
             // Regular theme attribute
             val overriding = if (isOverriding(attributeClass, superklass)) " override" else ""
 
             renderRegularAttribute(writer, attributeClass, overriding)
-
-//            if (renderTriple != null) {
-//                writer.println("\t@DefinedBy($definedBy::class)")
-//                writer.println("\topen$overriding var ${nested.simpleName}: ${renderTriple.first}? by ${renderTriple.second}()")
-//                writer.println("\topen$overriding fun ${nested.simpleName}(init: ${renderTriple.third}.() -> Unit)")
-//                writer.println("\t\t= initAttr($styleableName.${nested.simpleName}::class, init)")
-//            } else {
-//                val enumClass = getEnumClass(nested)
-//                if (enumClass != null) {
-//                    writer.println("\t@DefinedBy($definedBy::class)")
-//                    writer.println("\topen$overriding var ${nested.simpleName}: ${enumClass.qualifiedName}? by StyleableEnumDelegate()")
-//                } else {
-//                    val flagClass = getFlagClass(nested)
-//                    if (flagClass != null) {
-//                        writer.println("\t@DefinedBy($definedBy::class)")
-//                        writer.println("\topen$overriding var ${nested.simpleName}: List<Enum<${flagClass.qualifiedName}>>? by StyleableFlagDelegate()")
-//                    } else {
-//                        writer.println("// SKIPPING ${nested.simpleName}")
-//                    }
-//                }
-//            }
         } else {
             val overriding = if (isOverriding(attributeClass, superklass)) " override" else ""
 
@@ -881,23 +855,7 @@ fun renderRegularAttribute(writer: PrintWriter, nested: KClass<*>, overriding: S
             writer.println("\topen$overriding fun ${nested.simpleName}(init: ${renderInfo.complexAttributeClassName}.() -> Unit)")
             writer.println("\t\t= initAttr($definedBy::class, init)")
         }
-//        writer.println("\t\t= initAttr($styleableName.${nested.simpleName}::class, init)")
     } else {
         writer.println("// SKIPPING ${nested.simpleName}")
     }
-//    else {
-//        val enumClass = getEnumClass(nested)
-//        if (enumClass != null) {
-//            writer.println("\t@DefinedBy($definedBy::class)")
-//            writer.println("\topen$overriding var ${nested.simpleName}: ${enumClass.qualifiedName}? by StyleableEnumDelegate()")
-//        } else {
-//            val flagClass = getFlagClass(nested)
-//            if (flagClass != null) {
-//                writer.println("\t@DefinedBy($definedBy::class)")
-//                writer.println("\topen$overriding var ${nested.simpleName}: List<Enum<${flagClass.qualifiedName}>>? by StyleableFlagDelegate()")
-//            } else {
-//                writer.println("// SKIPPING ${nested.simpleName}")
-//            }
-//        }
-//    }
 }
