@@ -15,18 +15,18 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.style
+import dev.android.playground.nova.appcompat.appCompatStyle
 import dev.android.playground.nova.core.base.dp
 import dev.android.playground.nova.core.base.matchParent
 
 fun styles() {
 
-    val simple = style(name = "SimpleStyle") {
+    val simple = appCompatStyle(name = "SimpleStyle") {
         layoutWidth = 100.dp
         layoutHeight = matchParent
     }
 
-    val conditional = style(name = "ConditionalStyle", parentStyle = simple) {
+    val conditional = appCompatStyle(name = "ConditionalStyle", parentStyle = simple) {
         layoutHeight {
             baseline use matchParent
             landscape use 600.dp

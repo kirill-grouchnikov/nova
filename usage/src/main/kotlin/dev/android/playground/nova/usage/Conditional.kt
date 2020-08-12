@@ -15,12 +15,12 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.theme
+import dev.android.playground.nova.appcompat.appCompatTheme
 import dev.android.playground.nova.core.base.color
 
 fun conditional() {
 
-    theme(name = "MyMainTheme", parent = "Theme.Material.Light") {
+    appCompatTheme(name = "MyMainTheme", parent = "Theme.Material.Light") {
         // This attribute is a conditional with multiple selectors on one of the conditions.
         // The output will have <string> resources in the matching values.xml in -sw600dp-land,
         // -sw600dp and default.

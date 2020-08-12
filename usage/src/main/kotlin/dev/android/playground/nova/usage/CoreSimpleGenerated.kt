@@ -22,7 +22,7 @@ import dev.android.playground.nova.core.framework.generated.*
 import dev.android.playground.nova.core.framework.styleables.CoreViewGroup_LayoutStyleable
 import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
 
-fun style2(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,
+fun style(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,
            init: CoreStyle2.() -> Unit): CoreStyle2 {
     val style = CoreStyle2()
     style.init()
@@ -39,7 +39,7 @@ fun style2(name: String, parentName: String? = null, parentStyle: CoreStyle2? = 
     return style
 }
 
-fun theme2(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
+fun theme(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
     val theme = CoreThemeStyle2()
     theme.init()
     theme.myName = name
@@ -48,7 +48,7 @@ fun theme2(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): Core
     return theme
 }
 
-fun theme2(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
+fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
     val theme = CoreThemeStyle2()
     theme.init()
     theme.myName = name
@@ -59,7 +59,7 @@ fun theme2(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Un
 
 fun simpleCoreGenerated() {
 
-    theme2(name = "MyMainTheme", parent = "Theme.Material") {
+    theme(name = "MyMainTheme", parent = "Theme.Material") {
         // Simple attributes (can use primitive values or reference framework
         // application resources)
         windowActionModeOverlay = true
@@ -109,7 +109,7 @@ fun simpleCoreGenerated() {
         }
     }
 
-    style2(name = "MyStyle") {
+    style(name = "MyStyle") {
         // Enum field
         orientation = Orientation.horizontal
         // Flag field with one flag value

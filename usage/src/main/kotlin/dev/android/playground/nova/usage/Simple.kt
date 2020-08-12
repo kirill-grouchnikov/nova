@@ -15,7 +15,7 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.theme
+import dev.android.playground.nova.appcompat.appCompatTheme
 import dev.android.playground.nova.core.base.bool
 import dev.android.playground.nova.core.base.color
 import dev.android.playground.nova.core.base.postInit
@@ -24,7 +24,7 @@ import dev.android.playground.nova.core.framework.themes.initializeCoreDictionar
 
 fun simple() {
 
-    theme(name = "MyMainTheme", parent = "Theme.AppCompat.Light") {
+    appCompatTheme(name = "MyMainTheme", parent = "Theme.AppCompat.Light") {
         // Simple boolean attributes
         windowDrawsSystemBarBackgrounds = true
         windowActionModeOverlay = true

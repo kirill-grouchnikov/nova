@@ -567,7 +567,7 @@ fun main(args: Array<String>) {
     writerSample.println("import import dev.android.playground.nova.core.framework.themes.*")
     writerSample.println()
 
-    writerSample.println("fun style2(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,")
+    writerSample.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,")
     writerSample.println("           init: CoreStyle2.() -> Unit): CoreStyle2 {")
     writerSample.println("    val style = CoreStyle2()")
     writerSample.println("    style.init()")
@@ -585,7 +585,7 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun theme2(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
+    writerSample.println("fun theme(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
     writerSample.println("    val theme = CoreThemeStyle2()")
     writerSample.println("    theme.init()")
     writerSample.println("    theme.myName = name")
@@ -595,7 +595,7 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun theme2(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
+    writerSample.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
     writerSample.println("    val theme = CoreThemeStyle2()")
     writerSample.println("    theme.init()")
     writerSample.println("    theme.myName = name")
@@ -607,7 +607,7 @@ fun main(args: Array<String>) {
 
     writerSample.println("fun simpleCoreGenerated() {")
     writerSample.println()
-    writerSample.println("    theme2(name = \"MyMainTheme\", parent = \"Theme.Material\") {")
+    writerSample.println("    theme(name = \"MyMainTheme\", parent = \"Theme.Material\") {")
     writerSample.println("        // Simple attributes (can use primitive values or reference framework")
     writerSample.println("        // application resources)")
     writerSample.println("        windowActionModeOverlay = true")
@@ -658,7 +658,7 @@ fun main(args: Array<String>) {
     writerSample.println("        }")
     writerSample.println("    }")
     writerSample.println()
-    writerSample.println("    style2(name = \"MyStyle\") {")
+    writerSample.println("    style(name = \"MyStyle\") {")
     writerSample.println("        layout_width = 100.dp")
     writerSample.println("        layout_height = CoreViewGroup_LayoutStyleable.LayoutHeightEnum.match_parent")
     writerSample.println("    }")

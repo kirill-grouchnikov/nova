@@ -42,7 +42,7 @@ open class AppCompatTheme: CoreTheme() {
             = initInlineStyle(AppCompatToolbarStyle(), "toolbarStyle", init)
 }
 
-fun theme(name: String, parent: String, init: AppCompatTheme.() -> Unit): AppCompatTheme {
+fun appCompatTheme(name: String, parent: String, init: AppCompatTheme.() -> Unit): AppCompatTheme {
     val theme = AppCompatTheme()
     theme.init()
     theme.myName = name
@@ -51,7 +51,7 @@ fun theme(name: String, parent: String, init: AppCompatTheme.() -> Unit): AppCom
     return theme
 }
 
-fun theme(name: String, parent: ParentCondition, init: AppCompatTheme.() -> Unit): AppCompatTheme {
+fun appCompatTheme(name: String, parent: ParentCondition, init: AppCompatTheme.() -> Unit): AppCompatTheme {
     val theme = AppCompatTheme()
     theme.init()
     theme.myName = name

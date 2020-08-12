@@ -15,7 +15,7 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.theme
+import dev.android.playground.nova.appcompat.appCompatTheme
 import dev.android.playground.nova.core.base.parentCondition
 import dev.android.playground.nova.core.framework.generated.android
 import dev.android.playground.nova.core.framework.generated.primary_text_dark
@@ -23,7 +23,7 @@ import dev.android.playground.nova.core.framework.generated.primary_text_light
 
 fun parentConditional() {
 
-    theme(name = "MyMainTheme",
+    appCompatTheme(name = "MyMainTheme",
             parent = parentCondition {
                 baseline use "Theme.Material.Light"
                 night use "Theme.Material"

@@ -73,7 +73,7 @@ open class AppCompatStyle: CoreStyle() {
             = initAttr(AppCompatThemeStyleable.actionMenuTextColor::class, init)
 }
 
-fun style(name: String, parentName: String? = null, parentStyle: AppCompatStyle? = null,
+fun appCompatStyle(name: String, parentName: String? = null, parentStyle: AppCompatStyle? = null,
           init: AppCompatStyle.() -> Unit): AppCompatStyle {
     val style = AppCompatStyle()
     style.init()

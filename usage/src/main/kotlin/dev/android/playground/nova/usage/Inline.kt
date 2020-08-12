@@ -21,7 +21,7 @@ import dev.android.playground.nova.core.base.string
 
 fun inline() {
 
-    theme2(name = "MyMainTheme", parent = "Theme.Material") {
+    theme(name = "MyMainTheme", parent = "Theme.Material") {
 
         // Inline widget style with inline text appearance
         toolbarStyle {

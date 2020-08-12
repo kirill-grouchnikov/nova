@@ -24,7 +24,7 @@ import dev.android.playground.nova.core.framework.themes.initializeCoreDictionar
 
 fun simpleCore() {
 
-    theme2(name = "MyMainTheme", parent = "Theme.Material.Light") {
+    theme(name = "MyMainTheme", parent = "Theme.Material.Light") {
         // Simple boolean attributes
         windowDrawsSystemBarBackgrounds = true
         windowActionModeOverlay = true

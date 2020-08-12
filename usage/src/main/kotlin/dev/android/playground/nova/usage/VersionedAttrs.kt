@@ -15,13 +15,13 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.theme
+import dev.android.playground.nova.appcompat.appCompatTheme
 import dev.android.playground.nova.core.base.color
 import dev.android.playground.nova.core.framework.manual.version
 
 fun versionedAttrs() {
 
-    theme(name="MainTheme.CustomToolbar", parent="Theme.AppCompat.Light") {
+    appCompatTheme(name="MainTheme.CustomToolbar", parent="Theme.AppCompat.Light") {
         toolbarStyle {
             background = color.toolbar_background
         }
@@ -32,7 +32,7 @@ fun versionedAttrs() {
     // will have three entries for the same theme under the same name. The default
     // one will not have any attribute, the -v21 will have only windowTranslucentStatus
     // and -v23 will have only windowLightStatusBar
-    theme(name="MainTheme.CustomToolbar.LightStatusBar", parent="MainTheme.CustomToolbar") {
+    appCompatTheme(name="MainTheme.CustomToolbar.LightStatusBar", parent="MainTheme.CustomToolbar") {
         version(21) {
             windowTranslucentStatus = true
         }
