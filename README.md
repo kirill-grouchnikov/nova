@@ -52,7 +52,7 @@ is converted to the following "traditional" XML resource snippets:
 
 What do we have here? Simple boolean attributes were "copied" as they were. The `android:statusBarColor` has `tools:targetApi` to mark that this attribute was added in version 21 of the platform
 
-The more interesting part if our `actionModeStyle`. In the Nova snippet it is an inline style with no explicit parent. When Nova converts this DSL snippet into the "traditional" world, it does two things:
+The more interesting part is our `actionModeStyle`. In the Nova snippet it is an inline style with no explicit parent. When Nova converts this DSL snippet into the "traditional" world, it does two things:
 
 * Creates a separate `<style>` for action mode
 * Finds the right parent for it based on the parent theme being used (`Theme.Material.Light`) in our case.

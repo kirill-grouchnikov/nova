@@ -1,0 +1,16 @@
+# Gradle
+.gradle
+build/
+
+/local.properties
+
+# IntelliJ .idea folder
+.idea
+gradle.xml
+*.iml
+
+# General
+.DS_Store
+.externalNativeBuild
+*.class
+*/out/*
