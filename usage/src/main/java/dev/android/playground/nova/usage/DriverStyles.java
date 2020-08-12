@@ -20,7 +20,7 @@ import dev.android.playground.nova.core.base.DictionaryKt;
 import java.util.Map;
 
 public class DriverStyles {
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
         System.out.println("Hello");
 
         StylesKt.styles();

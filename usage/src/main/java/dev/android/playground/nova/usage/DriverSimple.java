@@ -21,7 +21,7 @@ import dev.android.playground.nova.core.framework.themes.CoreDictionaryKt;
 import java.util.Map;
 
 public class DriverSimple {
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
         System.out.println("Hello");
 
         CoreDictionaryKt.initializeCoreDictionary();
