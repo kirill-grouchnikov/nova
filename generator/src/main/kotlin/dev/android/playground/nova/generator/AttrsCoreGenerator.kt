@@ -24,9 +24,18 @@ import java.io.PrintWriter
 import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.reflect.KClass
 import kotlin.reflect.full.isSubclassOf
+import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
-    generateAttrs()
+    val publicXmlFile = getInputArgument(args, "publicXml")
+    if (publicXmlFile == null) {
+        exitProcess(1)
+    }
+    val outputFolder = getInputArgument(args, "outputFolder")
+    if (outputFolder == null) {
+        exitProcess(1)
+    }
+    generateAttrs(publicXmlFile, outputFolder)
 }
 
 val versionMapping: MutableMap<String, Int> = hashMapOf()
@@ -88,7 +97,7 @@ fun scanForStyleables(klass: KClass<out BaseStyleable>) {
 
 }
 
-fun generateAttrs() {
+fun generateAttrs(publicXml: String, outputFolder: String) {
     versionMapping["1"] = 1
     versionMapping["2"] = 2
     versionMapping["3"] = 3
@@ -116,8 +125,10 @@ fun generateAttrs() {
     versionMapping["NMR1"] = 25
     versionMapping["O"] = 26
     versionMapping["OMR1"] = 27
+    versionMapping["P"] = 28
+    versionMapping["Q"] = 29
 
-    val xlmFile: File = File("/Volumes/android/pi-dev/frameworks/base/core/res/res/values/public.xml")
+    val xlmFile: File = File(publicXml)
     val xmlDoc: Document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(xlmFile)
 
     xmlDoc.documentElement.normalize()
@@ -159,14 +170,13 @@ fun generateAttrs() {
         scanForStyleables(topStyleable)
     }
 
-    File("/Users/kirillg/Playground/src/generated").mkdirs()
+    File(outputFolder).mkdirs()
 
-    val writerAttrs = PrintWriter("/Users/kirillg/Playground/src/generated/CoreAttrs.kt")
-    writerAttrs.println("package theme.core")
+    val writerAttrs = PrintWriter("$outputFolder/CoreAttrs.kt")
+    printCopyright(writerAttrs)
+    writerAttrs.println("package dev.android.playground.nova.core.framework.generated")
     writerAttrs.println()
-    writerAttrs.println("import theme.*")
-    writerAttrs.println("import theme.base.*")
-    writerAttrs.println("import theme.core.*")
+    writerAttrs.println("import dev.android.playground.nova.core.base.*")
     writerAttrs.println()
 
     writerAttrs.println("object android {")

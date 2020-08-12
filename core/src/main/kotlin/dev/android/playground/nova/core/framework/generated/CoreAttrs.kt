@@ -108,9 +108,15 @@ val android.attr.accessibilityFeedbackType: StringContainer
 @RequiresApiLevel(14)
 val android.attr.accessibilityFlags: StringContainer
         get() = StringContainer("@android:attr/accessibilityFlags")
+@RequiresApiLevel(28)
+val android.attr.accessibilityHeading: StringContainer
+        get() = StringContainer("@android:attr/accessibilityHeading")
 @RequiresApiLevel(19)
 val android.attr.accessibilityLiveRegion: StringContainer
         get() = StringContainer("@android:attr/accessibilityLiveRegion")
+@RequiresApiLevel(28)
+val android.attr.accessibilityPaneTitle: StringContainer
+        get() = StringContainer("@android:attr/accessibilityPaneTitle")
 @RequiresApiLevel(22)
 val android.attr.accessibilityTraversalAfter: StringContainer
         get() = StringContainer("@android:attr/accessibilityTraversalAfter")
@@ -256,11 +262,17 @@ val android.attr.alignmentMode: StringContainer
 @RequiresApiLevel(11)
 val android.attr.allContactsName: StringContainer
         get() = StringContainer("@android:attr/allContactsName")
+@RequiresApiLevel(29)
+val android.attr.allowAudioPlaybackCapture: StringContainer
+        get() = StringContainer("@android:attr/allowAudioPlaybackCapture")
 @RequiresApiLevel(4)
 val android.attr.allowBackup: StringContainer
         get() = StringContainer("@android:attr/allowBackup")
 val android.attr.allowClearUserData: StringContainer
         get() = StringContainer("@android:attr/allowClearUserData")
+@RequiresApiLevel(29)
+val android.attr.allowClearUserDataOnFailedRestore: StringContainer
+        get() = StringContainer("@android:attr/allowClearUserDataOnFailedRestore")
 @RequiresApiLevel(20)
 val android.attr.allowEmbedded: StringContainer
         get() = StringContainer("@android:attr/allowEmbedded")
@@ -331,6 +343,9 @@ val android.attr.apiKey: StringContainer
 @RequiresApiLevel(26)
 val android.attr.appCategory: StringContainer
         get() = StringContainer("@android:attr/appCategory")
+@RequiresApiLevel(28)
+val android.attr.appComponentFactory: StringContainer
+        get() = StringContainer("@android:attr/appComponentFactory")
 @RequiresApiLevel(7)
 val android.attr.author: StringContainer
         get() = StringContainer("@android:attr/author")
@@ -467,6 +482,9 @@ val android.attr.buttonBarPositiveButtonStyle: StringContainer
 @RequiresApiLevel(11)
 val android.attr.buttonBarStyle: StringContainer
         get() = StringContainer("@android:attr/buttonBarStyle")
+@RequiresApiLevel(28)
+val android.attr.buttonCornerRadius: StringContainer
+        get() = StringContainer("@android:attr/buttonCornerRadius")
 @RequiresApiLevel(24)
 val android.attr.buttonGravity: StringContainer
         get() = StringContainer("@android:attr/buttonGravity")
@@ -522,6 +540,9 @@ val android.attr.canRetrieveWindowContent: StringContainer
 @RequiresApiLevel(3)
 val android.attr.candidatesTextStyleSpans: StringContainer
         get() = StringContainer("@android:attr/candidatesTextStyleSpans")
+@RequiresApiLevel(28)
+val android.attr.cantSaveState: StringContainer
+        get() = StringContainer("@android:attr/cantSaveState")
 val android.attr.capitalize: StringContainer
         get() = StringContainer("@android:attr/capitalize")
 @RequiresApiLevel(19)
@@ -686,6 +707,12 @@ val android.attr.commitIcon: StringContainer
 @RequiresApiLevel(13)
 val android.attr.compatibleWidthLimitDp: StringContainer
         get() = StringContainer("@android:attr/compatibleWidthLimitDp")
+@RequiresApiLevel(28)
+val android.attr.compileSdkVersion: StringContainer
+        get() = StringContainer("@android:attr/compileSdkVersion")
+@RequiresApiLevel(28)
+val android.attr.compileSdkVersionCodename: StringContainer
+        get() = StringContainer("@android:attr/compileSdkVersionCodename")
 val android.attr.completionHint: StringContainer
         get() = StringContainer("@android:attr/completionHint")
 val android.attr.completionHintView: StringContainer
@@ -833,6 +860,9 @@ val android.attr.detailsElementBackground: StringContainer
         get() = StringContainer("@android:attr/detailsElementBackground")
 val android.attr.dial: StringContainer
         get() = StringContainer("@android:attr/dial")
+@RequiresApiLevel(28)
+val android.attr.dialogCornerRadius: StringContainer
+        get() = StringContainer("@android:attr/dialogCornerRadius")
 val android.attr.dialogIcon: StringContainer
         get() = StringContainer("@android:attr/dialogIcon")
 val android.attr.dialogLayout: StringContainer
@@ -987,6 +1017,12 @@ val android.attr.endY: StringContainer
         get() = StringContainer("@android:attr/endY")
 val android.attr.endYear: StringContainer
         get() = StringContainer("@android:attr/endYear")
+@RequiresApiLevel(29)
+val android.attr.enforceNavigationBarContrast: StringContainer
+        get() = StringContainer("@android:attr/enforceNavigationBarContrast")
+@RequiresApiLevel(29)
+val android.attr.enforceStatusBarContrast: StringContainer
+        get() = StringContainer("@android:attr/enforceStatusBarContrast")
 @RequiresApiLevel(11)
 val android.attr.enterFadeDuration: StringContainer
         get() = StringContainer("@android:attr/enterFadeDuration")
@@ -1060,6 +1096,9 @@ val android.attr.fadingEdgeLength: StringContainer
 @RequiresApiLevel(19)
 val android.attr.fadingMode: StringContainer
         get() = StringContainer("@android:attr/fadingMode")
+@RequiresApiLevel(28)
+val android.attr.fallbackLineSpacing: StringContainer
+        get() = StringContainer("@android:attr/fallbackLineSpacing")
 @RequiresApiLevel(11)
 val android.attr.fastScrollAlwaysVisible: StringContainer
         get() = StringContainer("@android:attr/fastScrollAlwaysVisible")
@@ -1118,6 +1157,9 @@ val android.attr.finishOnCloseSystemDialogs: StringContainer
         get() = StringContainer("@android:attr/finishOnCloseSystemDialogs")
 val android.attr.finishOnTaskLaunch: StringContainer
         get() = StringContainer("@android:attr/finishOnTaskLaunch")
+@RequiresApiLevel(28)
+val android.attr.firstBaselineToTopHeight: StringContainer
+        get() = StringContainer("@android:attr/firstBaselineToTopHeight")
 @RequiresApiLevel(11)
 val android.attr.firstDayOfWeek: StringContainer
         get() = StringContainer("@android:attr/firstDayOfWeek")
@@ -1159,19 +1201,31 @@ val android.attr.fontProviderQuery: StringContainer
 @RequiresApiLevel(26)
 val android.attr.fontStyle: StringContainer
         get() = StringContainer("@android:attr/fontStyle")
+@RequiresApiLevel(28)
+val android.attr.fontVariationSettings: StringContainer
+        get() = StringContainer("@android:attr/fontVariationSettings")
 @RequiresApiLevel(26)
 val android.attr.fontWeight: StringContainer
         get() = StringContainer("@android:attr/fontWeight")
 @RequiresApiLevel(3)
 val android.attr.footerDividersEnabled: StringContainer
         get() = StringContainer("@android:attr/footerDividersEnabled")
+@RequiresApiLevel(29)
+val android.attr.forceDarkAllowed: StringContainer
+        get() = StringContainer("@android:attr/forceDarkAllowed")
 @RequiresApiLevel(24)
 val android.attr.forceHasOverlappingRendering: StringContainer
         get() = StringContainer("@android:attr/forceHasOverlappingRendering")
+@RequiresApiLevel(29)
+val android.attr.forceUriPermissions: StringContainer
+        get() = StringContainer("@android:attr/forceUriPermissions")
 val android.attr.foreground: StringContainer
         get() = StringContainer("@android:attr/foreground")
 val android.attr.foregroundGravity: StringContainer
         get() = StringContainer("@android:attr/foregroundGravity")
+@RequiresApiLevel(29)
+val android.attr.foregroundServiceType: StringContainer
+        get() = StringContainer("@android:attr/foregroundServiceType")
 @RequiresApiLevel(21)
 val android.attr.foregroundTint: StringContainer
         get() = StringContainer("@android:attr/foregroundTint")
@@ -1321,6 +1375,9 @@ val android.attr.hardwareAccelerated: StringContainer
         get() = StringContainer("@android:attr/hardwareAccelerated")
 val android.attr.hasCode: StringContainer
         get() = StringContainer("@android:attr/hasCode")
+@RequiresApiLevel(29)
+val android.attr.hasFragileUserData: StringContainer
+        get() = StringContainer("@android:attr/hasFragileUserData")
 @RequiresApiLevel(24)
 val android.attr.hash: StringContainer
         get() = StringContainer("@android:attr/hash")
@@ -1397,6 +1454,9 @@ val android.attr.iconifiedByDefault: StringContainer
         get() = StringContainer("@android:attr/iconifiedByDefault")
 val android.attr.id: StringContainer
         get() = StringContainer("@android:attr/id")
+@RequiresApiLevel(29)
+val android.attr.identifier: StringContainer
+        get() = StringContainer("@android:attr/identifier")
 val android.attr.ignoreGravity: StringContainer
         get() = StringContainer("@android:attr/ignoreGravity")
 val android.attr.imageButtonStyle: StringContainer
@@ -1477,6 +1537,9 @@ val android.attr.indicatorStart: StringContainer
         get() = StringContainer("@android:attr/indicatorStart")
 val android.attr.inflatedId: StringContainer
         get() = StringContainer("@android:attr/inflatedId")
+@RequiresApiLevel(29)
+val android.attr.inheritShowWhenLocked: StringContainer
+        get() = StringContainer("@android:attr/inheritShowWhenLocked")
 val android.attr.initOrder: StringContainer
         get() = StringContainer("@android:attr/initOrder")
 @RequiresApiLevel(17)
@@ -1509,6 +1572,9 @@ val android.attr.insetTop: StringContainer
 @RequiresApiLevel(8)
 val android.attr.installLocation: StringContainer
         get() = StringContainer("@android:attr/installLocation")
+@RequiresApiLevel(29)
+val android.attr.interactiveUiTimeout: StringContainer
+        get() = StringContainer("@android:attr/interactiveUiTimeout")
 val android.attr.interpolator: StringContainer
         get() = StringContainer("@android:attr/interpolator")
 @RequiresApiLevel(11)
@@ -1531,6 +1597,9 @@ val android.attr.isGame: StringContainer
         get() = StringContainer("@android:attr/isGame")
 val android.attr.isIndicator: StringContainer
         get() = StringContainer("@android:attr/isIndicator")
+@RequiresApiLevel(29)
+val android.attr.isLightTheme: StringContainer
+        get() = StringContainer("@android:attr/isLightTheme")
 @RequiresApiLevel(3)
 val android.attr.isModifier: StringContainer
         get() = StringContainer("@android:attr/isModifier")
@@ -1540,12 +1609,18 @@ val android.attr.isRepeatable: StringContainer
 @RequiresApiLevel(3)
 val android.attr.isScrollContainer: StringContainer
         get() = StringContainer("@android:attr/isScrollContainer")
+@RequiresApiLevel(29)
+val android.attr.isSplitRequired: StringContainer
+        get() = StringContainer("@android:attr/isSplitRequired")
 @RequiresApiLevel(26)
 val android.attr.isStatic: StringContainer
         get() = StringContainer("@android:attr/isStatic")
 @RequiresApiLevel(3)
 val android.attr.isSticky: StringContainer
         get() = StringContainer("@android:attr/isSticky")
+@RequiresApiLevel(28)
+val android.attr.isVrOnly: StringContainer
+        get() = StringContainer("@android:attr/isVrOnly")
 @RequiresApiLevel(16)
 val android.attr.isolatedProcess: StringContainer
         get() = StringContainer("@android:attr/isolatedProcess")
@@ -1641,6 +1716,9 @@ val android.attr.largeScreens: StringContainer
 @RequiresApiLevel(13)
 val android.attr.largestWidthLimitDp: StringContainer
         get() = StringContainer("@android:attr/largestWidthLimitDp")
+@RequiresApiLevel(28)
+val android.attr.lastBaselineToBottomHeight: StringContainer
+        get() = StringContainer("@android:attr/lastBaselineToBottomHeight")
 val android.attr.launchMode: StringContainer
         get() = StringContainer("@android:attr/launchMode")
 @RequiresApiLevel(21)
@@ -1777,6 +1855,9 @@ val android.attr.letterSpacing: StringContainer
 @RequiresApiLevel(24)
 val android.attr.level: StringContainer
         get() = StringContainer("@android:attr/level")
+@RequiresApiLevel(28)
+val android.attr.lineHeight: StringContainer
+        get() = StringContainer("@android:attr/lineHeight")
 val android.attr.lineSpacingExtra: StringContainer
         get() = StringContainer("@android:attr/lineSpacingExtra")
 val android.attr.lineSpacingMultiplier: StringContainer
@@ -1878,6 +1959,9 @@ val android.attr.maxLevel: StringContainer
         get() = StringContainer("@android:attr/maxLevel")
 val android.attr.maxLines: StringContainer
         get() = StringContainer("@android:attr/maxLines")
+@RequiresApiLevel(28)
+val android.attr.maxLongVersionCode: StringContainer
+        get() = StringContainer("@android:attr/maxLongVersionCode")
 @RequiresApiLevel(21)
 val android.attr.maxRecents: StringContainer
         get() = StringContainer("@android:attr/maxRecents")
@@ -1909,6 +1993,9 @@ val android.attr.mimeType: StringContainer
 @RequiresApiLevel(26)
 val android.attr.min: StringContainer
         get() = StringContainer("@android:attr/min")
+@RequiresApiLevel(29)
+val android.attr.minAspectRatio: StringContainer
+        get() = StringContainer("@android:attr/minAspectRatio")
 @RequiresApiLevel(11)
 val android.attr.minDate: StringContainer
         get() = StringContainer("@android:attr/minDate")
@@ -1993,6 +2080,9 @@ val android.attr.nextFocusUp: StringContainer
 @RequiresApiLevel(3)
 val android.attr.noHistory: StringContainer
         get() = StringContainer("@android:attr/noHistory")
+@RequiresApiLevel(29)
+val android.attr.nonInteractiveUiTimeout: StringContainer
+        get() = StringContainer("@android:attr/nonInteractiveUiTimeout")
 @RequiresApiLevel(4)
 val android.attr.normalScreens: StringContainer
         get() = StringContainer("@android:attr/normalScreens")
@@ -2036,6 +2126,18 @@ val android.attr.oneshot: StringContainer
 @RequiresApiLevel(11)
 val android.attr.opacity: StringContainer
         get() = StringContainer("@android:attr/opacity")
+@RequiresApiLevel(29)
+val android.attr.opticalInsetBottom: StringContainer
+        get() = StringContainer("@android:attr/opticalInsetBottom")
+@RequiresApiLevel(29)
+val android.attr.opticalInsetLeft: StringContainer
+        get() = StringContainer("@android:attr/opticalInsetLeft")
+@RequiresApiLevel(29)
+val android.attr.opticalInsetRight: StringContainer
+        get() = StringContainer("@android:attr/opticalInsetRight")
+@RequiresApiLevel(29)
+val android.attr.opticalInsetTop: StringContainer
+        get() = StringContainer("@android:attr/opticalInsetTop")
 val android.attr.order: StringContainer
         get() = StringContainer("@android:attr/order")
 val android.attr.orderInCategory: StringContainer
@@ -2049,9 +2151,15 @@ val android.attr.orientation: StringContainer
         get() = StringContainer("@android:attr/orientation")
 val android.attr.outAnimation: StringContainer
         get() = StringContainer("@android:attr/outAnimation")
+@RequiresApiLevel(28)
+val android.attr.outlineAmbientShadowColor: StringContainer
+        get() = StringContainer("@android:attr/outlineAmbientShadowColor")
 @RequiresApiLevel(21)
 val android.attr.outlineProvider: StringContainer
         get() = StringContainer("@android:attr/outlineProvider")
+@RequiresApiLevel(28)
+val android.attr.outlineSpotShadowColor: StringContainer
+        get() = StringContainer("@android:attr/outlineSpotShadowColor")
 @RequiresApiLevel(9)
 val android.attr.overScrollFooter: StringContainer
         get() = StringContainer("@android:attr/overScrollFooter")
@@ -2070,6 +2178,9 @@ val android.attr.overridesImplicitlyEnabledSubtype: StringContainer
 @RequiresApiLevel(14)
 val android.attr.packageNames: StringContainer
         get() = StringContainer("@android:attr/packageNames")
+@RequiresApiLevel(29)
+val android.attr.packageType: StringContainer
+        get() = StringContainer("@android:attr/packageType")
 val android.attr.padding: StringContainer
         get() = StringContainer("@android:attr/padding")
 val android.attr.paddingBottom: StringContainer
@@ -2349,6 +2460,9 @@ val android.attr.reqNavigation: StringContainer
 @RequiresApiLevel(3)
 val android.attr.reqTouchScreen: StringContainer
         get() = StringContainer("@android:attr/reqTouchScreen")
+@RequiresApiLevel(29)
+val android.attr.requestLegacyExternalStorage: StringContainer
+        get() = StringContainer("@android:attr/requestLegacyExternalStorage")
 @RequiresApiLevel(19)
 val android.attr.requireDeviceUnlock: StringContainer
         get() = StringContainer("@android:attr/requireDeviceUnlock")
@@ -2471,6 +2585,9 @@ val android.attr.screenDensity: StringContainer
         get() = StringContainer("@android:attr/screenDensity")
 val android.attr.screenOrientation: StringContainer
         get() = StringContainer("@android:attr/screenOrientation")
+@RequiresApiLevel(28)
+val android.attr.screenReaderFocusable: StringContainer
+        get() = StringContainer("@android:attr/screenReaderFocusable")
 @RequiresApiLevel(9)
 val android.attr.screenSize: StringContainer
         get() = StringContainer("@android:attr/screenSize")
@@ -2563,6 +2680,9 @@ val android.attr.secondaryProgressTint: StringContainer
 @RequiresApiLevel(21)
 val android.attr.secondaryProgressTintMode: StringContainer
         get() = StringContainer("@android:attr/secondaryProgressTintMode")
+@RequiresApiLevel(29)
+val android.attr.secureElementName: StringContainer
+        get() = StringContainer("@android:attr/secureElementName")
 val android.attr.seekBarStyle: StringContainer
         get() = StringContainer("@android:attr/seekBarStyle")
 @RequiresApiLevel(11)
@@ -2584,12 +2704,18 @@ val android.attr.selectedDateVerticalBar: StringContainer
 @RequiresApiLevel(11)
 val android.attr.selectedWeekBackgroundColor: StringContainer
         get() = StringContainer("@android:attr/selectedWeekBackgroundColor")
+@RequiresApiLevel(29)
+val android.attr.selectionDividerHeight: StringContainer
+        get() = StringContainer("@android:attr/selectionDividerHeight")
 @RequiresApiLevel(21)
 val android.attr.sessionService: StringContainer
         get() = StringContainer("@android:attr/sessionService")
 @RequiresApiLevel(3)
 val android.attr.settingsActivity: StringContainer
         get() = StringContainer("@android:attr/settingsActivity")
+@RequiresApiLevel(29)
+val android.attr.settingsSliceUri: StringContainer
+        get() = StringContainer("@android:attr/settingsSliceUri")
 @RequiresApiLevel(20)
 val android.attr.setupActivity: StringContainer
         get() = StringContainer("@android:attr/setupActivity")
@@ -2610,6 +2736,9 @@ val android.attr.sharedUserId: StringContainer
 @RequiresApiLevel(3)
 val android.attr.sharedUserLabel: StringContainer
         get() = StringContainer("@android:attr/sharedUserLabel")
+@RequiresApiLevel(29)
+val android.attr.shell: StringContainer
+        get() = StringContainer("@android:attr/shell")
 @RequiresApiLevel(25)
 val android.attr.shortcutDisabledMessage: StringContainer
         get() = StringContainer("@android:attr/shortcutDisabledMessage")
@@ -2878,6 +3007,9 @@ val android.attr.summaryOff: StringContainer
         get() = StringContainer("@android:attr/summaryOff")
 val android.attr.summaryOn: StringContainer
         get() = StringContainer("@android:attr/summaryOn")
+@RequiresApiLevel(29)
+val android.attr.supportsAmbientMode: StringContainer
+        get() = StringContainer("@android:attr/supportsAmbientMode")
 @RequiresApiLevel(23)
 val android.attr.supportsAssist: StringContainer
         get() = StringContainer("@android:attr/supportsAssist")
@@ -2887,6 +3019,9 @@ val android.attr.supportsLaunchVoiceAssistFromKeyguard: StringContainer
 @RequiresApiLevel(24)
 val android.attr.supportsLocalInteraction: StringContainer
         get() = StringContainer("@android:attr/supportsLocalInteraction")
+@RequiresApiLevel(29)
+val android.attr.supportsMultipleDisplays: StringContainer
+        get() = StringContainer("@android:attr/supportsMultipleDisplays")
 @RequiresApiLevel(24)
 val android.attr.supportsPictureInPicture: StringContainer
         get() = StringContainer("@android:attr/supportsPictureInPicture")
@@ -3104,9 +3239,15 @@ val android.attr.textEditSuggestionItemLayout: StringContainer
         get() = StringContainer("@android:attr/textEditSuggestionItemLayout")
 val android.attr.textFilterEnabled: StringContainer
         get() = StringContainer("@android:attr/textFilterEnabled")
+@RequiresApiLevel(28)
+val android.attr.textFontWeight: StringContainer
+        get() = StringContainer("@android:attr/textFontWeight")
 @RequiresApiLevel(11)
 val android.attr.textIsSelectable: StringContainer
         get() = StringContainer("@android:attr/textIsSelectable")
+@RequiresApiLevel(29)
+val android.attr.textLocale: StringContainer
+        get() = StringContainer("@android:attr/textLocale")
 val android.attr.textOff: StringContainer
         get() = StringContainer("@android:attr/textOff")
 val android.attr.textOn: StringContainer
@@ -3318,6 +3459,9 @@ val android.attr.trimPathOffset: StringContainer
 @RequiresApiLevel(21)
 val android.attr.trimPathStart: StringContainer
         get() = StringContainer("@android:attr/trimPathStart")
+@RequiresApiLevel(28)
+val android.attr.ttcIndex: StringContainer
+        get() = StringContainer("@android:attr/ttcIndex")
 @RequiresApiLevel(24)
 val android.attr.tunerCount: StringContainer
         get() = StringContainer("@android:attr/tunerCount")
@@ -3345,20 +3489,32 @@ val android.attr.updatePeriodMillis: StringContainer
 @RequiresApiLevel(24)
 val android.attr.use32bitAbi: StringContainer
         get() = StringContainer("@android:attr/use32bitAbi")
+@RequiresApiLevel(29)
+val android.attr.useAppZygote: StringContainer
+        get() = StringContainer("@android:attr/useAppZygote")
 @RequiresApiLevel(14)
 val android.attr.useDefaultMargins: StringContainer
         get() = StringContainer("@android:attr/useDefaultMargins")
+@RequiresApiLevel(29)
+val android.attr.useEmbeddedDex: StringContainer
+        get() = StringContainer("@android:attr/useEmbeddedDex")
 @RequiresApiLevel(11)
 val android.attr.useIntrinsicSizeAsMinimum: StringContainer
         get() = StringContainer("@android:attr/useIntrinsicSizeAsMinimum")
 val android.attr.useLevel: StringContainer
         get() = StringContainer("@android:attr/useLevel")
+@RequiresApiLevel(28)
+val android.attr.userRestriction: StringContainer
+        get() = StringContainer("@android:attr/userRestriction")
 @RequiresApiLevel(5)
 val android.attr.userVisible: StringContainer
         get() = StringContainer("@android:attr/userVisible")
 @RequiresApiLevel(23)
 val android.attr.usesCleartextTraffic: StringContainer
         get() = StringContainer("@android:attr/usesCleartextTraffic")
+@RequiresApiLevel(29)
+val android.attr.usesNonSdkApi: StringContainer
+        get() = StringContainer("@android:attr/usesNonSdkApi")
 val android.attr.value: StringContainer
         get() = StringContainer("@android:attr/value")
 @RequiresApiLevel(11)
@@ -3380,6 +3536,12 @@ val android.attr.version: StringContainer
         get() = StringContainer("@android:attr/version")
 val android.attr.versionCode: StringContainer
         get() = StringContainer("@android:attr/versionCode")
+@RequiresApiLevel(28)
+val android.attr.versionCodeMajor: StringContainer
+        get() = StringContainer("@android:attr/versionCodeMajor")
+@RequiresApiLevel(28)
+val android.attr.versionMajor: StringContainer
+        get() = StringContainer("@android:attr/versionMajor")
 val android.attr.versionName: StringContainer
         get() = StringContainer("@android:attr/versionName")
 @RequiresApiLevel(3)
@@ -3472,6 +3634,9 @@ val android.attr.weightSum: StringContainer
 @RequiresApiLevel(17)
 val android.attr.widgetCategory: StringContainer
         get() = StringContainer("@android:attr/widgetCategory")
+@RequiresApiLevel(28)
+val android.attr.widgetFeatures: StringContainer
+        get() = StringContainer("@android:attr/widgetFeatures")
 val android.attr.widgetLayout: StringContainer
         get() = StringContainer("@android:attr/widgetLayout")
 val android.attr.width: StringContainer
@@ -3547,6 +3712,9 @@ val android.attr.windowIsFloating: StringContainer
         get() = StringContainer("@android:attr/windowIsFloating")
 val android.attr.windowIsTranslucent: StringContainer
         get() = StringContainer("@android:attr/windowIsTranslucent")
+@RequiresApiLevel(28)
+val android.attr.windowLayoutInDisplayCutoutMode: StringContainer
+        get() = StringContainer("@android:attr/windowLayoutInDisplayCutoutMode")
 @RequiresApiLevel(27)
 val android.attr.windowLightNavigationBar: StringContainer
         get() = StringContainer("@android:attr/windowLightNavigationBar")
@@ -3636,6 +3804,25 @@ val android.attr.yesNoPreferenceStyle: StringContainer
         get() = StringContainer("@android:attr/yesNoPreferenceStyle")
 val android.attr.zAdjustment: StringContainer
         get() = StringContainer("@android:attr/zAdjustment")
+@RequiresApiLevel(29)
+val android.attr.zygotePreloadName: StringContainer
+        get() = StringContainer("@android:attr/zygotePreloadName")
+
+@RequiresApiLevel(29)
+val android.bool.config_perDisplayFocusEnabled: StringContainer
+        get() = StringContainer("@android:bool/config_perDisplayFocusEnabled")
+@RequiresApiLevel(29)
+val android.bool.config_sendPackageName: StringContainer
+        get() = StringContainer("@android:bool/config_sendPackageName")
+@RequiresApiLevel(29)
+val android.bool.config_showDefaultAssistant: StringContainer
+        get() = StringContainer("@android:bool/config_showDefaultAssistant")
+@RequiresApiLevel(29)
+val android.bool.config_showDefaultEmergency: StringContainer
+        get() = StringContainer("@android:bool/config_showDefaultEmergency")
+@RequiresApiLevel(29)
+val android.bool.config_showDefaultHome: StringContainer
+        get() = StringContainer("@android:bool/config_showDefaultHome")
 
 val android.color.background_dark: StringContainer
         get() = StringContainer("@android:color/background_dark")
@@ -3691,6 +3878,9 @@ val android.color.secondary_text_light: StringContainer
         get() = StringContainer("@android:color/secondary_text_light")
 val android.color.secondary_text_light_nodisable: StringContainer
         get() = StringContainer("@android:color/secondary_text_light_nodisable")
+@RequiresApiLevel(29)
+val android.color.system_notification_accent_color: StringContainer
+        get() = StringContainer("@android:color/system_notification_accent_color")
 val android.color.tab_indicator_text: StringContainer
         get() = StringContainer("@android:color/tab_indicator_text")
 val android.color.tertiary_text_dark: StringContainer
@@ -3706,6 +3896,9 @@ val android.color.widget_edittext_dark: StringContainer
 
 val android.dimen.app_icon_size: StringContainer
         get() = StringContainer("@android:dimen/app_icon_size")
+@RequiresApiLevel(29)
+val android.dimen.config_restrictedIconSize: StringContainer
+        get() = StringContainer("@android:dimen/config_restrictedIconSize")
 @RequiresApiLevel(11)
 val android.dimen.dialog_min_width_major: StringContainer
         get() = StringContainer("@android:dimen/dialog_min_width_major")
@@ -3807,6 +4000,9 @@ val android.drawable.ic_dialog_info: StringContainer
         get() = StringContainer("@android:drawable/ic_dialog_info")
 val android.drawable.ic_dialog_map: StringContainer
         get() = StringContainer("@android:drawable/ic_dialog_map")
+@RequiresApiLevel(29)
+val android.drawable.ic_info: StringContainer
+        get() = StringContainer("@android:drawable/ic_info")
 val android.drawable.ic_input_add: StringContainer
         get() = StringContainer("@android:drawable/ic_input_add")
 val android.drawable.ic_input_delete: StringContainer
@@ -4092,9 +4288,24 @@ val android.drawable.zoom_plate: StringContainer
 @RequiresApiLevel(23)
 val android.id.accessibilityActionContextClick: StringContainer
         get() = StringContainer("@android:id/accessibilityActionContextClick")
+@RequiresApiLevel(28)
+val android.id.accessibilityActionHideTooltip: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionHideTooltip")
 @RequiresApiLevel(26)
 val android.id.accessibilityActionMoveWindow: StringContainer
         get() = StringContainer("@android:id/accessibilityActionMoveWindow")
+@RequiresApiLevel(29)
+val android.id.accessibilityActionPageDown: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionPageDown")
+@RequiresApiLevel(29)
+val android.id.accessibilityActionPageLeft: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionPageLeft")
+@RequiresApiLevel(29)
+val android.id.accessibilityActionPageRight: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionPageRight")
+@RequiresApiLevel(29)
+val android.id.accessibilityActionPageUp: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionPageUp")
 @RequiresApiLevel(23)
 val android.id.accessibilityActionScrollDown: StringContainer
         get() = StringContainer("@android:id/accessibilityActionScrollDown")
@@ -4116,6 +4327,9 @@ val android.id.accessibilityActionSetProgress: StringContainer
 @RequiresApiLevel(23)
 val android.id.accessibilityActionShowOnScreen: StringContainer
         get() = StringContainer("@android:id/accessibilityActionShowOnScreen")
+@RequiresApiLevel(28)
+val android.id.accessibilityActionShowTooltip: StringContainer
+        get() = StringContainer("@android:id/accessibilityActionShowTooltip")
 @RequiresApiLevel(3)
 val android.id.addToDictionary: StringContainer
         get() = StringContainer("@android:id/addToDictionary")
@@ -4313,7 +4527,7 @@ val android.interpolator.decelerate_quad: StringContainer
 @RequiresApiLevel(11)
 val android.interpolator.decelerate_quint: StringContainer
         get() = StringContainer("@android:interpolator/decelerate_quint")
-@RequiresApiLevel(27)
+@RequiresApiLevel(28)
 val android.interpolator.fast_out_extra_slow_in: StringContainer
         get() = StringContainer("@android:interpolator/fast_out_extra_slow_in")
 @RequiresApiLevel(21)
@@ -4410,6 +4624,36 @@ val android.string.autofill: StringContainer
         get() = StringContainer("@android:string/autofill")
 val android.string.cancel: StringContainer
         get() = StringContainer("@android:string/cancel")
+@RequiresApiLevel(29)
+val android.string.config_defaultAssistant: StringContainer
+        get() = StringContainer("@android:string/config_defaultAssistant")
+@RequiresApiLevel(29)
+val android.string.config_defaultBrowser: StringContainer
+        get() = StringContainer("@android:string/config_defaultBrowser")
+@RequiresApiLevel(29)
+val android.string.config_defaultDialer: StringContainer
+        get() = StringContainer("@android:string/config_defaultDialer")
+@RequiresApiLevel(29)
+val android.string.config_defaultSms: StringContainer
+        get() = StringContainer("@android:string/config_defaultSms")
+@RequiresApiLevel(29)
+val android.string.config_feedbackIntentExtraKey: StringContainer
+        get() = StringContainer("@android:string/config_feedbackIntentExtraKey")
+@RequiresApiLevel(29)
+val android.string.config_feedbackIntentNameKey: StringContainer
+        get() = StringContainer("@android:string/config_feedbackIntentNameKey")
+@RequiresApiLevel(29)
+val android.string.config_helpIntentExtraKey: StringContainer
+        get() = StringContainer("@android:string/config_helpIntentExtraKey")
+@RequiresApiLevel(29)
+val android.string.config_helpIntentNameKey: StringContainer
+        get() = StringContainer("@android:string/config_helpIntentNameKey")
+@RequiresApiLevel(29)
+val android.string.config_helpPackageNameKey: StringContainer
+        get() = StringContainer("@android:string/config_helpPackageNameKey")
+@RequiresApiLevel(29)
+val android.string.config_helpPackageNameValue: StringContainer
+        get() = StringContainer("@android:string/config_helpPackageNameValue")
 @RequiresApiLevel(3)
 val android.string.copy: StringContainer
         get() = StringContainer("@android:string/copy")
@@ -4986,6 +5230,9 @@ val android.style.Theme_Black_NoTitleBar_Fullscreen: StringContainer
 @RequiresApiLevel(14)
 val android.style.Theme_DeviceDefault: StringContainer
         get() = StringContainer("@android:style/Theme_DeviceDefault")
+@RequiresApiLevel(29)
+val android.style.Theme_DeviceDefault_DayNight: StringContainer
+        get() = StringContainer("@android:style/Theme_DeviceDefault_DayNight")
 @RequiresApiLevel(14)
 val android.style.Theme_DeviceDefault_Dialog: StringContainer
         get() = StringContainer("@android:style/Theme_DeviceDefault_Dialog")
@@ -5007,6 +5254,9 @@ val android.style.Theme_DeviceDefault_DialogWhenLarge: StringContainer
 @RequiresApiLevel(14)
 val android.style.Theme_DeviceDefault_DialogWhenLarge_NoActionBar: StringContainer
         get() = StringContainer("@android:style/Theme_DeviceDefault_DialogWhenLarge_NoActionBar")
+@RequiresApiLevel(29)
+val android.style.Theme_DeviceDefault_DocumentsUI: StringContainer
+        get() = StringContainer("@android:style/Theme_DeviceDefault_DocumentsUI")
 @RequiresApiLevel(14)
 val android.style.Theme_DeviceDefault_InputMethod: StringContainer
         get() = StringContainer("@android:style/Theme_DeviceDefault_InputMethod")
@@ -5328,6 +5578,9 @@ val android.style.Theme_WithActionBar: StringContainer
 @RequiresApiLevel(21)
 val android.style.ThemeOverlay: StringContainer
         get() = StringContainer("@android:style/ThemeOverlay")
+@RequiresApiLevel(29)
+val android.style.ThemeOverlay_DeviceDefault_Accent_DayNight: StringContainer
+        get() = StringContainer("@android:style/ThemeOverlay_DeviceDefault_Accent_DayNight")
 @RequiresApiLevel(21)
 val android.style.ThemeOverlay_Material: StringContainer
         get() = StringContainer("@android:style/ThemeOverlay_Material")
@@ -5440,9 +5693,15 @@ val android.style.Widget_DeviceDefault_Button: StringContainer
 @RequiresApiLevel(14)
 val android.style.Widget_DeviceDefault_Button_Borderless: StringContainer
         get() = StringContainer("@android:style/Widget_DeviceDefault_Button_Borderless")
+@RequiresApiLevel(28)
+val android.style.Widget_DeviceDefault_Button_Borderless_Colored: StringContainer
+        get() = StringContainer("@android:style/Widget_DeviceDefault_Button_Borderless_Colored")
 @RequiresApiLevel(14)
 val android.style.Widget_DeviceDefault_Button_Borderless_Small: StringContainer
         get() = StringContainer("@android:style/Widget_DeviceDefault_Button_Borderless_Small")
+@RequiresApiLevel(28)
+val android.style.Widget_DeviceDefault_Button_Colored: StringContainer
+        get() = StringContainer("@android:style/Widget_DeviceDefault_Button_Colored")
 @RequiresApiLevel(14)
 val android.style.Widget_DeviceDefault_Button_Inset: StringContainer
         get() = StringContainer("@android:style/Widget_DeviceDefault_Button_Inset")

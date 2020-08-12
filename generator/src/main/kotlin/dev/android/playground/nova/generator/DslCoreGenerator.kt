@@ -23,6 +23,7 @@ import kotlin.reflect.KClass
 import kotlin.reflect.full.isSubclassOf
 import kotlin.reflect.full.isSuperclassOf
 import kotlin.reflect.full.superclasses
+import kotlin.system.exitProcess
 
 fun getAnnotationSource(attributeClass: KClass<*>): String {
     val reuse = (attributeClass.annotations.find { it.annotationClass == Reuse::class })
@@ -35,16 +36,28 @@ fun getAnnotationSource(attributeClass: KClass<*>): String {
 
 fun getEnumClassNameForRendering(enumClass: KClass<out StyleableEnum>): String {
 //    return enumClass.simpleName!!
-//    val split = enumClass.qualifiedName!!.split('.')
-//    return split[split.lastIndex - 1] + "." + split[split.lastIndex]
-    return enumClass.qualifiedName!!.substring(11)
+    val split = enumClass.qualifiedName!!.split('.')
+    val last = split[split.lastIndex]
+    val prev = split[split.lastIndex - 1]
+    if (prev.endsWith("Styleable")) {
+        return prev + "." + last
+    } else {
+        return last
+    }
+//    return enumClass.qualifiedName!!.substring(11)
 }
 
 fun getFlagClassNameForRendering(flagClass: KClass<out StyleableFlag>): String {
 //    return enumClass.simpleName!!
-//    val split = enumClass.qualifiedName!!.split('.')
-//    return split[split.lastIndex - 1] + "." + split[split.lastIndex]
-    return flagClass.qualifiedName!!.substring(11)
+    val split = flagClass.qualifiedName!!.split('.')
+    val last = split[split.lastIndex]
+    val prev = split[split.lastIndex - 1]
+    if (prev.endsWith("Styleable")) {
+        return prev + "." + last
+    } else {
+        return last
+    }
+//    return flagClass.qualifiedName!!.substring(11)
 }
 
 fun typeAnnotations(attributeClass: KClass<*>): List<Annotation> {
@@ -451,17 +464,59 @@ val topStyleables = arrayOf(CoreThemeStyleable::class,
         CoreRecyclerViewStyleable::class,
         CoreNotificationThemeStyleable::class)
 
-fun main(args: Array<String>) {
-    File("/Users/kirillg/Playground/src/generated").mkdirs()
+internal fun getInputArgument(args: Array<String>, argumentName: String?): String? {
+    for (arg in args) {
+        val split = arg.split("=").toTypedArray()
+        if (split.size != 2) {
+            println("Argument '$arg' unsupported")
+            exitProcess(1)
+        }
+        if (split[0].compareTo(argumentName!!) == 0) {
+            return split[1]
+        }
+    }
+    return null
+}
 
-    val writerThemes = PrintWriter("/Users/kirillg/Playground/src/generated/CoreThemes2.kt")
-    writerThemes.println("package theme.core")
+internal fun printCopyright(printWriter: PrintWriter) {
+    printWriter.println("/*")
+    printWriter.println(" * Copyright 2020 Google LLC")
+    printWriter.println(" *")
+    printWriter.println(" * Licensed under the Apache License, Version 2.0 (the \"License\");")
+    printWriter.println(" * you may not use this file except in compliance with the License.")
+    printWriter.println(" * You may obtain a copy of the License at")
+    printWriter.println(" *")
+    printWriter.println(" *     http://www.apache.org/licenses/LICENSE-2.0")
+    printWriter.println(" *")
+    printWriter.println(" * Unless required by applicable law or agreed to in writing, software")
+    printWriter.println(" * distributed under the License is distributed on an \"AS IS\" BASIS,")
+    printWriter.println(" * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.")
+    printWriter.println(" * See the License for the specific language governing permissions and")
+    printWriter.println(" * limitations under the License.")
+    printWriter.println(" */")
+}
+
+fun main(args: Array<String>) {
+    val folderForThemesAndStyles = getInputArgument(args, "mainOutputFolder")
+    if (folderForThemesAndStyles == null) {
+        exitProcess(1)
+    }
+    val folderForSampleUsage = getInputArgument(args, "sampleOutputFolder")
+    if (folderForSampleUsage == null) {
+        exitProcess(1)
+    }
+
+    File(folderForThemesAndStyles).mkdirs()
+
+    val writerThemes = PrintWriter("$folderForThemesAndStyles/CoreThemes2.kt")
+    printCopyright(writerThemes)
+    writerThemes.println("package dev.android.playground.nova.core.framework.generated")
     writerThemes.println()
-    writerThemes.println("import theme.*")
-    writerThemes.println("import theme.base.*")
+    writerThemes.println("import dev.android.playground.nova.core.base.*")
+    writerThemes.println("import dev.android.playground.nova.core.framework.*")
+    writerThemes.println("import dev.android.playground.nova.core.framework.styleables.*")
     writerThemes.println()
     renderAll(writerThemes, topStyleables)
-
 
     writerThemes.println("fun <T : CoreThemeStyle2> T.extralarge(init: T.() -> Unit) {")
     writerThemes.println("    conditionalBag(ExtraLarge(), init)")
@@ -479,11 +534,13 @@ fun main(args: Array<String>) {
         }
     }
 
-    val writerStyles = PrintWriter("/Users/kirillg/Playground/src/generated/CoreStyles2.kt")
-    writerStyles.println("package theme.core")
+    val writerStyles = PrintWriter("$folderForThemesAndStyles/CoreStyles2.kt")
+    printCopyright(writerStyles)
+    writerStyles.println("package dev.android.playground.nova.core.framework.generated")
     writerStyles.println()
-    writerStyles.println("import theme.*")
-    writerStyles.println("import theme.base.*")
+    writerStyles.println("import dev.android.playground.nova.core.base.*")
+    writerStyles.println("import dev.android.playground.nova.core.framework.*")
+    writerStyles.println("import dev.android.playground.nova.core.framework.styleables.*")
     writerStyles.println()
     writerStyles.println("open class CoreStyle2 : BaseBag(\"style\") {")
     writerStyles.println("    fun asReference(): StringContainer {")
@@ -498,14 +555,16 @@ fun main(args: Array<String>) {
     writerStyles.close()
 
 
-    val writerSample = PrintWriter("/Users/kirillg/Playground/src/generated/CoreSimple2.kt")
+    val writerSample = PrintWriter("$folderForSampleUsage/CoreSimpleGenerated.kt")
 
-    writerSample.println("package generated")
+    printCopyright(writerSample)
+    writerSample.println("package dev.android.playground.nova.usage")
     writerSample.println()
 
-    writerSample.println("import theme.*")
-    writerSample.println("import theme.base.*")
-    writerSample.println("import theme.core.*")
+    writerSample.println("import dev.android.playground.nova.core.base.*")
+    writerSample.println("import dev.android.playground.nova.core.framework.*")
+    writerSample.println("import import dev.android.playground.nova.core.framework.styleables.*")
+    writerSample.println("import import dev.android.playground.nova.core.framework.themes.*")
     writerSample.println()
 
     writerSample.println("fun style2(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,")
@@ -546,7 +605,7 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun simple() {")
+    writerSample.println("fun simpleCoreGenerated() {")
     writerSample.println()
     writerSample.println("    theme2(name = \"MyMainTheme\", parent = \"Theme.Material\") {")
     writerSample.println("        // Simple attributes (can use primitive values or reference framework")
@@ -608,7 +667,7 @@ fun main(args: Array<String>) {
     writerSample.println()
 
     writerSample.println("fun main(args: Array<String>) {")
-    writerSample.println("    preInit()")
+    writerSample.println("    initializeCoreDictionary()")
     writerSample.println("    simple()")
     writerSample.println("    for (entry in postInit()) {")
     writerSample.println("        System.out.println(\"*** \" + entry.key + \" ***\")")
@@ -620,6 +679,7 @@ fun main(args: Array<String>) {
 
     writerSample.close()
 
+    println("Successfully created output files")
 //    for (base in styleables) {
 //        System.out.println(base.simpleName)
 //    }
@@ -702,9 +762,9 @@ var renderedClasses: MutableSet<KClass<out BaseStyleable>> = HashSet()
 var allViewAttributes: MutableMap<String, Pair<KClass<*>, String>> = HashMap()
 
 fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<out BaseStyleable>?,
-                           styleClassname: String, superStyleClassname: String,
-                           inlineAttributeName: String,
-                           writer: PrintWriter) {
+        styleClassname: String, superStyleClassname: String,
+        inlineAttributeName: String,
+        writer: PrintWriter) {
 
     val stylesToRender: MutableSet<KClass<out BaseStyleable>> = HashSet()
 
