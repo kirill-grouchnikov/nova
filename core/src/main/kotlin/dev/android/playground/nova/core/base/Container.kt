@@ -25,9 +25,7 @@ class FloatContainer : AttributeValue<Float> {
     constructor(resourceReference: String) : super(resourceReference)
 }
 
-class StringContainer : AttributeValue<String> {
-    constructor(text: String) : super(text)
-}
+class StringContainer(text: String) : AttributeValue<String>(text)
 
 class IntegerContainer : AttributeValue<Int> {
     constructor(value: Int) : super(value)

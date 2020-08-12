@@ -34,7 +34,7 @@ abstract class Bag(var xmlTag: String) {
 
     protected fun <T : Attribute<out Any>> initAttr(klass: KClass<*>,
                                                     init: T.() -> Unit): T {
-        var tag: T?
+        val tag: T?
         if (klass.findAnnotation<DimensionValue>() != null) {
             tag = (::DimensionAttribute)(klass.simpleName!!) as T
         } else if (klass.findAnnotation<BooleanValue>() != null) {
@@ -169,7 +169,8 @@ abstract class Bag(var xmlTag: String) {
         }
     }
 
-    inner class GenericEnumDelegate<T : Enum<*>>(val enumClass: KClass<T>, vararg val supportedType: KClass<*>) {
+    inner class GenericEnumDelegate<T : Enum<*>>(private val enumClass: KClass<T>,
+            vararg val supportedType: KClass<*>) {
         operator fun getValue(thisRef: Any?, property: KProperty<*>): Any? {
             return null
         }
@@ -181,7 +182,7 @@ abstract class Bag(var xmlTag: String) {
                 attr.value = StyleableEnumContainer(value as Enum<*>)
             } else {
                 for (candidateType in supportedType) {
-                    if (value!!::class.isSubclassOf(candidateType)) {
+                    if (value::class.isSubclassOf(candidateType)) {
                         attr = wrapValueAsAttribute(value, property.name)
                     }
                     if (attr != null) {
@@ -200,7 +201,7 @@ abstract class Bag(var xmlTag: String) {
         }
     }
 
-    inner class GenericFlagDelegate<T : Enum<*>>(val enumClass: KClass<T>) {
+    inner class GenericFlagDelegate<T : Enum<*>>(private val enumClass: KClass<T>) {
         operator fun getValue(thisRef: Any?, property: KProperty<*>): Any? {
             return null
         }
@@ -210,7 +211,7 @@ abstract class Bag(var xmlTag: String) {
             if (value!!::class.isSubclassOf(List::class)) {
                 val flagList = value as List<*>
                 if (!flagList.all { it!!::class == enumClass }) {
-                    throw IllegalStateException("Expecting all entries to be " + enumClass)
+                    throw IllegalStateException("Expecting all entries to be $enumClass")
                 }
                 attr = (::StyleableFlagAttribute)(property.name)
                 attr.value = StyleableFlagContainer(flagList as List<Enum<*>>)
@@ -403,7 +404,7 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
     }
 
     fun hasConditionalBags(): Boolean {
-        return !conditionalBags.isEmpty()
+        return conditionalBags.isNotEmpty()
     }
 
     fun getConditionalBags(): Map<ResourceQualifier, BaseBag> {
@@ -417,10 +418,10 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
     fun addAttributesFrom(baseBag: BaseBag) {
         for (attr in baseBag.attributes) {
             if (attr.isConditional()) {
-                throw IllegalStateException("Cannot use conditional attributes in conditional blocks");
+                throw IllegalStateException("Cannot use conditional attributes in conditional blocks")
             }
         }
-        attributes.addAll(baseBag.attributes);
+        attributes.addAll(baseBag.attributes)
     }
 
     private fun hasRenderableStyles(): Boolean {
@@ -437,16 +438,16 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
 
         val parentName = getParentNameInXml()
         val parentThemeDefinition =
-                if (parentName != null) ThemeDictionary.getThemeDefinition("", parentName!!) else null
+                if (parentName != null) ThemeDictionary.getThemeDefinition("", parentName) else null
         val isParentInAndroidNamespace =
-                if (parentThemeDefinition != null) parentThemeDefinition!!.hasAndroidNamespace else false
+                if (parentThemeDefinition != null) parentThemeDefinition.hasAndroidNamespace else false
         val stylePrefix = if (isParentInAndroidNamespace) "@android:style" else "@style"
 
         val parentBlurb = if (parentName == null) "" else " parent=\"" + stylePrefix + "/${getParentNameInXml()}\""
         if (noContent) {
-            builder.append("$indent<$xmlTag name=\"${this.myName}\"${parentBlurb} />\n")
+            builder.append("$indent<$xmlTag name=\"${this.myName}\"$parentBlurb />\n")
         } else {
-            builder.append("$indent<$xmlTag name=\"${this.myName}\"${parentBlurb}>\n")
+            builder.append("$indent<$xmlTag name=\"${this.myName}\"$parentBlurb>\n")
             for (c in attributes) {
                 c.render(builder, "$indent    ")
             }
@@ -480,7 +481,7 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
             val isParentInAndroidNamespace =
                     if (parentStyleName != null) parentStyle!!.hasAndroidNamespace else false
             val parentStylePrefix = if (isParentInAndroidNamespace) "@android:style" else "@style"
-            val parentStyleBlock = if (parentStyleName != null) parentStylePrefix + "/" + parentStyleName else null
+            val parentStyleBlock = if (parentStyleName != null) "$parentStylePrefix/$parentStyleName" else null
             style.render(builder, indent, myGeneratedName, parentStyleBlock)
 
             for (nested in style.styles) {
@@ -499,7 +500,7 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
                         if (parentNestedStyleName != null) parentNestedStyle!!.hasAndroidNamespace else false
                 val parentNestedStylePrefix = if (isParentNestedInAndroidNamespace) "@android:style" else "@style"
                 nested.render(builder, indent, myGeneratedNestedName,
-                        parentNestedStylePrefix + "/" + parentNestedStyleName)
+                        "$parentNestedStylePrefix/$parentNestedStyleName")
             }
         }
     }
@@ -540,7 +541,7 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
         renderStyles(builder, indent)
     }
 
-    override public fun clone(): Any {
+    public override fun clone(): Any {
         val result = super.clone() as BaseBag
         result.attributes = arrayListOf()
         result.attributes.addAll(attributes)

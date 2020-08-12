@@ -109,9 +109,6 @@ class StyleAttribute
 
 abstract class InlineStyle(name: String) : BaseBag(name), Cloneable {
     var shouldSkipRender: Boolean = false
-        set(value) {
-            field = value
-        }
 
     fun render(builder: StringBuilder, indent: String, generatedName: String?, parentName: String?) {
         val isEmpty = attributes.isEmpty() && styles.isEmpty()
@@ -134,7 +131,7 @@ abstract class InlineStyle(name: String) : BaseBag(name), Cloneable {
         }
     }
 
-    override public fun clone(): Any {
+    override fun clone(): Any {
         return super<BaseBag>.clone()
     }
 }
@@ -165,8 +162,8 @@ open class WidgetStyleDefinition(open val name: String, var parent: WidgetStyleD
             for (nestedClass in styleableForAttrs.nestedClasses) {
                 for (nestedClassAnnotation in nestedClass.annotations) {
                     if (nestedClassAnnotation.annotationClass.findAnnotation<Value>() != null) {
-                        supportedAttributes.put(nestedClass.simpleName!!,
-                                nestedClassAnnotation.annotationClass::class)
+                        supportedAttributes[nestedClass.simpleName!!] =
+                                nestedClassAnnotation.annotationClass::class
                     }
                 }
             }
@@ -183,10 +180,10 @@ open class WidgetStyleDefinition(open val name: String, var parent: WidgetStyleD
     }
 
     fun addStyle(style: WidgetStyleDefinition) {
-        styles.put(style.name, style)
+        styles[style.name] = style
     }
 
-    fun retrieveStyleable(): KClass<out BaseStyleable>? {
+    private fun retrieveStyleable(): KClass<out BaseStyleable>? {
         if (styleable != null) {
             return styleable
         }
@@ -196,9 +193,6 @@ open class WidgetStyleDefinition(open val name: String, var parent: WidgetStyleD
 
 data class AppWidgetStyleDefinition(override val name: String) : WidgetStyleDefinition(name, null) {
     var generatedName: String? = null
-        set(newValue) {
-            field = newValue
-        }
 }
 
 data class ResourceDefinition(val tag: String, val name: String, val prefix: String,

@@ -46,7 +46,7 @@ class Night : ResourceQualifier {
 
 class PlatformVersion(private val version: Int) : ResourceQualifier {
     override fun render(builder: StringBuilder) {
-        builder.append("-v" + version)
+        builder.append("-v$version")
     }
 }
 

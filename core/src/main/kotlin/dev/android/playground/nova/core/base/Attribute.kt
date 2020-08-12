@@ -45,8 +45,8 @@ abstract class Attribute<T>(val name: String) {
         builder.append(">")
         when {
             value != null -> value?.render(builder)
-            themeAttributeName != null -> builder.append("?attr/" + themeAttributeName)
-            else -> builder.append(conditionalResourcePrefix + "/" + generatedConditionalResourceName)
+            themeAttributeName != null -> builder.append("?attr/$themeAttributeName")
+            else -> builder.append("$conditionalResourcePrefix/$generatedConditionalResourceName")
         }
         builder.append("</item>\n")
     }

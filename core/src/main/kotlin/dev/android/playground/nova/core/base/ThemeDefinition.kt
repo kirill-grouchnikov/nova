@@ -18,7 +18,7 @@ package dev.android.playground.nova.core.base
 import dev.android.playground.nova.core.framework.styleables.CoreThemeStyleable
 
 open class ThemeDefinition(override val name: String, open var themeParent: ThemeDefinition?,
-        var _hasAndroidNamespace : Boolean) :
+        private var _hasAndroidNamespace : Boolean) :
         WidgetStyleDefinition(name, themeParent, CoreThemeStyleable::class) {
     init {
         hasAndroidNamespace = _hasAndroidNamespace
@@ -52,14 +52,14 @@ open class ThemeDefinition(override val name: String, open var themeParent: Them
         for (styleName in styleNames) {
             result = result!!.getStyleDefinition(styleName)
             if (result == null) {
-                return null;
+                return null
             }
         }
         return result
     }
 
     fun addChildStyle(style: WidgetStyleDefinition) {
-        styles.put(style.name, style)
+        styles[style.name] = style
     }
 }
 
@@ -72,7 +72,7 @@ data class AppThemeDefinition(override val name: String) : ThemeDefinition(name,
             // this style, and as the parent for any style that extends it)
             appWidgetStyleDefinition.generatedName = prefix + "_" + c.xmlTag
             // And store this style on the theme definition
-            this.styles.put(c.xmlTag, appWidgetStyleDefinition)
+            this.styles[c.xmlTag] = appWidgetStyleDefinition
 
             for (nested in c.styles) {
                 // For each widget style explicitly defined in this theme create a widget style object
@@ -81,9 +81,9 @@ data class AppThemeDefinition(override val name: String) : ThemeDefinition(name,
                 // this style, and as the parent for any style that extends it)
                 nestedStyleDefinition.generatedName = prefix + "_" + c.xmlTag + "_" + nested.xmlTag
                 // And store this style on the theme definition
-                this.nestedStyles.put(nested.xmlTag, nestedStyleDefinition)
+                this.nestedStyles[nested.xmlTag] = nestedStyleDefinition
 
-                appWidgetStyleDefinition.styles.put(nested.xmlTag, nestedStyleDefinition)
+                appWidgetStyleDefinition.styles[nested.xmlTag] = nestedStyleDefinition
             }
         }
     }

@@ -20,7 +20,7 @@ object ThemeDictionary {
     private val appBags = hashMapOf<String, HashMap<String, BaseBag>>()
     private val appConditionalResources = hashMapOf<String, ArrayList<ResourceDefinition>>()
 
-    fun getThemeDefinition(conditional: StringCondition, themeName: String): ThemeDefinition? {
+    private fun getThemeDefinition(conditional: StringCondition, themeName: String): ThemeDefinition? {
         return getThemeDefinition(getResourceQualifiers(conditional), themeName)
     }
 
@@ -39,11 +39,11 @@ object ThemeDictionary {
         themeDefinitions[resourceQualifiers]!![themeDefinition.name] = themeDefinition
     }
 
-    fun getBag(conditional: StringCondition, bagName: String): BaseBag? {
+    private fun getBag(conditional: StringCondition, bagName: String): BaseBag? {
         return getBag(getResourceQualifiers(conditional), bagName)
     }
 
-    fun getBag(resourceQualifiers: String, bagName: String): BaseBag? {
+    private fun getBag(resourceQualifiers: String, bagName: String): BaseBag? {
         return appBags[resourceQualifiers]!![bagName]
     }
 
@@ -251,7 +251,7 @@ object ThemeDictionary {
                 }
             }
             builder.append("</resources>\n")
-            result.put("values$qualifier/generated_themes.xml", builder.toString())
+            result["values$qualifier/generated_themes.xml"] = builder.toString()
         }
 
         // Iterate over all app-defined themes and generate matching XML snippets for all inline
@@ -268,7 +268,7 @@ object ThemeDictionary {
                 theme.outputStyles(builder, "   ")
             }
             builder.append("</resources>\n")
-            result.put("values$qualifier/generated_styles.xml", builder.toString())
+            result["values$qualifier/generated_styles.xml"] = builder.toString()
         }
 
         // Iterate over all app-defined resources that are conditional based on resource
@@ -287,7 +287,7 @@ object ThemeDictionary {
                 builder.append("</" + value.tag + ">\n")
             }
             builder.append("</resources>\n")
-            result.put("values$qualifier/generated_values.xml", builder.toString())
+            result["values$qualifier/generated_values.xml"] = builder.toString()
         }
 
         return result

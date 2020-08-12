@@ -151,8 +151,7 @@ abstract class CoreStyleable : BaseStyleable {
 
 @SkipForDSL
 @UseAndroidNamespace
-abstract class CoreWidgetStyleable : BaseStyleable {
-}
+abstract class CoreWidgetStyleable : BaseStyleable
 
 @UseAndroidNamespace
 abstract class CoreThemeStyleable : CoreWindowStyleable() {
