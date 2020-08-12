@@ -304,7 +304,7 @@ fun isStyleableOfAClass(klass: KClass<*>, klassToCheck: KClass<out BaseStyleable
 }
 
 fun getOutputStyleClassName(klass: KClass<*>): String {
-    return klass.simpleName!!.substring(0, klass.simpleName!!.length - 4) + "2"
+    return klass.simpleName!!.substring(0, klass.simpleName!!.length - 4)
 }
 
 fun renderAll(writer: PrintWriter, klass: Array<KClass<out BaseStyleable>>) {
@@ -508,7 +508,7 @@ fun main(args: Array<String>) {
 
     File(folderForThemesAndStyles).mkdirs()
 
-    val writerThemes = PrintWriter("$folderForThemesAndStyles/CoreThemes2.kt")
+    val writerThemes = PrintWriter("$folderForThemesAndStyles/CoreThemes.kt")
     printCopyright(writerThemes)
     writerThemes.println("package dev.android.playground.nova.core.framework.generated")
     writerThemes.println()
@@ -518,11 +518,11 @@ fun main(args: Array<String>) {
     writerThemes.println()
     renderAll(writerThemes, topStyleables)
 
-    writerThemes.println("fun <T : CoreThemeStyle2> T.extralarge(init: T.() -> Unit) {")
+    writerThemes.println("fun <T : CoreThemeStyle> T.extralarge(init: T.() -> Unit) {")
     writerThemes.println("    conditionalBag(ExtraLarge(), init)")
     writerThemes.println("}")
 
-    writerThemes.println("fun <T : CoreThemeStyle2> T.version(version: Int, init: T.() -> Unit) {")
+    writerThemes.println("fun <T : CoreThemeStyle> T.version(version: Int, init: T.() -> Unit) {")
     writerThemes.println("    conditionalBag(PlatformVersion(version), init)")
     writerThemes.println("}")
 
@@ -534,7 +534,7 @@ fun main(args: Array<String>) {
         }
     }
 
-    val writerStyles = PrintWriter("$folderForThemesAndStyles/CoreStyles2.kt")
+    val writerStyles = PrintWriter("$folderForThemesAndStyles/CoreStyles.kt")
     printCopyright(writerStyles)
     writerStyles.println("package dev.android.playground.nova.core.framework.generated")
     writerStyles.println()
@@ -542,7 +542,7 @@ fun main(args: Array<String>) {
     writerStyles.println("import dev.android.playground.nova.core.framework.*")
     writerStyles.println("import dev.android.playground.nova.core.framework.styleables.*")
     writerStyles.println()
-    writerStyles.println("open class CoreStyle2 : BaseBag(\"style\") {")
+    writerStyles.println("open class CoreStyle : BaseBag(\"style\") {")
     writerStyles.println("    fun asReference(): StringContainer {")
     writerStyles.println("        return StringContainer(\"@style/\" + this.myName)")
     writerStyles.println("    }")
@@ -562,14 +562,14 @@ fun main(args: Array<String>) {
     writerSample.println()
 
     writerSample.println("import dev.android.playground.nova.core.base.*")
-    writerSample.println("import dev.android.playground.nova.core.framework.*")
-    writerSample.println("import import dev.android.playground.nova.core.framework.styleables.*")
-    writerSample.println("import import dev.android.playground.nova.core.framework.themes.*")
+    writerSample.println("import dev.android.playground.nova.core.framework.generated.*")
+    writerSample.println("import dev.android.playground.nova.core.framework.styleables.*")
+    writerSample.println("import dev.android.playground.nova.core.framework.themes.*")
     writerSample.println()
 
-    writerSample.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,")
-    writerSample.println("           init: CoreStyle2.() -> Unit): CoreStyle2 {")
-    writerSample.println("    val style = CoreStyle2()")
+    writerSample.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,")
+    writerSample.println("           init: CoreStyle.() -> Unit): CoreStyle {")
+    writerSample.println("    val style = CoreStyle()")
     writerSample.println("    style.init()")
     writerSample.println("    style.myName = name")
     writerSample.println("    if ((parentName != null) && (parentStyle != null)) {")
@@ -585,8 +585,8 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun theme(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
-    writerSample.println("    val theme = CoreThemeStyle2()")
+    writerSample.println("fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerSample.println("    val theme = CoreThemeStyle()")
     writerSample.println("    theme.init()")
     writerSample.println("    theme.myName = name")
     writerSample.println("    theme.parentName = parent")
@@ -595,8 +595,8 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {")
-    writerSample.println("    val theme = CoreThemeStyle2()")
+    writerSample.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerSample.println("    val theme = CoreThemeStyle()")
     writerSample.println("    theme.init()")
     writerSample.println("    theme.myName = name")
     writerSample.println("    theme.parentCondition = parent")
@@ -617,7 +617,7 @@ fun main(args: Array<String>) {
     writerSample.println("        // Inline widget style (no need for a separate style object)")
     writerSample.println("        actionModeStyle {")
     writerSample.println("            background = color.action_mode_background")
-    writerSample.println("            height = 48.dp")
+    writerSample.println("            //height = 48.dp")
     writerSample.println("        }")
     writerSample.println()
     writerSample.println("        // Deeper nesting of styles")
@@ -666,9 +666,9 @@ fun main(args: Array<String>) {
     writerSample.println("}")
     writerSample.println()
 
-    writerSample.println("fun main(args: Array<String>) {")
+    writerSample.println("fun main() {")
     writerSample.println("    initializeCoreDictionary()")
-    writerSample.println("    simple()")
+    writerSample.println("    simpleCoreGenerated()")
     writerSample.println("    for (entry in postInit()) {")
     writerSample.println("        System.out.println(\"*** \" + entry.key + \" ***\")")
     writerSample.println("        System.out.println(entry.value)")
@@ -817,7 +817,7 @@ fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<
             val definedBy = getAnnotationSource(attributeClass)
             if (inlineableClass != null) {
                 stylesToRender.add(inlineableClass)
-                val styleClassname = inlineableClass.simpleName!!.substring(0, inlineableClass.simpleName!!.length - 4) + "2"
+                val styleClassname = inlineableClass.simpleName!!.substring(0, inlineableClass.simpleName!!.length - 4)
 
                 writer.println("\t@DefinedBy($definedBy::class)")
                 writer.println("\topen$overriding var ${attributeClass.simpleName}: $styleClassname? by InlineStyleDelegate()")

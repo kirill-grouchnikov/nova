@@ -19,14 +19,14 @@ import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.*
 import dev.android.playground.nova.core.framework.styleables.*
 
-open class CoreThemeStyle2 : CoreWindowStyle2 {
+open class CoreThemeStyle : CoreWindowStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 	@DefinedBy(CoreThemeStyleable.absListViewStyle::class)
-	open var absListViewStyle: CoreAbsListViewStyle2? by InlineStyleDelegate()
-	open fun absListViewStyle(init: CoreAbsListViewStyle2.() -> Unit)
-		= initInlineStyle(CoreAbsListViewStyle2(), "absListViewStyle", init)
+	open var absListViewStyle: CoreAbsListViewStyle? by InlineStyleDelegate()
+	open fun absListViewStyle(init: CoreAbsListViewStyle.() -> Unit)
+		= initInlineStyle(CoreAbsListViewStyle(), "absListViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.accessibilityFocusedDrawable::class)
 	open var accessibilityFocusedDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -44,9 +44,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.actionBarItemBackground::class, init)
 
 	@DefinedBy(CoreThemeStyleable.actionBarPopupTheme::class)
-	open var actionBarPopupTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun actionBarPopupTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "actionBarPopupTheme", init)
+	open var actionBarPopupTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun actionBarPopupTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "actionBarPopupTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.actionBarSize::class)
 	open var actionBarSize: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
@@ -55,29 +55,29 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.actionBarStyle::class)
-	open var actionBarStyle: CoreActionBarStyle2? by InlineStyleDelegate()
-	open fun actionBarStyle(init: CoreActionBarStyle2.() -> Unit)
-		= initInlineStyle(CoreActionBarStyle2(), "actionBarStyle", init)
+	open var actionBarStyle: CoreActionBarStyle? by InlineStyleDelegate()
+	open fun actionBarStyle(init: CoreActionBarStyle.() -> Unit)
+		= initInlineStyle(CoreActionBarStyle(), "actionBarStyle", init)
 
 
 
 
 	@DefinedBy(CoreThemeStyleable.actionBarTheme::class)
-	open var actionBarTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun actionBarTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "actionBarTheme", init)
+	open var actionBarTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun actionBarTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "actionBarTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.actionBarWidgetTheme::class)
-	open var actionBarWidgetTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun actionBarWidgetTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "actionBarWidgetTheme", init)
+	open var actionBarWidgetTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun actionBarWidgetTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "actionBarWidgetTheme", init)
 
 
 
 	@DefinedBy(CoreThemeStyleable.actionMenuTextAppearance::class)
-	open var actionMenuTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun actionMenuTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "actionMenuTextAppearance", init)
+	open var actionMenuTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun actionMenuTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "actionMenuTextAppearance", init)
 
 	@DefinedBy(CoreThemeStyleable.actionMenuTextColor::class)
 	open var actionMenuTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -116,9 +116,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.actionModePasteDrawable::class, init)
 
 	@DefinedBy(CoreThemeStyleable.actionModePopupWindowStyle::class)
-	open var actionModePopupWindowStyle: CoreWindowStyle2? by InlineStyleDelegate()
-	open fun actionModePopupWindowStyle(init: CoreWindowStyle2.() -> Unit)
-		= initInlineStyle(CoreWindowStyle2(), "actionModePopupWindowStyle", init)
+	open var actionModePopupWindowStyle: CoreWindowStyle? by InlineStyleDelegate()
+	open fun actionModePopupWindowStyle(init: CoreWindowStyle.() -> Unit)
+		= initInlineStyle(CoreWindowStyle(), "actionModePopupWindowStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.actionModeSelectAllDrawable::class)
 	open var actionModeSelectAllDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -136,9 +136,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.actionModeSplitBackground::class, init)
 
 	@DefinedBy(CoreThemeStyleable.actionModeStyle::class)
-	open var actionModeStyle: CoreActionModeStyle2? by InlineStyleDelegate()
-	open fun actionModeStyle(init: CoreActionModeStyle2.() -> Unit)
-		= initInlineStyle(CoreActionModeStyle2(), "actionModeStyle", init)
+	open var actionModeStyle: CoreActionModeStyle? by InlineStyleDelegate()
+	open fun actionModeStyle(init: CoreActionModeStyle.() -> Unit)
+		= initInlineStyle(CoreActionModeStyle(), "actionModeStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.actionModeWebSearchDrawable::class)
 	open var actionModeWebSearchDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -153,9 +153,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.activatedBackgroundIndicator::class, init)
 
 	@DefinedBy(CoreThemeStyleable.activityChooserViewStyle::class)
-	open var activityChooserViewStyle: CoreActivityChooserViewStyle2? by InlineStyleDelegate()
-	open fun activityChooserViewStyle(init: CoreActivityChooserViewStyle2.() -> Unit)
-		= initInlineStyle(CoreActivityChooserViewStyle2(), "activityChooserViewStyle", init)
+	open var activityChooserViewStyle: CoreActivityChooserViewStyle? by InlineStyleDelegate()
+	open fun activityChooserViewStyle(init: CoreActivityChooserViewStyle.() -> Unit)
+		= initInlineStyle(CoreActivityChooserViewStyle(), "activityChooserViewStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.alertDialogCenterButtons::class)
@@ -169,14 +169,14 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.alertDialogIcon::class, init)
 
 	@DefinedBy(CoreThemeStyleable.alertDialogStyle::class)
-	open var alertDialogStyle: CoreAlertDialogStyle2? by InlineStyleDelegate()
-	open fun alertDialogStyle(init: CoreAlertDialogStyle2.() -> Unit)
-		= initInlineStyle(CoreAlertDialogStyle2(), "alertDialogStyle", init)
+	open var alertDialogStyle: CoreAlertDialogStyle? by InlineStyleDelegate()
+	open fun alertDialogStyle(init: CoreAlertDialogStyle.() -> Unit)
+		= initInlineStyle(CoreAlertDialogStyle(), "alertDialogStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.alertDialogTheme::class)
-	open var alertDialogTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun alertDialogTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "alertDialogTheme", init)
+	open var alertDialogTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun alertDialogTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "alertDialogTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.ambientShadowAlpha::class)
 	open var ambientShadowAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
@@ -184,9 +184,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.ambientShadowAlpha::class, init)
 
 	@DefinedBy(CoreThemeStyleable.autoCompleteTextViewStyle::class)
-	open var autoCompleteTextViewStyle: CoreAutoCompleteTextViewStyle2? by InlineStyleDelegate()
-	open fun autoCompleteTextViewStyle(init: CoreAutoCompleteTextViewStyle2.() -> Unit)
-		= initInlineStyle(CoreAutoCompleteTextViewStyle2(), "autoCompleteTextViewStyle", init)
+	open var autoCompleteTextViewStyle: CoreAutoCompleteTextViewStyle? by InlineStyleDelegate()
+	open fun autoCompleteTextViewStyle(init: CoreAutoCompleteTextViewStyle.() -> Unit)
+		= initInlineStyle(CoreAutoCompleteTextViewStyle(), "autoCompleteTextViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.autofillDatasetPickerMaxHeight::class)
 	open var autofillDatasetPickerMaxHeight: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -219,9 +219,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.backgroundDimEnabled::class, init)
 
 	@DefinedBy(CoreThemeStyleable.borderlessButtonStyle::class)
-	open var borderlessButtonStyle: CoreButtonStyle2? by InlineStyleDelegate()
-	open fun borderlessButtonStyle(init: CoreButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreButtonStyle2(), "borderlessButtonStyle", init)
+	open var borderlessButtonStyle: CoreButtonStyle? by InlineStyleDelegate()
+	open fun borderlessButtonStyle(init: CoreButtonStyle.() -> Unit)
+		= initInlineStyle(CoreButtonStyle(), "borderlessButtonStyle", init)
 
 
 
@@ -229,29 +229,29 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.buttonStyle::class)
-	open var buttonStyle: CoreButtonStyle2? by InlineStyleDelegate()
-	open fun buttonStyle(init: CoreButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreButtonStyle2(), "buttonStyle", init)
+	open var buttonStyle: CoreButtonStyle? by InlineStyleDelegate()
+	open fun buttonStyle(init: CoreButtonStyle.() -> Unit)
+		= initInlineStyle(CoreButtonStyle(), "buttonStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.buttonStyleInset::class)
-	open var buttonStyleInset: CoreButtonStyle2? by InlineStyleDelegate()
-	open fun buttonStyleInset(init: CoreButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreButtonStyle2(), "buttonStyleInset", init)
+	open var buttonStyleInset: CoreButtonStyle? by InlineStyleDelegate()
+	open fun buttonStyleInset(init: CoreButtonStyle.() -> Unit)
+		= initInlineStyle(CoreButtonStyle(), "buttonStyleInset", init)
 
 	@DefinedBy(CoreThemeStyleable.buttonStyleSmall::class)
-	open var buttonStyleSmall: CoreButtonStyle2? by InlineStyleDelegate()
-	open fun buttonStyleSmall(init: CoreButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreButtonStyle2(), "buttonStyleSmall", init)
+	open var buttonStyleSmall: CoreButtonStyle? by InlineStyleDelegate()
+	open fun buttonStyleSmall(init: CoreButtonStyle.() -> Unit)
+		= initInlineStyle(CoreButtonStyle(), "buttonStyleSmall", init)
 
 	@DefinedBy(CoreThemeStyleable.buttonStyleToggle::class)
-	open var buttonStyleToggle: CoreToggleButtonStyle2? by InlineStyleDelegate()
-	open fun buttonStyleToggle(init: CoreToggleButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreToggleButtonStyle2(), "buttonStyleToggle", init)
+	open var buttonStyleToggle: CoreToggleButtonStyle? by InlineStyleDelegate()
+	open fun buttonStyleToggle(init: CoreToggleButtonStyle.() -> Unit)
+		= initInlineStyle(CoreToggleButtonStyle(), "buttonStyleToggle", init)
 
 	@DefinedBy(CoreThemeStyleable.calendarViewStyle::class)
-	open var calendarViewStyle: CoreCalendarViewStyle2? by InlineStyleDelegate()
-	open fun calendarViewStyle(init: CoreCalendarViewStyle2.() -> Unit)
-		= initInlineStyle(CoreCalendarViewStyle2(), "calendarViewStyle", init)
+	open var calendarViewStyle: CoreCalendarViewStyle? by InlineStyleDelegate()
+	open fun calendarViewStyle(init: CoreCalendarViewStyle.() -> Unit)
+		= initInlineStyle(CoreCalendarViewStyle(), "calendarViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.candidatesTextStyleSpans::class)
 	open var candidatesTextStyleSpans: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -259,15 +259,15 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.candidatesTextStyleSpans::class, init)
 
 	@DefinedBy(CoreThemeStyleable.checkBoxPreferenceStyle::class)
-	open var checkBoxPreferenceStyle: CoreCheckBoxPreferenceStyle2? by InlineStyleDelegate()
-	open fun checkBoxPreferenceStyle(init: CoreCheckBoxPreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreCheckBoxPreferenceStyle2(), "checkBoxPreferenceStyle", init)
+	open var checkBoxPreferenceStyle: CoreCheckBoxPreferenceStyle? by InlineStyleDelegate()
+	open fun checkBoxPreferenceStyle(init: CoreCheckBoxPreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreCheckBoxPreferenceStyle(), "checkBoxPreferenceStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.checkedTextViewStyle::class)
-	open var checkedTextViewStyle: CoreCheckedTextViewStyle2? by InlineStyleDelegate()
-	open fun checkedTextViewStyle(init: CoreCheckedTextViewStyle2.() -> Unit)
-		= initInlineStyle(CoreCheckedTextViewStyle2(), "checkedTextViewStyle", init)
+	open var checkedTextViewStyle: CoreCheckedTextViewStyle? by InlineStyleDelegate()
+	open fun checkedTextViewStyle(init: CoreCheckedTextViewStyle.() -> Unit)
+		= initInlineStyle(CoreCheckedTextViewStyle(), "checkedTextViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.colorAccent::class)
 	open var colorAccent: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -376,14 +376,14 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.datePickerDialogTheme::class)
-	open var datePickerDialogTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun datePickerDialogTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "datePickerDialogTheme", init)
+	open var datePickerDialogTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun datePickerDialogTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "datePickerDialogTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.datePickerStyle::class)
-	open var datePickerStyle: CoreDatePickerStyle2? by InlineStyleDelegate()
-	open fun datePickerStyle(init: CoreDatePickerStyle2.() -> Unit)
-		= initInlineStyle(CoreDatePickerStyle2(), "datePickerStyle", init)
+	open var datePickerStyle: CoreDatePickerStyle? by InlineStyleDelegate()
+	open fun datePickerStyle(init: CoreDatePickerStyle.() -> Unit)
+		= initInlineStyle(CoreDatePickerStyle(), "datePickerStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.detailsElementBackground::class)
 	open var detailsElementBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -401,9 +401,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.dialogCustomTitleDecorLayout::class, init)
 
 	@DefinedBy(CoreThemeStyleable.dialogPreferenceStyle::class)
-	open var dialogPreferenceStyle: CoreDialogPreferenceStyle2? by InlineStyleDelegate()
-	open fun dialogPreferenceStyle(init: CoreDialogPreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreDialogPreferenceStyle2(), "dialogPreferenceStyle", init)
+	open var dialogPreferenceStyle: CoreDialogPreferenceStyle? by InlineStyleDelegate()
+	open fun dialogPreferenceStyle(init: CoreDialogPreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreDialogPreferenceStyle(), "dialogPreferenceStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.dialogPreferredPadding::class)
 	open var dialogPreferredPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
@@ -411,9 +411,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.dialogPreferredPadding::class, init)
 
 	@DefinedBy(CoreThemeStyleable.dialogTheme::class)
-	open var dialogTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun dialogTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "dialogTheme", init)
+	open var dialogTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun dialogTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "dialogTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.dialogTitleDecorLayout::class)
 	open var dialogTitleDecorLayout: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -461,9 +461,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.editTextStyle::class)
-	open var editTextStyle: CoreEditTextViewStyle2? by InlineStyleDelegate()
-	open fun editTextStyle(init: CoreEditTextViewStyle2.() -> Unit)
-		= initInlineStyle(CoreEditTextViewStyle2(), "editTextStyle", init)
+	open var editTextStyle: CoreEditTextViewStyle? by InlineStyleDelegate()
+	open fun editTextStyle(init: CoreEditTextViewStyle.() -> Unit)
+		= initInlineStyle(CoreEditTextViewStyle(), "editTextStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.errorMessageAboveBackground::class)
 	open var errorMessageAboveBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -506,14 +506,14 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.expandableListPreferredItemPaddingLeft::class, init)
 
 	@DefinedBy(CoreThemeStyleable.expandableListViewStyle::class)
-	open var expandableListViewStyle: CoreExpandableListViewStyle2? by InlineStyleDelegate()
-	open fun expandableListViewStyle(init: CoreExpandableListViewStyle2.() -> Unit)
-		= initInlineStyle(CoreExpandableListViewStyle2(), "expandableListViewStyle", init)
+	open var expandableListViewStyle: CoreExpandableListViewStyle? by InlineStyleDelegate()
+	open fun expandableListViewStyle(init: CoreExpandableListViewStyle.() -> Unit)
+		= initInlineStyle(CoreExpandableListViewStyle(), "expandableListViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.expandableListViewWhiteStyle::class)
-	open var expandableListViewWhiteStyle: CoreExpandableListViewStyle2? by InlineStyleDelegate()
-	open fun expandableListViewWhiteStyle(init: CoreExpandableListViewStyle2.() -> Unit)
-		= initInlineStyle(CoreExpandableListViewStyle2(), "expandableListViewWhiteStyle", init)
+	open var expandableListViewWhiteStyle: CoreExpandableListViewStyle? by InlineStyleDelegate()
+	open fun expandableListViewWhiteStyle(init: CoreExpandableListViewStyle.() -> Unit)
+		= initInlineStyle(CoreExpandableListViewStyle(), "expandableListViewWhiteStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.fastScrollOverlayPosition::class)
 	open var fastScrollOverlayPosition: Any? by GenericEnumDelegate<CoreThemeStyleable.FastScrollOverlayPositionEnum>(CoreThemeStyleable.FastScrollOverlayPositionEnum::class)
@@ -594,9 +594,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.floatingToolbarPopupBackgroundDrawable::class, init)
 
 	@DefinedBy(CoreThemeStyleable.fragmentBreadCrumbsStyle::class)
-	open var fragmentBreadCrumbsStyle: CoreFragmentBreadCrumbsStyle2? by InlineStyleDelegate()
-	open fun fragmentBreadCrumbsStyle(init: CoreFragmentBreadCrumbsStyle2.() -> Unit)
-		= initInlineStyle(CoreFragmentBreadCrumbsStyle2(), "fragmentBreadCrumbsStyle", init)
+	open var fragmentBreadCrumbsStyle: CoreFragmentBreadCrumbsStyle? by InlineStyleDelegate()
+	open fun fragmentBreadCrumbsStyle(init: CoreFragmentBreadCrumbsStyle.() -> Unit)
+		= initInlineStyle(CoreFragmentBreadCrumbsStyle(), "fragmentBreadCrumbsStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.galleryItemBackground::class)
 	open var galleryItemBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -604,19 +604,19 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.galleryItemBackground::class, init)
 
 	@DefinedBy(CoreThemeStyleable.galleryStyle::class)
-	open var galleryStyle: CoreGalleryStyle2? by InlineStyleDelegate()
-	open fun galleryStyle(init: CoreGalleryStyle2.() -> Unit)
-		= initInlineStyle(CoreGalleryStyle2(), "galleryStyle", init)
+	open var galleryStyle: CoreGalleryStyle? by InlineStyleDelegate()
+	open fun galleryStyle(init: CoreGalleryStyle.() -> Unit)
+		= initInlineStyle(CoreGalleryStyle(), "galleryStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.gestureOverlayViewStyle::class)
-	open var gestureOverlayViewStyle: CoreGestureOverlayViewStyle2? by InlineStyleDelegate()
-	open fun gestureOverlayViewStyle(init: CoreGestureOverlayViewStyle2.() -> Unit)
-		= initInlineStyle(CoreGestureOverlayViewStyle2(), "gestureOverlayViewStyle", init)
+	open var gestureOverlayViewStyle: CoreGestureOverlayViewStyle? by InlineStyleDelegate()
+	open fun gestureOverlayViewStyle(init: CoreGestureOverlayViewStyle.() -> Unit)
+		= initInlineStyle(CoreGestureOverlayViewStyle(), "gestureOverlayViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.gridViewStyle::class)
-	open var gridViewStyle: CoreGridViewStyle2? by InlineStyleDelegate()
-	open fun gridViewStyle(init: CoreGridViewStyle2.() -> Unit)
-		= initInlineStyle(CoreGridViewStyle2(), "gridViewStyle", init)
+	open var gridViewStyle: CoreGridViewStyle? by InlineStyleDelegate()
+	open fun gridViewStyle(init: CoreGridViewStyle.() -> Unit)
+		= initInlineStyle(CoreGridViewStyle(), "gridViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.homeAsUpIndicator::class)
 	open var homeAsUpIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -624,9 +624,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.homeAsUpIndicator::class, init)
 
 	@DefinedBy(CoreThemeStyleable.horizontalScrollViewStyle::class)
-	open var horizontalScrollViewStyle: CoreHorizontalScrollViewStyle2? by InlineStyleDelegate()
-	open fun horizontalScrollViewStyle(init: CoreHorizontalScrollViewStyle2.() -> Unit)
-		= initInlineStyle(CoreHorizontalScrollViewStyle2(), "horizontalScrollViewStyle", init)
+	open var horizontalScrollViewStyle: CoreHorizontalScrollViewStyle? by InlineStyleDelegate()
+	open fun horizontalScrollViewStyle(init: CoreHorizontalScrollViewStyle.() -> Unit)
+		= initInlineStyle(CoreHorizontalScrollViewStyle(), "horizontalScrollViewStyle", init)
 
 
 
@@ -677,9 +677,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.listPopupWindowStyle::class)
-	open var listPopupWindowStyle: CoreListPopupWindowStyle2? by InlineStyleDelegate()
-	open fun listPopupWindowStyle(init: CoreListPopupWindowStyle2.() -> Unit)
-		= initInlineStyle(CoreListPopupWindowStyle2(), "listPopupWindowStyle", init)
+	open var listPopupWindowStyle: CoreListPopupWindowStyle? by InlineStyleDelegate()
+	open fun listPopupWindowStyle(init: CoreListPopupWindowStyle.() -> Unit)
+		= initInlineStyle(CoreListPopupWindowStyle(), "listPopupWindowStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.listPreferredItemHeight::class)
 	open var listPreferredItemHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
@@ -717,30 +717,30 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.listPreferredItemPaddingStart::class, init)
 
 	@DefinedBy(CoreThemeStyleable.listSeparatorTextViewStyle::class)
-	open var listSeparatorTextViewStyle: CoreTextViewStyle2? by InlineStyleDelegate()
-	open fun listSeparatorTextViewStyle(init: CoreTextViewStyle2.() -> Unit)
-		= initInlineStyle(CoreTextViewStyle2(), "listSeparatorTextViewStyle", init)
+	open var listSeparatorTextViewStyle: CoreTextViewStyle? by InlineStyleDelegate()
+	open fun listSeparatorTextViewStyle(init: CoreTextViewStyle.() -> Unit)
+		= initInlineStyle(CoreTextViewStyle(), "listSeparatorTextViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.listViewStyle::class)
-	open var listViewStyle: CoreListViewStyle2? by InlineStyleDelegate()
-	open fun listViewStyle(init: CoreListViewStyle2.() -> Unit)
-		= initInlineStyle(CoreListViewStyle2(), "listViewStyle", init)
+	open var listViewStyle: CoreListViewStyle? by InlineStyleDelegate()
+	open fun listViewStyle(init: CoreListViewStyle.() -> Unit)
+		= initInlineStyle(CoreListViewStyle(), "listViewStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.mapViewStyle::class)
-	open var mapViewStyle: CoreMapViewStyle2? by InlineStyleDelegate()
-	open fun mapViewStyle(init: CoreMapViewStyle2.() -> Unit)
-		= initInlineStyle(CoreMapViewStyle2(), "mapViewStyle", init)
+	open var mapViewStyle: CoreMapViewStyle? by InlineStyleDelegate()
+	open fun mapViewStyle(init: CoreMapViewStyle.() -> Unit)
+		= initInlineStyle(CoreMapViewStyle(), "mapViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.mediaRouteButtonStyle::class)
-	open var mediaRouteButtonStyle: CoreMediaRouteButtonStyle2? by InlineStyleDelegate()
-	open fun mediaRouteButtonStyle(init: CoreMediaRouteButtonStyle2.() -> Unit)
-		= initInlineStyle(CoreMediaRouteButtonStyle2(), "mediaRouteButtonStyle", init)
+	open var mediaRouteButtonStyle: CoreMediaRouteButtonStyle? by InlineStyleDelegate()
+	open fun mediaRouteButtonStyle(init: CoreMediaRouteButtonStyle.() -> Unit)
+		= initInlineStyle(CoreMediaRouteButtonStyle(), "mediaRouteButtonStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.numberPickerStyle::class)
-	open var numberPickerStyle: CoreNumberPickerStyle2? by InlineStyleDelegate()
-	open fun numberPickerStyle(init: CoreNumberPickerStyle2.() -> Unit)
-		= initInlineStyle(CoreNumberPickerStyle2(), "numberPickerStyle", init)
+	open var numberPickerStyle: CoreNumberPickerStyle? by InlineStyleDelegate()
+	open fun numberPickerStyle(init: CoreNumberPickerStyle.() -> Unit)
+		= initInlineStyle(CoreNumberPickerStyle(), "numberPickerStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.panelBackground::class)
 	open var panelBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -768,9 +768,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.panelMenuIsCompact::class, init)
 
 	@DefinedBy(CoreThemeStyleable.panelMenuListTheme::class)
-	open var panelMenuListTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun panelMenuListTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "panelMenuListTheme", init)
+	open var panelMenuListTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun panelMenuListTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "panelMenuListTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.panelMenuListWidth::class)
 	open var panelMenuListWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
@@ -778,33 +778,33 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.panelMenuListWidth::class, init)
 
 	@DefinedBy(CoreThemeStyleable.panelTextAppearance::class)
-	open var panelTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun panelTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "panelTextAppearance", init)
+	open var panelTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun panelTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "panelTextAppearance", init)
 
 
 	@DefinedBy(CoreThemeStyleable.popupWindowStyle::class)
-	open var popupWindowStyle: CorePopupWindowStyle2? by InlineStyleDelegate()
-	open fun popupWindowStyle(init: CorePopupWindowStyle2.() -> Unit)
-		= initInlineStyle(CorePopupWindowStyle2(), "popupWindowStyle", init)
+	open var popupWindowStyle: CorePopupWindowStyle? by InlineStyleDelegate()
+	open fun popupWindowStyle(init: CorePopupWindowStyle.() -> Unit)
+		= initInlineStyle(CorePopupWindowStyle(), "popupWindowStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.preferenceActivityStyle::class)
-	open var preferenceActivityStyle: CorePreferenceActivityStyle2? by InlineStyleDelegate()
-	open fun preferenceActivityStyle(init: CorePreferenceActivityStyle2.() -> Unit)
-		= initInlineStyle(CorePreferenceActivityStyle2(), "preferenceActivityStyle", init)
+	open var preferenceActivityStyle: CorePreferenceActivityStyle? by InlineStyleDelegate()
+	open fun preferenceActivityStyle(init: CorePreferenceActivityStyle.() -> Unit)
+		= initInlineStyle(CorePreferenceActivityStyle(), "preferenceActivityStyle", init)
 
 
 
 
 	@DefinedBy(CoreThemeStyleable.preferenceFragmentStyle::class)
-	open var preferenceFragmentStyle: CorePreferenceFragmentStyle2? by InlineStyleDelegate()
-	open fun preferenceFragmentStyle(init: CorePreferenceFragmentStyle2.() -> Unit)
-		= initInlineStyle(CorePreferenceFragmentStyle2(), "preferenceFragmentStyle", init)
+	open var preferenceFragmentStyle: CorePreferenceFragmentStyle? by InlineStyleDelegate()
+	open fun preferenceFragmentStyle(init: CorePreferenceFragmentStyle.() -> Unit)
+		= initInlineStyle(CorePreferenceFragmentStyle(), "preferenceFragmentStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.preferenceFrameLayoutStyle::class)
-	open var preferenceFrameLayoutStyle: CorePreferenceFrameLayoutStyle2? by InlineStyleDelegate()
-	open fun preferenceFrameLayoutStyle(init: CorePreferenceFrameLayoutStyle2.() -> Unit)
-		= initInlineStyle(CorePreferenceFrameLayoutStyle2(), "preferenceFrameLayoutStyle", init)
+	open var preferenceFrameLayoutStyle: CorePreferenceFrameLayoutStyle? by InlineStyleDelegate()
+	open fun preferenceFrameLayoutStyle(init: CorePreferenceFrameLayoutStyle.() -> Unit)
+		= initInlineStyle(CorePreferenceFrameLayoutStyle(), "preferenceFrameLayoutStyle", init)
 
 
 
@@ -814,25 +814,25 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.preferenceLayoutChild::class, init)
 
 	@DefinedBy(CoreThemeStyleable.preferenceListStyle::class)
-	open var preferenceListStyle: CoreListPreferenceStyle2? by InlineStyleDelegate()
-	open fun preferenceListStyle(init: CoreListPreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreListPreferenceStyle2(), "preferenceListStyle", init)
+	open var preferenceListStyle: CoreListPreferenceStyle? by InlineStyleDelegate()
+	open fun preferenceListStyle(init: CoreListPreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreListPreferenceStyle(), "preferenceListStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.preferenceScreenStyle::class)
-	open var preferenceScreenStyle: CorePreferenceScreenStyle2? by InlineStyleDelegate()
-	open fun preferenceScreenStyle(init: CorePreferenceScreenStyle2.() -> Unit)
-		= initInlineStyle(CorePreferenceScreenStyle2(), "preferenceScreenStyle", init)
+	open var preferenceScreenStyle: CorePreferenceScreenStyle? by InlineStyleDelegate()
+	open fun preferenceScreenStyle(init: CorePreferenceScreenStyle.() -> Unit)
+		= initInlineStyle(CorePreferenceScreenStyle(), "preferenceScreenStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.preferenceStyle::class)
-	open var preferenceStyle: CorePreferenceStyle2? by InlineStyleDelegate()
-	open fun preferenceStyle(init: CorePreferenceStyle2.() -> Unit)
-		= initInlineStyle(CorePreferenceStyle2(), "preferenceStyle", init)
+	open var preferenceStyle: CorePreferenceStyle? by InlineStyleDelegate()
+	open fun preferenceStyle(init: CorePreferenceStyle.() -> Unit)
+		= initInlineStyle(CorePreferenceStyle(), "preferenceStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.presentationTheme::class)
-	open var presentationTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun presentationTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "presentationTheme", init)
+	open var presentationTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun presentationTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "presentationTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.primaryContentAlpha::class)
 	open var primaryContentAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
@@ -840,9 +840,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.primaryContentAlpha::class, init)
 
 	@DefinedBy(CoreThemeStyleable.progressBarStyle::class)
-	open var progressBarStyle: CoreProgressBarStyle2? by InlineStyleDelegate()
-	open fun progressBarStyle(init: CoreProgressBarStyle2.() -> Unit)
-		= initInlineStyle(CoreProgressBarStyle2(), "progressBarStyle", init)
+	open var progressBarStyle: CoreProgressBarStyle? by InlineStyleDelegate()
+	open fun progressBarStyle(init: CoreProgressBarStyle.() -> Unit)
+		= initInlineStyle(CoreProgressBarStyle(), "progressBarStyle", init)
 
 
 
@@ -857,65 +857,65 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.quickContactBadgeOverlay::class, init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleSmallWindowLarge::class)
-	open var quickContactBadgeStyleSmallWindowLarge: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleSmallWindowLarge(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleSmallWindowLarge", init)
+	open var quickContactBadgeStyleSmallWindowLarge: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleSmallWindowLarge(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleSmallWindowLarge", init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleSmallWindowMedium::class)
-	open var quickContactBadgeStyleSmallWindowMedium: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleSmallWindowMedium(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleSmallWindowMedium", init)
+	open var quickContactBadgeStyleSmallWindowMedium: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleSmallWindowMedium(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleSmallWindowMedium", init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleSmallWindowSmall::class)
-	open var quickContactBadgeStyleSmallWindowSmall: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleSmallWindowSmall(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleSmallWindowSmall", init)
+	open var quickContactBadgeStyleSmallWindowSmall: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleSmallWindowSmall(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleSmallWindowSmall", init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleWindowLarge::class)
-	open var quickContactBadgeStyleWindowLarge: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleWindowLarge(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleWindowLarge", init)
+	open var quickContactBadgeStyleWindowLarge: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleWindowLarge(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleWindowLarge", init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleWindowMedium::class)
-	open var quickContactBadgeStyleWindowMedium: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleWindowMedium(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleWindowMedium", init)
+	open var quickContactBadgeStyleWindowMedium: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleWindowMedium(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleWindowMedium", init)
 
 	@DefinedBy(CoreThemeStyleable.quickContactBadgeStyleWindowSmall::class)
-	open var quickContactBadgeStyleWindowSmall: CoreQuickContactBadgeStyle2? by InlineStyleDelegate()
-	open fun quickContactBadgeStyleWindowSmall(init: CoreQuickContactBadgeStyle2.() -> Unit)
-		= initInlineStyle(CoreQuickContactBadgeStyle2(), "quickContactBadgeStyleWindowSmall", init)
+	open var quickContactBadgeStyleWindowSmall: CoreQuickContactBadgeStyle? by InlineStyleDelegate()
+	open fun quickContactBadgeStyleWindowSmall(init: CoreQuickContactBadgeStyle.() -> Unit)
+		= initInlineStyle(CoreQuickContactBadgeStyle(), "quickContactBadgeStyleWindowSmall", init)
 
 
 	@DefinedBy(CoreThemeStyleable.ratingBarStyle::class)
-	open var ratingBarStyle: CoreRatingBarStyle2? by InlineStyleDelegate()
-	open fun ratingBarStyle(init: CoreRatingBarStyle2.() -> Unit)
-		= initInlineStyle(CoreRatingBarStyle2(), "ratingBarStyle", init)
+	open var ratingBarStyle: CoreRatingBarStyle? by InlineStyleDelegate()
+	open fun ratingBarStyle(init: CoreRatingBarStyle.() -> Unit)
+		= initInlineStyle(CoreRatingBarStyle(), "ratingBarStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.ratingBarStyleIndicator::class)
-	open var ratingBarStyleIndicator: CoreRatingBarStyle2? by InlineStyleDelegate()
-	open fun ratingBarStyleIndicator(init: CoreRatingBarStyle2.() -> Unit)
-		= initInlineStyle(CoreRatingBarStyle2(), "ratingBarStyleIndicator", init)
+	open var ratingBarStyleIndicator: CoreRatingBarStyle? by InlineStyleDelegate()
+	open fun ratingBarStyleIndicator(init: CoreRatingBarStyle.() -> Unit)
+		= initInlineStyle(CoreRatingBarStyle(), "ratingBarStyleIndicator", init)
 
 	@DefinedBy(CoreThemeStyleable.ratingBarStyleSmall::class)
-	open var ratingBarStyleSmall: CoreRatingBarStyle2? by InlineStyleDelegate()
-	open fun ratingBarStyleSmall(init: CoreRatingBarStyle2.() -> Unit)
-		= initInlineStyle(CoreRatingBarStyle2(), "ratingBarStyleSmall", init)
+	open var ratingBarStyleSmall: CoreRatingBarStyle? by InlineStyleDelegate()
+	open fun ratingBarStyleSmall(init: CoreRatingBarStyle.() -> Unit)
+		= initInlineStyle(CoreRatingBarStyle(), "ratingBarStyleSmall", init)
 
 	@DefinedBy(CoreThemeStyleable.ringtonePreferenceStyle::class)
-	open var ringtonePreferenceStyle: CoreRingtonePreferenceStyle2? by InlineStyleDelegate()
-	open fun ringtonePreferenceStyle(init: CoreRingtonePreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreRingtonePreferenceStyle2(), "ringtonePreferenceStyle", init)
+	open var ringtonePreferenceStyle: CoreRingtonePreferenceStyle? by InlineStyleDelegate()
+	open fun ringtonePreferenceStyle(init: CoreRingtonePreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreRingtonePreferenceStyle(), "ringtonePreferenceStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.scrollViewStyle::class)
-	open var scrollViewStyle: CoreScrollViewStyle2? by InlineStyleDelegate()
-	open fun scrollViewStyle(init: CoreScrollViewStyle2.() -> Unit)
-		= initInlineStyle(CoreScrollViewStyle2(), "scrollViewStyle", init)
+	open var scrollViewStyle: CoreScrollViewStyle? by InlineStyleDelegate()
+	open fun scrollViewStyle(init: CoreScrollViewStyle.() -> Unit)
+		= initInlineStyle(CoreScrollViewStyle(), "scrollViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.searchDialogTheme::class)
-	open var searchDialogTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun searchDialogTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "searchDialogTheme", init)
+	open var searchDialogTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun searchDialogTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "searchDialogTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.searchResultListItemHeight::class)
 	open var searchResultListItemHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
@@ -923,9 +923,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.searchResultListItemHeight::class, init)
 
 	@DefinedBy(CoreThemeStyleable.searchViewStyle::class)
-	open var searchViewStyle: CoreSearchViewStyle2? by InlineStyleDelegate()
-	open fun searchViewStyle(init: CoreSearchViewStyle2.() -> Unit)
-		= initInlineStyle(CoreSearchViewStyle2(), "searchViewStyle", init)
+	open var searchViewStyle: CoreSearchViewStyle? by InlineStyleDelegate()
+	open fun searchViewStyle(init: CoreSearchViewStyle.() -> Unit)
+		= initInlineStyle(CoreSearchViewStyle(), "searchViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.searchWidgetCorpusItemBackground::class)
 	open var searchWidgetCorpusItemBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -939,14 +939,14 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.seekBarPreferenceStyle::class)
-	open var seekBarPreferenceStyle: CoreSeekBarPreferenceStyle2? by InlineStyleDelegate()
-	open fun seekBarPreferenceStyle(init: CoreSeekBarPreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreSeekBarPreferenceStyle2(), "seekBarPreferenceStyle", init)
+	open var seekBarPreferenceStyle: CoreSeekBarPreferenceStyle? by InlineStyleDelegate()
+	open fun seekBarPreferenceStyle(init: CoreSeekBarPreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreSeekBarPreferenceStyle(), "seekBarPreferenceStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.seekBarStyle::class)
-	open var seekBarStyle: CoreSeekBarStyle2? by InlineStyleDelegate()
-	open fun seekBarStyle(init: CoreSeekBarStyle2.() -> Unit)
-		= initInlineStyle(CoreSeekBarStyle2(), "seekBarStyle", init)
+	open var seekBarStyle: CoreSeekBarStyle? by InlineStyleDelegate()
+	open fun seekBarStyle(init: CoreSeekBarStyle.() -> Unit)
+		= initInlineStyle(CoreSeekBarStyle(), "seekBarStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.selectableItemBackground::class)
@@ -962,9 +962,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 
 	@DefinedBy(CoreThemeStyleable.spinnerStyle::class)
-	open var spinnerStyle: CoreSpinnerStyle2? by InlineStyleDelegate()
-	open fun spinnerStyle(init: CoreSpinnerStyle2.() -> Unit)
-		= initInlineStyle(CoreSpinnerStyle2(), "spinnerStyle", init)
+	open var spinnerStyle: CoreSpinnerStyle? by InlineStyleDelegate()
+	open fun spinnerStyle(init: CoreSpinnerStyle.() -> Unit)
+		= initInlineStyle(CoreSpinnerStyle(), "spinnerStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.spotShadowAlpha::class)
 	open var spotShadowAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
@@ -972,125 +972,125 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.spotShadowAlpha::class, init)
 
 	@DefinedBy(CoreThemeStyleable.stackViewStyle::class)
-	open var stackViewStyle: CoreStackViewStyle2? by InlineStyleDelegate()
-	open fun stackViewStyle(init: CoreStackViewStyle2.() -> Unit)
-		= initInlineStyle(CoreStackViewStyle2(), "stackViewStyle", init)
+	open var stackViewStyle: CoreStackViewStyle? by InlineStyleDelegate()
+	open fun stackViewStyle(init: CoreStackViewStyle.() -> Unit)
+		= initInlineStyle(CoreStackViewStyle(), "stackViewStyle", init)
 
 
 	@DefinedBy(CoreThemeStyleable.switchPreferenceStyle::class)
-	open var switchPreferenceStyle: CoreSwitchPreferenceStyle2? by InlineStyleDelegate()
-	open fun switchPreferenceStyle(init: CoreSwitchPreferenceStyle2.() -> Unit)
-		= initInlineStyle(CoreSwitchPreferenceStyle2(), "switchPreferenceStyle", init)
+	open var switchPreferenceStyle: CoreSwitchPreferenceStyle? by InlineStyleDelegate()
+	open fun switchPreferenceStyle(init: CoreSwitchPreferenceStyle.() -> Unit)
+		= initInlineStyle(CoreSwitchPreferenceStyle(), "switchPreferenceStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.switchStyle::class)
-	open var switchStyle: CoreSwitchStyle2? by InlineStyleDelegate()
-	open fun switchStyle(init: CoreSwitchStyle2.() -> Unit)
-		= initInlineStyle(CoreSwitchStyle2(), "switchStyle", init)
+	open var switchStyle: CoreSwitchStyle? by InlineStyleDelegate()
+	open fun switchStyle(init: CoreSwitchStyle.() -> Unit)
+		= initInlineStyle(CoreSwitchStyle(), "switchStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.tabWidgetStyle::class)
-	open var tabWidgetStyle: CoreTabWidgetStyle2? by InlineStyleDelegate()
-	open fun tabWidgetStyle(init: CoreTabWidgetStyle2.() -> Unit)
-		= initInlineStyle(CoreTabWidgetStyle2(), "tabWidgetStyle", init)
+	open var tabWidgetStyle: CoreTabWidgetStyle? by InlineStyleDelegate()
+	open fun tabWidgetStyle(init: CoreTabWidgetStyle.() -> Unit)
+		= initInlineStyle(CoreTabWidgetStyle(), "tabWidgetStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearance::class)
-	open var textAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearance", init)
+	open var textAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearance", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceAutoCorrectionSuggestion::class)
-	open var textAppearanceAutoCorrectionSuggestion: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceAutoCorrectionSuggestion(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceAutoCorrectionSuggestion", init)
+	open var textAppearanceAutoCorrectionSuggestion: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceAutoCorrectionSuggestion(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceAutoCorrectionSuggestion", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceButton::class)
-	open var textAppearanceButton: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceButton(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceButton", init)
+	open var textAppearanceButton: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceButton(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceButton", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceEasyCorrectSuggestion::class)
-	open var textAppearanceEasyCorrectSuggestion: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceEasyCorrectSuggestion(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceEasyCorrectSuggestion", init)
+	open var textAppearanceEasyCorrectSuggestion: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceEasyCorrectSuggestion(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceEasyCorrectSuggestion", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceInverse::class)
-	open var textAppearanceInverse: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceInverse(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceInverse", init)
+	open var textAppearanceInverse: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceInverse(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceInverse", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceLarge::class)
-	open var textAppearanceLarge: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceLarge(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceLarge", init)
+	open var textAppearanceLarge: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceLarge(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceLarge", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceLargeInverse::class)
-	open var textAppearanceLargeInverse: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceLargeInverse(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceLargeInverse", init)
+	open var textAppearanceLargeInverse: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceLargeInverse(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceLargeInverse", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceLargePopupMenu::class)
-	open var textAppearanceLargePopupMenu: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceLargePopupMenu(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceLargePopupMenu", init)
+	open var textAppearanceLargePopupMenu: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceLargePopupMenu(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceLargePopupMenu", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceListItem::class)
-	open var textAppearanceListItem: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceListItem(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceListItem", init)
+	open var textAppearanceListItem: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceListItem(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceListItem", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceListItemSecondary::class)
-	open var textAppearanceListItemSecondary: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceListItemSecondary(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceListItemSecondary", init)
+	open var textAppearanceListItemSecondary: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceListItemSecondary(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceListItemSecondary", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceListItemSmall::class)
-	open var textAppearanceListItemSmall: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceListItemSmall(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceListItemSmall", init)
+	open var textAppearanceListItemSmall: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceListItemSmall(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceListItemSmall", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceMedium::class)
-	open var textAppearanceMedium: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceMedium(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceMedium", init)
+	open var textAppearanceMedium: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceMedium(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceMedium", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceMediumInverse::class)
-	open var textAppearanceMediumInverse: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceMediumInverse(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceMediumInverse", init)
+	open var textAppearanceMediumInverse: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceMediumInverse(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceMediumInverse", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceMisspelledSuggestion::class)
-	open var textAppearanceMisspelledSuggestion: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceMisspelledSuggestion(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceMisspelledSuggestion", init)
+	open var textAppearanceMisspelledSuggestion: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceMisspelledSuggestion(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceMisspelledSuggestion", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearancePopupMenuHeader::class)
-	open var textAppearancePopupMenuHeader: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearancePopupMenuHeader(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearancePopupMenuHeader", init)
+	open var textAppearancePopupMenuHeader: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearancePopupMenuHeader(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearancePopupMenuHeader", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceSearchResultSubtitle::class)
-	open var textAppearanceSearchResultSubtitle: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceSearchResultSubtitle(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceSearchResultSubtitle", init)
+	open var textAppearanceSearchResultSubtitle: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceSearchResultSubtitle(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceSearchResultSubtitle", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceSearchResultTitle::class)
-	open var textAppearanceSearchResultTitle: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceSearchResultTitle(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceSearchResultTitle", init)
+	open var textAppearanceSearchResultTitle: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceSearchResultTitle(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceSearchResultTitle", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceSmall::class)
-	open var textAppearanceSmall: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceSmall(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceSmall", init)
+	open var textAppearanceSmall: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceSmall(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceSmall", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceSmallInverse::class)
-	open var textAppearanceSmallInverse: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceSmallInverse(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceSmallInverse", init)
+	open var textAppearanceSmallInverse: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceSmallInverse(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceSmallInverse", init)
 
 	@DefinedBy(CoreThemeStyleable.textAppearanceSmallPopupMenu::class)
-	open var textAppearanceSmallPopupMenu: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearanceSmallPopupMenu(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearanceSmallPopupMenu", init)
+	open var textAppearanceSmallPopupMenu: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearanceSmallPopupMenu(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearanceSmallPopupMenu", init)
 
 	@DefinedBy(CoreThemeStyleable.textCheckMark::class)
 	open var textCheckMark: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -1244,14 +1244,14 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.textSelectHandleRight::class, init)
 
 	@DefinedBy(CoreThemeStyleable.textSelectHandleWindowStyle::class)
-	open var textSelectHandleWindowStyle: CorePopupWindowStyle2? by InlineStyleDelegate()
-	open fun textSelectHandleWindowStyle(init: CorePopupWindowStyle2.() -> Unit)
-		= initInlineStyle(CorePopupWindowStyle2(), "textSelectHandleWindowStyle", init)
+	open var textSelectHandleWindowStyle: CorePopupWindowStyle? by InlineStyleDelegate()
+	open fun textSelectHandleWindowStyle(init: CorePopupWindowStyle.() -> Unit)
+		= initInlineStyle(CorePopupWindowStyle(), "textSelectHandleWindowStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.textSuggestionsWindowStyle::class)
-	open var textSuggestionsWindowStyle: CoreWindowStyle2? by InlineStyleDelegate()
-	open fun textSuggestionsWindowStyle(init: CoreWindowStyle2.() -> Unit)
-		= initInlineStyle(CoreWindowStyle2(), "textSuggestionsWindowStyle", init)
+	open var textSuggestionsWindowStyle: CoreWindowStyle? by InlineStyleDelegate()
+	open fun textSuggestionsWindowStyle(init: CoreWindowStyle.() -> Unit)
+		= initInlineStyle(CoreWindowStyle(), "textSuggestionsWindowStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.textUnderlineColor::class)
 	open var textUnderlineColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -1264,19 +1264,19 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.textUnderlineThickness::class, init)
 
 	@DefinedBy(CoreThemeStyleable.textViewStyle::class)
-	open var textViewStyle: CoreTextViewStyle2? by InlineStyleDelegate()
-	open fun textViewStyle(init: CoreTextViewStyle2.() -> Unit)
-		= initInlineStyle(CoreTextViewStyle2(), "textViewStyle", init)
+	open var textViewStyle: CoreTextViewStyle? by InlineStyleDelegate()
+	open fun textViewStyle(init: CoreTextViewStyle.() -> Unit)
+		= initInlineStyle(CoreTextViewStyle(), "textViewStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.timePickerDialogTheme::class)
-	open var timePickerDialogTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun timePickerDialogTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "timePickerDialogTheme", init)
+	open var timePickerDialogTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun timePickerDialogTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "timePickerDialogTheme", init)
 
 	@DefinedBy(CoreThemeStyleable.timePickerStyle::class)
-	open var timePickerStyle: CoreTimePickerStyle2? by InlineStyleDelegate()
-	open fun timePickerStyle(init: CoreTimePickerStyle2.() -> Unit)
-		= initInlineStyle(CoreTimePickerStyle2(), "timePickerStyle", init)
+	open var timePickerStyle: CoreTimePickerStyle? by InlineStyleDelegate()
+	open fun timePickerStyle(init: CoreTimePickerStyle.() -> Unit)
+		= initInlineStyle(CoreTimePickerStyle(), "timePickerStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.toastFrameBackground::class)
 	open var toastFrameBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -1284,9 +1284,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.toastFrameBackground::class, init)
 
 	@DefinedBy(CoreThemeStyleable.toolbarStyle::class)
-	open var toolbarStyle: CoreToolbarStyle2? by InlineStyleDelegate()
-	open fun toolbarStyle(init: CoreToolbarStyle2.() -> Unit)
-		= initInlineStyle(CoreToolbarStyle2(), "toolbarStyle", init)
+	open var toolbarStyle: CoreToolbarStyle? by InlineStyleDelegate()
+	open fun toolbarStyle(init: CoreToolbarStyle.() -> Unit)
+		= initInlineStyle(CoreToolbarStyle(), "toolbarStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.tooltipBackgroundColor::class)
 	open var tooltipBackgroundColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -1341,9 +1341,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.windowAllowReturnTransitionOverlap::class, init)
 
 	@DefinedBy(CoreThemeStyleable.windowAnimationStyle::class)
-	open override var windowAnimationStyle: CoreWindowAnimationStyle2? by InlineStyleDelegate()
-	open override fun windowAnimationStyle(init: CoreWindowAnimationStyle2.() -> Unit)
-		= initInlineStyle(CoreWindowAnimationStyle2(), "windowAnimationStyle", init)
+	open override var windowAnimationStyle: CoreWindowAnimationStyle? by InlineStyleDelegate()
+	open override fun windowAnimationStyle(init: CoreWindowAnimationStyle.() -> Unit)
+		= initInlineStyle(CoreWindowAnimationStyle(), "windowAnimationStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.windowBackground::class)
 	open override var windowBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -1485,9 +1485,9 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 		= initAttr(CoreThemeStyleable.windowTitleSize::class, init)
 
 	@DefinedBy(CoreThemeStyleable.windowTitleStyle::class)
-	open var windowTitleStyle: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun windowTitleStyle(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "windowTitleStyle", init)
+	open var windowTitleStyle: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun windowTitleStyle(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "windowTitleStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.windowTransitionBackgroundFadeDuration::class)
 	open override var windowTransitionBackgroundFadeDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
@@ -1507,154 +1507,283 @@ open class CoreThemeStyle2 : CoreWindowStyle2 {
 
 }
 
-open class CorePreferenceActivityStyle2 : InlineStyle {
+open class CoreActionBarStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CorePreferenceActivityStyleable.headerLayout::class)
-	open var headerLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun headerLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CorePreferenceActivityStyleable.headerLayout::class, init)
+	@DefinedBy(CoreViewStyleable.background::class)
+	open override var background: Any? by GenericDelegate(String::class,StringContainer::class)
+	open override fun background(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStyleable.background::class, init)
 
-	@DefinedBy(CorePreferenceActivityStyleable.headerRemoveIconIfEmpty::class)
-	open var headerRemoveIconIfEmpty: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun headerRemoveIconIfEmpty(init: BooleanAttribute.() -> Unit)
-		= initAttr(CorePreferenceActivityStyleable.headerRemoveIconIfEmpty::class, init)
+	@DefinedBy(CoreActionBarStyleable.backgroundSplit::class)
+	open var backgroundSplit: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun backgroundSplit(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.backgroundSplit::class, init)
 
-	@DefinedBy(CoreViewStubStyleable.layout::class)
-	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun layout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStubStyleable.layout::class, init)
+	@DefinedBy(CoreActionBarStyleable.backgroundStacked::class)
+	open var backgroundStacked: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun backgroundStacked(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.backgroundStacked::class, init)
 
-}
+	@DefinedBy(CoreActionBarStyleable.contentInsetEnd::class)
+	open var contentInsetEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetEnd::class, init)
 
-open class CoreSpinnerStyle2 : CoreAbsSpinnerStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
+	@DefinedBy(CoreActionBarStyleable.contentInsetEndWithActions::class)
+	open var contentInsetEndWithActions: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetEndWithActions(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetEndWithActions::class, init)
 
-	@DefinedBy(CoreSpinnerStyleable.disableChildrenWhenDisabled::class)
-	open var disableChildrenWhenDisabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun disableChildrenWhenDisabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSpinnerStyleable.disableChildrenWhenDisabled::class, init)
+	@DefinedBy(CoreActionBarStyleable.contentInsetLeft::class)
+	open var contentInsetLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetLeft(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetLeft::class, init)
 
-	@DefinedBy(CoreAutoCompleteTextViewStyleable.dropDownSelector::class)
-	open var dropDownSelector: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dropDownSelector(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAutoCompleteTextViewStyleable.dropDownSelector::class, init)
+	@DefinedBy(CoreActionBarStyleable.contentInsetRight::class)
+	open var contentInsetRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetRight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetRight::class, init)
 
-	@DefinedBy(CoreAutoCompleteTextViewStyleable.dropDownWidth::class)
-	open var dropDownWidth: Any? by GenericEnumDelegate<CoreAutoCompleteTextViewStyleable.DropDownWidthEnum>(CoreAutoCompleteTextViewStyleable.DropDownWidthEnum::class, Dimension::class, DimensionContainer::class)
+	@DefinedBy(CoreActionBarStyleable.contentInsetStart::class)
+	open var contentInsetStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetStart::class, init)
 
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+	@DefinedBy(CoreActionBarStyleable.contentInsetStartWithNavigation::class)
+	open var contentInsetStartWithNavigation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetStartWithNavigation(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetStartWithNavigation::class, init)
 
-	@DefinedBy(CorePopupWindowStyleable.popupBackground::class)
-	open var popupBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupBackground::class, init)
+	@DefinedBy(CoreActionBarStyleable.customNavigationLayout::class)
+	open var customNavigationLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun customNavigationLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.customNavigationLayout::class, init)
 
-	@DefinedBy(CorePopupWindowStyleable.popupElevation::class)
-	open var popupElevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun popupElevation(init: DimensionAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupElevation::class, init)
+	@DefinedBy(CoreActionBarStyleable.displayOptions::class)
+	open var displayOptions: Any? by GenericFlagDelegate<CoreActionBarStyleable.DisplayOptionsFlag>(CoreActionBarStyleable.DisplayOptionsFlag::class)
 
-	@DefinedBy(CoreSpinnerStyleable.popupPromptView::class)
-	open var popupPromptView: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupPromptView(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSpinnerStyleable.popupPromptView::class, init)
+	@DefinedBy(CoreListViewStyleable.divider::class)
+	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun divider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.divider::class, init)
+
+	@DefinedBy(CoreViewStyleable.elevation::class)
+	open override var elevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open override fun elevation(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewStyleable.elevation::class, init)
+
+	@DefinedBy(CoreTextViewStyleable.height::class)
+	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun height(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreTextViewStyleable.height::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.hideOnContentScroll::class)
+	open var hideOnContentScroll: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun hideOnContentScroll(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.hideOnContentScroll::class, init)
+
+	@DefinedBy(CoreThemeStyleable.homeAsUpIndicator::class)
+	open var homeAsUpIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun homeAsUpIndicator(init: StringAttribute.() -> Unit)
+		= initAttr(CoreThemeStyleable.homeAsUpIndicator::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.homeLayout::class)
+	open var homeLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun homeLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.homeLayout::class, init)
+
+	@DefinedBy(ManifestStyleable.icon::class)
+	open var icon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun icon(init: StringAttribute.() -> Unit)
+		= initAttr(ManifestStyleable.icon::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.indeterminateProgressStyle::class)
+	open var indeterminateProgressStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun indeterminateProgressStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.indeterminateProgressStyle::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.itemPadding::class)
+	open var itemPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun itemPadding(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.itemPadding::class, init)
+
+	@DefinedBy(ManifestStyleable.logo::class)
+	open var logo: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun logo(init: StringAttribute.() -> Unit)
+		= initAttr(ManifestStyleable.logo::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.navigationMode::class)
+	open var navigationMode: Any? by GenericEnumDelegate<CoreActionBarStyleable.NavigationModeEnum>(CoreActionBarStyleable.NavigationModeEnum::class)
 
 	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
-	open var popupTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun popupTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "popupTheme", init)
+	open var popupTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun popupTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "popupTheme", init)
 
-	@DefinedBy(CoreSpinnerStyleable.prompt::class)
-	open var prompt: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun prompt(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSpinnerStyleable.prompt::class, init)
+	@DefinedBy(CoreActionBarStyleable.progressBarPadding::class)
+	open var progressBarPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun progressBarPadding(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.progressBarPadding::class, init)
 
-	@DefinedBy(CoreSpinnerStyleable.spinnerMode::class)
-	open var spinnerMode: Any? by GenericEnumDelegate<CoreSpinnerStyleable.SpinnerModeEnum>(CoreSpinnerStyleable.SpinnerModeEnum::class)
+	@DefinedBy(CoreThemeStyleable.progressBarStyle::class)
+	open var progressBarStyle: CoreProgressBarStyle? by InlineStyleDelegate()
+	open fun progressBarStyle(init: CoreProgressBarStyle.() -> Unit)
+		= initInlineStyle(CoreProgressBarStyle(), "progressBarStyle", init)
+
+	@DefinedBy(CoreActionBarStyleable.subtitle::class)
+	open var subtitle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun subtitle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.subtitle::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.subtitleTextStyle::class)
+	open var subtitleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun subtitleTextStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.subtitleTextStyle::class, init)
+
+	@DefinedBy(CoreMenuItemStyleable.title::class)
+	open var title: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun title(init: StringAttribute.() -> Unit)
+		= initAttr(CoreMenuItemStyleable.title::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.titleTextStyle::class)
+	open var titleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun titleTextStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.titleTextStyle::class, init)
 
 }
 
-open class CoreAbsSpinnerStyle2 : CoreViewGroupStyle2 {
+open class CoreProgressBarStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreStyleable.entries::class)
-	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun entries(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.entries::class, init)
+	@DefinedBy(CoreProgressBarStyleable.animationResolution::class)
+	open var animationResolution: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun animationResolution(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.animationResolution::class, init)
+
+	@DefinedBy(CoreViewStyleable.backgroundTint::class)
+	open override var backgroundTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open override fun backgroundTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStyleable.backgroundTint::class, init)
+
+	@DefinedBy(CoreViewStyleable.backgroundTintMode::class)
+	open override var backgroundTintMode: Any? by GenericEnumDelegate<CoreViewStyleable.BackgroundTintModeEnum>(CoreViewStyleable.BackgroundTintModeEnum::class)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminate::class)
+	open var indeterminate: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun indeterminate(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.indeterminate::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateBehavior::class)
+	open var indeterminateBehavior: Any? by GenericEnumDelegate<CoreProgressBarStyleable.IndeterminateBehaviorEnum>(CoreProgressBarStyleable.IndeterminateBehaviorEnum::class)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateDrawable::class)
+	open var indeterminateDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun indeterminateDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.indeterminateDrawable::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateDuration::class)
+	open var indeterminateDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun indeterminateDuration(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.indeterminateDuration::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateOnly::class)
+	open var indeterminateOnly: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun indeterminateOnly(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.indeterminateOnly::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateTint::class)
+	open var indeterminateTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun indeterminateTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.indeterminateTint::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.indeterminateTintMode::class)
+	open var indeterminateTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.IndeterminateTintModeEnum>(CoreProgressBarStyleable.IndeterminateTintModeEnum::class)
+
+	@DefinedBy(CoreProgressBarStyleable.interpolator::class)
+	open var interpolator: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun interpolator(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.interpolator::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.max::class)
+	open var max: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun max(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.max::class, init)
+
+	@DefinedBy(CoreImageViewStyleable.maxHeight::class)
+	open var maxHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun maxHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreImageViewStyleable.maxHeight::class, init)
+
+	@DefinedBy(CoreImageViewStyleable.maxWidth::class)
+	open var maxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun maxWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreImageViewStyleable.maxWidth::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.min::class)
+	open var min: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun min(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.min::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
+	open override var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open override fun minHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
+	open override var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open override fun minWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.mirrorForRtl::class)
+	open var mirrorForRtl: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun mirrorForRtl(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.mirrorForRtl::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.progress::class)
+	open var progress: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun progress(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.progress::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.progressBackgroundTint::class)
+	open var progressBackgroundTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun progressBackgroundTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.progressBackgroundTint::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.progressBackgroundTintMode::class)
+	open var progressBackgroundTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.ProgressBackgroundTintModeEnum>(CoreProgressBarStyleable.ProgressBackgroundTintModeEnum::class)
+
+	@DefinedBy(CoreProgressBarStyleable.progressDrawable::class)
+	open var progressDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun progressDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.progressDrawable::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.progressTint::class)
+	open var progressTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun progressTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.progressTint::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.progressTintMode::class)
+	open var progressTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.ProgressTintModeEnum>(CoreProgressBarStyleable.ProgressTintModeEnum::class)
+
+	@DefinedBy(CoreProgressBarStyleable.secondaryProgress::class)
+	open var secondaryProgress: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun secondaryProgress(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.secondaryProgress::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.secondaryProgressTint::class)
+	open var secondaryProgressTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun secondaryProgressTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.secondaryProgressTint::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.secondaryProgressTintMode::class)
+	open var secondaryProgressTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.SecondaryProgressTintModeEnum>(CoreProgressBarStyleable.SecondaryProgressTintModeEnum::class)
 
 }
 
-open class CoreViewGroupStyle2 : CoreViewStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreViewGroupStyleable.addStatesFromChildren::class)
-	open var addStatesFromChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun addStatesFromChildren(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.addStatesFromChildren::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.alwaysDrawnWithCache::class)
-	open var alwaysDrawnWithCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun alwaysDrawnWithCache(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.alwaysDrawnWithCache::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.animateLayoutChanges::class)
-	open var animateLayoutChanges: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun animateLayoutChanges(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.animateLayoutChanges::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.animationCache::class)
-	open var animationCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun animationCache(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.animationCache::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.clipChildren::class)
-	open var clipChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun clipChildren(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.clipChildren::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.clipToPadding::class)
-	open var clipToPadding: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun clipToPadding(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.clipToPadding::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.descendantFocusability::class)
-	open var descendantFocusability: Any? by GenericEnumDelegate<CoreViewGroupStyleable.DescendantFocusabilityFlag>(CoreViewGroupStyleable.DescendantFocusabilityFlag::class)
-
-	@DefinedBy(CoreViewGroupStyleable.layoutAnimation::class)
-	open var layoutAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun layoutAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.layoutAnimation::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.layoutMode::class)
-	open var layoutMode: Any? by GenericEnumDelegate<CoreViewGroupStyleable.LayoutModeFlag>(CoreViewGroupStyleable.LayoutModeFlag::class)
-
-	@DefinedBy(CoreViewGroupStyleable.persistentDrawingCache::class)
-	open var persistentDrawingCache: Any? by GenericFlagDelegate<CoreViewGroupStyleable.PersistentDrawingCacheFlag>(CoreViewGroupStyleable.PersistentDrawingCacheFlag::class)
-
-	@DefinedBy(CoreViewGroupStyleable.splitMotionEvents::class)
-	open var splitMotionEvents: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun splitMotionEvents(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.splitMotionEvents::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.touchscreenBlocksFocus::class)
-	open var touchscreenBlocksFocus: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun touchscreenBlocksFocus(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.touchscreenBlocksFocus::class, init)
-
-	@DefinedBy(CoreViewGroupStyleable.transitionGroup::class)
-	open var transitionGroup: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun transitionGroup(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewGroupStyleable.transitionGroup::class, init)
-
-}
-
-open class CoreViewStyle2 : CoreWidgetStyle2 {
+open class CoreViewStyle : CoreWidgetStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2111,13 +2240,78 @@ open class CoreViewStyle2 : CoreWidgetStyle2 {
 
 }
 
-open class CoreWidgetStyle2 : InlineStyle {
+open class CoreWidgetStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreViewGroup_LayoutStyle2 : InlineStyle {
+open class CoreViewGroupStyle : CoreViewStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreViewGroupStyleable.addStatesFromChildren::class)
+	open var addStatesFromChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun addStatesFromChildren(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.addStatesFromChildren::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.alwaysDrawnWithCache::class)
+	open var alwaysDrawnWithCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun alwaysDrawnWithCache(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.alwaysDrawnWithCache::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.animateLayoutChanges::class)
+	open var animateLayoutChanges: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun animateLayoutChanges(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.animateLayoutChanges::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.animationCache::class)
+	open var animationCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun animationCache(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.animationCache::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.clipChildren::class)
+	open var clipChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun clipChildren(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.clipChildren::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.clipToPadding::class)
+	open var clipToPadding: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun clipToPadding(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.clipToPadding::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.descendantFocusability::class)
+	open var descendantFocusability: Any? by GenericEnumDelegate<CoreViewGroupStyleable.DescendantFocusabilityFlag>(CoreViewGroupStyleable.DescendantFocusabilityFlag::class)
+
+	@DefinedBy(CoreViewGroupStyleable.layoutAnimation::class)
+	open var layoutAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun layoutAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.layoutAnimation::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.layoutMode::class)
+	open var layoutMode: Any? by GenericEnumDelegate<CoreViewGroupStyleable.LayoutModeFlag>(CoreViewGroupStyleable.LayoutModeFlag::class)
+
+	@DefinedBy(CoreViewGroupStyleable.persistentDrawingCache::class)
+	open var persistentDrawingCache: Any? by GenericFlagDelegate<CoreViewGroupStyleable.PersistentDrawingCacheFlag>(CoreViewGroupStyleable.PersistentDrawingCacheFlag::class)
+
+	@DefinedBy(CoreViewGroupStyleable.splitMotionEvents::class)
+	open var splitMotionEvents: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun splitMotionEvents(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.splitMotionEvents::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.touchscreenBlocksFocus::class)
+	open var touchscreenBlocksFocus: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun touchscreenBlocksFocus(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.touchscreenBlocksFocus::class, init)
+
+	@DefinedBy(CoreViewGroupStyleable.transitionGroup::class)
+	open var transitionGroup: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun transitionGroup(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewGroupStyleable.transitionGroup::class, init)
+
+}
+
+open class CoreViewGroup_LayoutStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2129,382 +2323,109 @@ open class CoreViewGroup_LayoutStyle2 : InlineStyle {
 
 }
 
-open class CoreProgressBarStyle2 : CoreViewStyle2 {
+open class CoreActionBar_LayoutParamsStyle : CoreViewGroup_MarginLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreProgressBarStyleable.animationResolution::class)
-	open var animationResolution: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun animationResolution(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.animationResolution::class, init)
-
-	@DefinedBy(CoreViewStyleable.backgroundTint::class)
-	open override var backgroundTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open override fun backgroundTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStyleable.backgroundTint::class, init)
-
-	@DefinedBy(CoreViewStyleable.backgroundTintMode::class)
-	open override var backgroundTintMode: Any? by GenericEnumDelegate<CoreViewStyleable.BackgroundTintModeEnum>(CoreViewStyleable.BackgroundTintModeEnum::class)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminate::class)
-	open var indeterminate: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun indeterminate(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.indeterminate::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateBehavior::class)
-	open var indeterminateBehavior: Any? by GenericEnumDelegate<CoreProgressBarStyleable.IndeterminateBehaviorEnum>(CoreProgressBarStyleable.IndeterminateBehaviorEnum::class)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateDrawable::class)
-	open var indeterminateDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun indeterminateDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.indeterminateDrawable::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateDuration::class)
-	open var indeterminateDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun indeterminateDuration(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.indeterminateDuration::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateOnly::class)
-	open var indeterminateOnly: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun indeterminateOnly(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.indeterminateOnly::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateTint::class)
-	open var indeterminateTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun indeterminateTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.indeterminateTint::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.indeterminateTintMode::class)
-	open var indeterminateTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.IndeterminateTintModeEnum>(CoreProgressBarStyleable.IndeterminateTintModeEnum::class)
-
-	@DefinedBy(CoreProgressBarStyleable.interpolator::class)
-	open var interpolator: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun interpolator(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.interpolator::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.max::class)
-	open var max: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun max(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.max::class, init)
-
-	@DefinedBy(CoreImageViewStyleable.maxHeight::class)
-	open var maxHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun maxHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreImageViewStyleable.maxHeight::class, init)
-
-	@DefinedBy(CoreImageViewStyleable.maxWidth::class)
-	open var maxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun maxWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreImageViewStyleable.maxWidth::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.min::class)
-	open var min: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun min(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.min::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
-	open override var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open override fun minHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
-	open override var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open override fun minWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.mirrorForRtl::class)
-	open var mirrorForRtl: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun mirrorForRtl(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.mirrorForRtl::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.progress::class)
-	open var progress: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun progress(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.progress::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.progressBackgroundTint::class)
-	open var progressBackgroundTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun progressBackgroundTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.progressBackgroundTint::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.progressBackgroundTintMode::class)
-	open var progressBackgroundTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.ProgressBackgroundTintModeEnum>(CoreProgressBarStyleable.ProgressBackgroundTintModeEnum::class)
-
-	@DefinedBy(CoreProgressBarStyleable.progressDrawable::class)
-	open var progressDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun progressDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.progressDrawable::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.progressTint::class)
-	open var progressTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun progressTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.progressTint::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.progressTintMode::class)
-	open var progressTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.ProgressTintModeEnum>(CoreProgressBarStyleable.ProgressTintModeEnum::class)
-
-	@DefinedBy(CoreProgressBarStyleable.secondaryProgress::class)
-	open var secondaryProgress: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun secondaryProgress(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.secondaryProgress::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.secondaryProgressTint::class)
-	open var secondaryProgressTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun secondaryProgressTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.secondaryProgressTint::class, init)
-
-	@DefinedBy(CoreProgressBarStyleable.secondaryProgressTintMode::class)
-	open var secondaryProgressTintMode: Any? by GenericEnumDelegate<CoreProgressBarStyleable.SecondaryProgressTintModeEnum>(CoreProgressBarStyleable.SecondaryProgressTintModeEnum::class)
-
-}
-
-open class CoreTextAppearanceStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreTextAppearanceStyleable.elegantTextHeight::class)
-	open var elegantTextHeight: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun elegantTextHeight(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.elegantTextHeight::class, init)
-
-	@DefinedBy(CoreStyleable.fontFamily::class)
-	open var fontFamily: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun fontFamily(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.fontFamily::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.fontFeatureSettings::class)
-	open var fontFeatureSettings: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun fontFeatureSettings(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.fontFeatureSettings::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.letterSpacing::class)
-	open var letterSpacing: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun letterSpacing(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.letterSpacing::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.shadowColor::class)
-	open var shadowColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun shadowColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.shadowColor::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.shadowDx::class)
-	open var shadowDx: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun shadowDx(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.shadowDx::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.shadowDy::class)
-	open var shadowDy: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun shadowDy(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.shadowDy::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.shadowRadius::class)
-	open var shadowRadius: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun shadowRadius(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.shadowRadius::class, init)
-
-	@DefinedBy(CoreTextAppearanceStyleable.textAllCaps::class)
-	open var textAllCaps: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun textAllCaps(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreTextAppearanceStyleable.textAllCaps::class, init)
-
-	@DefinedBy(CoreStyleable.textColor::class)
-	open var textColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textColor::class, init)
-
-	@DefinedBy(CoreStyleable.textColorHighlight::class)
-	open var textColorHighlight: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textColorHighlight(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textColorHighlight::class, init)
-
-	@DefinedBy(CoreStyleable.textColorHint::class)
-	open var textColorHint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textColorHint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textColorHint::class, init)
-
-	@DefinedBy(CoreStyleable.textColorLink::class)
-	open var textColorLink: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textColorLink(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textColorLink::class, init)
-
-	@DefinedBy(CoreStyleable.textSize::class)
-	open var textSize: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun textSize(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textSize::class, init)
-
-	@DefinedBy(CoreStyleable.textStyle::class)
-	open var textStyle: Any? by GenericFlagDelegate<TextStyle>(TextStyle::class)
-
-	@DefinedBy(CoreStyleable.typeface::class)
-	open var typeface: Any? by GenericEnumDelegate<Typeface>(Typeface::class)
-
-}
-
-open class CoreGridViewStyle2 : CoreAbsListViewStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGridViewStyleable.columnWidth::class)
-	open var columnWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun columnWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGridViewStyleable.columnWidth::class, init)
 
 	@DefinedBy(CoreStyleable.gravity::class)
-	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-	@DefinedBy(CoreGridViewStyleable.horizontalSpacing::class)
-	open var horizontalSpacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun horizontalSpacing(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGridViewStyleable.horizontalSpacing::class, init)
-
-	@DefinedBy(CoreGridViewStyleable.numColumns::class)
-	open var numColumns: Any? by GenericEnumDelegate<CoreGridViewStyleable.NumColumnsEnum>(CoreGridViewStyleable.NumColumnsEnum::class, Int::class, IntegerContainer::class)
-
-	@DefinedBy(CoreGridViewStyleable.stretchMode::class)
-	open var stretchMode: Any? by GenericEnumDelegate<CoreGridViewStyleable.StretchModeEnum>(CoreGridViewStyleable.StretchModeEnum::class)
-
-	@DefinedBy(CoreGridViewStyleable.verticalSpacing::class)
-	open var verticalSpacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun verticalSpacing(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGridViewStyleable.verticalSpacing::class, init)
+	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
 
 }
 
-open class CoreAbsListViewStyle2 : CoreViewGroupStyle2 {
+open class CoreViewGroup_MarginLayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreAbsListViewStyleable.cacheColorHint::class)
-	open var cacheColorHint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun cacheColorHint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.cacheColorHint::class, init)
+	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
+	open override var layout_height: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutHeightEnum>(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
 
-	@DefinedBy(CoreAbsListViewStyleable.choiceMode::class)
-	open var choiceMode: Any? by GenericEnumDelegate<CoreAbsListViewStyleable.ChoiceModeEnum>(CoreAbsListViewStyleable.ChoiceModeEnum::class)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_margin::class)
+	open var layout_margin: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_margin(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_margin::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.drawSelectorOnTop::class)
-	open var drawSelectorOnTop: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun drawSelectorOnTop(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.drawSelectorOnTop::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginBottom::class)
+	open var layout_marginBottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginBottom(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginBottom::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.fastScrollAlwaysVisible::class)
-	open var fastScrollAlwaysVisible: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun fastScrollAlwaysVisible(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.fastScrollAlwaysVisible::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginEnd::class)
+	open var layout_marginEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginEnd::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.fastScrollEnabled::class)
-	open var fastScrollEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun fastScrollEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.fastScrollEnabled::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginHorizontal::class)
+	open var layout_marginHorizontal: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginHorizontal(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginHorizontal::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.fastScrollStyle::class)
-	open var fastScrollStyle: CoreFastScrollStyle2? by InlineStyleDelegate()
-	open fun fastScrollStyle(init: CoreFastScrollStyle2.() -> Unit)
-		= initInlineStyle(CoreFastScrollStyle2(), "fastScrollStyle", init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginLeft::class)
+	open var layout_marginLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginLeft(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginLeft::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.listSelector::class)
-	open var listSelector: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun listSelector(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.listSelector::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginRight::class)
+	open var layout_marginRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginRight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginRight::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.scrollingCache::class)
-	open var scrollingCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun scrollingCache(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.scrollingCache::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginStart::class)
+	open var layout_marginStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginStart::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.smoothScrollbar::class)
-	open var smoothScrollbar: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun smoothScrollbar(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.smoothScrollbar::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginTop::class)
+	open var layout_marginTop: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginTop(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginTop::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.stackFromBottom::class)
-	open var stackFromBottom: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun stackFromBottom(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.stackFromBottom::class, init)
+	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginVertical::class)
+	open var layout_marginVertical: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun layout_marginVertical(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginVertical::class, init)
 
-	@DefinedBy(CoreAbsListViewStyleable.textFilterEnabled::class)
-	open var textFilterEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun textFilterEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAbsListViewStyleable.textFilterEnabled::class, init)
-
-	@DefinedBy(CoreAbsListViewStyleable.transcriptMode::class)
-	open var transcriptMode: Any? by GenericEnumDelegate<CoreAbsListViewStyleable.TranscriptModeEnum>(CoreAbsListViewStyleable.TranscriptModeEnum::class)
+	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
+	open override var layout_width: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutWidthEnum>(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
 
 }
 
-open class CoreFastScrollStyle2 : InlineStyle {
+open class CoreDialogPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreFastScrollStyleable.backgroundLeft::class)
-	open var backgroundLeft: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun backgroundLeft(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.backgroundLeft::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.dialogIcon::class)
+	open var dialogIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dialogIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.dialogIcon::class, init)
 
-	@DefinedBy(CoreFastScrollStyleable.backgroundRight::class)
-	open var backgroundRight: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun backgroundRight(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.backgroundRight::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.dialogLayout::class)
+	open var dialogLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dialogLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.dialogLayout::class, init)
 
-	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
-	open var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun minHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.dialogMessage::class)
+	open var dialogMessage: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dialogMessage(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.dialogMessage::class, init)
 
-	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
-	open var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun minWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.dialogTitle::class)
+	open var dialogTitle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dialogTitle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.dialogTitle::class, init)
 
-	@DefinedBy(CoreViewStyleable.padding::class)
-	open var padding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun padding(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewStyleable.padding::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.negativeButtonText::class)
+	open var negativeButtonText: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun negativeButtonText(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.negativeButtonText::class, init)
 
-	@DefinedBy(CoreFastScrollStyleable.position::class)
-	open var position: Any? by GenericEnumDelegate<CoreFastScrollStyleable.PositionEnum>(CoreFastScrollStyleable.PositionEnum::class)
-
-	@DefinedBy(CoreTextViewStyleable.textAppearance::class)
-	open var textAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearance", init)
-
-	@DefinedBy(CoreStyleable.textColor::class)
-	open var textColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textColor::class, init)
-
-	@DefinedBy(CoreStyleable.textSize::class)
-	open var textSize: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun textSize(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreStyleable.textSize::class, init)
-
-	@DefinedBy(CoreFastScrollStyleable.thumbDrawable::class)
-	open var thumbDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun thumbDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.thumbDrawable::class, init)
-
-	@DefinedBy(CoreFastScrollStyleable.thumbMinHeight::class)
-	open var thumbMinHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun thumbMinHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.thumbMinHeight::class, init)
-
-	@DefinedBy(CoreFastScrollStyleable.thumbMinWidth::class)
-	open var thumbMinWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun thumbMinWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.thumbMinWidth::class, init)
-
-	@DefinedBy(CoreFastScrollStyleable.thumbPosition::class)
-	open var thumbPosition: Any? by GenericEnumDelegate<CoreFastScrollStyleable.ThumbPositionEnum>(CoreFastScrollStyleable.ThumbPositionEnum::class)
-
-	@DefinedBy(CoreFastScrollStyleable.trackDrawable::class)
-	open var trackDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun trackDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFastScrollStyleable.trackDrawable::class, init)
+	@DefinedBy(CoreDialogPreferenceStyleable.positiveButtonText::class)
+	open var positiveButtonText: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun positiveButtonText(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDialogPreferenceStyleable.positiveButtonText::class, init)
 
 }
 
-open class CorePreferenceStyle2 : InlineStyle {
+open class CorePreferenceStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2595,47 +2516,553 @@ open class CorePreferenceStyle2 : InlineStyle {
 
 }
 
-open class CoreCheckBoxPreferenceStyle2 : CorePreferenceStyle2 {
+open class CoreGridViewStyle : CoreAbsListViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.disableDependentsState::class)
-	open var disableDependentsState: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun disableDependentsState(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.disableDependentsState::class, init)
-
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOff::class)
-	open var summaryOff: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun summaryOff(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOff::class, init)
-
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOn::class)
-	open var summaryOn: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun summaryOn(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOn::class, init)
-
-}
-
-open class CoreFragmentBreadCrumbsStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
+	@DefinedBy(CoreGridViewStyleable.columnWidth::class)
+	open var columnWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun columnWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGridViewStyleable.columnWidth::class, init)
 
 	@DefinedBy(CoreStyleable.gravity::class)
 	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
 
-	@DefinedBy(CoreFragmentBreadCrumbsStyleable.itemColor::class)
-	open var itemColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun itemColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFragmentBreadCrumbsStyleable.itemColor::class, init)
+	@DefinedBy(CoreGridViewStyleable.horizontalSpacing::class)
+	open var horizontalSpacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun horizontalSpacing(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGridViewStyleable.horizontalSpacing::class, init)
 
-	@DefinedBy(CoreFragmentBreadCrumbsStyleable.itemLayout::class)
-	open var itemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun itemLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreFragmentBreadCrumbsStyleable.itemLayout::class, init)
+	@DefinedBy(CoreGridViewStyleable.numColumns::class)
+	open var numColumns: Any? by GenericEnumDelegate<CoreGridViewStyleable.NumColumnsEnum>(CoreGridViewStyleable.NumColumnsEnum::class, Int::class, IntegerContainer::class)
+
+	@DefinedBy(CoreGridViewStyleable.stretchMode::class)
+	open var stretchMode: Any? by GenericEnumDelegate<CoreGridViewStyleable.StretchModeEnum>(CoreGridViewStyleable.StretchModeEnum::class)
+
+	@DefinedBy(CoreGridViewStyleable.verticalSpacing::class)
+	open var verticalSpacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun verticalSpacing(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGridViewStyleable.verticalSpacing::class, init)
 
 }
 
-open class CorePreferenceFragmentStyle2 : CoreFragmentStyle2 {
+open class CoreAbsListViewStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreAbsListViewStyleable.cacheColorHint::class)
+	open var cacheColorHint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun cacheColorHint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.cacheColorHint::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.choiceMode::class)
+	open var choiceMode: Any? by GenericEnumDelegate<CoreAbsListViewStyleable.ChoiceModeEnum>(CoreAbsListViewStyleable.ChoiceModeEnum::class)
+
+	@DefinedBy(CoreAbsListViewStyleable.drawSelectorOnTop::class)
+	open var drawSelectorOnTop: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun drawSelectorOnTop(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.drawSelectorOnTop::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.fastScrollAlwaysVisible::class)
+	open var fastScrollAlwaysVisible: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun fastScrollAlwaysVisible(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.fastScrollAlwaysVisible::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.fastScrollEnabled::class)
+	open var fastScrollEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun fastScrollEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.fastScrollEnabled::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.fastScrollStyle::class)
+	open var fastScrollStyle: CoreFastScrollStyle? by InlineStyleDelegate()
+	open fun fastScrollStyle(init: CoreFastScrollStyle.() -> Unit)
+		= initInlineStyle(CoreFastScrollStyle(), "fastScrollStyle", init)
+
+	@DefinedBy(CoreAbsListViewStyleable.listSelector::class)
+	open var listSelector: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun listSelector(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.listSelector::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.scrollingCache::class)
+	open var scrollingCache: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun scrollingCache(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.scrollingCache::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.smoothScrollbar::class)
+	open var smoothScrollbar: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun smoothScrollbar(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.smoothScrollbar::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.stackFromBottom::class)
+	open var stackFromBottom: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun stackFromBottom(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.stackFromBottom::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.textFilterEnabled::class)
+	open var textFilterEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun textFilterEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAbsListViewStyleable.textFilterEnabled::class, init)
+
+	@DefinedBy(CoreAbsListViewStyleable.transcriptMode::class)
+	open var transcriptMode: Any? by GenericEnumDelegate<CoreAbsListViewStyleable.TranscriptModeEnum>(CoreAbsListViewStyleable.TranscriptModeEnum::class)
+
+}
+
+open class CoreFastScrollStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreFastScrollStyleable.backgroundLeft::class)
+	open var backgroundLeft: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun backgroundLeft(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.backgroundLeft::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.backgroundRight::class)
+	open var backgroundRight: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun backgroundRight(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.backgroundRight::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
+	open var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun minHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
+	open var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun minWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
+
+	@DefinedBy(CoreViewStyleable.padding::class)
+	open var padding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun padding(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreViewStyleable.padding::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.position::class)
+	open var position: Any? by GenericEnumDelegate<CoreFastScrollStyleable.PositionEnum>(CoreFastScrollStyleable.PositionEnum::class)
+
+	@DefinedBy(CoreTextViewStyleable.textAppearance::class)
+	open var textAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearance", init)
+
+	@DefinedBy(CoreStyleable.textColor::class)
+	open var textColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textColor::class, init)
+
+	@DefinedBy(CoreStyleable.textSize::class)
+	open var textSize: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun textSize(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textSize::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.thumbDrawable::class)
+	open var thumbDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun thumbDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.thumbDrawable::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.thumbMinHeight::class)
+	open var thumbMinHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun thumbMinHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.thumbMinHeight::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.thumbMinWidth::class)
+	open var thumbMinWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun thumbMinWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.thumbMinWidth::class, init)
+
+	@DefinedBy(CoreFastScrollStyleable.thumbPosition::class)
+	open var thumbPosition: Any? by GenericEnumDelegate<CoreFastScrollStyleable.ThumbPositionEnum>(CoreFastScrollStyleable.ThumbPositionEnum::class)
+
+	@DefinedBy(CoreFastScrollStyleable.trackDrawable::class)
+	open var trackDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun trackDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFastScrollStyleable.trackDrawable::class, init)
+
+}
+
+open class CoreTextAppearanceStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreTextAppearanceStyleable.elegantTextHeight::class)
+	open var elegantTextHeight: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun elegantTextHeight(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.elegantTextHeight::class, init)
+
+	@DefinedBy(CoreStyleable.fontFamily::class)
+	open var fontFamily: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun fontFamily(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.fontFamily::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.fontFeatureSettings::class)
+	open var fontFeatureSettings: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun fontFeatureSettings(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.fontFeatureSettings::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.letterSpacing::class)
+	open var letterSpacing: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun letterSpacing(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.letterSpacing::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.shadowColor::class)
+	open var shadowColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun shadowColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.shadowColor::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.shadowDx::class)
+	open var shadowDx: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun shadowDx(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.shadowDx::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.shadowDy::class)
+	open var shadowDy: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun shadowDy(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.shadowDy::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.shadowRadius::class)
+	open var shadowRadius: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun shadowRadius(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.shadowRadius::class, init)
+
+	@DefinedBy(CoreTextAppearanceStyleable.textAllCaps::class)
+	open var textAllCaps: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun textAllCaps(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreTextAppearanceStyleable.textAllCaps::class, init)
+
+	@DefinedBy(CoreStyleable.textColor::class)
+	open var textColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textColor::class, init)
+
+	@DefinedBy(CoreStyleable.textColorHighlight::class)
+	open var textColorHighlight: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textColorHighlight(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textColorHighlight::class, init)
+
+	@DefinedBy(CoreStyleable.textColorHint::class)
+	open var textColorHint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textColorHint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textColorHint::class, init)
+
+	@DefinedBy(CoreStyleable.textColorLink::class)
+	open var textColorLink: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textColorLink(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textColorLink::class, init)
+
+	@DefinedBy(CoreStyleable.textSize::class)
+	open var textSize: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun textSize(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreStyleable.textSize::class, init)
+
+	@DefinedBy(CoreStyleable.textStyle::class)
+	open var textStyle: Any? by GenericFlagDelegate<TextStyle>(TextStyle::class)
+
+	@DefinedBy(CoreStyleable.typeface::class)
+	open var typeface: Any? by GenericEnumDelegate<Typeface>(Typeface::class)
+
+}
+
+open class CoreExpandableListViewStyle : CoreListViewStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childDivider::class)
+	open var childDivider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun childDivider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childDivider::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childIndicator::class)
+	open var childIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun childIndicator(init: StringAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childIndicator::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorEnd::class)
+	open var childIndicatorEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun childIndicatorEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childIndicatorEnd::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorLeft::class)
+	open var childIndicatorLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun childIndicatorLeft(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childIndicatorLeft::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorRight::class)
+	open var childIndicatorRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun childIndicatorRight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childIndicatorRight::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorStart::class)
+	open var childIndicatorStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun childIndicatorStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.childIndicatorStart::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.groupIndicator::class)
+	open var groupIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun groupIndicator(init: StringAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.groupIndicator::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.indicatorEnd::class)
+	open var indicatorEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun indicatorEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.indicatorEnd::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.indicatorLeft::class)
+	open var indicatorLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun indicatorLeft(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.indicatorLeft::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.indicatorRight::class)
+	open var indicatorRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun indicatorRight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.indicatorRight::class, init)
+
+	@DefinedBy(CoreExpandableListViewStyleable.indicatorStart::class)
+	open var indicatorStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun indicatorStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreExpandableListViewStyleable.indicatorStart::class, init)
+
+}
+
+open class CoreListViewStyle : CoreAbsListViewStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreListViewStyleable.divider::class)
+	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun divider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.divider::class, init)
+
+	@DefinedBy(CoreListViewStyleable.dividerHeight::class)
+	open var dividerHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun dividerHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.dividerHeight::class, init)
+
+	@DefinedBy(CoreStyleable.entries::class)
+	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun entries(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.entries::class, init)
+
+	@DefinedBy(CoreListViewStyleable.footerDividersEnabled::class)
+	open var footerDividersEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun footerDividersEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.footerDividersEnabled::class, init)
+
+	@DefinedBy(CoreListViewStyleable.headerDividersEnabled::class)
+	open var headerDividersEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun headerDividersEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.headerDividersEnabled::class, init)
+
+	@DefinedBy(CoreListViewStyleable.overScrollFooter::class)
+	open var overScrollFooter: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun overScrollFooter(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.overScrollFooter::class, init)
+
+	@DefinedBy(CoreListViewStyleable.overScrollHeader::class)
+	open var overScrollHeader: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun overScrollHeader(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.overScrollHeader::class, init)
+
+}
+
+open class CoreRatingBarStyle : CoreProgressBarStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreRatingBarStyleable.isIndicator::class)
+	open var isIndicator: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun isIndicator(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreRatingBarStyleable.isIndicator::class, init)
+
+	@DefinedBy(CoreRatingBarStyleable.numStars::class)
+	open var numStars: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun numStars(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreRatingBarStyleable.numStars::class, init)
+
+	@DefinedBy(CoreRatingBarStyleable.rating::class)
+	open var rating: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun rating(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreRatingBarStyleable.rating::class, init)
+
+	@DefinedBy(CoreRatingBarStyleable.stepSize::class)
+	open var stepSize: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun stepSize(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreRatingBarStyleable.stepSize::class, init)
+
+}
+
+open class CoreScrollViewStyle : CoreFrameLayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreScrollViewStyleable.fillViewport::class)
+	open var fillViewport: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun fillViewport(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreScrollViewStyleable.fillViewport::class, init)
+
+}
+
+open class CoreFrameLayoutStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreFrameLayoutStyleable.measureAllChildren::class)
+	open var measureAllChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun measureAllChildren(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreFrameLayoutStyleable.measureAllChildren::class, init)
+
+}
+
+open class CoreFrameLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+}
+
+open class CoreWindowAnimationStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreWindowAnimationStyleable.activityCloseEnterAnimation::class)
+	open var activityCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun activityCloseEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.activityCloseEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.activityCloseExitAnimation::class)
+	open var activityCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun activityCloseExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.activityCloseExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.activityOpenEnterAnimation::class)
+	open var activityOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun activityOpenEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.activityOpenEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.activityOpenExitAnimation::class)
+	open var activityOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun activityOpenExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.activityOpenExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.activityOpenRemoteViewsEnterAnimation::class)
+	open var activityOpenRemoteViewsEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun activityOpenRemoteViewsEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.activityOpenRemoteViewsEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.launchTaskBehindSourceAnimation::class)
+	open var launchTaskBehindSourceAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun launchTaskBehindSourceAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.launchTaskBehindSourceAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.launchTaskBehindTargetAnimation::class)
+	open var launchTaskBehindTargetAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun launchTaskBehindTargetAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.launchTaskBehindTargetAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskCloseEnterAnimation::class)
+	open var taskCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskCloseEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskCloseEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskCloseExitAnimation::class)
+	open var taskCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskCloseExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskCloseExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskOpenEnterAnimation::class)
+	open var taskOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskOpenEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskOpenEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskOpenExitAnimation::class)
+	open var taskOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskOpenExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskOpenExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskToBackEnterAnimation::class)
+	open var taskToBackEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskToBackEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskToBackEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskToBackExitAnimation::class)
+	open var taskToBackExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskToBackExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskToBackExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskToFrontEnterAnimation::class)
+	open var taskToFrontEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskToFrontEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskToFrontEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.taskToFrontExitAnimation::class)
+	open var taskToFrontExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun taskToFrontExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.taskToFrontExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperCloseEnterAnimation::class)
+	open var wallpaperCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperCloseEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperCloseEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperCloseExitAnimation::class)
+	open var wallpaperCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperCloseExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperCloseExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraCloseEnterAnimation::class)
+	open var wallpaperIntraCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperIntraCloseEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraCloseEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraCloseExitAnimation::class)
+	open var wallpaperIntraCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperIntraCloseExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraCloseExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraOpenEnterAnimation::class)
+	open var wallpaperIntraOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperIntraOpenEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraOpenEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraOpenExitAnimation::class)
+	open var wallpaperIntraOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperIntraOpenExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraOpenExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperOpenEnterAnimation::class)
+	open var wallpaperOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperOpenEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperOpenEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.wallpaperOpenExitAnimation::class)
+	open var wallpaperOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun wallpaperOpenExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.wallpaperOpenExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.windowEnterAnimation::class)
+	open var windowEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun windowEnterAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.windowEnterAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.windowExitAnimation::class)
+	open var windowExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun windowExitAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.windowExitAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.windowHideAnimation::class)
+	open var windowHideAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun windowHideAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.windowHideAnimation::class, init)
+
+	@DefinedBy(CoreWindowAnimationStyleable.windowShowAnimation::class)
+	open var windowShowAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun windowShowAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreWindowAnimationStyleable.windowShowAnimation::class, init)
+
+}
+
+open class CorePreferenceFragmentStyle : CoreFragmentStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2651,7 +3078,7 @@ open class CorePreferenceFragmentStyle2 : CoreFragmentStyle2 {
 
 }
 
-open class CoreFragmentStyle2 : InlineStyle {
+open class CoreFragmentStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2712,275 +3139,23 @@ open class CoreFragmentStyle2 : InlineStyle {
 
 }
 
-open class CoreDatePickerStyle2 : CoreFrameLayoutStyle2 {
+open class CoreActivityChooserViewStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreDatePickerStyleable.calendarTextColor::class)
-	open var calendarTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun calendarTextColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.calendarTextColor::class, init)
+	@DefinedBy(CoreActivityChooserViewStyleable.expandActivityOverflowButtonDrawable::class)
+	open var expandActivityOverflowButtonDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun expandActivityOverflowButtonDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActivityChooserViewStyleable.expandActivityOverflowButtonDrawable::class, init)
 
-	@DefinedBy(CoreDatePickerStyleable.calendarViewShown::class)
-	open var calendarViewShown: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun calendarViewShown(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.calendarViewShown::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.datePickerMode::class)
-	open var datePickerMode: Any? by GenericEnumDelegate<CoreDatePickerStyleable.DatePickerModeEnum>(CoreDatePickerStyleable.DatePickerModeEnum::class)
-
-	@DefinedBy(CoreDatePickerStyleable.dayOfWeekBackground::class)
-	open var dayOfWeekBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dayOfWeekBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.dayOfWeekBackground::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.dayOfWeekTextAppearance::class)
-	open var dayOfWeekTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun dayOfWeekTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "dayOfWeekTextAppearance", init)
-
-	@DefinedBy(CoreDatePickerStyleable.dialogMode::class)
-	open var dialogMode: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun dialogMode(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.dialogMode::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.endYear::class)
-	open var endYear: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun endYear(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.endYear::class, init)
-
-	@DefinedBy(CoreCalendarViewStyleable.firstDayOfWeek::class)
-	open var firstDayOfWeek: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun firstDayOfWeek(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreCalendarViewStyleable.firstDayOfWeek::class, init)
-
-	@DefinedBy(CoreMenuViewStyleable.headerBackground::class)
-	open var headerBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun headerBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CoreMenuViewStyleable.headerBackground::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.headerDayOfMonthTextAppearance::class)
-	open var headerDayOfMonthTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun headerDayOfMonthTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "headerDayOfMonthTextAppearance", init)
-
-	@DefinedBy(CoreDatePickerStyleable.headerMonthTextAppearance::class)
-	open var headerMonthTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun headerMonthTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "headerMonthTextAppearance", init)
-
-	@DefinedBy(CoreDatePickerStyleable.headerTextColor::class)
-	open var headerTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun headerTextColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.headerTextColor::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.headerYearTextAppearance::class)
-	open var headerYearTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun headerYearTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "headerYearTextAppearance", init)
-
-	@DefinedBy(CoreDatePickerStyleable.internalLayout::class)
-	open var internalLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun internalLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.internalLayout::class, init)
-
-	@DefinedBy(CoreTimePickerStyleable.legacyLayout::class)
-	open var legacyLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun legacyLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTimePickerStyleable.legacyLayout::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.maxDate::class)
-	open var maxDate: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun maxDate(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.maxDate::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.minDate::class)
-	open var minDate: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun minDate(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.minDate::class, init)
-
-// SKIPPING spinnersShown
-
-	@DefinedBy(CoreDatePickerStyleable.startYear::class)
-	open var startYear: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun startYear(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.startYear::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.yearListItemActivatedTextAppearance::class)
-	open var yearListItemActivatedTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun yearListItemActivatedTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "yearListItemActivatedTextAppearance", init)
-
-	@DefinedBy(CoreDatePickerStyleable.yearListItemTextAppearance::class)
-	open var yearListItemTextAppearance: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun yearListItemTextAppearance(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.yearListItemTextAppearance::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.yearListSelectorColor::class)
-	open var yearListSelectorColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun yearListSelectorColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.yearListSelectorColor::class, init)
+	@DefinedBy(CoreActivityChooserViewStyleable.initialActivityCount::class)
+	open var initialActivityCount: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun initialActivityCount(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActivityChooserViewStyleable.initialActivityCount::class, init)
 
 }
 
-open class CoreFrameLayoutStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreFrameLayoutStyleable.measureAllChildren::class)
-	open var measureAllChildren: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun measureAllChildren(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreFrameLayoutStyleable.measureAllChildren::class, init)
-
-}
-
-open class CoreFrameLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-}
-
-open class CoreNumberPickerStyle2 : CoreLinearLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreNumberPickerStyleable.hideWheelUntilFocused::class)
-	open var hideWheelUntilFocused: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun hideWheelUntilFocused(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.hideWheelUntilFocused::class, init)
-
-	@DefinedBy(CoreDatePickerStyleable.internalLayout::class)
-	open var internalLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun internalLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDatePickerStyleable.internalLayout::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.internalMaxHeight::class)
-	open var internalMaxHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun internalMaxHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.internalMaxHeight::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.internalMaxWidth::class)
-	open var internalMaxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun internalMaxWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.internalMaxWidth::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.internalMinHeight::class)
-	open var internalMinHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun internalMinHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.internalMinHeight::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.internalMinWidth::class)
-	open var internalMinWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun internalMinWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.internalMinWidth::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.selectionDivider::class)
-	open var selectionDivider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun selectionDivider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.selectionDivider::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.selectionDividerHeight::class)
-	open var selectionDividerHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun selectionDividerHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.selectionDividerHeight::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.selectionDividersDistance::class)
-	open var selectionDividersDistance: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun selectionDividersDistance(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.selectionDividersDistance::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.solidColor::class)
-	open var solidColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun solidColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.solidColor::class, init)
-
-	@DefinedBy(CoreNumberPickerStyleable.virtualButtonPressedDrawable::class)
-	open var virtualButtonPressedDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun virtualButtonPressedDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreNumberPickerStyleable.virtualButtonPressedDrawable::class, init)
-
-}
-
-open class CoreLinearLayoutStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreLinearLayoutStyleable.baselineAligned::class)
-	open var baselineAligned: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun baselineAligned(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreLinearLayoutStyleable.baselineAligned::class, init)
-
-	@DefinedBy(CoreLinearLayoutStyleable.baselineAlignedChildIndex::class)
-	open var baselineAlignedChildIndex: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun baselineAlignedChildIndex(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreLinearLayoutStyleable.baselineAlignedChildIndex::class, init)
-
-	@DefinedBy(CoreListViewStyleable.divider::class)
-	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun divider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.divider::class, init)
-
-	@DefinedBy(CoreLinearLayoutStyleable.dividerPadding::class)
-	open var dividerPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun dividerPadding(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreLinearLayoutStyleable.dividerPadding::class, init)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-	@DefinedBy(CoreLinearLayoutStyleable.measureWithLargestChild::class)
-	open var measureWithLargestChild: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun measureWithLargestChild(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreLinearLayoutStyleable.measureWithLargestChild::class, init)
-
-	@DefinedBy(CoreStyleable.orientation::class)
-	open var orientation: Any? by GenericEnumDelegate<Orientation>(Orientation::class)
-
-	@DefinedBy(CoreLinearLayoutStyleable.showDividers::class)
-	open var showDividers: Any? by GenericFlagDelegate<CoreLinearLayoutStyleable.ShowDividersFlag>(CoreLinearLayoutStyleable.ShowDividersFlag::class)
-
-	@DefinedBy(CoreLinearLayoutStyleable.weightSum::class)
-	open var weightSum: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun weightSum(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreLinearLayoutStyleable.weightSum::class, init)
-
-}
-
-open class CoreLinearLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
-	open override var layout_height: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutHeightEnum>(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
-
-	@DefinedBy(CoreLinearLayout_LayoutStyleable.layout_weight::class)
-	open var layout_weight: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun layout_weight(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreLinearLayout_LayoutStyleable.layout_weight::class, init)
-
-	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
-	open override var layout_width: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutWidthEnum>(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
-
-}
-
-open class CoreScrollViewStyle2 : CoreFrameLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreScrollViewStyleable.fillViewport::class)
-	open var fillViewport: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun fillViewport(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreScrollViewStyleable.fillViewport::class, init)
-
-}
-
-open class CoreQuickContactBadgeStyle2 : CoreImageViewStyle2 {
+open class CoreQuickContactBadgeStyle : CoreImageViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -2989,7 +3164,7 @@ open class CoreQuickContactBadgeStyle2 : CoreImageViewStyle2 {
 
 }
 
-open class CoreImageViewStyle2 : CoreViewStyle2 {
+open class CoreImageViewStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -3046,7 +3221,306 @@ open class CoreImageViewStyle2 : CoreViewStyle2 {
 
 }
 
-open class CoreMapViewStyle2 : CoreViewGroupStyle2 {
+open class CoreDatePickerStyle : CoreFrameLayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreDatePickerStyleable.calendarTextColor::class)
+	open var calendarTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun calendarTextColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.calendarTextColor::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.calendarViewShown::class)
+	open var calendarViewShown: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun calendarViewShown(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.calendarViewShown::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.datePickerMode::class)
+	open var datePickerMode: Any? by GenericEnumDelegate<CoreDatePickerStyleable.DatePickerModeEnum>(CoreDatePickerStyleable.DatePickerModeEnum::class)
+
+	@DefinedBy(CoreDatePickerStyleable.dayOfWeekBackground::class)
+	open var dayOfWeekBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dayOfWeekBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.dayOfWeekBackground::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.dayOfWeekTextAppearance::class)
+	open var dayOfWeekTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun dayOfWeekTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "dayOfWeekTextAppearance", init)
+
+	@DefinedBy(CoreDatePickerStyleable.dialogMode::class)
+	open var dialogMode: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun dialogMode(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.dialogMode::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.endYear::class)
+	open var endYear: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun endYear(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.endYear::class, init)
+
+	@DefinedBy(CoreCalendarViewStyleable.firstDayOfWeek::class)
+	open var firstDayOfWeek: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun firstDayOfWeek(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreCalendarViewStyleable.firstDayOfWeek::class, init)
+
+	@DefinedBy(CoreMenuViewStyleable.headerBackground::class)
+	open var headerBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun headerBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CoreMenuViewStyleable.headerBackground::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.headerDayOfMonthTextAppearance::class)
+	open var headerDayOfMonthTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun headerDayOfMonthTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "headerDayOfMonthTextAppearance", init)
+
+	@DefinedBy(CoreDatePickerStyleable.headerMonthTextAppearance::class)
+	open var headerMonthTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun headerMonthTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "headerMonthTextAppearance", init)
+
+	@DefinedBy(CoreDatePickerStyleable.headerTextColor::class)
+	open var headerTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun headerTextColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.headerTextColor::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.headerYearTextAppearance::class)
+	open var headerYearTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun headerYearTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "headerYearTextAppearance", init)
+
+	@DefinedBy(CoreDatePickerStyleable.internalLayout::class)
+	open var internalLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun internalLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.internalLayout::class, init)
+
+	@DefinedBy(CoreTimePickerStyleable.legacyLayout::class)
+	open var legacyLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun legacyLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTimePickerStyleable.legacyLayout::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.maxDate::class)
+	open var maxDate: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun maxDate(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.maxDate::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.minDate::class)
+	open var minDate: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun minDate(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.minDate::class, init)
+
+// SKIPPING spinnersShown
+
+	@DefinedBy(CoreDatePickerStyleable.startYear::class)
+	open var startYear: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun startYear(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.startYear::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.yearListItemActivatedTextAppearance::class)
+	open var yearListItemActivatedTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun yearListItemActivatedTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "yearListItemActivatedTextAppearance", init)
+
+	@DefinedBy(CoreDatePickerStyleable.yearListItemTextAppearance::class)
+	open var yearListItemTextAppearance: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun yearListItemTextAppearance(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.yearListItemTextAppearance::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.yearListSelectorColor::class)
+	open var yearListSelectorColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun yearListSelectorColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.yearListSelectorColor::class, init)
+
+}
+
+open class CoreSwitchPreferenceStyle : CorePreferenceStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.disableDependentsState::class)
+	open var disableDependentsState: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun disableDependentsState(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.disableDependentsState::class, init)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOff::class)
+	open var summaryOff: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun summaryOff(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOff::class, init)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOn::class)
+	open var summaryOn: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun summaryOn(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOn::class, init)
+
+	@DefinedBy(CoreSwitchPreferenceStyleable.switchTextOff::class)
+	open var switchTextOff: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun switchTextOff(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSwitchPreferenceStyleable.switchTextOff::class, init)
+
+	@DefinedBy(CoreSwitchPreferenceStyleable.switchTextOn::class)
+	open var switchTextOn: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun switchTextOn(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSwitchPreferenceStyleable.switchTextOn::class, init)
+
+}
+
+open class CoreSpinnerStyle : CoreAbsSpinnerStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreSpinnerStyleable.disableChildrenWhenDisabled::class)
+	open var disableChildrenWhenDisabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun disableChildrenWhenDisabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSpinnerStyleable.disableChildrenWhenDisabled::class, init)
+
+	@DefinedBy(CoreAutoCompleteTextViewStyleable.dropDownSelector::class)
+	open var dropDownSelector: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun dropDownSelector(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAutoCompleteTextViewStyleable.dropDownSelector::class, init)
+
+	@DefinedBy(CoreAutoCompleteTextViewStyleable.dropDownWidth::class)
+	open var dropDownWidth: Any? by GenericEnumDelegate<CoreAutoCompleteTextViewStyleable.DropDownWidthEnum>(CoreAutoCompleteTextViewStyleable.DropDownWidthEnum::class, Dimension::class, DimensionContainer::class)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(CorePopupWindowStyleable.popupBackground::class)
+	open var popupBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupBackground::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupElevation::class)
+	open var popupElevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun popupElevation(init: DimensionAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupElevation::class, init)
+
+	@DefinedBy(CoreSpinnerStyleable.popupPromptView::class)
+	open var popupPromptView: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupPromptView(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSpinnerStyleable.popupPromptView::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
+	open var popupTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun popupTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "popupTheme", init)
+
+	@DefinedBy(CoreSpinnerStyleable.prompt::class)
+	open var prompt: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun prompt(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSpinnerStyleable.prompt::class, init)
+
+	@DefinedBy(CoreSpinnerStyleable.spinnerMode::class)
+	open var spinnerMode: Any? by GenericEnumDelegate<CoreSpinnerStyleable.SpinnerModeEnum>(CoreSpinnerStyleable.SpinnerModeEnum::class)
+
+}
+
+open class CoreAbsSpinnerStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStyleable.entries::class)
+	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun entries(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.entries::class, init)
+
+}
+
+open class CoreTabWidgetStyle : CoreLinearLayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreListViewStyleable.divider::class)
+	open override var divider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open override fun divider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.divider::class, init)
+
+	@DefinedBy(CoreTabWidgetStyleable.tabLayout::class)
+	open var tabLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun tabLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTabWidgetStyleable.tabLayout::class, init)
+
+	@DefinedBy(CoreTabWidgetStyleable.tabStripEnabled::class)
+	open var tabStripEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun tabStripEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreTabWidgetStyleable.tabStripEnabled::class, init)
+
+	@DefinedBy(CoreTabWidgetStyleable.tabStripLeft::class)
+	open var tabStripLeft: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun tabStripLeft(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTabWidgetStyleable.tabStripLeft::class, init)
+
+	@DefinedBy(CoreTabWidgetStyleable.tabStripRight::class)
+	open var tabStripRight: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun tabStripRight(init: StringAttribute.() -> Unit)
+		= initAttr(CoreTabWidgetStyleable.tabStripRight::class, init)
+
+}
+
+open class CoreLinearLayoutStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreLinearLayoutStyleable.baselineAligned::class)
+	open var baselineAligned: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun baselineAligned(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreLinearLayoutStyleable.baselineAligned::class, init)
+
+	@DefinedBy(CoreLinearLayoutStyleable.baselineAlignedChildIndex::class)
+	open var baselineAlignedChildIndex: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun baselineAlignedChildIndex(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreLinearLayoutStyleable.baselineAlignedChildIndex::class, init)
+
+	@DefinedBy(CoreListViewStyleable.divider::class)
+	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun divider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.divider::class, init)
+
+	@DefinedBy(CoreLinearLayoutStyleable.dividerPadding::class)
+	open var dividerPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun dividerPadding(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreLinearLayoutStyleable.dividerPadding::class, init)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(CoreLinearLayoutStyleable.measureWithLargestChild::class)
+	open var measureWithLargestChild: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun measureWithLargestChild(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreLinearLayoutStyleable.measureWithLargestChild::class, init)
+
+	@DefinedBy(CoreStyleable.orientation::class)
+	open var orientation: Any? by GenericEnumDelegate<Orientation>(Orientation::class)
+
+	@DefinedBy(CoreLinearLayoutStyleable.showDividers::class)
+	open var showDividers: Any? by GenericFlagDelegate<CoreLinearLayoutStyleable.ShowDividersFlag>(CoreLinearLayoutStyleable.ShowDividersFlag::class)
+
+	@DefinedBy(CoreLinearLayoutStyleable.weightSum::class)
+	open var weightSum: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun weightSum(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreLinearLayoutStyleable.weightSum::class, init)
+
+}
+
+open class CoreLinearLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
+	open override var layout_height: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutHeightEnum>(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
+
+	@DefinedBy(CoreLinearLayout_LayoutStyleable.layout_weight::class)
+	open var layout_weight: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun layout_weight(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreLinearLayout_LayoutStyleable.layout_weight::class, init)
+
+	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
+	open override var layout_width: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutWidthEnum>(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
+
+}
+
+open class CoreMapViewStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -3057,23 +3531,155 @@ open class CoreMapViewStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreActivityChooserViewStyle2 : CoreViewGroupStyle2 {
+open class CoreSearchViewStyle : CoreLinearLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreActivityChooserViewStyleable.expandActivityOverflowButtonDrawable::class)
-	open var expandActivityOverflowButtonDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun expandActivityOverflowButtonDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActivityChooserViewStyleable.expandActivityOverflowButtonDrawable::class, init)
+	@DefinedBy(CoreSearchViewStyleable.closeIcon::class)
+	open var closeIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun closeIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.closeIcon::class, init)
 
-	@DefinedBy(CoreActivityChooserViewStyleable.initialActivityCount::class)
-	open var initialActivityCount: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun initialActivityCount(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActivityChooserViewStyleable.initialActivityCount::class, init)
+	@DefinedBy(CoreSearchViewStyleable.commitIcon::class)
+	open var commitIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun commitIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.commitIcon::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.defaultQueryHint::class)
+	open var defaultQueryHint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun defaultQueryHint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.defaultQueryHint::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.goIcon::class)
+	open var goIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun goIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.goIcon::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.iconifiedByDefault::class)
+	open var iconifiedByDefault: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun iconifiedByDefault(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.iconifiedByDefault::class, init)
+
+	@DefinedBy(CoreStyleable.imeOptions::class)
+	open var imeOptions: Any? by GenericFlagDelegate<ImeOptions>(ImeOptions::class)
+
+	@DefinedBy(CoreStyleable.inputType::class)
+	open var inputType: Any? by GenericFlagDelegate<InputType>(InputType::class)
+
+	@DefinedBy(CoreViewStubStyleable.layout::class)
+	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun layout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStubStyleable.layout::class, init)
+
+	@DefinedBy(CoreImageViewStyleable.maxWidth::class)
+	open var maxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun maxWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreImageViewStyleable.maxWidth::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.queryBackground::class)
+	open var queryBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun queryBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.queryBackground::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.queryHint::class)
+	open var queryHint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun queryHint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.queryHint::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.searchHintIcon::class)
+	open var searchHintIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun searchHintIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.searchHintIcon::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.searchIcon::class)
+	open var searchIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun searchIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.searchIcon::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.submitBackground::class)
+	open var submitBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun submitBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.submitBackground::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.suggestionRowLayout::class)
+	open var suggestionRowLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun suggestionRowLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.suggestionRowLayout::class, init)
+
+	@DefinedBy(CoreSearchViewStyleable.voiceIcon::class)
+	open var voiceIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun voiceIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSearchViewStyleable.voiceIcon::class, init)
 
 }
 
-open class CoreAutoCompleteTextViewStyle2 : CoreEditTextViewStyle2 {
+open class CoreMediaRouteButtonStyle : CoreViewStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreMediaRouteButtonStyleable.externalRouteEnabledDrawable::class)
+	open var externalRouteEnabledDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun externalRouteEnabledDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreMediaRouteButtonStyleable.externalRouteEnabledDrawable::class, init)
+
+	@DefinedBy(CoreMediaRouteButtonStyleable.mediaRouteTypes::class)
+	open var mediaRouteTypes: Any? by GenericEnumDelegate<CoreMediaRouteButtonStyleable.MediaRouteTypesEnum>(CoreMediaRouteButtonStyleable.MediaRouteTypesEnum::class, Int::class, IntegerContainer::class)
+
+	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
+	open override var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open override fun minHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
+
+	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
+	open override var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open override fun minWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
+
+}
+
+open class CoreStackViewStyle : CoreAdapterViewAnimatorStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStackViewStyleable.clickColor::class)
+	open var clickColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun clickColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStackViewStyleable.clickColor::class, init)
+
+	@DefinedBy(CoreStackViewStyleable.resOutColor::class)
+	open var resOutColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun resOutColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStackViewStyleable.resOutColor::class, init)
+
+}
+
+open class CoreAdapterViewAnimatorStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreViewAnimatorStyleable.animateFirstView::class)
+	open var animateFirstView: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun animateFirstView(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreViewAnimatorStyleable.animateFirstView::class, init)
+
+	@DefinedBy(CoreViewAnimatorStyleable.inAnimation::class)
+	open var inAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun inAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewAnimatorStyleable.inAnimation::class, init)
+
+	@DefinedBy(CoreAdapterViewAnimatorStyleable.loopViews::class)
+	open var loopViews: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun loopViews(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAdapterViewAnimatorStyleable.loopViews::class, init)
+
+	@DefinedBy(CoreViewAnimatorStyleable.outAnimation::class)
+	open var outAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun outAnimation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewAnimatorStyleable.outAnimation::class, init)
+
+}
+
+open class CoreAutoCompleteTextViewStyle : CoreEditTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -3112,19 +3718,19 @@ open class CoreAutoCompleteTextViewStyle2 : CoreEditTextViewStyle2 {
 	open override var inputType: Any? by GenericFlagDelegate<InputType>(InputType::class)
 
 	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
-	open var popupTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun popupTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "popupTheme", init)
+	open var popupTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun popupTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "popupTheme", init)
 
 }
 
-open class CoreEditTextViewStyle2 : CoreTextViewStyle2 {
+open class CoreEditTextViewStyle : CoreTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreTextViewStyle2 : CoreViewStyle2 {
+open class CoreTextViewStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -3448,9 +4054,9 @@ open class CoreTextViewStyle2 : CoreViewStyle2 {
 		= initAttr(CoreTextAppearanceStyleable.textAllCaps::class, init)
 
 	@DefinedBy(CoreTextViewStyleable.textAppearance::class)
-	open var textAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearance", init)
+	open var textAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearance", init)
 
 	@DefinedBy(CoreStyleable.textColor::class)
 	open var textColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -3551,548 +4157,7 @@ open class CoreTextViewStyle2 : CoreViewStyle2 {
 
 }
 
-open class CoreActionBarStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreViewStyleable.background::class)
-	open override var background: Any? by GenericDelegate(String::class,StringContainer::class)
-	open override fun background(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStyleable.background::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.backgroundSplit::class)
-	open var backgroundSplit: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun backgroundSplit(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.backgroundSplit::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.backgroundStacked::class)
-	open var backgroundStacked: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun backgroundStacked(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.backgroundStacked::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetEnd::class)
-	open var contentInsetEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetEnd::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetEndWithActions::class)
-	open var contentInsetEndWithActions: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetEndWithActions(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetEndWithActions::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetLeft::class)
-	open var contentInsetLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetLeft(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetLeft::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetRight::class)
-	open var contentInsetRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetRight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetRight::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetStart::class)
-	open var contentInsetStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetStart::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetStartWithNavigation::class)
-	open var contentInsetStartWithNavigation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetStartWithNavigation(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetStartWithNavigation::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.customNavigationLayout::class)
-	open var customNavigationLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun customNavigationLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.customNavigationLayout::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.displayOptions::class)
-	open var displayOptions: Any? by GenericFlagDelegate<CoreActionBarStyleable.DisplayOptionsFlag>(CoreActionBarStyleable.DisplayOptionsFlag::class)
-
-	@DefinedBy(CoreListViewStyleable.divider::class)
-	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun divider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.divider::class, init)
-
-	@DefinedBy(CoreViewStyleable.elevation::class)
-	open override var elevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open override fun elevation(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewStyleable.elevation::class, init)
-
-	@DefinedBy(CoreTextViewStyleable.height::class)
-	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun height(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreTextViewStyleable.height::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.hideOnContentScroll::class)
-	open var hideOnContentScroll: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun hideOnContentScroll(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.hideOnContentScroll::class, init)
-
-	@DefinedBy(CoreThemeStyleable.homeAsUpIndicator::class)
-	open var homeAsUpIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun homeAsUpIndicator(init: StringAttribute.() -> Unit)
-		= initAttr(CoreThemeStyleable.homeAsUpIndicator::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.homeLayout::class)
-	open var homeLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun homeLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.homeLayout::class, init)
-
-	@DefinedBy(ManifestStyleable.icon::class)
-	open var icon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun icon(init: StringAttribute.() -> Unit)
-		= initAttr(ManifestStyleable.icon::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.indeterminateProgressStyle::class)
-	open var indeterminateProgressStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun indeterminateProgressStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.indeterminateProgressStyle::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.itemPadding::class)
-	open var itemPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun itemPadding(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.itemPadding::class, init)
-
-	@DefinedBy(ManifestStyleable.logo::class)
-	open var logo: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun logo(init: StringAttribute.() -> Unit)
-		= initAttr(ManifestStyleable.logo::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.navigationMode::class)
-	open var navigationMode: Any? by GenericEnumDelegate<CoreActionBarStyleable.NavigationModeEnum>(CoreActionBarStyleable.NavigationModeEnum::class)
-
-	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
-	open var popupTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun popupTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "popupTheme", init)
-
-	@DefinedBy(CoreActionBarStyleable.progressBarPadding::class)
-	open var progressBarPadding: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun progressBarPadding(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.progressBarPadding::class, init)
-
-	@DefinedBy(CoreThemeStyleable.progressBarStyle::class)
-	open var progressBarStyle: CoreProgressBarStyle2? by InlineStyleDelegate()
-	open fun progressBarStyle(init: CoreProgressBarStyle2.() -> Unit)
-		= initInlineStyle(CoreProgressBarStyle2(), "progressBarStyle", init)
-
-	@DefinedBy(CoreActionBarStyleable.subtitle::class)
-	open var subtitle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun subtitle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.subtitle::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.subtitleTextStyle::class)
-	open var subtitleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun subtitleTextStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.subtitleTextStyle::class, init)
-
-	@DefinedBy(CoreMenuItemStyleable.title::class)
-	open var title: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun title(init: StringAttribute.() -> Unit)
-		= initAttr(CoreMenuItemStyleable.title::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.titleTextStyle::class)
-	open var titleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun titleTextStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.titleTextStyle::class, init)
-
-}
-
-open class CoreActionBar_LayoutParamsStyle2 : CoreViewGroup_MarginLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-}
-
-open class CoreViewGroup_MarginLayoutStyle2 : CoreViewGroup_LayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
-	open override var layout_height: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutHeightEnum>(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_margin::class)
-	open var layout_margin: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_margin(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_margin::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginBottom::class)
-	open var layout_marginBottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginBottom(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginBottom::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginEnd::class)
-	open var layout_marginEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginEnd::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginHorizontal::class)
-	open var layout_marginHorizontal: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginHorizontal(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginHorizontal::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginLeft::class)
-	open var layout_marginLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginLeft(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginLeft::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginRight::class)
-	open var layout_marginRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginRight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginRight::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginStart::class)
-	open var layout_marginStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginStart::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginTop::class)
-	open var layout_marginTop: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginTop(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginTop::class, init)
-
-	@DefinedBy(CoreViewGroup_MarginLayoutStyleable.layout_marginVertical::class)
-	open var layout_marginVertical: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun layout_marginVertical(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreViewGroup_MarginLayoutStyleable.layout_marginVertical::class, init)
-
-	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
-	open override var layout_width: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutWidthEnum>(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
-
-}
-
-open class CoreGestureOverlayViewStyle2 : CoreFrameLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.eventsInterceptionEnabled::class)
-	open var eventsInterceptionEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun eventsInterceptionEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.eventsInterceptionEnabled::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.fadeDuration::class)
-	open var fadeDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun fadeDuration(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.fadeDuration::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.fadeEnabled::class)
-	open var fadeEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun fadeEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.fadeEnabled::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.fadeOffset::class)
-	open var fadeOffset: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun fadeOffset(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.fadeOffset::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureColor::class)
-	open var gestureColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun gestureColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.gestureColor::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeAngleThreshold::class)
-	open var gestureStrokeAngleThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun gestureStrokeAngleThreshold(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeAngleThreshold::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeLengthThreshold::class)
-	open var gestureStrokeLengthThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun gestureStrokeLengthThreshold(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeLengthThreshold::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeSquarenessThreshold::class)
-	open var gestureStrokeSquarenessThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun gestureStrokeSquarenessThreshold(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeSquarenessThreshold::class, init)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeType::class)
-	open var gestureStrokeType: Any? by GenericEnumDelegate<CoreGestureOverlayViewStyleable.GestureStrokeTypeEnum>(CoreGestureOverlayViewStyleable.GestureStrokeTypeEnum::class)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeWidth::class)
-	open var gestureStrokeWidth: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun gestureStrokeWidth(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeWidth::class, init)
-
-	@DefinedBy(CoreStyleable.orientation::class)
-	open var orientation: Any? by GenericEnumDelegate<Orientation>(Orientation::class)
-
-	@DefinedBy(CoreGestureOverlayViewStyleable.uncertainGestureColor::class)
-	open var uncertainGestureColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun uncertainGestureColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGestureOverlayViewStyleable.uncertainGestureColor::class, init)
-
-}
-
-open class CoreStackViewStyle2 : CoreAdapterViewAnimatorStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreStackViewStyleable.clickColor::class)
-	open var clickColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun clickColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStackViewStyleable.clickColor::class, init)
-
-	@DefinedBy(CoreStackViewStyleable.resOutColor::class)
-	open var resOutColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun resOutColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStackViewStyleable.resOutColor::class, init)
-
-}
-
-open class CoreAdapterViewAnimatorStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreViewAnimatorStyleable.animateFirstView::class)
-	open var animateFirstView: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun animateFirstView(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreViewAnimatorStyleable.animateFirstView::class, init)
-
-	@DefinedBy(CoreViewAnimatorStyleable.inAnimation::class)
-	open var inAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun inAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewAnimatorStyleable.inAnimation::class, init)
-
-	@DefinedBy(CoreAdapterViewAnimatorStyleable.loopViews::class)
-	open var loopViews: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun loopViews(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAdapterViewAnimatorStyleable.loopViews::class, init)
-
-	@DefinedBy(CoreViewAnimatorStyleable.outAnimation::class)
-	open var outAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun outAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewAnimatorStyleable.outAnimation::class, init)
-
-}
-
-open class CoreButtonStyle2 : CoreTextViewStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-}
-
-open class CoreActionModeStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreViewStyleable.background::class)
-	open var background: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun background(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStyleable.background::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.backgroundSplit::class)
-	open var backgroundSplit: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun backgroundSplit(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.backgroundSplit::class, init)
-
-	@DefinedBy(CoreActionModeStyleable.closeItemLayout::class)
-	open var closeItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun closeItemLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionModeStyleable.closeItemLayout::class, init)
-
-	@DefinedBy(CoreTextViewStyleable.height::class)
-	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun height(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreTextViewStyleable.height::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.subtitleTextStyle::class)
-	open var subtitleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun subtitleTextStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.subtitleTextStyle::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.titleTextStyle::class)
-	open var titleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun titleTextStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.titleTextStyle::class, init)
-
-}
-
-open class CorePreferenceScreenStyle2 : CorePreferenceGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreListViewStyleable.divider::class)
-	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun divider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.divider::class, init)
-
-	@DefinedBy(CorePreferenceScreenStyleable.screenLayout::class)
-	open var screenLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun screenLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CorePreferenceScreenStyleable.screenLayout::class, init)
-
-}
-
-open class CorePreferenceGroupStyle2 : CorePreferenceStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CorePreferenceGroupStyleable.orderingFromXml::class)
-	open var orderingFromXml: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun orderingFromXml(init: BooleanAttribute.() -> Unit)
-		= initAttr(CorePreferenceGroupStyleable.orderingFromXml::class, init)
-
-}
-
-open class CorePopupWindowStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CorePopupWindowStyleable.overlapAnchor::class)
-	open var overlapAnchor: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun overlapAnchor(init: BooleanAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.overlapAnchor::class, init)
-
-	@DefinedBy(CorePopupWindowStyleable.popupAnimationStyle::class)
-	open var popupAnimationStyle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupAnimationStyle(init: StringAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupAnimationStyle::class, init)
-
-	@DefinedBy(CorePopupWindowStyleable.popupBackground::class)
-	open var popupBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupBackground::class, init)
-
-	@DefinedBy(CorePopupWindowStyleable.popupElevation::class)
-	open var popupElevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun popupElevation(init: DimensionAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupElevation::class, init)
-
-	@DefinedBy(CorePopupWindowStyleable.popupEnterTransition::class)
-	open var popupEnterTransition: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupEnterTransition(init: StringAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupEnterTransition::class, init)
-
-	@DefinedBy(CorePopupWindowStyleable.popupExitTransition::class)
-	open var popupExitTransition: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun popupExitTransition(init: StringAttribute.() -> Unit)
-		= initAttr(CorePopupWindowStyleable.popupExitTransition::class, init)
-
-}
-
-open class CoreSeekBarStyle2 : CoreProgressBarStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreSeekBarStyleable.splitTrack::class)
-	open var splitTrack: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun splitTrack(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.splitTrack::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.thumb::class)
-	open var thumb: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun thumb(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.thumb::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.thumbOffset::class)
-	open var thumbOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun thumbOffset(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.thumbOffset::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.thumbTint::class)
-	open var thumbTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun thumbTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.thumbTint::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.thumbTintMode::class)
-	open var thumbTintMode: Any? by GenericEnumDelegate<CoreSeekBarStyleable.ThumbTintModeEnum>(CoreSeekBarStyleable.ThumbTintModeEnum::class)
-
-	@DefinedBy(CoreSeekBarStyleable.tickMark::class)
-	open var tickMark: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun tickMark(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.tickMark::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.tickMarkTint::class)
-	open var tickMarkTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun tickMarkTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.tickMarkTint::class, init)
-
-	@DefinedBy(CoreSeekBarStyleable.tickMarkTintMode::class)
-	open var tickMarkTintMode: Any? by GenericEnumDelegate<CoreSeekBarStyleable.TickMarkTintModeEnum>(CoreSeekBarStyleable.TickMarkTintModeEnum::class)
-
-	@DefinedBy(CoreSeekBarStyleable.useDisabledAlpha::class)
-	open var useDisabledAlpha: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun useDisabledAlpha(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSeekBarStyleable.useDisabledAlpha::class, init)
-
-}
-
-open class CoreTabWidgetStyle2 : CoreLinearLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreListViewStyleable.divider::class)
-	open override var divider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open override fun divider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.divider::class, init)
-
-	@DefinedBy(CoreTabWidgetStyleable.tabLayout::class)
-	open var tabLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun tabLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTabWidgetStyleable.tabLayout::class, init)
-
-	@DefinedBy(CoreTabWidgetStyleable.tabStripEnabled::class)
-	open var tabStripEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun tabStripEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreTabWidgetStyleable.tabStripEnabled::class, init)
-
-	@DefinedBy(CoreTabWidgetStyleable.tabStripLeft::class)
-	open var tabStripLeft: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun tabStripLeft(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTabWidgetStyleable.tabStripLeft::class, init)
-
-	@DefinedBy(CoreTabWidgetStyleable.tabStripRight::class)
-	open var tabStripRight: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun tabStripRight(init: StringAttribute.() -> Unit)
-		= initAttr(CoreTabWidgetStyleable.tabStripRight::class, init)
-
-}
-
-open class CoreListViewStyle2 : CoreAbsListViewStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreListViewStyleable.divider::class)
-	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun divider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.divider::class, init)
-
-	@DefinedBy(CoreListViewStyleable.dividerHeight::class)
-	open var dividerHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun dividerHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.dividerHeight::class, init)
-
-	@DefinedBy(CoreStyleable.entries::class)
-	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun entries(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.entries::class, init)
-
-	@DefinedBy(CoreListViewStyleable.footerDividersEnabled::class)
-	open var footerDividersEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun footerDividersEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.footerDividersEnabled::class, init)
-
-	@DefinedBy(CoreListViewStyleable.headerDividersEnabled::class)
-	open var headerDividersEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun headerDividersEnabled(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.headerDividersEnabled::class, init)
-
-	@DefinedBy(CoreListViewStyleable.overScrollFooter::class)
-	open var overScrollFooter: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun overScrollFooter(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.overScrollFooter::class, init)
-
-	@DefinedBy(CoreListViewStyleable.overScrollHeader::class)
-	open var overScrollHeader: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun overScrollHeader(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListViewStyleable.overScrollHeader::class, init)
-
-}
-
-open class CorePreferenceFrameLayoutStyle2 : CoreFrameLayoutStyle2 {
+open class CorePreferenceFrameLayoutStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -4118,151 +4183,7 @@ open class CorePreferenceFrameLayoutStyle2 : CoreFrameLayoutStyle2 {
 
 }
 
-open class CoreSearchViewStyle2 : CoreLinearLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreSearchViewStyleable.closeIcon::class)
-	open var closeIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun closeIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.closeIcon::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.commitIcon::class)
-	open var commitIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun commitIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.commitIcon::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.defaultQueryHint::class)
-	open var defaultQueryHint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun defaultQueryHint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.defaultQueryHint::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.goIcon::class)
-	open var goIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun goIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.goIcon::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.iconifiedByDefault::class)
-	open var iconifiedByDefault: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun iconifiedByDefault(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.iconifiedByDefault::class, init)
-
-	@DefinedBy(CoreStyleable.imeOptions::class)
-	open var imeOptions: Any? by GenericFlagDelegate<ImeOptions>(ImeOptions::class)
-
-	@DefinedBy(CoreStyleable.inputType::class)
-	open var inputType: Any? by GenericFlagDelegate<InputType>(InputType::class)
-
-	@DefinedBy(CoreViewStubStyleable.layout::class)
-	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun layout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStubStyleable.layout::class, init)
-
-	@DefinedBy(CoreImageViewStyleable.maxWidth::class)
-	open var maxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun maxWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreImageViewStyleable.maxWidth::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.queryBackground::class)
-	open var queryBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun queryBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.queryBackground::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.queryHint::class)
-	open var queryHint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun queryHint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.queryHint::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.searchHintIcon::class)
-	open var searchHintIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun searchHintIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.searchHintIcon::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.searchIcon::class)
-	open var searchIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun searchIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.searchIcon::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.submitBackground::class)
-	open var submitBackground: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun submitBackground(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.submitBackground::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.suggestionRowLayout::class)
-	open var suggestionRowLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun suggestionRowLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.suggestionRowLayout::class, init)
-
-	@DefinedBy(CoreSearchViewStyleable.voiceIcon::class)
-	open var voiceIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun voiceIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSearchViewStyleable.voiceIcon::class, init)
-
-}
-
-open class CoreDialogPreferenceStyle2 : CorePreferenceStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.dialogIcon::class)
-	open var dialogIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dialogIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.dialogIcon::class, init)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.dialogLayout::class)
-	open var dialogLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dialogLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.dialogLayout::class, init)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.dialogMessage::class)
-	open var dialogMessage: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dialogMessage(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.dialogMessage::class, init)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.dialogTitle::class)
-	open var dialogTitle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun dialogTitle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.dialogTitle::class, init)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.negativeButtonText::class)
-	open var negativeButtonText: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun negativeButtonText(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.negativeButtonText::class, init)
-
-	@DefinedBy(CoreDialogPreferenceStyleable.positiveButtonText::class)
-	open var positiveButtonText: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun positiveButtonText(init: StringAttribute.() -> Unit)
-		= initAttr(CoreDialogPreferenceStyleable.positiveButtonText::class, init)
-
-}
-
-open class CoreRatingBarStyle2 : CoreProgressBarStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreRatingBarStyleable.isIndicator::class)
-	open var isIndicator: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun isIndicator(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreRatingBarStyleable.isIndicator::class, init)
-
-	@DefinedBy(CoreRatingBarStyleable.numStars::class)
-	open var numStars: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun numStars(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreRatingBarStyleable.numStars::class, init)
-
-	@DefinedBy(CoreRatingBarStyleable.rating::class)
-	open var rating: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun rating(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreRatingBarStyleable.rating::class, init)
-
-	@DefinedBy(CoreRatingBarStyleable.stepSize::class)
-	open var stepSize: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun stepSize(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreRatingBarStyleable.stepSize::class, init)
-
-}
-
-open class CoreTimePickerStyle2 : CoreFrameLayoutStyle2 {
+open class CoreTimePickerStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -4282,9 +4203,9 @@ open class CoreTimePickerStyle2 : CoreFrameLayoutStyle2 {
 		= initAttr(CoreDatePickerStyleable.dialogMode::class, init)
 
 	@DefinedBy(CoreTimePickerStyleable.headerAmPmTextAppearance::class)
-	open var headerAmPmTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun headerAmPmTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "headerAmPmTextAppearance", init)
+	open var headerAmPmTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun headerAmPmTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "headerAmPmTextAppearance", init)
 
 	@DefinedBy(CoreMenuViewStyleable.headerBackground::class)
 	open var headerBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -4297,9 +4218,9 @@ open class CoreTimePickerStyle2 : CoreFrameLayoutStyle2 {
 		= initAttr(CoreDatePickerStyleable.headerTextColor::class, init)
 
 	@DefinedBy(CoreTimePickerStyleable.headerTimeTextAppearance::class)
-	open var headerTimeTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun headerTimeTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "headerTimeTextAppearance", init)
+	open var headerTimeTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun headerTimeTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "headerTimeTextAppearance", init)
 
 	@DefinedBy(CoreDatePickerStyleable.internalLayout::class)
 	open var internalLayout: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -4336,225 +4257,121 @@ open class CoreTimePickerStyle2 : CoreFrameLayoutStyle2 {
 
 }
 
-open class CoreListPreferenceStyle2 : CoreDialogPreferenceStyle2 {
+open class CoreAlertDialogStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreStyleable.entries::class)
-	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun entries(init: StringAttribute.() -> Unit)
-		= initAttr(CoreStyleable.entries::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.bottomBright::class)
+	open var bottomBright: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun bottomBright(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.bottomBright::class, init)
 
-	@DefinedBy(CoreListPreferenceStyleable.entryValues::class)
-	open var entryValues: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun entryValues(init: StringAttribute.() -> Unit)
-		= initAttr(CoreListPreferenceStyleable.entryValues::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.bottomDark::class)
+	open var bottomDark: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun bottomDark(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.bottomDark::class, init)
 
-}
+	@DefinedBy(CoreAlertDialogStyleable.bottomMedium::class)
+	open var bottomMedium: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun bottomMedium(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.bottomMedium::class, init)
 
-open class CoreMediaRouteButtonStyle2 : CoreViewStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
+	@DefinedBy(CoreAlertDialogStyleable.buttonPanelSideLayout::class)
+	open var buttonPanelSideLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun buttonPanelSideLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.buttonPanelSideLayout::class, init)
 
-	@DefinedBy(CoreMediaRouteButtonStyleable.externalRouteEnabledDrawable::class)
-	open var externalRouteEnabledDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun externalRouteEnabledDrawable(init: StringAttribute.() -> Unit)
-		= initAttr(CoreMediaRouteButtonStyleable.externalRouteEnabledDrawable::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.centerBright::class)
+	open var centerBright: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun centerBright(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.centerBright::class, init)
 
-	@DefinedBy(CoreMediaRouteButtonStyleable.mediaRouteTypes::class)
-	open var mediaRouteTypes: Any? by GenericEnumDelegate<CoreMediaRouteButtonStyleable.MediaRouteTypesEnum>(CoreMediaRouteButtonStyleable.MediaRouteTypesEnum::class, Int::class, IntegerContainer::class)
+	@DefinedBy(CoreAlertDialogStyleable.centerDark::class)
+	open var centerDark: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun centerDark(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.centerDark::class, init)
 
-	@DefinedBy(CoreProgressBarStyleable.minHeight::class)
-	open override var minHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open override fun minHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minHeight::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.centerMedium::class)
+	open var centerMedium: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun centerMedium(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.centerMedium::class, init)
 
-	@DefinedBy(CoreProgressBarStyleable.minWidth::class)
-	open override var minWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open override fun minWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreProgressBarStyleable.minWidth::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.controllerType::class)
+	open var controllerType: Any? by GenericEnumDelegate<CoreAlertDialogStyleable.ControllerTypeEnum>(CoreAlertDialogStyleable.ControllerTypeEnum::class)
 
-}
+	@DefinedBy(CoreAlertDialogStyleable.fullBright::class)
+	open var fullBright: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun fullBright(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.fullBright::class, init)
 
-open class CoreSeekBarPreferenceStyle2 : CorePreferenceStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
+	@DefinedBy(CoreAlertDialogStyleable.fullDark::class)
+	open var fullDark: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun fullDark(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.fullDark::class, init)
 
-	@DefinedBy(CoreSeekBarPreferenceStyleable.adjustable::class)
-	open var adjustable: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun adjustable(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSeekBarPreferenceStyleable.adjustable::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.horizontalProgressLayout::class)
+	open var horizontalProgressLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun horizontalProgressLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.horizontalProgressLayout::class, init)
 
 	@DefinedBy(CoreViewStubStyleable.layout::class)
-	open override var layout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open override fun layout(init: StringAttribute.() -> Unit)
+	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun layout(init: StringAttribute.() -> Unit)
 		= initAttr(CoreViewStubStyleable.layout::class, init)
 
-	@DefinedBy(CoreSeekBarPreferenceStyleable.showSeekBarValue::class)
-	open var showSeekBarValue: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun showSeekBarValue(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreSeekBarPreferenceStyleable.showSeekBarValue::class, init)
+	@DefinedBy(CoreAlertDialogStyleable.listItemLayout::class)
+	open var listItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun listItemLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.listItemLayout::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.listLayout::class)
+	open var listLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun listLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.listLayout::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.multiChoiceItemLayout::class)
+	open var multiChoiceItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun multiChoiceItemLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.multiChoiceItemLayout::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.needsDefaultBackgrounds::class)
+	open var needsDefaultBackgrounds: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun needsDefaultBackgrounds(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.needsDefaultBackgrounds::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.progressLayout::class)
+	open var progressLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun progressLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.progressLayout::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.selectionScrollOffset::class)
+	open var selectionScrollOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun selectionScrollOffset(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.selectionScrollOffset::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.showTitle::class)
+	open var showTitle: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun showTitle(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.showTitle::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.singleChoiceItemLayout::class)
+	open var singleChoiceItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun singleChoiceItemLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.singleChoiceItemLayout::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.topBright::class)
+	open var topBright: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun topBright(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.topBright::class, init)
+
+	@DefinedBy(CoreAlertDialogStyleable.topDark::class)
+	open var topDark: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun topDark(init: StringAttribute.() -> Unit)
+		= initAttr(CoreAlertDialogStyleable.topDark::class, init)
 
 }
 
-open class CoreHorizontalScrollViewStyle2 : CoreFrameLayoutStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreHorizontalScrollViewStyleable.fillViewport::class)
-	open var fillViewport: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun fillViewport(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreHorizontalScrollViewStyleable.fillViewport::class, init)
-
-}
-
-open class CoreToolbarStyle2 : CoreViewGroupStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreToolbarStyleable.buttonGravity::class)
-	open var buttonGravity: Any? by GenericFlagDelegate<CoreToolbarStyleable.ButtonGravityFlag>(CoreToolbarStyleable.ButtonGravityFlag::class)
-
-	@DefinedBy(CoreToolbarStyleable.collapseContentDescription::class)
-	open var collapseContentDescription: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun collapseContentDescription(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.collapseContentDescription::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.collapseIcon::class)
-	open var collapseIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun collapseIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.collapseIcon::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetEnd::class)
-	open var contentInsetEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetEnd::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetEndWithActions::class)
-	open var contentInsetEndWithActions: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetEndWithActions(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetEndWithActions::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetLeft::class)
-	open var contentInsetLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetLeft(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetLeft::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetRight::class)
-	open var contentInsetRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetRight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetRight::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetStart::class)
-	open var contentInsetStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetStart::class, init)
-
-	@DefinedBy(CoreActionBarStyleable.contentInsetStartWithNavigation::class)
-	open var contentInsetStartWithNavigation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun contentInsetStartWithNavigation(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.contentInsetStartWithNavigation::class, init)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-	@DefinedBy(ManifestStyleable.logo::class)
-	open var logo: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun logo(init: StringAttribute.() -> Unit)
-		= initAttr(ManifestStyleable.logo::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.logoDescription::class)
-	open var logoDescription: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun logoDescription(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.logoDescription::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.maxButtonHeight::class)
-	open var maxButtonHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun maxButtonHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.maxButtonHeight::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.navigationContentDescription::class)
-	open var navigationContentDescription: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun navigationContentDescription(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.navigationContentDescription::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.navigationIcon::class)
-	open var navigationIcon: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun navigationIcon(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.navigationIcon::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
-	open var popupTheme: CoreThemeStyle2? by InlineStyleDelegate()
-	open fun popupTheme(init: CoreThemeStyle2.() -> Unit)
-		= initInlineStyle(CoreThemeStyle2(), "popupTheme", init)
-
-	@DefinedBy(CoreActionBarStyleable.subtitle::class)
-	open var subtitle: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun subtitle(init: StringAttribute.() -> Unit)
-		= initAttr(CoreActionBarStyleable.subtitle::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.subtitleTextAppearance::class)
-	open var subtitleTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun subtitleTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "subtitleTextAppearance", init)
-
-	@DefinedBy(CoreToolbarStyleable.subtitleTextColor::class)
-	open var subtitleTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun subtitleTextColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.subtitleTextColor::class, init)
-
-	@DefinedBy(CoreMenuItemStyleable.title::class)
-	open var title: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun title(init: StringAttribute.() -> Unit)
-		= initAttr(CoreMenuItemStyleable.title::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleMargin::class)
-	open var titleMargin: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun titleMargin(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleMargin::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleMarginBottom::class)
-	open var titleMarginBottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun titleMarginBottom(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleMarginBottom::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleMarginEnd::class)
-	open var titleMarginEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun titleMarginEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleMarginEnd::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleMarginStart::class)
-	open var titleMarginStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun titleMarginStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleMarginStart::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleMarginTop::class)
-	open var titleMarginTop: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun titleMarginTop(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleMarginTop::class, init)
-
-	@DefinedBy(CoreToolbarStyleable.titleTextAppearance::class)
-	open var titleTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun titleTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "titleTextAppearance", init)
-
-	@DefinedBy(CoreToolbarStyleable.titleTextColor::class)
-	open var titleTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun titleTextColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToolbarStyleable.titleTextColor::class, init)
-
-}
-
-open class CoreToolbar_LayoutParamsStyle2 : CoreActionBar_LayoutParamsStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open override var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-}
-
-open class CoreWindowStyle2 : InlineStyle {
+open class CoreWindowStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -4624,9 +4441,9 @@ open class CoreWindowStyle2 : InlineStyle {
 		= initAttr(CoreThemeStyleable.windowAllowReturnTransitionOverlap::class, init)
 
 	@DefinedBy(CoreThemeStyleable.windowAnimationStyle::class)
-	open var windowAnimationStyle: CoreWindowAnimationStyle2? by InlineStyleDelegate()
-	open fun windowAnimationStyle(init: CoreWindowAnimationStyle2.() -> Unit)
-		= initInlineStyle(CoreWindowAnimationStyle2(), "windowAnimationStyle", init)
+	open var windowAnimationStyle: CoreWindowAnimationStyle? by InlineStyleDelegate()
+	open fun windowAnimationStyle(init: CoreWindowAnimationStyle.() -> Unit)
+		= initInlineStyle(CoreWindowAnimationStyle(), "windowAnimationStyle", init)
 
 	@DefinedBy(CoreThemeStyleable.windowBackground::class)
 	open var windowBackground: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -4843,228 +4660,202 @@ open class CoreWindowStyle2 : InlineStyle {
 
 }
 
-open class CoreWindowAnimationStyle2 : InlineStyle {
+open class CoreHorizontalScrollViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreWindowAnimationStyleable.activityCloseEnterAnimation::class)
-	open var activityCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun activityCloseEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.activityCloseEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.activityCloseExitAnimation::class)
-	open var activityCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun activityCloseExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.activityCloseExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.activityOpenEnterAnimation::class)
-	open var activityOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun activityOpenEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.activityOpenEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.activityOpenExitAnimation::class)
-	open var activityOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun activityOpenExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.activityOpenExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.activityOpenRemoteViewsEnterAnimation::class)
-	open var activityOpenRemoteViewsEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun activityOpenRemoteViewsEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.activityOpenRemoteViewsEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.launchTaskBehindSourceAnimation::class)
-	open var launchTaskBehindSourceAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun launchTaskBehindSourceAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.launchTaskBehindSourceAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.launchTaskBehindTargetAnimation::class)
-	open var launchTaskBehindTargetAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun launchTaskBehindTargetAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.launchTaskBehindTargetAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskCloseEnterAnimation::class)
-	open var taskCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskCloseEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskCloseEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskCloseExitAnimation::class)
-	open var taskCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskCloseExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskCloseExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskOpenEnterAnimation::class)
-	open var taskOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskOpenEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskOpenEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskOpenExitAnimation::class)
-	open var taskOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskOpenExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskOpenExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskToBackEnterAnimation::class)
-	open var taskToBackEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskToBackEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskToBackEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskToBackExitAnimation::class)
-	open var taskToBackExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskToBackExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskToBackExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskToFrontEnterAnimation::class)
-	open var taskToFrontEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskToFrontEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskToFrontEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.taskToFrontExitAnimation::class)
-	open var taskToFrontExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun taskToFrontExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.taskToFrontExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperCloseEnterAnimation::class)
-	open var wallpaperCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperCloseEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperCloseEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperCloseExitAnimation::class)
-	open var wallpaperCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperCloseExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperCloseExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraCloseEnterAnimation::class)
-	open var wallpaperIntraCloseEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperIntraCloseEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraCloseEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraCloseExitAnimation::class)
-	open var wallpaperIntraCloseExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperIntraCloseExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraCloseExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraOpenEnterAnimation::class)
-	open var wallpaperIntraOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperIntraOpenEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraOpenEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperIntraOpenExitAnimation::class)
-	open var wallpaperIntraOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperIntraOpenExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperIntraOpenExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperOpenEnterAnimation::class)
-	open var wallpaperOpenEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperOpenEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperOpenEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.wallpaperOpenExitAnimation::class)
-	open var wallpaperOpenExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun wallpaperOpenExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.wallpaperOpenExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.windowEnterAnimation::class)
-	open var windowEnterAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun windowEnterAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.windowEnterAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.windowExitAnimation::class)
-	open var windowExitAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun windowExitAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.windowExitAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.windowHideAnimation::class)
-	open var windowHideAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun windowHideAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.windowHideAnimation::class, init)
-
-	@DefinedBy(CoreWindowAnimationStyleable.windowShowAnimation::class)
-	open var windowShowAnimation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun windowShowAnimation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreWindowAnimationStyleable.windowShowAnimation::class, init)
+	@DefinedBy(CoreHorizontalScrollViewStyleable.fillViewport::class)
+	open var fillViewport: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun fillViewport(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreHorizontalScrollViewStyleable.fillViewport::class, init)
 
 }
 
-open class CoreRingtonePreferenceStyle2 : CorePreferenceStyle2 {
+open class CoreGestureOverlayViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreRingtonePreferenceStyleable.ringtoneType::class)
-	open var ringtoneType: Any? by GenericFlagDelegate<CoreRingtonePreferenceStyleable.RingtoneTypeFlag>(CoreRingtonePreferenceStyleable.RingtoneTypeFlag::class)
+	@DefinedBy(CoreGestureOverlayViewStyleable.eventsInterceptionEnabled::class)
+	open var eventsInterceptionEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun eventsInterceptionEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.eventsInterceptionEnabled::class, init)
 
-	@DefinedBy(CoreRingtonePreferenceStyleable.showDefault::class)
-	open var showDefault: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun showDefault(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreRingtonePreferenceStyleable.showDefault::class, init)
+	@DefinedBy(CoreGestureOverlayViewStyleable.fadeDuration::class)
+	open var fadeDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun fadeDuration(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.fadeDuration::class, init)
 
-	@DefinedBy(CoreRingtonePreferenceStyleable.showSilent::class)
-	open var showSilent: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun showSilent(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreRingtonePreferenceStyleable.showSilent::class, init)
+	@DefinedBy(CoreGestureOverlayViewStyleable.fadeEnabled::class)
+	open var fadeEnabled: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun fadeEnabled(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.fadeEnabled::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.fadeOffset::class)
+	open var fadeOffset: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun fadeOffset(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.fadeOffset::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureColor::class)
+	open var gestureColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun gestureColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.gestureColor::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeAngleThreshold::class)
+	open var gestureStrokeAngleThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun gestureStrokeAngleThreshold(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeAngleThreshold::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeLengthThreshold::class)
+	open var gestureStrokeLengthThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun gestureStrokeLengthThreshold(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeLengthThreshold::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeSquarenessThreshold::class)
+	open var gestureStrokeSquarenessThreshold: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun gestureStrokeSquarenessThreshold(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeSquarenessThreshold::class, init)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeType::class)
+	open var gestureStrokeType: Any? by GenericEnumDelegate<CoreGestureOverlayViewStyleable.GestureStrokeTypeEnum>(CoreGestureOverlayViewStyleable.GestureStrokeTypeEnum::class)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.gestureStrokeWidth::class)
+	open var gestureStrokeWidth: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun gestureStrokeWidth(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.gestureStrokeWidth::class, init)
+
+	@DefinedBy(CoreStyleable.orientation::class)
+	open var orientation: Any? by GenericEnumDelegate<Orientation>(Orientation::class)
+
+	@DefinedBy(CoreGestureOverlayViewStyleable.uncertainGestureColor::class)
+	open var uncertainGestureColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun uncertainGestureColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGestureOverlayViewStyleable.uncertainGestureColor::class, init)
 
 }
 
-open class CoreExpandableListViewStyle2 : CoreListViewStyle2 {
+open class CorePreferenceActivityStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreExpandableListViewStyleable.childDivider::class)
-	open var childDivider: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun childDivider(init: StringAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childDivider::class, init)
+	@DefinedBy(CorePreferenceActivityStyleable.headerLayout::class)
+	open var headerLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun headerLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CorePreferenceActivityStyleable.headerLayout::class, init)
 
-	@DefinedBy(CoreExpandableListViewStyleable.childIndicator::class)
-	open var childIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun childIndicator(init: StringAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childIndicator::class, init)
+	@DefinedBy(CorePreferenceActivityStyleable.headerRemoveIconIfEmpty::class)
+	open var headerRemoveIconIfEmpty: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun headerRemoveIconIfEmpty(init: BooleanAttribute.() -> Unit)
+		= initAttr(CorePreferenceActivityStyleable.headerRemoveIconIfEmpty::class, init)
 
-	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorEnd::class)
-	open var childIndicatorEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun childIndicatorEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childIndicatorEnd::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorLeft::class)
-	open var childIndicatorLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun childIndicatorLeft(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childIndicatorLeft::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorRight::class)
-	open var childIndicatorRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun childIndicatorRight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childIndicatorRight::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.childIndicatorStart::class)
-	open var childIndicatorStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun childIndicatorStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.childIndicatorStart::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.groupIndicator::class)
-	open var groupIndicator: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun groupIndicator(init: StringAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.groupIndicator::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.indicatorEnd::class)
-	open var indicatorEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun indicatorEnd(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.indicatorEnd::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.indicatorLeft::class)
-	open var indicatorLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun indicatorLeft(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.indicatorLeft::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.indicatorRight::class)
-	open var indicatorRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun indicatorRight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.indicatorRight::class, init)
-
-	@DefinedBy(CoreExpandableListViewStyleable.indicatorStart::class)
-	open var indicatorStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun indicatorStart(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreExpandableListViewStyleable.indicatorStart::class, init)
+	@DefinedBy(CoreViewStubStyleable.layout::class)
+	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun layout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStubStyleable.layout::class, init)
 
 }
 
-open class CoreCheckedTextViewStyle2 : CoreTextViewStyle2 {
+open class CorePopupWindowStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CorePopupWindowStyleable.overlapAnchor::class)
+	open var overlapAnchor: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun overlapAnchor(init: BooleanAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.overlapAnchor::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupAnimationStyle::class)
+	open var popupAnimationStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupAnimationStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupAnimationStyle::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupBackground::class)
+	open var popupBackground: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupBackground(init: StringAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupBackground::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupElevation::class)
+	open var popupElevation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun popupElevation(init: DimensionAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupElevation::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupEnterTransition::class)
+	open var popupEnterTransition: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupEnterTransition(init: StringAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupEnterTransition::class, init)
+
+	@DefinedBy(CorePopupWindowStyleable.popupExitTransition::class)
+	open var popupExitTransition: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun popupExitTransition(init: StringAttribute.() -> Unit)
+		= initAttr(CorePopupWindowStyleable.popupExitTransition::class, init)
+
+}
+
+open class CoreFragmentBreadCrumbsStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(CoreFragmentBreadCrumbsStyleable.itemColor::class)
+	open var itemColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun itemColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFragmentBreadCrumbsStyleable.itemColor::class, init)
+
+	@DefinedBy(CoreFragmentBreadCrumbsStyleable.itemLayout::class)
+	open var itemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun itemLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreFragmentBreadCrumbsStyleable.itemLayout::class, init)
+
+}
+
+open class CoreButtonStyle : CoreTextViewStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+}
+
+open class CoreGalleryStyle : CoreAbsSpinnerStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreGalleryStyleable.animationDuration::class)
+	open var animationDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
+	open fun animationDuration(init: IntegerAttribute.() -> Unit)
+		= initAttr(CoreGalleryStyleable.animationDuration::class, init)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(CoreGalleryStyleable.spacing::class)
+	open var spacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun spacing(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGalleryStyleable.spacing::class, init)
+
+	@DefinedBy(CoreGalleryStyleable.unselectedAlpha::class)
+	open var unselectedAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun unselectedAlpha(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGalleryStyleable.unselectedAlpha::class, init)
+
+}
+
+open class CoreListPopupWindowStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreListPopupWindowStyleable.dropDownHorizontalOffset::class)
+	open var dropDownHorizontalOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun dropDownHorizontalOffset(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreListPopupWindowStyleable.dropDownHorizontalOffset::class, init)
+
+	@DefinedBy(CoreListPopupWindowStyleable.dropDownVerticalOffset::class)
+	open var dropDownVerticalOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun dropDownVerticalOffset(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreListPopupWindowStyleable.dropDownVerticalOffset::class, init)
+
+}
+
+open class CoreCheckedTextViewStyle : CoreTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5091,7 +4882,388 @@ open class CoreCheckedTextViewStyle2 : CoreTextViewStyle2 {
 
 }
 
-open class CoreSwitchStyle2 : CoreCompoundButtonStyle2 {
+open class CorePreferenceScreenStyle : CorePreferenceGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreListViewStyleable.divider::class)
+	open var divider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun divider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListViewStyleable.divider::class, init)
+
+	@DefinedBy(CorePreferenceScreenStyleable.screenLayout::class)
+	open var screenLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun screenLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CorePreferenceScreenStyleable.screenLayout::class, init)
+
+}
+
+open class CorePreferenceGroupStyle : CorePreferenceStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CorePreferenceGroupStyleable.orderingFromXml::class)
+	open var orderingFromXml: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun orderingFromXml(init: BooleanAttribute.() -> Unit)
+		= initAttr(CorePreferenceGroupStyleable.orderingFromXml::class, init)
+
+}
+
+open class CoreToolbarStyle : CoreViewGroupStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreToolbarStyleable.buttonGravity::class)
+	open var buttonGravity: Any? by GenericFlagDelegate<CoreToolbarStyleable.ButtonGravityFlag>(CoreToolbarStyleable.ButtonGravityFlag::class)
+
+	@DefinedBy(CoreToolbarStyleable.collapseContentDescription::class)
+	open var collapseContentDescription: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun collapseContentDescription(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.collapseContentDescription::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.collapseIcon::class)
+	open var collapseIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun collapseIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.collapseIcon::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetEnd::class)
+	open var contentInsetEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetEnd::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetEndWithActions::class)
+	open var contentInsetEndWithActions: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetEndWithActions(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetEndWithActions::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetLeft::class)
+	open var contentInsetLeft: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetLeft(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetLeft::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetRight::class)
+	open var contentInsetRight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetRight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetRight::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetStart::class)
+	open var contentInsetStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetStart::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.contentInsetStartWithNavigation::class)
+	open var contentInsetStartWithNavigation: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun contentInsetStartWithNavigation(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.contentInsetStartWithNavigation::class, init)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+	@DefinedBy(ManifestStyleable.logo::class)
+	open var logo: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun logo(init: StringAttribute.() -> Unit)
+		= initAttr(ManifestStyleable.logo::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.logoDescription::class)
+	open var logoDescription: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun logoDescription(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.logoDescription::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.maxButtonHeight::class)
+	open var maxButtonHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun maxButtonHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.maxButtonHeight::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.navigationContentDescription::class)
+	open var navigationContentDescription: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun navigationContentDescription(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.navigationContentDescription::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.navigationIcon::class)
+	open var navigationIcon: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun navigationIcon(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.navigationIcon::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.popupTheme::class)
+	open var popupTheme: CoreThemeStyle? by InlineStyleDelegate()
+	open fun popupTheme(init: CoreThemeStyle.() -> Unit)
+		= initInlineStyle(CoreThemeStyle(), "popupTheme", init)
+
+	@DefinedBy(CoreActionBarStyleable.subtitle::class)
+	open var subtitle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun subtitle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.subtitle::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.subtitleTextAppearance::class)
+	open var subtitleTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun subtitleTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "subtitleTextAppearance", init)
+
+	@DefinedBy(CoreToolbarStyleable.subtitleTextColor::class)
+	open var subtitleTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun subtitleTextColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.subtitleTextColor::class, init)
+
+	@DefinedBy(CoreMenuItemStyleable.title::class)
+	open var title: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun title(init: StringAttribute.() -> Unit)
+		= initAttr(CoreMenuItemStyleable.title::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleMargin::class)
+	open var titleMargin: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun titleMargin(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleMargin::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleMarginBottom::class)
+	open var titleMarginBottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun titleMarginBottom(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleMarginBottom::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleMarginEnd::class)
+	open var titleMarginEnd: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun titleMarginEnd(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleMarginEnd::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleMarginStart::class)
+	open var titleMarginStart: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun titleMarginStart(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleMarginStart::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleMarginTop::class)
+	open var titleMarginTop: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun titleMarginTop(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleMarginTop::class, init)
+
+	@DefinedBy(CoreToolbarStyleable.titleTextAppearance::class)
+	open var titleTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun titleTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "titleTextAppearance", init)
+
+	@DefinedBy(CoreToolbarStyleable.titleTextColor::class)
+	open var titleTextColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun titleTextColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToolbarStyleable.titleTextColor::class, init)
+
+}
+
+open class CoreToolbar_LayoutParamsStyle : CoreActionBar_LayoutParamsStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreStyleable.gravity::class)
+	open override var layout_gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
+
+}
+
+open class CoreNumberPickerStyle : CoreLinearLayoutStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreNumberPickerStyleable.hideWheelUntilFocused::class)
+	open var hideWheelUntilFocused: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun hideWheelUntilFocused(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.hideWheelUntilFocused::class, init)
+
+	@DefinedBy(CoreDatePickerStyleable.internalLayout::class)
+	open var internalLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun internalLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreDatePickerStyleable.internalLayout::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.internalMaxHeight::class)
+	open var internalMaxHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun internalMaxHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.internalMaxHeight::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.internalMaxWidth::class)
+	open var internalMaxWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun internalMaxWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.internalMaxWidth::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.internalMinHeight::class)
+	open var internalMinHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun internalMinHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.internalMinHeight::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.internalMinWidth::class)
+	open var internalMinWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun internalMinWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.internalMinWidth::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.selectionDivider::class)
+	open var selectionDivider: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun selectionDivider(init: StringAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.selectionDivider::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.selectionDividerHeight::class)
+	open var selectionDividerHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun selectionDividerHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.selectionDividerHeight::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.selectionDividersDistance::class)
+	open var selectionDividersDistance: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun selectionDividersDistance(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.selectionDividersDistance::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.solidColor::class)
+	open var solidColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun solidColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.solidColor::class, init)
+
+	@DefinedBy(CoreNumberPickerStyleable.virtualButtonPressedDrawable::class)
+	open var virtualButtonPressedDrawable: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun virtualButtonPressedDrawable(init: StringAttribute.() -> Unit)
+		= initAttr(CoreNumberPickerStyleable.virtualButtonPressedDrawable::class, init)
+
+}
+
+open class CoreRingtonePreferenceStyle : CorePreferenceStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreRingtonePreferenceStyleable.ringtoneType::class)
+	open var ringtoneType: Any? by GenericFlagDelegate<CoreRingtonePreferenceStyleable.RingtoneTypeFlag>(CoreRingtonePreferenceStyleable.RingtoneTypeFlag::class)
+
+	@DefinedBy(CoreRingtonePreferenceStyleable.showDefault::class)
+	open var showDefault: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun showDefault(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreRingtonePreferenceStyleable.showDefault::class, init)
+
+	@DefinedBy(CoreRingtonePreferenceStyleable.showSilent::class)
+	open var showSilent: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun showSilent(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreRingtonePreferenceStyleable.showSilent::class, init)
+
+}
+
+open class CoreToggleButtonStyle : CoreCompoundButtonStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreThemeStyleable.disabledAlpha::class)
+	open var disabledAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun disabledAlpha(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreThemeStyleable.disabledAlpha::class, init)
+
+	@DefinedBy(CoreToggleButtonStyleable.textOff::class)
+	open var textOff: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textOff(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToggleButtonStyleable.textOff::class, init)
+
+	@DefinedBy(CoreToggleButtonStyleable.textOn::class)
+	open var textOn: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun textOn(init: StringAttribute.() -> Unit)
+		= initAttr(CoreToggleButtonStyleable.textOn::class, init)
+
+}
+
+open class CoreCompoundButtonStyle : CoreButtonStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreCompoundButtonStyleable.button::class)
+	open var button: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun button(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCompoundButtonStyleable.button::class, init)
+
+	@DefinedBy(CoreCompoundButtonStyleable.buttonTint::class)
+	open var buttonTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun buttonTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCompoundButtonStyleable.buttonTint::class, init)
+
+	@DefinedBy(CoreCompoundButtonStyleable.buttonTintMode::class)
+	open var buttonTintMode: Any? by GenericEnumDelegate<CoreCompoundButtonStyleable.ButtonTintModeEnum>(CoreCompoundButtonStyleable.ButtonTintModeEnum::class)
+
+	@DefinedBy(CoreCompoundButtonStyleable.checked::class)
+	open var checked: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun checked(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreCompoundButtonStyleable.checked::class, init)
+
+}
+
+open class CoreSeekBarStyle : CoreProgressBarStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreSeekBarStyleable.splitTrack::class)
+	open var splitTrack: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun splitTrack(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.splitTrack::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.thumb::class)
+	open var thumb: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun thumb(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.thumb::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.thumbOffset::class)
+	open var thumbOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun thumbOffset(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.thumbOffset::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.thumbTint::class)
+	open var thumbTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun thumbTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.thumbTint::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.thumbTintMode::class)
+	open var thumbTintMode: Any? by GenericEnumDelegate<CoreSeekBarStyleable.ThumbTintModeEnum>(CoreSeekBarStyleable.ThumbTintModeEnum::class)
+
+	@DefinedBy(CoreSeekBarStyleable.tickMark::class)
+	open var tickMark: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun tickMark(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.tickMark::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.tickMarkTint::class)
+	open var tickMarkTint: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun tickMarkTint(init: StringAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.tickMarkTint::class, init)
+
+	@DefinedBy(CoreSeekBarStyleable.tickMarkTintMode::class)
+	open var tickMarkTintMode: Any? by GenericEnumDelegate<CoreSeekBarStyleable.TickMarkTintModeEnum>(CoreSeekBarStyleable.TickMarkTintModeEnum::class)
+
+	@DefinedBy(CoreSeekBarStyleable.useDisabledAlpha::class)
+	open var useDisabledAlpha: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun useDisabledAlpha(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSeekBarStyleable.useDisabledAlpha::class, init)
+
+}
+
+open class CoreActionModeStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreViewStyleable.background::class)
+	open var background: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun background(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStyleable.background::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.backgroundSplit::class)
+	open var backgroundSplit: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun backgroundSplit(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.backgroundSplit::class, init)
+
+	@DefinedBy(CoreActionModeStyleable.closeItemLayout::class)
+	open var closeItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun closeItemLayout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionModeStyleable.closeItemLayout::class, init)
+
+	@DefinedBy(CoreTextViewStyleable.height::class)
+	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun height(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreTextViewStyleable.height::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.subtitleTextStyle::class)
+	open var subtitleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun subtitleTextStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.subtitleTextStyle::class, init)
+
+	@DefinedBy(CoreActionBarStyleable.titleTextStyle::class)
+	open var titleTextStyle: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun titleTextStyle(init: StringAttribute.() -> Unit)
+		= initAttr(CoreActionBarStyleable.titleTextStyle::class, init)
+
+}
+
+open class CoreSwitchStyle : CoreCompoundButtonStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5163,31 +5335,49 @@ open class CoreSwitchStyle2 : CoreCompoundButtonStyle2 {
 
 }
 
-open class CoreCompoundButtonStyle2 : CoreButtonStyle2 {
+open class CoreSeekBarPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreCompoundButtonStyleable.button::class)
-	open var button: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun button(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCompoundButtonStyleable.button::class, init)
+	@DefinedBy(CoreSeekBarPreferenceStyleable.adjustable::class)
+	open var adjustable: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun adjustable(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSeekBarPreferenceStyleable.adjustable::class, init)
 
-	@DefinedBy(CoreCompoundButtonStyleable.buttonTint::class)
-	open var buttonTint: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun buttonTint(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCompoundButtonStyleable.buttonTint::class, init)
+	@DefinedBy(CoreViewStubStyleable.layout::class)
+	open override var layout: Any? by GenericDelegate(String::class,StringContainer::class)
+	open override fun layout(init: StringAttribute.() -> Unit)
+		= initAttr(CoreViewStubStyleable.layout::class, init)
 
-	@DefinedBy(CoreCompoundButtonStyleable.buttonTintMode::class)
-	open var buttonTintMode: Any? by GenericEnumDelegate<CoreCompoundButtonStyleable.ButtonTintModeEnum>(CoreCompoundButtonStyleable.ButtonTintModeEnum::class)
-
-	@DefinedBy(CoreCompoundButtonStyleable.checked::class)
-	open var checked: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun checked(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreCompoundButtonStyleable.checked::class, init)
+	@DefinedBy(CoreSeekBarPreferenceStyleable.showSeekBarValue::class)
+	open var showSeekBarValue: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun showSeekBarValue(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreSeekBarPreferenceStyleable.showSeekBarValue::class, init)
 
 }
 
-open class CoreCalendarViewStyle2 : CoreFrameLayoutStyle2 {
+open class CoreCheckBoxPreferenceStyle : CorePreferenceStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.disableDependentsState::class)
+	open var disableDependentsState: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
+	open fun disableDependentsState(init: BooleanAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.disableDependentsState::class, init)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOff::class)
+	open var summaryOff: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun summaryOff(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOff::class, init)
+
+	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOn::class)
+	open var summaryOn: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun summaryOn(init: StringAttribute.() -> Unit)
+		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOn::class, init)
+
+}
+
+open class CoreCalendarViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5195,9 +5385,9 @@ open class CoreCalendarViewStyle2 : CoreFrameLayoutStyle2 {
 	open var calendarViewMode: Any? by GenericEnumDelegate<CoreCalendarViewStyleable.CalendarViewModeEnum>(CoreCalendarViewStyleable.CalendarViewModeEnum::class)
 
 	@DefinedBy(CoreCalendarViewStyleable.dateTextAppearance::class)
-	open var dateTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun dateTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "dateTextAppearance", init)
+	open var dateTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun dateTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "dateTextAppearance", init)
 
 	@DefinedBy(CoreCalendarViewStyleable.dayHighlightColor::class)
 	open var dayHighlightColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -5230,9 +5420,9 @@ open class CoreCalendarViewStyle2 : CoreFrameLayoutStyle2 {
 		= initAttr(CoreDatePickerStyleable.minDate::class, init)
 
 	@DefinedBy(CoreCalendarViewStyleable.monthTextAppearance::class)
-	open var monthTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun monthTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "monthTextAppearance", init)
+	open var monthTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun monthTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "monthTextAppearance", init)
 
 	@DefinedBy(CoreCalendarViewStyleable.selectedDateVerticalBar::class)
 	open var selectedDateVerticalBar: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -5260,9 +5450,9 @@ open class CoreCalendarViewStyle2 : CoreFrameLayoutStyle2 {
 		= initAttr(CoreCalendarViewStyleable.unfocusedMonthDateColor::class, init)
 
 	@DefinedBy(CoreCalendarViewStyleable.weekDayTextAppearance::class)
-	open var weekDayTextAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun weekDayTextAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "weekDayTextAppearance", init)
+	open var weekDayTextAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun weekDayTextAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "weekDayTextAppearance", init)
 
 	@DefinedBy(CoreCalendarViewStyleable.weekNumberColor::class)
 	open var weekNumberColor: Any? by GenericDelegate(String::class,StringContainer::class)
@@ -5276,213 +5466,23 @@ open class CoreCalendarViewStyle2 : CoreFrameLayoutStyle2 {
 
 }
 
-open class CoreListPopupWindowStyle2 : InlineStyle {
+open class CoreListPreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreListPopupWindowStyleable.dropDownHorizontalOffset::class)
-	open var dropDownHorizontalOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun dropDownHorizontalOffset(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreListPopupWindowStyleable.dropDownHorizontalOffset::class, init)
+	@DefinedBy(CoreStyleable.entries::class)
+	open var entries: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun entries(init: StringAttribute.() -> Unit)
+		= initAttr(CoreStyleable.entries::class, init)
 
-	@DefinedBy(CoreListPopupWindowStyleable.dropDownVerticalOffset::class)
-	open var dropDownVerticalOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun dropDownVerticalOffset(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreListPopupWindowStyleable.dropDownVerticalOffset::class, init)
-
-}
-
-open class CoreAlertDialogStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreAlertDialogStyleable.bottomBright::class)
-	open var bottomBright: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun bottomBright(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.bottomBright::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.bottomDark::class)
-	open var bottomDark: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun bottomDark(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.bottomDark::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.bottomMedium::class)
-	open var bottomMedium: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun bottomMedium(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.bottomMedium::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.buttonPanelSideLayout::class)
-	open var buttonPanelSideLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun buttonPanelSideLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.buttonPanelSideLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.centerBright::class)
-	open var centerBright: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun centerBright(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.centerBright::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.centerDark::class)
-	open var centerDark: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun centerDark(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.centerDark::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.centerMedium::class)
-	open var centerMedium: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun centerMedium(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.centerMedium::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.controllerType::class)
-	open var controllerType: Any? by GenericEnumDelegate<CoreAlertDialogStyleable.ControllerTypeEnum>(CoreAlertDialogStyleable.ControllerTypeEnum::class)
-
-	@DefinedBy(CoreAlertDialogStyleable.fullBright::class)
-	open var fullBright: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun fullBright(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.fullBright::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.fullDark::class)
-	open var fullDark: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun fullDark(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.fullDark::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.horizontalProgressLayout::class)
-	open var horizontalProgressLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun horizontalProgressLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.horizontalProgressLayout::class, init)
-
-	@DefinedBy(CoreViewStubStyleable.layout::class)
-	open var layout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun layout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreViewStubStyleable.layout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.listItemLayout::class)
-	open var listItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun listItemLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.listItemLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.listLayout::class)
-	open var listLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun listLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.listLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.multiChoiceItemLayout::class)
-	open var multiChoiceItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun multiChoiceItemLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.multiChoiceItemLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.needsDefaultBackgrounds::class)
-	open var needsDefaultBackgrounds: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun needsDefaultBackgrounds(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.needsDefaultBackgrounds::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.progressLayout::class)
-	open var progressLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun progressLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.progressLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.selectionScrollOffset::class)
-	open var selectionScrollOffset: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun selectionScrollOffset(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.selectionScrollOffset::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.showTitle::class)
-	open var showTitle: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun showTitle(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.showTitle::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.singleChoiceItemLayout::class)
-	open var singleChoiceItemLayout: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun singleChoiceItemLayout(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.singleChoiceItemLayout::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.topBright::class)
-	open var topBright: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun topBright(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.topBright::class, init)
-
-	@DefinedBy(CoreAlertDialogStyleable.topDark::class)
-	open var topDark: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun topDark(init: StringAttribute.() -> Unit)
-		= initAttr(CoreAlertDialogStyleable.topDark::class, init)
+	@DefinedBy(CoreListPreferenceStyleable.entryValues::class)
+	open var entryValues: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun entryValues(init: StringAttribute.() -> Unit)
+		= initAttr(CoreListPreferenceStyleable.entryValues::class, init)
 
 }
 
-open class CoreToggleButtonStyle2 : CoreCompoundButtonStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreThemeStyleable.disabledAlpha::class)
-	open var disabledAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun disabledAlpha(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreThemeStyleable.disabledAlpha::class, init)
-
-	@DefinedBy(CoreToggleButtonStyleable.textOff::class)
-	open var textOff: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textOff(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToggleButtonStyleable.textOff::class, init)
-
-	@DefinedBy(CoreToggleButtonStyleable.textOn::class)
-	open var textOn: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun textOn(init: StringAttribute.() -> Unit)
-		= initAttr(CoreToggleButtonStyleable.textOn::class, init)
-
-}
-
-open class CoreGalleryStyle2 : CoreAbsSpinnerStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGalleryStyleable.animationDuration::class)
-	open var animationDuration: Any? by GenericDelegate(Int::class,IntegerContainer::class)
-	open fun animationDuration(init: IntegerAttribute.() -> Unit)
-		= initAttr(CoreGalleryStyleable.animationDuration::class, init)
-
-	@DefinedBy(CoreStyleable.gravity::class)
-	open var gravity: Any? by GenericFlagDelegate<Gravity>(Gravity::class)
-
-	@DefinedBy(CoreGalleryStyleable.spacing::class)
-	open var spacing: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun spacing(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGalleryStyleable.spacing::class, init)
-
-	@DefinedBy(CoreGalleryStyleable.unselectedAlpha::class)
-	open var unselectedAlpha: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun unselectedAlpha(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGalleryStyleable.unselectedAlpha::class, init)
-
-}
-
-open class CoreSwitchPreferenceStyle2 : CorePreferenceStyle2 {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.disableDependentsState::class)
-	open var disableDependentsState: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
-	open fun disableDependentsState(init: BooleanAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.disableDependentsState::class, init)
-
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOff::class)
-	open var summaryOff: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun summaryOff(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOff::class, init)
-
-	@DefinedBy(CoreCheckBoxPreferenceStyleable.summaryOn::class)
-	open var summaryOn: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun summaryOn(init: StringAttribute.() -> Unit)
-		= initAttr(CoreCheckBoxPreferenceStyleable.summaryOn::class, init)
-
-	@DefinedBy(CoreSwitchPreferenceStyleable.switchTextOff::class)
-	open var switchTextOff: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun switchTextOff(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSwitchPreferenceStyleable.switchTextOff::class, init)
-
-	@DefinedBy(CoreSwitchPreferenceStyleable.switchTextOn::class)
-	open var switchTextOn: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun switchTextOn(init: StringAttribute.() -> Unit)
-		= initAttr(CoreSwitchPreferenceStyleable.switchTextOn::class, init)
-
-}
-
-open class CoreFragmentAnimationStyle2 : InlineStyle {
+open class CoreFragmentAnimationStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5518,7 +5518,7 @@ open class CoreFragmentAnimationStyle2 : InlineStyle {
 
 }
 
-open class CoreButtonBarLayoutStyle2 : CoreLinearLayoutStyle2 {
+open class CoreButtonBarLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5529,7 +5529,7 @@ open class CoreButtonBarLayoutStyle2 : CoreLinearLayoutStyle2 {
 
 }
 
-open class CoreViewTagStyle2 : InlineStyle {
+open class CoreViewTagStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5545,7 +5545,7 @@ open class CoreViewTagStyle2 : InlineStyle {
 
 }
 
-open class CoreIncludeStyle2 : InlineStyle {
+open class CoreIncludeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5559,7 +5559,7 @@ open class CoreIncludeStyle2 : InlineStyle {
 
 }
 
-open class CoreActionMenuItemViewStyle2 : InlineStyle {
+open class CoreActionMenuItemViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5570,19 +5570,19 @@ open class CoreActionMenuItemViewStyle2 : InlineStyle {
 
 }
 
-open class CoreImageSwitcherStyle2 : CoreViewSwitcherStyle2 {
+open class CoreImageSwitcherStyle : CoreViewSwitcherStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreViewSwitcherStyle2 : CoreViewAnimatorStyle2 {
+open class CoreViewSwitcherStyle : CoreViewAnimatorStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreViewAnimatorStyle2 : CoreFrameLayoutStyle2 {
+open class CoreViewAnimatorStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5603,7 +5603,7 @@ open class CoreViewAnimatorStyle2 : CoreFrameLayoutStyle2 {
 
 }
 
-open class CoreTextClockStyle2 : CoreTextViewStyle2 {
+open class CoreTextClockStyle : CoreTextViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5624,7 +5624,7 @@ open class CoreTextClockStyle2 : CoreTextViewStyle2 {
 
 }
 
-open class CoreGridLayoutStyle2 : CoreViewGroupStyle2 {
+open class CoreGridLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5661,7 +5661,7 @@ open class CoreGridLayoutStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreGridLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
+open class CoreGridLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5700,7 +5700,7 @@ open class CoreGridLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
 
 }
 
-open class CoreViewFlipperStyle2 : CoreViewAnimatorStyle2 {
+open class CoreViewFlipperStyle : CoreViewAnimatorStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5716,7 +5716,7 @@ open class CoreViewFlipperStyle2 : CoreViewAnimatorStyle2 {
 
 }
 
-open class CoreAdapterViewFlipperStyle2 : CoreAdapterViewAnimatorStyle2 {
+open class CoreAdapterViewFlipperStyle : CoreAdapterViewAnimatorStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5732,7 +5732,7 @@ open class CoreAdapterViewFlipperStyle2 : CoreAdapterViewAnimatorStyle2 {
 
 }
 
-open class CoreRadioGroupStyle2 : CoreLinearLayoutStyle2 {
+open class CoreRadioGroupStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5746,7 +5746,7 @@ open class CoreRadioGroupStyle2 : CoreLinearLayoutStyle2 {
 
 }
 
-open class CoreTableLayoutStyle2 : CoreLinearLayoutStyle2 {
+open class CoreTableLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5767,13 +5767,13 @@ open class CoreTableLayoutStyle2 : CoreLinearLayoutStyle2 {
 
 }
 
-open class CoreTableRowStyle2 : CoreLinearLayoutStyle2 {
+open class CoreTableRowStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreTableRow_CellStyle2 : InlineStyle {
+open class CoreTableRow_CellStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5789,13 +5789,13 @@ open class CoreTableRow_CellStyle2 : InlineStyle {
 
 }
 
-open class CoreTextSwitcherStyle2 : CoreViewSwitcherStyle2 {
+open class CoreTextSwitcherStyle : CoreViewSwitcherStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreTwoLineListItemStyle2 : CoreRelativeLayoutStyle2 {
+open class CoreTwoLineListItemStyle : CoreRelativeLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5804,7 +5804,7 @@ open class CoreTwoLineListItemStyle2 : CoreRelativeLayoutStyle2 {
 
 }
 
-open class CoreRelativeLayoutStyle2 : CoreViewGroupStyle2 {
+open class CoreRelativeLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5818,7 +5818,7 @@ open class CoreRelativeLayoutStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreRelativeLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
+open class CoreRelativeLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -5939,7 +5939,7 @@ open class CoreRelativeLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
 
 }
 
-open class CoreSlidingDrawerStyle2 : CoreViewGroupStyle2 {
+open class CoreSlidingDrawerStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5978,7 +5978,7 @@ open class CoreSlidingDrawerStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CorePreferenceFrameLayout_LayoutStyle2 : InlineStyle {
+open class CorePreferenceFrameLayout_LayoutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -5989,7 +5989,7 @@ open class CorePreferenceFrameLayout_LayoutStyle2 : InlineStyle {
 
 }
 
-open class CorePreferenceHeaderStyle2 : InlineStyle {
+open class CorePreferenceHeaderStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6030,7 +6030,7 @@ open class CorePreferenceHeaderStyle2 : InlineStyle {
 
 }
 
-open class CoreMultiSelectListPreferenceStyle2 : CoreDialogPreferenceStyle2 {
+open class CoreMultiSelectListPreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6046,7 +6046,7 @@ open class CoreMultiSelectListPreferenceStyle2 : CoreDialogPreferenceStyle2 {
 
 }
 
-open class CoreVolumePreferenceStyle2 : CoreDialogPreferenceStyle2 {
+open class CoreVolumePreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6055,7 +6055,7 @@ open class CoreVolumePreferenceStyle2 : CoreDialogPreferenceStyle2 {
 
 }
 
-open class CoreIconMenuViewStyle2 : CoreMenuViewStyle2 {
+open class CoreIconMenuViewStyle : CoreMenuViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6086,7 +6086,7 @@ open class CoreIconMenuViewStyle2 : CoreMenuViewStyle2 {
 
 }
 
-open class CoreMenuViewStyle2 : InlineStyle {
+open class CoreMenuViewStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6128,13 +6128,13 @@ open class CoreMenuViewStyle2 : InlineStyle {
 		= initAttr(CoreMenuViewStyleable.verticalDivider::class, init)
 
 	@DefinedBy(CoreThemeStyleable.windowAnimationStyle::class)
-	open var windowAnimationStyle: CoreWindowAnimationStyle2? by InlineStyleDelegate()
-	open fun windowAnimationStyle(init: CoreWindowAnimationStyle2.() -> Unit)
-		= initInlineStyle(CoreWindowAnimationStyle2(), "windowAnimationStyle", init)
+	open var windowAnimationStyle: CoreWindowAnimationStyle? by InlineStyleDelegate()
+	open fun windowAnimationStyle(init: CoreWindowAnimationStyle.() -> Unit)
+		= initInlineStyle(CoreWindowAnimationStyle(), "windowAnimationStyle", init)
 
 }
 
-open class CoreAbsoluteLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
+open class CoreAbsoluteLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6150,7 +6150,7 @@ open class CoreAbsoluteLayout_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
 
 }
 
-open class CoreVerticalSlider_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
+open class CoreVerticalSlider_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6161,7 +6161,7 @@ open class CoreVerticalSlider_LayoutStyle2 : CoreViewGroup_LayoutStyle2 {
 
 }
 
-open class CoreWeightedLinearLayoutStyle2 : CoreLinearLayoutStyle2 {
+open class CoreWeightedLinearLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6187,13 +6187,13 @@ open class CoreWeightedLinearLayoutStyle2 : CoreLinearLayoutStyle2 {
 
 }
 
-open class CoreVoiceInteractionSessionStyle2 : InlineStyle {
+open class CoreVoiceInteractionSessionStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreKeyboardViewStyle2 : CoreViewStyle2 {
+open class CoreKeyboardViewStyle : CoreViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6259,7 +6259,7 @@ open class CoreKeyboardViewStyle2 : CoreViewStyle2 {
 
 }
 
-open class CoreKeyboardViewPreviewStateStyle2 : InlineStyle {
+open class CoreKeyboardViewPreviewStateStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6270,47 +6270,7 @@ open class CoreKeyboardViewPreviewStateStyle2 : InlineStyle {
 
 }
 
-open class CoreKeyboardStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreKeyboardStyleable.horizontalGap::class)
-	open var horizontalGap: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun horizontalGap(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreKeyboardStyleable.horizontalGap::class, init)
-
-	@DefinedBy(CoreKeyboardStyleable.keyHeight::class)
-	open var keyHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun keyHeight(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreKeyboardStyleable.keyHeight::class, init)
-
-	@DefinedBy(CoreKeyboardStyleable.keyWidth::class)
-	open var keyWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun keyWidth(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreKeyboardStyleable.keyWidth::class, init)
-
-	@DefinedBy(CoreKeyboardStyleable.verticalGap::class)
-	open var verticalGap: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun verticalGap(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreKeyboardStyleable.verticalGap::class, init)
-
-}
-
-open class CoreKeyboard_RowStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreKeyboard_RowStyleable.keyboardMode::class)
-	open var keyboardMode: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun keyboardMode(init: StringAttribute.() -> Unit)
-		= initAttr(CoreKeyboard_RowStyleable.keyboardMode::class, init)
-
-	@DefinedBy(CoreKeyboard_RowStyleable.rowEdgeFlags::class)
-	open var rowEdgeFlags: Any? by GenericFlagDelegate<CoreKeyboard_RowStyleable.RowEdgeFlagsFlag>(CoreKeyboard_RowStyleable.RowEdgeFlagsFlag::class)
-
-}
-
-open class CoreKeyboard_KeyStyle2 : InlineStyle {
+open class CoreKeyboard_KeyStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6374,7 +6334,47 @@ open class CoreKeyboard_KeyStyle2 : InlineStyle {
 
 }
 
-open class CoreInputMethodStyle2 : InlineStyle {
+open class CoreKeyboardStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreKeyboardStyleable.horizontalGap::class)
+	open var horizontalGap: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun horizontalGap(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreKeyboardStyleable.horizontalGap::class, init)
+
+	@DefinedBy(CoreKeyboardStyleable.keyHeight::class)
+	open var keyHeight: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun keyHeight(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreKeyboardStyleable.keyHeight::class, init)
+
+	@DefinedBy(CoreKeyboardStyleable.keyWidth::class)
+	open var keyWidth: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun keyWidth(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreKeyboardStyleable.keyWidth::class, init)
+
+	@DefinedBy(CoreKeyboardStyleable.verticalGap::class)
+	open var verticalGap: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun verticalGap(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreKeyboardStyleable.verticalGap::class, init)
+
+}
+
+open class CoreKeyboard_RowStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreKeyboard_RowStyleable.keyboardMode::class)
+	open var keyboardMode: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun keyboardMode(init: StringAttribute.() -> Unit)
+		= initAttr(CoreKeyboard_RowStyleable.keyboardMode::class, init)
+
+	@DefinedBy(CoreKeyboard_RowStyleable.rowEdgeFlags::class)
+	open var rowEdgeFlags: Any? by GenericFlagDelegate<CoreKeyboard_RowStyleable.RowEdgeFlagsFlag>(CoreKeyboard_RowStyleable.RowEdgeFlagsFlag::class)
+
+}
+
+open class CoreInputMethodStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6400,7 +6400,7 @@ open class CoreInputMethodStyle2 : InlineStyle {
 
 }
 
-open class CoreInputMethod_SubtypeStyle2 : InlineStyle {
+open class CoreInputMethod_SubtypeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6456,7 +6456,7 @@ open class CoreInputMethod_SubtypeStyle2 : InlineStyle {
 
 }
 
-open class CoreSpellCheckerStyle2 : InlineStyle {
+open class CoreSpellCheckerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6472,7 +6472,7 @@ open class CoreSpellCheckerStyle2 : InlineStyle {
 
 }
 
-open class CoreSpellChecker_SubtypeStyle2 : InlineStyle {
+open class CoreSpellChecker_SubtypeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6498,7 +6498,7 @@ open class CoreSpellChecker_SubtypeStyle2 : InlineStyle {
 
 }
 
-open class CoreAccessibilityServiceStyle2 : InlineStyle {
+open class CoreAccessibilityServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6573,7 +6573,7 @@ open class CoreAccessibilityServiceStyle2 : InlineStyle {
 
 }
 
-open class CorePrintServiceStyle2 : InlineStyle {
+open class CorePrintServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6599,7 +6599,7 @@ open class CorePrintServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreHostApduServiceStyle2 : InlineStyle {
+open class CoreHostApduServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6625,7 +6625,7 @@ open class CoreHostApduServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreAidGroupStyle2 : InlineStyle {
+open class CoreAidGroupStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6641,7 +6641,7 @@ open class CoreAidGroupStyle2 : InlineStyle {
 
 }
 
-open class CoreOffHostApduServiceStyle2 : InlineStyle {
+open class CoreOffHostApduServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6662,7 +6662,7 @@ open class CoreOffHostApduServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreHostNfcFServiceStyle2 : InlineStyle {
+open class CoreHostNfcFServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6673,7 +6673,7 @@ open class CoreHostNfcFServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreNfcid2FilterStyle2 : InlineStyle {
+open class CoreT3tPmmFilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6684,7 +6684,7 @@ open class CoreNfcid2FilterStyle2 : InlineStyle {
 
 }
 
-open class CoreSystemCodeFilterStyle2 : InlineStyle {
+open class CoreNfcid2FilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6695,7 +6695,7 @@ open class CoreSystemCodeFilterStyle2 : InlineStyle {
 
 }
 
-open class CoreT3tPmmFilterStyle2 : InlineStyle {
+open class CoreSystemCodeFilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6706,7 +6706,7 @@ open class CoreT3tPmmFilterStyle2 : InlineStyle {
 
 }
 
-open class CoreInputMethodServiceStyle2 : InlineStyle {
+open class CoreInputMethodServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6727,7 +6727,7 @@ open class CoreInputMethodServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreWallpaperStyle2 : InlineStyle {
+open class CoreWallpaperStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6768,7 +6768,7 @@ open class CoreWallpaperStyle2 : InlineStyle {
 
 }
 
-open class CoreDreamStyle2 : InlineStyle {
+open class CoreDreamStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6779,7 +6779,7 @@ open class CoreDreamStyle2 : InlineStyle {
 
 }
 
-open class CoreTrustAgentStyle2 : InlineStyle {
+open class CoreTrustAgentStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6805,7 +6805,7 @@ open class CoreTrustAgentStyle2 : InlineStyle {
 
 }
 
-open class CoreAutofillServiceStyle2 : InlineStyle {
+open class CoreAutofillServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6816,7 +6816,7 @@ open class CoreAutofillServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreSettingInjectorServiceStyle2 : InlineStyle {
+open class CoreSettingInjectorServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6837,7 +6837,7 @@ open class CoreSettingInjectorServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreRecognitionServiceStyle2 : InlineStyle {
+open class CoreRecognitionServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6848,7 +6848,7 @@ open class CoreRecognitionServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreVoiceInteractionServiceStyle2 : InlineStyle {
+open class CoreVoiceInteractionServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6884,7 +6884,7 @@ open class CoreVoiceInteractionServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreTextToSpeechEngineStyle2 : InlineStyle {
+open class CoreTextToSpeechEngineStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6895,7 +6895,7 @@ open class CoreTextToSpeechEngineStyle2 : InlineStyle {
 
 }
 
-open class CoreTvInputServiceStyle2 : InlineStyle {
+open class CoreTvInputServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -6921,7 +6921,7 @@ open class CoreTvInputServiceStyle2 : InlineStyle {
 
 }
 
-open class CoreRatingSystemDefinitionStyle2 : InlineStyle {
+open class CoreRatingSystemDefinitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6947,7 +6947,7 @@ open class CoreRatingSystemDefinitionStyle2 : InlineStyle {
 
 }
 
-open class CoreRatingDefinitionStyle2 : InlineStyle {
+open class CoreRatingDefinitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -6973,7 +6973,7 @@ open class CoreRatingDefinitionStyle2 : InlineStyle {
 
 }
 
-open class CoreStateListDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreStateListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7014,7 +7014,18 @@ open class CoreStateListDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreDrawableStyle2 : InlineStyle {
+open class CoreStateListAnimatorItemStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreLayoutAnimationStyleable.animation::class)
+	open var animation: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun animation(init: StringAttribute.() -> Unit)
+		= initAttr(CoreLayoutAnimationStyleable.animation::class, init)
+
+}
+
+open class CoreDrawableStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7030,7 +7041,7 @@ open class CoreDrawableStyle2 : InlineStyle {
 
 }
 
-open class CoreDrawableStatesStyle2 : InlineStyle {
+open class CoreDrawableStatesStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7126,7 +7137,7 @@ open class CoreDrawableStatesStyle2 : InlineStyle {
 
 }
 
-open class CoreStateListDrawableItemStyle2 : InlineStyle {
+open class CoreStateListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7137,18 +7148,7 @@ open class CoreStateListDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreStateListAnimatorItemStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreLayoutAnimationStyleable.animation::class)
-	open var animation: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun animation(init: StringAttribute.() -> Unit)
-		= initAttr(CoreLayoutAnimationStyleable.animation::class, init)
-
-}
-
-open class CoreBitmapDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreBitmapDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7209,7 +7209,7 @@ open class CoreBitmapDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreAnimatedStateListDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreAnimatedStateListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7250,7 +7250,7 @@ open class CoreAnimatedStateListDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreAnimatedStateListDrawableTransitionStyle2 : InlineStyle {
+open class CoreAnimatedStateListDrawableTransitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7276,7 +7276,7 @@ open class CoreAnimatedStateListDrawableTransitionStyle2 : InlineStyle {
 
 }
 
-open class CoreAnimatedStateListDrawableItemStyle2 : InlineStyle {
+open class CoreAnimatedStateListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7292,7 +7292,7 @@ open class CoreAnimatedStateListDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreAnimationDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreAnimationDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7313,7 +7313,7 @@ open class CoreAnimationDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreAnimationDrawableItemStyle2 : InlineStyle {
+open class CoreAnimationDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7329,13 +7329,13 @@ open class CoreAnimationDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreAnimationScaleListDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreAnimationScaleListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreAnimationScaleListDrawableItemStyle2 : InlineStyle {
+open class CoreAnimationScaleListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7346,7 +7346,7 @@ open class CoreAnimationScaleListDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreGradientDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreGradientDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7418,23 +7418,33 @@ open class CoreGradientDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreGradientDrawableSizeStyle2 : InlineStyle {
+open class CoreGradientDrawablePaddingStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(CoreTextViewStyleable.height::class)
-	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun height(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreTextViewStyleable.height::class, init)
+	@DefinedBy(CoreGradientDrawablePaddingStyleable.bottom::class)
+	open var bottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun bottom(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawablePaddingStyleable.bottom::class, init)
 
-	@DefinedBy(CoreTextViewStyleable.width::class)
-	open var width: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun width(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreTextViewStyleable.width::class, init)
+	@DefinedBy(CoreGradientDrawablePaddingStyleable.left::class)
+	open var left: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun left(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawablePaddingStyleable.left::class, init)
+
+	@DefinedBy(CoreGradientDrawablePaddingStyleable.right::class)
+	open var right: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun right(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawablePaddingStyleable.right::class, init)
+
+	@DefinedBy(CoreGradientDrawablePaddingStyleable.top::class)
+	open var top: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun top(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawablePaddingStyleable.top::class, init)
 
 }
 
-open class CoreGradientDrawableGradientStyle2 : InlineStyle {
+open class CoreGradientDrawableGradientStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7483,7 +7493,34 @@ open class CoreGradientDrawableGradientStyle2 : InlineStyle {
 
 }
 
-open class CoreGradientDrawableStrokeStyle2 : InlineStyle {
+open class CoreGradientDrawableSizeStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreTextViewStyleable.height::class)
+	open var height: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun height(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreTextViewStyleable.height::class, init)
+
+	@DefinedBy(CoreTextViewStyleable.width::class)
+	open var width: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
+	open fun width(init: DimensionAttribute.() -> Unit)
+		= initAttr(CoreTextViewStyleable.width::class, init)
+
+}
+
+open class CoreGradientDrawableSolidStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreGradientDrawableSolidStyleable.color::class)
+	open var color: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun color(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableSolidStyleable.color::class, init)
+
+}
+
+open class CoreGradientDrawableStrokeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7509,7 +7546,7 @@ open class CoreGradientDrawableStrokeStyle2 : InlineStyle {
 
 }
 
-open class CoreDrawableCornersStyle2 : InlineStyle {
+open class CoreDrawableCornersStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7540,44 +7577,7 @@ open class CoreDrawableCornersStyle2 : InlineStyle {
 
 }
 
-open class CoreGradientDrawablePaddingStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGradientDrawablePaddingStyleable.bottom::class)
-	open var bottom: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun bottom(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawablePaddingStyleable.bottom::class, init)
-
-	@DefinedBy(CoreGradientDrawablePaddingStyleable.left::class)
-	open var left: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun left(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawablePaddingStyleable.left::class, init)
-
-	@DefinedBy(CoreGradientDrawablePaddingStyleable.right::class)
-	open var right: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun right(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawablePaddingStyleable.right::class, init)
-
-	@DefinedBy(CoreGradientDrawablePaddingStyleable.top::class)
-	open var top: Any? by GenericDelegate(Dimension::class,DimensionContainer::class)
-	open fun top(init: DimensionAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawablePaddingStyleable.top::class, init)
-
-}
-
-open class CoreGradientDrawableSolidStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGradientDrawableSolidStyleable.color::class)
-	open var color: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun color(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableSolidStyleable.color::class, init)
-
-}
-
-open class CoreLayerDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreLayerDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7624,7 +7624,7 @@ open class CoreLayerDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreLayerDrawableItemStyle2 : InlineStyle {
+open class CoreLayerDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -7683,7 +7683,7 @@ open class CoreLayerDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreRotateDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreRotateDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7719,7 +7719,7 @@ open class CoreRotateDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreAnimatedRotateDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreAnimatedRotateDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7755,7 +7755,7 @@ open class CoreAnimatedRotateDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreMaterialProgressDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreMaterialProgressDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7791,7 +7791,7 @@ open class CoreMaterialProgressDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreInsetDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreInsetDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7832,7 +7832,7 @@ open class CoreInsetDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreNinePatchDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreNinePatchDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7868,7 +7868,7 @@ open class CoreNinePatchDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreColorDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreColorDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7879,7 +7879,7 @@ open class CoreColorDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreRippleDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreRippleDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7895,7 +7895,7 @@ open class CoreRippleDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreScaleDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreScaleDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7929,7 +7929,7 @@ open class CoreScaleDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreClipDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreClipDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7946,7 +7946,7 @@ open class CoreClipDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreShapeDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreShapeDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -7982,7 +7982,7 @@ open class CoreShapeDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreShapeDrawablePaddingStyle2 : InlineStyle {
+open class CoreShapeDrawablePaddingStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8008,7 +8008,7 @@ open class CoreShapeDrawablePaddingStyle2 : InlineStyle {
 
 }
 
-open class CoreVectorDrawableStyle2 : CoreDrawableStyle2 {
+open class CoreVectorDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8077,23 +8077,85 @@ open class CoreVectorDrawableStyle2 : CoreDrawableStyle2 {
 
 }
 
-open class CoreVectorDrawableClipPathStyle2 : InlineStyle {
+open class CoreGradientColorStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
-	@DefinedBy(ManifestStyleable.name::class)
-	open var name: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun name(init: StringAttribute.() -> Unit)
-		= initAttr(ManifestStyleable.name::class, init)
+	@DefinedBy(CoreGradientDrawableGradientStyleable.centerColor::class)
+	open var centerColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun centerColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.centerColor::class, init)
 
-	@DefinedBy(CoreVectorDrawablePathStyleable.pathData::class)
-	open var pathData: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun pathData(init: StringAttribute.() -> Unit)
-		= initAttr(CoreVectorDrawablePathStyleable.pathData::class, init)
+	@DefinedBy(CoreGradientDrawableGradientStyleable.centerX::class)
+	open var centerX: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun centerX(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.centerX::class, init)
+
+	@DefinedBy(CoreGradientDrawableGradientStyleable.centerY::class)
+	open var centerY: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun centerY(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.centerY::class, init)
+
+	@DefinedBy(CoreGradientDrawableGradientStyleable.endColor::class)
+	open var endColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun endColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.endColor::class, init)
+
+	@DefinedBy(CoreGradientColorStyleable.endX::class)
+	open var endX: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun endX(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientColorStyleable.endX::class, init)
+
+	@DefinedBy(CoreGradientColorStyleable.endY::class)
+	open var endY: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun endY(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientColorStyleable.endY::class, init)
+
+	@DefinedBy(CoreGradientDrawableGradientStyleable.gradientRadius::class)
+	open var gradientRadius: Any? by GenericDelegate(Float::class,FloatContainer::class,Dimension::class,DimensionContainer::class)
+	open fun gradientRadius(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.gradientRadius::class, init)
+
+	@DefinedBy(CoreGradientDrawableGradientStyleable.startColor::class)
+	open var startColor: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun startColor(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableGradientStyleable.startColor::class, init)
+
+	@DefinedBy(CoreGradientColorStyleable.startX::class)
+	open var startX: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun startX(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientColorStyleable.startX::class, init)
+
+	@DefinedBy(CoreGradientColorStyleable.startY::class)
+	open var startY: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun startY(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientColorStyleable.startY::class, init)
+
+	@DefinedBy(CoreBitmapDrawableStyleable.tileMode::class)
+	open var tileMode: Any? by GenericEnumDelegate<CoreBitmapDrawableStyleable.TileModeEnum>(CoreBitmapDrawableStyleable.TileModeEnum::class)
+
+	@DefinedBy(CoreGradientDrawableGradientStyleable.type::class)
+	open var type: Any? by GenericEnumDelegate<CoreGradientDrawableGradientStyleable.TypeEnum>(CoreGradientDrawableGradientStyleable.TypeEnum::class)
 
 }
 
-open class CoreVectorDrawablePathStyle2 : InlineStyle {
+open class CoreGradientColorItemStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CoreGradientDrawableSolidStyleable.color::class)
+	open var color: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun color(init: StringAttribute.() -> Unit)
+		= initAttr(CoreGradientDrawableSolidStyleable.color::class, init)
+
+	@DefinedBy(CoreGradientColorItemStyleable.offset::class)
+	open var offset: Any? by GenericDelegate(Float::class,FloatContainer::class)
+	open fun offset(init: FloatAttribute.() -> Unit)
+		= initAttr(CoreGradientColorItemStyleable.offset::class, init)
+
+}
+
+open class CoreVectorDrawablePathStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8163,7 +8225,23 @@ open class CoreVectorDrawablePathStyle2 : InlineStyle {
 
 }
 
-open class CoreVectorDrawableGroupStyle2 : InlineStyle {
+open class CoreVectorDrawableClipPathStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(ManifestStyleable.name::class)
+	open var name: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun name(init: StringAttribute.() -> Unit)
+		= initAttr(ManifestStyleable.name::class, init)
+
+	@DefinedBy(CoreVectorDrawablePathStyleable.pathData::class)
+	open var pathData: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun pathData(init: StringAttribute.() -> Unit)
+		= initAttr(CoreVectorDrawablePathStyleable.pathData::class, init)
+
+}
+
+open class CoreVectorDrawableGroupStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8209,85 +8287,7 @@ open class CoreVectorDrawableGroupStyle2 : InlineStyle {
 
 }
 
-open class CoreGradientColorStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.centerColor::class)
-	open var centerColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun centerColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.centerColor::class, init)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.centerX::class)
-	open var centerX: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun centerX(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.centerX::class, init)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.centerY::class)
-	open var centerY: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun centerY(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.centerY::class, init)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.endColor::class)
-	open var endColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun endColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.endColor::class, init)
-
-	@DefinedBy(CoreGradientColorStyleable.endX::class)
-	open var endX: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun endX(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientColorStyleable.endX::class, init)
-
-	@DefinedBy(CoreGradientColorStyleable.endY::class)
-	open var endY: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun endY(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientColorStyleable.endY::class, init)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.gradientRadius::class)
-	open var gradientRadius: Any? by GenericDelegate(Float::class,FloatContainer::class,Dimension::class,DimensionContainer::class)
-	open fun gradientRadius(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.gradientRadius::class, init)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.startColor::class)
-	open var startColor: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun startColor(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableGradientStyleable.startColor::class, init)
-
-	@DefinedBy(CoreGradientColorStyleable.startX::class)
-	open var startX: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun startX(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientColorStyleable.startX::class, init)
-
-	@DefinedBy(CoreGradientColorStyleable.startY::class)
-	open var startY: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun startY(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientColorStyleable.startY::class, init)
-
-	@DefinedBy(CoreBitmapDrawableStyleable.tileMode::class)
-	open var tileMode: Any? by GenericEnumDelegate<CoreBitmapDrawableStyleable.TileModeEnum>(CoreBitmapDrawableStyleable.TileModeEnum::class)
-
-	@DefinedBy(CoreGradientDrawableGradientStyleable.type::class)
-	open var type: Any? by GenericEnumDelegate<CoreGradientDrawableGradientStyleable.TypeEnum>(CoreGradientDrawableGradientStyleable.TypeEnum::class)
-
-}
-
-open class CoreGradientColorItemStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CoreGradientDrawableSolidStyleable.color::class)
-	open var color: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun color(init: StringAttribute.() -> Unit)
-		= initAttr(CoreGradientDrawableSolidStyleable.color::class, init)
-
-	@DefinedBy(CoreGradientColorItemStyleable.offset::class)
-	open var offset: Any? by GenericDelegate(Float::class,FloatContainer::class)
-	open fun offset(init: FloatAttribute.() -> Unit)
-		= initAttr(CoreGradientColorItemStyleable.offset::class, init)
-
-}
-
-open class CoreLayoutAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreLayoutAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8311,7 +8311,7 @@ open class CoreLayoutAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreAnimationStyle2 : InlineStyle {
+open class CoreAnimationStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8366,7 +8366,7 @@ open class CoreAnimationStyle2 : InlineStyle {
 
 }
 
-open class CoreRotateAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreRotateAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8392,7 +8392,7 @@ open class CoreRotateAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreScaleAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreScaleAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8428,7 +8428,7 @@ open class CoreScaleAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreTranslateAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreTranslateAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8454,7 +8454,7 @@ open class CoreTranslateAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreAlphaAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreAlphaAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8470,7 +8470,7 @@ open class CoreAlphaAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreGridLayoutAnimationStyle2 : CoreAnimationStyle2 {
+open class CoreGridLayoutAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8492,7 +8492,7 @@ open class CoreGridLayoutAnimationStyle2 : CoreAnimationStyle2 {
 
 }
 
-open class CoreAnimationSetStyle2 : InlineStyle {
+open class CoreAnimationSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8526,7 +8526,7 @@ open class CoreAnimationSetStyle2 : InlineStyle {
 
 }
 
-open class CoreAccelerateInterpolatorStyle2 : InlineStyle {
+open class CoreAccelerateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8537,7 +8537,7 @@ open class CoreAccelerateInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreDecelerateInterpolatorStyle2 : InlineStyle {
+open class CoreDecelerateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8548,7 +8548,7 @@ open class CoreDecelerateInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreCycleInterpolatorStyle2 : InlineStyle {
+open class CoreCycleInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8559,7 +8559,7 @@ open class CoreCycleInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreAnticipateInterpolatorStyle2 : InlineStyle {
+open class CoreAnticipateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8570,7 +8570,7 @@ open class CoreAnticipateInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreOvershootInterpolatorStyle2 : InlineStyle {
+open class CoreOvershootInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8581,7 +8581,7 @@ open class CoreOvershootInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreAnticipateOvershootInterpolatorStyle2 : InlineStyle {
+open class CoreAnticipateOvershootInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8597,7 +8597,7 @@ open class CoreAnticipateOvershootInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CorePathInterpolatorStyle2 : InlineStyle {
+open class CorePathInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8628,7 +8628,7 @@ open class CorePathInterpolatorStyle2 : InlineStyle {
 
 }
 
-open class CoreDrawableWrapperStyle2 : InlineStyle {
+open class CoreDrawableWrapperStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8639,7 +8639,7 @@ open class CoreDrawableWrapperStyle2 : InlineStyle {
 
 }
 
-open class CoreColorStateListItemStyle2 : InlineStyle {
+open class CoreColorStateListItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8655,7 +8655,7 @@ open class CoreColorStateListItemStyle2 : InlineStyle {
 
 }
 
-open class CoreLevelListDrawableItemStyle2 : InlineStyle {
+open class CoreLevelListDrawableItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8676,7 +8676,7 @@ open class CoreLevelListDrawableItemStyle2 : InlineStyle {
 
 }
 
-open class CoreAdaptiveIconDrawableLayerStyle2 : InlineStyle {
+open class CoreAdaptiveIconDrawableLayerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8687,18 +8687,18 @@ open class CoreAdaptiveIconDrawableLayerStyle2 : InlineStyle {
 
 }
 
-open class CoreTextViewAppearanceStyle2 : InlineStyle {
+open class CoreTextViewAppearanceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 	@DefinedBy(CoreTextViewStyleable.textAppearance::class)
-	open var textAppearance: CoreTextAppearanceStyle2? by InlineStyleDelegate()
-	open fun textAppearance(init: CoreTextAppearanceStyle2.() -> Unit)
-		= initInlineStyle(CoreTextAppearanceStyle2(), "textAppearance", init)
+	open var textAppearance: CoreTextAppearanceStyle? by InlineStyleDelegate()
+	open fun textAppearance(init: CoreTextAppearanceStyle.() -> Unit)
+		= initInlineStyle(CoreTextAppearanceStyle(), "textAppearance", init)
 
 }
 
-open class CoreSelectionModeDrawablesStyle2 : InlineStyle {
+open class CoreSelectionModeDrawablesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8724,7 +8724,7 @@ open class CoreSelectionModeDrawablesStyle2 : InlineStyle {
 
 }
 
-open class CoreSuggestionSpanStyle2 : InlineStyle {
+open class CoreSuggestionSpanStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8740,13 +8740,13 @@ open class CoreSuggestionSpanStyle2 : InlineStyle {
 
 }
 
-open class CoreInputExtrasStyle2 : InlineStyle {
+open class CoreInputExtrasStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreEpicenterTranslateClipRevealStyle2 : CoreVisibilityTransitionStyle2 {
+open class CoreEpicenterTranslateClipRevealStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8767,7 +8767,7 @@ open class CoreEpicenterTranslateClipRevealStyle2 : CoreVisibilityTransitionStyl
 
 }
 
-open class CoreVisibilityTransitionStyle2 : CoreTransitionStyle2 {
+open class CoreVisibilityTransitionStyle : CoreTransitionStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8776,7 +8776,7 @@ open class CoreVisibilityTransitionStyle2 : CoreTransitionStyle2 {
 
 }
 
-open class CoreTransitionStyle2 : InlineStyle {
+open class CoreTransitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8802,7 +8802,7 @@ open class CoreTransitionStyle2 : InlineStyle {
 
 }
 
-open class CoreArcMotionStyle2 : InlineStyle {
+open class CoreArcMotionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8823,7 +8823,18 @@ open class CoreArcMotionStyle2 : InlineStyle {
 
 }
 
-open class CoreTransitionTargetStyle2 : InlineStyle {
+open class CorePatternPathMotionStyle : InlineStyle {
+	constructor() : super("")
+	constructor(name : String) : super(name)
+
+	@DefinedBy(CorePatternPathMotionStyleable.patternPathData::class)
+	open var patternPathData: Any? by GenericDelegate(String::class,StringContainer::class)
+	open fun patternPathData(init: StringAttribute.() -> Unit)
+		= initAttr(CorePatternPathMotionStyleable.patternPathData::class, init)
+
+}
+
+open class CoreTransitionTargetStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -8859,18 +8870,7 @@ open class CoreTransitionTargetStyle2 : InlineStyle {
 
 }
 
-open class CorePatternPathMotionStyle2 : InlineStyle {
-	constructor() : super("")
-	constructor(name : String) : super(name)
-
-	@DefinedBy(CorePatternPathMotionStyleable.patternPathData::class)
-	open var patternPathData: Any? by GenericDelegate(String::class,StringContainer::class)
-	open fun patternPathData(init: StringAttribute.() -> Unit)
-		= initAttr(CorePatternPathMotionStyleable.patternPathData::class, init)
-
-}
-
-open class CoreFadeStyle2 : CoreVisibilityTransitionStyle2 {
+open class CoreFadeStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8879,7 +8879,7 @@ open class CoreFadeStyle2 : CoreVisibilityTransitionStyle2 {
 
 }
 
-open class CoreSlideStyle2 : CoreVisibilityTransitionStyle2 {
+open class CoreSlideStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8888,7 +8888,7 @@ open class CoreSlideStyle2 : CoreVisibilityTransitionStyle2 {
 
 }
 
-open class CoreTransitionSetStyle2 : InlineStyle {
+open class CoreTransitionSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8897,7 +8897,7 @@ open class CoreTransitionSetStyle2 : InlineStyle {
 
 }
 
-open class CoreChangeTransformStyle2 : CoreTransitionStyle2 {
+open class CoreChangeTransformStyle : CoreTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8913,7 +8913,7 @@ open class CoreChangeTransformStyle2 : CoreTransitionStyle2 {
 
 }
 
-open class CoreChangeBoundsStyle2 : CoreTransitionStyle2 {
+open class CoreChangeBoundsStyle : CoreTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8924,7 +8924,7 @@ open class CoreChangeBoundsStyle2 : CoreTransitionStyle2 {
 
 }
 
-open class CoreTransitionManagerStyle2 : InlineStyle {
+open class CoreTransitionManagerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8945,7 +8945,7 @@ open class CoreTransitionManagerStyle2 : InlineStyle {
 
 }
 
-open class CoreAnimatorStyle2 : InlineStyle {
+open class CoreAnimatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -8985,7 +8985,7 @@ open class CoreAnimatorStyle2 : InlineStyle {
 
 }
 
-open class CorePropertyValuesHolderStyle2 : InlineStyle {
+open class CorePropertyValuesHolderStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9009,7 +9009,7 @@ open class CorePropertyValuesHolderStyle2 : InlineStyle {
 
 }
 
-open class CoreKeyframeStyle2 : InlineStyle {
+open class CoreKeyframeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9033,7 +9033,7 @@ open class CoreKeyframeStyle2 : InlineStyle {
 
 }
 
-open class CorePropertyAnimatorStyle2 : InlineStyle {
+open class CorePropertyAnimatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9059,7 +9059,7 @@ open class CorePropertyAnimatorStyle2 : InlineStyle {
 
 }
 
-open class CoreAnimatorSetStyle2 : InlineStyle {
+open class CoreAnimatorSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9068,7 +9068,7 @@ open class CoreAnimatorSetStyle2 : InlineStyle {
 
 }
 
-open class CoreViewDrawableStatesStyle2 : InlineStyle {
+open class CoreViewDrawableStatesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9124,7 +9124,7 @@ open class CoreViewDrawableStatesStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuItemCheckedStateStyle2 : InlineStyle {
+open class CoreMenuItemCheckedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9140,7 +9140,7 @@ open class CoreMenuItemCheckedStateStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuItemUncheckedStateStyle2 : InlineStyle {
+open class CoreMenuItemUncheckedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9151,7 +9151,7 @@ open class CoreMenuItemUncheckedStateStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuItemCheckedFocusedStateStyle2 : InlineStyle {
+open class CoreMenuItemCheckedFocusedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9172,7 +9172,7 @@ open class CoreMenuItemCheckedFocusedStateStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuItemUncheckedFocusedStateStyle2 : InlineStyle {
+open class CoreMenuItemUncheckedFocusedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9188,7 +9188,7 @@ open class CoreMenuItemUncheckedFocusedStateStyle2 : InlineStyle {
 
 }
 
-open class CoreExpandableListChildIndicatorStateStyle2 : InlineStyle {
+open class CoreExpandableListChildIndicatorStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9199,7 +9199,7 @@ open class CoreExpandableListChildIndicatorStateStyle2 : InlineStyle {
 
 }
 
-open class CoreExpandableListGroupIndicatorStateStyle2 : InlineStyle {
+open class CoreExpandableListGroupIndicatorStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9215,7 +9215,7 @@ open class CoreExpandableListGroupIndicatorStateStyle2 : InlineStyle {
 
 }
 
-open class CorePopupWindowBackgroundStateStyle2 : InlineStyle {
+open class CorePopupWindowBackgroundStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9226,7 +9226,7 @@ open class CorePopupWindowBackgroundStateStyle2 : InlineStyle {
 
 }
 
-open class CoreTextViewMultiLineBackgroundStateStyle2 : InlineStyle {
+open class CoreTextViewMultiLineBackgroundStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9237,7 +9237,7 @@ open class CoreTextViewMultiLineBackgroundStateStyle2 : InlineStyle {
 
 }
 
-open class CoreSearchableStyle2 : InlineStyle {
+open class CoreSearchableStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9345,7 +9345,7 @@ open class CoreSearchableStyle2 : InlineStyle {
 
 }
 
-open class CoreSearchableActionKeyStyle2 : InlineStyle {
+open class CoreSearchableActionKeyStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9368,13 +9368,13 @@ open class CoreSearchableActionKeyStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuStyle2 : InlineStyle {
+open class CoreMenuStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
-open class CoreMenuGroupStyle2 : InlineStyle {
+open class CoreMenuGroupStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9406,7 +9406,7 @@ open class CoreMenuGroupStyle2 : InlineStyle {
 
 }
 
-open class CoreMenuItemStyle2 : InlineStyle {
+open class CoreMenuItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9517,7 +9517,7 @@ open class CoreMenuItemStyle2 : InlineStyle {
 
 }
 
-open class CoreAppWidgetProviderInfoStyle2 : InlineStyle {
+open class CoreAppWidgetProviderInfoStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9582,7 +9582,7 @@ open class CoreAppWidgetProviderInfoStyle2 : InlineStyle {
 
 }
 
-open class CoreWallpaperPreviewInfoStyle2 : InlineStyle {
+open class CoreWallpaperPreviewInfoStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9593,7 +9593,7 @@ open class CoreWallpaperPreviewInfoStyle2 : InlineStyle {
 
 }
 
-open class CoreDeviceAdminStyle2 : InlineStyle {
+open class CoreDeviceAdminStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9604,7 +9604,7 @@ open class CoreDeviceAdminStyle2 : InlineStyle {
 
 }
 
-open class CoreAccountAuthenticatorStyle2 : InlineStyle {
+open class CoreAccountAuthenticatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9640,7 +9640,7 @@ open class CoreAccountAuthenticatorStyle2 : InlineStyle {
 
 }
 
-open class CoreSyncAdapterStyle2 : InlineStyle {
+open class CoreSyncAdapterStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9681,7 +9681,7 @@ open class CoreSyncAdapterStyle2 : InlineStyle {
 
 }
 
-open class CoreIconStyle2 : InlineStyle {
+open class CoreIconStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9697,7 +9697,7 @@ open class CoreIconStyle2 : InlineStyle {
 
 }
 
-open class CoreIconDefaultStyle2 : InlineStyle {
+open class CoreIconDefaultStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9708,7 +9708,7 @@ open class CoreIconDefaultStyle2 : InlineStyle {
 
 }
 
-open class CoreContactsDataKindStyle2 : InlineStyle {
+open class CoreContactsDataKindStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9744,7 +9744,7 @@ open class CoreContactsDataKindStyle2 : InlineStyle {
 
 }
 
-open class CoreSlidingTabStyle2 : InlineStyle {
+open class CoreSlidingTabStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9753,7 +9753,7 @@ open class CoreSlidingTabStyle2 : InlineStyle {
 
 }
 
-open class CoreGlowPadViewStyle2 : InlineStyle {
+open class CoreGlowPadViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9769,7 +9769,7 @@ open class CoreGlowPadViewStyle2 : InlineStyle {
 
 }
 
-open class CoreLockPatternViewStyle2 : InlineStyle {
+open class CoreLockPatternViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9800,7 +9800,7 @@ open class CoreLockPatternViewStyle2 : InlineStyle {
 
 }
 
-open class CoreVoiceEnrollmentApplicationStyle2 : InlineStyle {
+open class CoreVoiceEnrollmentApplicationStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9824,7 +9824,7 @@ open class CoreVoiceEnrollmentApplicationStyle2 : InlineStyle {
 
 }
 
-open class CorePointerStyle2 : InlineStyle {
+open class CorePointerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -9950,7 +9950,7 @@ open class CorePointerStyle2 : InlineStyle {
 
 }
 
-open class CorePointerIconStyle2 : InlineStyle {
+open class CorePointerIconStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -9971,7 +9971,7 @@ open class CorePointerIconStyle2 : InlineStyle {
 
 }
 
-open class CoreStorageStyle2 : InlineStyle {
+open class CoreStorageStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10017,7 +10017,7 @@ open class CoreStorageStyle2 : InlineStyle {
 
 }
 
-open class CoreKeyboardLayoutStyle2 : InlineStyle {
+open class CoreKeyboardLayoutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10053,7 +10053,7 @@ open class CoreKeyboardLayoutStyle2 : InlineStyle {
 
 }
 
-open class CorePagedViewStyle2 : InlineStyle {
+open class CorePagedViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10074,7 +10074,7 @@ open class CorePagedViewStyle2 : InlineStyle {
 
 }
 
-open class CoreKeyguardGlowStripViewStyle2 : InlineStyle {
+open class CoreKeyguardGlowStripViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10100,7 +10100,7 @@ open class CoreKeyguardGlowStripViewStyle2 : InlineStyle {
 
 }
 
-open class CoreEdgeEffectStyle2 : InlineStyle {
+open class CoreEdgeEffectStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10111,7 +10111,7 @@ open class CoreEdgeEffectStyle2 : InlineStyle {
 
 }
 
-open class CoreResolverDrawerLayoutStyle2 : CoreViewGroupStyle2 {
+open class CoreResolverDrawerLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10137,7 +10137,7 @@ open class CoreResolverDrawerLayoutStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreResolverDrawerLayout_LayoutParamsStyle2 : CoreViewGroup_MarginLayoutStyle2 {
+open class CoreResolverDrawerLayout_LayoutParamsStyle : CoreViewGroup_MarginLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
@@ -10161,7 +10161,7 @@ open class CoreResolverDrawerLayout_LayoutParamsStyle2 : CoreViewGroup_MarginLay
 
 }
 
-open class CoreMessagingLinearLayoutStyle2 : CoreViewGroupStyle2 {
+open class CoreMessagingLinearLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10172,7 +10172,7 @@ open class CoreMessagingLinearLayoutStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreDateTimeViewStyle2 : CoreTextViewStyle2 {
+open class CoreDateTimeViewStyle : CoreTextViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10183,7 +10183,7 @@ open class CoreDateTimeViewStyle2 : CoreTextViewStyle2 {
 
 }
 
-open class CoreLightingStyle2 : InlineStyle {
+open class CoreLightingStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10214,7 +10214,7 @@ open class CoreLightingStyle2 : InlineStyle {
 
 }
 
-open class CoreRestrictionEntryStyle2 : InlineStyle {
+open class CoreRestrictionEntryStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10253,7 +10253,7 @@ open class CoreRestrictionEntryStyle2 : InlineStyle {
 
 }
 
-open class CoreActivityTaskDescriptionStyle2 : InlineStyle {
+open class CoreActivityTaskDescriptionStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10279,7 +10279,7 @@ open class CoreActivityTaskDescriptionStyle2 : InlineStyle {
 
 }
 
-open class CoreShortcutStyle2 : InlineStyle {
+open class CoreShortcutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10315,7 +10315,7 @@ open class CoreShortcutStyle2 : InlineStyle {
 
 }
 
-open class CoreShortcutCategoriesStyle2 : InlineStyle {
+open class CoreShortcutCategoriesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10326,7 +10326,7 @@ open class CoreShortcutCategoriesStyle2 : InlineStyle {
 
 }
 
-open class CoreFontFamilyFontStyle2 : InlineStyle {
+open class CoreFontFamilyFontStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10355,7 +10355,7 @@ open class CoreFontFamilyFontStyle2 : InlineStyle {
 
 }
 
-open class CoreFontFamilyStyle2 : InlineStyle {
+open class CoreFontFamilyStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10381,7 +10381,7 @@ open class CoreFontFamilyStyle2 : InlineStyle {
 
 }
 
-open class CoreRecyclerViewStyle2 : CoreViewGroupStyle2 {
+open class CoreRecyclerViewStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10413,7 +10413,7 @@ open class CoreRecyclerViewStyle2 : CoreViewGroupStyle2 {
 
 }
 
-open class CoreNotificationThemeStyle2 : InlineStyle {
+open class CoreNotificationThemeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
@@ -10437,9 +10437,9 @@ open class CoreNotificationThemeStyle2 : InlineStyle {
 
 }
 
-fun <T : CoreThemeStyle2> T.extralarge(init: T.() -> Unit) {
+fun <T : CoreThemeStyle> T.extralarge(init: T.() -> Unit) {
     conditionalBag(ExtraLarge(), init)
 }
-fun <T : CoreThemeStyle2> T.version(version: Int, init: T.() -> Unit) {
+fun <T : CoreThemeStyle> T.version(version: Int, init: T.() -> Unit) {
     conditionalBag(PlatformVersion(version), init)
 }

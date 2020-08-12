@@ -19,7 +19,7 @@ import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.*
 import dev.android.playground.nova.core.framework.styleables.*
 
-open class CoreStyle2 : BaseBag("style") {
+open class CoreStyle : BaseBag("style") {
     fun asReference(): StringContainer {
         return StringContainer("@style/" + this.myName)
     }

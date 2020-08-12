@@ -16,15 +16,13 @@
 package dev.android.playground.nova.usage
 
 import dev.android.playground.nova.core.base.*
-import dev.android.playground.nova.core.framework.Gravity
-import dev.android.playground.nova.core.framework.Orientation
 import dev.android.playground.nova.core.framework.generated.*
-import dev.android.playground.nova.core.framework.styleables.CoreViewGroup_LayoutStyleable
-import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
+import dev.android.playground.nova.core.framework.styleables.*
+import dev.android.playground.nova.core.framework.themes.*
 
-fun style(name: String, parentName: String? = null, parentStyle: CoreStyle2? = null,
-           init: CoreStyle2.() -> Unit): CoreStyle2 {
-    val style = CoreStyle2()
+fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,
+           init: CoreStyle.() -> Unit): CoreStyle {
+    val style = CoreStyle()
     style.init()
     style.myName = name
     if ((parentName != null) && (parentStyle != null)) {
@@ -39,8 +37,8 @@ fun style(name: String, parentName: String? = null, parentStyle: CoreStyle2? = n
     return style
 }
 
-fun theme(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
-    val theme = CoreThemeStyle2()
+fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    val theme = CoreThemeStyle()
     theme.init()
     theme.myName = name
     theme.parentName = parent
@@ -48,8 +46,8 @@ fun theme(name: String, parent: String, init: CoreThemeStyle2.() -> Unit): CoreT
     return theme
 }
 
-fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle2.() -> Unit): CoreThemeStyle2 {
-    val theme = CoreThemeStyle2()
+fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    val theme = CoreThemeStyle()
     theme.init()
     theme.myName = name
     theme.parentCondition = parent
@@ -69,6 +67,7 @@ fun simpleCoreGenerated() {
         // Inline widget style (no need for a separate style object)
         actionModeStyle {
             background = color.action_mode_background
+            //height = 48.dp
         }
 
         // Deeper nesting of styles
@@ -110,15 +109,7 @@ fun simpleCoreGenerated() {
     }
 
     style(name = "MyStyle") {
-        // Enum field
-        orientation = Orientation.horizontal
-        // Flag field with one flag value
-        gravity = +Gravity.end
-        // Flag field with multiple flag values
-        layout_gravity = Gravity.start and Gravity.top
-        // Hybrid enum field - core dimension value
         layout_width = 100.dp
-        // Hybrid enum field - enum value
         layout_height = CoreViewGroup_LayoutStyleable.LayoutHeightEnum.match_parent
     }
 

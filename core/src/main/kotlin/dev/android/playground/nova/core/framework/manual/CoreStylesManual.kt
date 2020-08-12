@@ -23,16 +23,16 @@ import dev.android.playground.nova.core.framework.Typeface
 import dev.android.playground.nova.core.framework.styleables.*
 
 @UseAndroidNamespace
-open class CoreActionModeStyle : InlineStyle("actionModeStyle") {
+open class CoreActionModeStyleManual : InlineStyle("actionModeStyle") {
     @DefinedBy(CoreActionModeStyleable.titleTextStyle::class)
-    open var titleTextStyle: TextAppearance? by InlineStyleDelegate()
-    open fun titleTextStyle(init: TextAppearance.() -> Unit) =
-            initInlineStyle(TextAppearance(), "titleTextStyle", init)
+    open var titleTextStyle: TextAppearanceManual? by InlineStyleDelegate()
+    open fun titleTextStyle(init: TextAppearanceManual.() -> Unit) =
+            initInlineStyle(TextAppearanceManual(), "titleTextStyle", init)
 
     @DefinedBy(CoreActionModeStyleable.subtitleTextStyle::class)
-    open var subtitleTextStyle: TextAppearance? by InlineStyleDelegate()
-    open fun subtitleTextStyle(init: TextAppearance.() -> Unit) =
-            initInlineStyle(TextAppearance(), "subtitleTextStyle", init)
+    open var subtitleTextStyle: TextAppearanceManual? by InlineStyleDelegate()
+    open fun subtitleTextStyle(init: TextAppearanceManual.() -> Unit) =
+            initInlineStyle(TextAppearanceManual(), "subtitleTextStyle", init)
 
     @DefinedBy(CoreActionModeStyleable.background::class)
     open var background: StringContainer? by StringValueDelegate()
@@ -57,16 +57,16 @@ open class CoreActionModeStyle : InlineStyle("actionModeStyle") {
 }
 
 @UseAndroidNamespace
-open class CoreToolbarStyle : InlineStyle("toolbarStyle") {
-    @DefinedBy(TextAppearance::class)
-    open var titleTextAppearance: TextAppearance? by InlineStyleDelegate()
-    open fun titleTextAppearance(init: TextAppearance.() -> Unit)
-            = initInlineStyle(TextAppearance(), "titleTextAppearance", init)
+open class CoreToolbarStyleManual : InlineStyle("toolbarStyle") {
+    @DefinedBy(TextAppearanceManual::class)
+    open var titleTextAppearance: TextAppearanceManual? by InlineStyleDelegate()
+    open fun titleTextAppearance(init: TextAppearanceManual.() -> Unit)
+            = initInlineStyle(TextAppearanceManual(), "titleTextAppearance", init)
 
-    @DefinedBy(TextAppearance::class)
-    open var subtitleTextAppearance: TextAppearance? by InlineStyleDelegate()
-    open fun subtitleTextAppearance(init: TextAppearance.() -> Unit)
-            = initInlineStyle(TextAppearance(), "subtitleTextAppearance", init)
+    @DefinedBy(TextAppearanceManual::class)
+    open var subtitleTextAppearance: TextAppearanceManual? by InlineStyleDelegate()
+    open fun subtitleTextAppearance(init: TextAppearanceManual.() -> Unit)
+            = initInlineStyle(TextAppearanceManual(), "subtitleTextAppearance", init)
 
     @DefinedBy(CoreToolbarStyleable.title::class)
     open var title: StringContainer? by StringValueDelegate()
@@ -197,7 +197,7 @@ open class CoreToolbarStyle : InlineStyle("toolbarStyle") {
 }
 
 @UseAndroidNamespace
-class TextAppearance : InlineStyle("") {
+class TextAppearanceManual : InlineStyle("") {
     @DefinedBy(CoreTextAppearanceStyleable.textColor::class)
     var textColor: StringContainer? by StringValueDelegate()
     fun textColor(init: StringAttribute.() -> Unit) =
@@ -275,7 +275,7 @@ class TextAppearance : InlineStyle("") {
             initAttr(CoreTextAppearanceStyleable.fontFeatureSettings::class, init)
 }
 
-open class CoreStyle : BaseBag("style") {
+open class CoreStyleManual : BaseBag("style") {
     fun asReference(): StringContainer {
         return StringContainer("@style/" + this.myName)
     }
@@ -334,21 +334,21 @@ open class CoreStyle : BaseBag("style") {
     open fun actionMenuTextColor(init: StringAttribute.() -> Unit)
             = initAttr(CoreThemeStyleable.actionMenuTextColor::class, init)
 
-    @DefinedBy(CoreActionModeStyle::class)
-    open var actionModeStyle: CoreActionModeStyle? by InlineStyleDelegate()
-    open fun actionModeStyle(init: CoreActionModeStyle.() -> Unit)
-            = initInlineStyle(CoreActionModeStyle(), "actionModeStyle", init)
+    @DefinedBy(CoreActionModeStyleManual::class)
+    open var actionModeStyle: CoreActionModeStyleManual? by InlineStyleDelegate()
+    open fun actionModeStyle(init: CoreActionModeStyleManual.() -> Unit)
+            = initInlineStyle(CoreActionModeStyleManual(), "actionModeStyle", init)
 
-    @DefinedBy(CoreToolbarStyle::class)
-    open var toolbarStyle: CoreToolbarStyle? by InlineStyleDelegate()
-    fun toolbarStyle(init: CoreToolbarStyle.() -> Unit)
-            = initInlineStyle(CoreToolbarStyle(), "toolbarStyle", init)
+    @DefinedBy(CoreToolbarStyleManual::class)
+    open var toolbarStyle: CoreToolbarStyleManual? by InlineStyleDelegate()
+    fun toolbarStyle(init: CoreToolbarStyleManual.() -> Unit)
+            = initInlineStyle(CoreToolbarStyleManual(), "toolbarStyle", init)
 }
 
-fun <T : CoreStyle> T.extralarge(init: T.() -> Unit) {
+fun <T : CoreStyleManual> T.extralarge(init: T.() -> Unit) {
     conditionalBag(ExtraLarge(), init)
 }
 
-fun <T : CoreStyle> T.version(version: Int, init: T.() -> Unit) {
+fun <T : CoreStyleManual> T.version(version: Int, init: T.() -> Unit) {
     conditionalBag(PlatformVersion(version), init)
 }

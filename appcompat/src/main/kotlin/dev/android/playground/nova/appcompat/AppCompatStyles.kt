@@ -16,28 +16,28 @@
 package dev.android.playground.nova.appcompat
 
 import dev.android.playground.nova.core.base.*
-import dev.android.playground.nova.core.framework.manual.CoreActionModeStyle
-import dev.android.playground.nova.core.framework.manual.CoreStyle
-import dev.android.playground.nova.core.framework.manual.CoreToolbarStyle
-import dev.android.playground.nova.core.framework.manual.TextAppearance
+import dev.android.playground.nova.core.framework.manual.CoreActionModeStyleManual
+import dev.android.playground.nova.core.framework.manual.CoreStyleManual
+import dev.android.playground.nova.core.framework.manual.CoreToolbarStyleManual
+import dev.android.playground.nova.core.framework.manual.TextAppearanceManual
 
-class AppCompatToolbarStyle : CoreToolbarStyle() {
-    @DefinedBy(TextAppearance::class)
-    override var titleTextAppearance: TextAppearance? by InlineStyleDelegate()
-    override fun titleTextAppearance(init: TextAppearance.() -> Unit)
-            = initInlineStyle(TextAppearance(), "titleTextAppearance", init)
+class AppCompatToolbarStyleManual : CoreToolbarStyleManual() {
+    @DefinedBy(TextAppearanceManual::class)
+    override var titleTextAppearance: TextAppearanceManual? by InlineStyleDelegate()
+    override fun titleTextAppearance(init: TextAppearanceManual.() -> Unit)
+            = initInlineStyle(TextAppearanceManual(), "titleTextAppearance", init)
 }
 
-class AppCompatActionModeStyle: CoreActionModeStyle() {
+class AppCompatActionModeStyleManual: CoreActionModeStyleManual() {
     @DefinedBy(ActionModeStyleable.titleTextStyle::class)
-    override var titleTextStyle: TextAppearance? by InlineStyleDelegate()
-    override fun titleTextStyle(init: TextAppearance.() -> Unit) =
-            initInlineStyle(TextAppearance(), "titleTextStyle", init)
+    override var titleTextStyle: TextAppearanceManual? by InlineStyleDelegate()
+    override fun titleTextStyle(init: TextAppearanceManual.() -> Unit) =
+            initInlineStyle(TextAppearanceManual(), "titleTextStyle", init)
 
     @DefinedBy(ActionModeStyleable.subtitleTextStyle::class)
-    override var subtitleTextStyle: TextAppearance? by InlineStyleDelegate()
-    override fun subtitleTextStyle(init: TextAppearance.() -> Unit) =
-            initInlineStyle(TextAppearance(), "subtitleTextStyle", init)
+    override var subtitleTextStyle: TextAppearanceManual? by InlineStyleDelegate()
+    override fun subtitleTextStyle(init: TextAppearanceManual.() -> Unit) =
+            initInlineStyle(TextAppearanceManual(), "subtitleTextStyle", init)
 
     @DefinedBy(ActionModeStyleable.background::class)
     override var background: StringContainer? by StringValueDelegate()
@@ -61,7 +61,7 @@ class AppCompatActionModeStyle: CoreActionModeStyle() {
 
 }
 
-open class AppCompatStyle: CoreStyle() {
+open class AppCompatStyleManual: CoreStyleManual() {
     @DefinedBy(AppCompatThemeStyleable.windowActionModeOverlay::class)
     override var windowActionModeOverlay: Boolean? by BooleanDelegate()
     override fun windowActionModeOverlay(init: BooleanAttribute.() -> Unit)
@@ -73,9 +73,9 @@ open class AppCompatStyle: CoreStyle() {
             = initAttr(AppCompatThemeStyleable.actionMenuTextColor::class, init)
 }
 
-fun appCompatStyle(name: String, parentName: String? = null, parentStyle: AppCompatStyle? = null,
-          init: AppCompatStyle.() -> Unit): AppCompatStyle {
-    val style = AppCompatStyle()
+fun appCompatStyle(name: String, parentName: String? = null, parentStyle: AppCompatStyleManual? = null,
+          init: AppCompatStyleManual.() -> Unit): AppCompatStyleManual {
+    val style = AppCompatStyleManual()
     style.init()
     style.myName = name
     if ((parentName != null) && (parentStyle != null)) {

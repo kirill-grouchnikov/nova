@@ -18,7 +18,7 @@ package dev.android.playground.nova.core.framework.manual
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.styleables.*
 
-open class CoreTheme : BaseBag("style") {
+open class CoreThemeManual : BaseBag("style") {
     override fun shouldGoIntoThemesXml(): Boolean {
         return true
     }
@@ -68,28 +68,28 @@ open class CoreTheme : BaseBag("style") {
             = initAttr(CoreThemeStyleable.actionMenuTextColor::class, init)
 
     @DefinedBy(CoreActionModeStyleable::class)
-    open var actionModeStyle: CoreActionModeStyle? by InlineStyleDelegate()
-    open fun actionModeStyle(init: CoreActionModeStyle.() -> Unit)
-            = initInlineStyle(CoreActionModeStyle(), "actionModeStyle", init)
+    open var actionModeStyle: CoreActionModeStyleManual? by InlineStyleDelegate()
+    open fun actionModeStyle(init: CoreActionModeStyleManual.() -> Unit)
+            = initInlineStyle(CoreActionModeStyleManual(), "actionModeStyle", init)
 
     @DefinedBy(CoreToolbarStyleable::class)
-    open var toolbarStyle: CoreToolbarStyle? by InlineStyleDelegate()
-    open fun toolbarStyle(init: CoreToolbarStyle.() -> Unit)
-            = initInlineStyle(CoreToolbarStyle(), "toolbarStyle", init)
+    open var toolbarStyle: CoreToolbarStyleManual? by InlineStyleDelegate()
+    open fun toolbarStyle(init: CoreToolbarStyleManual.() -> Unit)
+            = initInlineStyle(CoreToolbarStyleManual(), "toolbarStyle", init)
 }
 
-fun <T : CoreTheme> T.extralarge(init: T.() -> Unit) {
+fun <T : CoreThemeManual> T.extralarge(init: T.() -> Unit) {
     conditionalBag(ExtraLarge(), init)
 }
 
-fun <T : CoreTheme> T.version(version: Int, init: T.() -> Unit) {
+fun <T : CoreThemeManual> T.version(version: Int, init: T.() -> Unit) {
     conditionalBag(PlatformVersion(version), init)
 }
 
 
-fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,
-          init: CoreStyle.() -> Unit): CoreStyle {
-    val style = CoreStyle()
+fun style(name: String, parentName: String? = null, parentStyle: CoreStyleManual? = null,
+          init: CoreStyleManual.() -> Unit): CoreStyleManual {
+    val style = CoreStyleManual()
     style.init()
     style.myName = name
     if ((parentName != null) && (parentStyle != null)) {
@@ -104,8 +104,8 @@ fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = nu
     return style
 }
 
-fun theme(name: String, parent: String, init: CoreTheme.() -> Unit): CoreTheme {
-    val theme = CoreTheme()
+fun theme(name: String, parent: String, init: CoreThemeManual.() -> Unit): CoreThemeManual {
+    val theme = CoreThemeManual()
     theme.init()
     theme.myName = name
     theme.parentName = parent
@@ -113,8 +113,8 @@ fun theme(name: String, parent: String, init: CoreTheme.() -> Unit): CoreTheme {
     return theme
 }
 
-fun theme(name: String, parent: ParentCondition, init: CoreTheme.() -> Unit): CoreTheme {
-    val theme = CoreTheme()
+fun theme(name: String, parent: ParentCondition, init: CoreThemeManual.() -> Unit): CoreThemeManual {
+    val theme = CoreThemeManual()
     theme.init()
     theme.myName = name
     theme.parentCondition = parent

@@ -16,11 +16,11 @@
 package dev.android.playground.nova.appcompat
 
 import dev.android.playground.nova.core.base.*
-import dev.android.playground.nova.core.framework.manual.CoreActionModeStyle
-import dev.android.playground.nova.core.framework.manual.CoreTheme
-import dev.android.playground.nova.core.framework.manual.CoreToolbarStyle
+import dev.android.playground.nova.core.framework.manual.CoreActionModeStyleManual
+import dev.android.playground.nova.core.framework.manual.CoreThemeManual
+import dev.android.playground.nova.core.framework.manual.CoreToolbarStyleManual
 
-open class AppCompatTheme: CoreTheme() {
+open class AppCompatTheme: CoreThemeManual() {
     @DefinedBy(AppCompatThemeStyleable.windowActionModeOverlay::class)
     override var windowActionModeOverlay: Boolean? by BooleanDelegate()
     override fun windowActionModeOverlay(init: BooleanAttribute.() -> Unit)
@@ -31,15 +31,15 @@ open class AppCompatTheme: CoreTheme() {
     override fun actionMenuTextColor(init: StringAttribute.() -> Unit)
             = initAttr(AppCompatThemeStyleable.actionMenuTextColor::class, init)
 
-    @DefinedBy(AppCompatActionModeStyle::class)
-    override var actionModeStyle: CoreActionModeStyle? by InlineStyleDelegate()
-    fun actionModeStyle(init: AppCompatActionModeStyle.() -> Unit)
-            = initInlineStyle(AppCompatActionModeStyle(), "actionModeStyle", init)
+    @DefinedBy(AppCompatActionModeStyleManual::class)
+    override var actionModeStyle: CoreActionModeStyleManual? by InlineStyleDelegate()
+    fun actionModeStyle(init: AppCompatActionModeStyleManual.() -> Unit)
+            = initInlineStyle(AppCompatActionModeStyleManual(), "actionModeStyle", init)
 
-    @DefinedBy(AppCompatToolbarStyle::class)
-    override var toolbarStyle: CoreToolbarStyle? by InlineStyleDelegate()
-    fun toolbarStyle(init: AppCompatToolbarStyle.() -> Unit)
-            = initInlineStyle(AppCompatToolbarStyle(), "toolbarStyle", init)
+    @DefinedBy(AppCompatToolbarStyleManual::class)
+    override var toolbarStyle: CoreToolbarStyleManual? by InlineStyleDelegate()
+    fun toolbarStyle(init: AppCompatToolbarStyleManual.() -> Unit)
+            = initInlineStyle(AppCompatToolbarStyleManual(), "toolbarStyle", init)
 }
 
 fun appCompatTheme(name: String, parent: String, init: AppCompatTheme.() -> Unit): AppCompatTheme {
