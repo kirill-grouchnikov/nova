@@ -409,7 +409,7 @@ The [AppCompat library](https://developer.android.com/jetpack/androidx/releases/
 
 However, while that set is similar to that of the core platform, it is not 100% identical. Developers need to know which attributes need to be in the `android:` namespace, which attributes need to be in the `app:` namespace, and which (in very few cases) need to be in both.
 
-Nova can help. Here is a Nova snippet that uses `themeAppCompat` construct:
+Nova can help. Here is a Nova snippet that uses `appCompatTheme` construct:
 
 ```kotlin
 appCompatTheme(name = "MyMainTheme", parent = "Theme.AppCompat.Light") {
