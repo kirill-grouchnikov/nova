@@ -617,7 +617,7 @@ fun main(args: Array<String>) {
     writerSample.println("        // Inline widget style (no need for a separate style object)")
     writerSample.println("        actionModeStyle {")
     writerSample.println("            background = color.action_mode_background")
-    writerSample.println("            //height = 48.dp")
+    writerSample.println("            height = 48.dp")
     writerSample.println("        }")
     writerSample.println()
     writerSample.println("        // Deeper nesting of styles")

@@ -67,7 +67,7 @@ fun simpleCoreGenerated() {
         // Inline widget style (no need for a separate style object)
         actionModeStyle {
             background = color.action_mode_background
-            //height = 48.dp
+            height = 48.dp
         }
 
         // Deeper nesting of styles
@@ -115,9 +115,9 @@ fun simpleCoreGenerated() {
 
 }
 
-fun main(args: Array<String>) {
+fun main() {
     initializeCoreDictionary()
-    simple()
+    simpleCoreGenerated()
     for (entry in postInit()) {
         System.out.println("*** " + entry.key + " ***")
         System.out.println(entry.value)
