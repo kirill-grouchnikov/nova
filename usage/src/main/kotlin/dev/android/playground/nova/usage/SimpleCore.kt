@@ -44,14 +44,13 @@ fun simpleCore() {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     initializeCoreDictionary()
     simpleCore()
     for (entry in postInit()) {
-        System.out.println("*** " + entry.key + " ***")
-        System.out.println(entry.value)
-        System.out.println()
+        println("*** " + entry.key + " ***")
+        println(entry.value)
+        println()
     }
-
 }
 
