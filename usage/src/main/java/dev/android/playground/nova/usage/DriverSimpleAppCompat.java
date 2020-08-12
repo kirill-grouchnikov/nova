@@ -20,12 +20,12 @@ import dev.android.playground.nova.core.framework.themes.CoreDictionaryKt;
 
 import java.util.Map;
 
-public class DriverSimple {
+public class DriverSimpleAppCompat {
     public static void main(String... args) {
         System.out.println("Hello");
 
         CoreDictionaryKt.initializeCoreDictionary();
-        SimpleKt.simple();
+        SimpleAppCompatKt.simpleAppCompat();
 
         // And now we can run the post-init step that resolves all themes / styles and
         // outputs them in the XML format
