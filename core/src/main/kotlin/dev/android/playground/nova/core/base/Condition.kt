@@ -54,6 +54,21 @@ open class DimensionCondition(vararg conditions: ResourceQualifier) : BaseCondit
     }
 }
 
+open class StyleableEnumAndDimensionCondition(vararg conditions: ResourceQualifier)
+    : BaseCondition<StyleableEnumAndDimension>(*conditions) {
+    infix fun use(inValue: StyleableEnumAndDimension) {
+        value = StyleableEnumAndDimensionContainer(inValue)
+    }
+
+    infix fun use(inValue: Dimension) {
+        value = StyleableEnumAndDimensionContainer(inValue)
+    }
+
+    fun getFirstCondition(): ResourceQualifier {
+        return conditions[0]
+    }
+}
+
 open class StyleableEnumCondition(vararg conditions: ResourceQualifier) : BaseCondition<Enum<*>>(*conditions) {
     infix fun use(inValue: Enum<*>) {
         value = StyleableEnumContainer(inValue)

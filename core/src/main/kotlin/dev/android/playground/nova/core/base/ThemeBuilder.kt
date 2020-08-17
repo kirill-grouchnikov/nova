@@ -198,36 +198,6 @@ data class AppWidgetStyleDefinition(override val name: String) : WidgetStyleDefi
 data class ResourceDefinition(val tag: String, val name: String, val prefix: String,
                               val value: AttributeValue<Any>?)
 
-
-// **************************************************************
-// Sample code that illustrates what app developer would be doing
-// **************************************************************
-
-//object android {
-//    object anim
-//    object animator
-//    object array
-//    object attr
-//    object bool
-//    object color
-//    object dimen
-//    object drawable
-//    object fraction
-//    object id
-//    object integer
-//    object interpolator
-//    object layout
-//    object menu
-//    object mipmap
-//    object plurals
-//    object raw
-//    object string
-//    object style
-//    object styleable
-//    object transition
-//    object xml
-//}
-
 object anim
 object animator
 object array
@@ -236,6 +206,7 @@ object bool
 object color
 object dimen
 object drawable
+object font
 object fraction
 object id
 object integer
@@ -251,37 +222,6 @@ object styleable
 object transition
 object xml
 
-object font
-
-fun hex(hexValue: String): StringContainer {
-    return StringContainer(hexValue)
-}
-
 val Int.dp : Dimension get() = Dimension(toInt(), "dp")
 val Int.px : Dimension get() = Dimension(toInt(), "px")
 val Int.sp : Dimension get() = Dimension(toInt(), "sp")
-
-//fun Int.dp(): Dimension {
-//    return Dimension(toInt(), "dp")
-//}
-//
-//fun Int.px(): Dimension {
-//    return Dimension(toInt(), "px")
-//}
-//
-//fun Int.sp(): Dimension {
-//    return Dimension(toInt(), "sp")
-//}
-
-object matchParent : Dimension(0, "") {
-    override fun render(): String {
-        return "match_parent"
-    }
-}
-
-object wrapContent : Dimension(0, "") {
-    override fun render(): String {
-        return "wrap_content"
-    }
-}
-

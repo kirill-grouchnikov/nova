@@ -281,13 +281,13 @@ open class CoreStyleManual : BaseBag("style") {
     }
 
     @DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
-    var layoutWidth: Dimension? by DimensionValueDelegate()
-    fun layoutWidth(init: DimensionAttribute.() -> Unit)
+    open var layoutWidth: Any? by GenericEnumDelegate(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
+    fun layoutWidth(init: StyleableEnumAndDimensionAttribute.() -> Unit)
             = initAttr(CoreViewGroup_LayoutStyleable.layout_width::class, init)
 
     @DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
-    var layoutHeight: Dimension? by DimensionValueDelegate()
-    fun layoutHeight(init: DimensionAttribute.() -> Unit)
+    open var layoutHeight: Any? by GenericEnumDelegate(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
+    fun layoutHeight(init: StyleableEnumAndDimensionAttribute.() -> Unit)
             = initAttr(CoreViewGroup_LayoutStyleable.layout_height::class, init)
 
     @DefinedBy(CoreStyleable.gravity::class)

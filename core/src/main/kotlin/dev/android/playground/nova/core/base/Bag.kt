@@ -45,6 +45,8 @@ abstract class Bag(var xmlTag: String) {
             tag = (::FloatAttribute)(klass.simpleName!!) as T
         } else if (klass.findAnnotation<EnumValue>() != null) {
             tag = (::StyleableEnumAttribute)(klass.simpleName!!) as T
+        }  else if (klass.findAnnotation<EnumAndDimensionValue>() != null) {
+            tag = (::StyleableEnumAndDimensionAttribute)(klass.simpleName!!) as T
         } else if (klass.findAnnotation<ColorValue>() != null) {
             tag = (::ColorAttribute)(klass.simpleName!!) as T
         } else if (klass.findAnnotation<LayoutValue>() != null) {

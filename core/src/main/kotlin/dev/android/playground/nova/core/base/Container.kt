@@ -46,8 +46,14 @@ class StyleableEnumContainer(styleableEnum: Enum<*>) : AttributeValue<Enum<*>>(s
 class StyleableFlagContainer(styleableFlags: List<Enum<*>>) :
         AttributeValue<List<Enum<*>>>(styleableFlags) {
     override fun render(builder: StringBuilder) {
-        builder.append(getValue()!!.joinToString(separator = "|", transform = {it.name}))
+        builder.append(getValue()!!.joinToString(separator = "|", transform = { it.name }))
     }
 }
+
+class StyleableEnumAndDimensionContainer : AttributeValue<StyleableEnumAndDimension> {
+    constructor(dimension: Dimension) : super(dimension.render())
+    constructor(dimension: StyleableEnumAndDimension) : super(dimension.toString())
+}
+
 
 

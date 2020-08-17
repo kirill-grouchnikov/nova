@@ -418,3 +418,54 @@ open class StyleableFlagAttribute(name: String) : Attribute<Enum<*>>(name) {
 
     val baseline : StyleableFlagCondition get() = initCondition(StyleableFlagCondition(), null)
 }
+
+
+open class StyleableEnumAndDimensionAttribute(name: String) : Attribute<StyleableEnumAndDimension>(name) {
+    private fun initCondition(condition: StyleableEnumAndDimensionCondition, init: (StyleableEnumAndDimensionCondition.() -> Unit)?):
+            StyleableEnumAndDimensionCondition {
+        if (init != null) {
+            condition.init()
+        }
+        conditionalValue.add(condition)
+        return condition
+    }
+
+    private fun initCombinedCondition(init: (StyleableEnumAndDimensionCondition.() -> Unit)? = null,
+            vararg conditions: StyleableEnumAndDimensionCondition): StyleableEnumAndDimensionCondition {
+        val combined = StyleableEnumAndDimensionCondition(*conditions.map(StyleableEnumAndDimensionCondition::getFirstCondition).toTypedArray())
+        if (init != null) {
+            combined.init()
+        }
+        // This is to prevent child conditions in allOf to be treated as top-level conditions
+        // that will contribute to the output files
+        for (condition in conditions) {
+            conditionalValue.remove(condition)
+        }
+        conditionalValue.add(combined)
+        return combined
+    }
+
+    fun allOf(vararg conditions: StyleableEnumAndDimensionCondition, init: (StyleableEnumAndDimensionCondition.() -> Unit)? = null)
+            = initCombinedCondition(init, *conditions)
+
+    fun smallestWidth(value: Int, init: (StyleableEnumAndDimensionCondition.() -> Unit)? = null)
+            = initCondition(StyleableEnumAndDimensionCondition(SmallestWidth(value)), init)
+
+    val night : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(Night()), null)
+
+    val landscape : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(Landscape()), null)
+
+    val small : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(Small()), null)
+
+    val normal : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(Normal()), null)
+
+    val large : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(Large()), null)
+
+    val extralarge : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(ExtraLarge()), null)
+
+    fun version(value: Int, init: (StyleableEnumAndDimensionCondition.() -> Unit)? = null)
+            = initCondition(StyleableEnumAndDimensionCondition(PlatformVersion(value)), init)
+
+    val baseline : StyleableEnumAndDimensionCondition get() = initCondition(StyleableEnumAndDimensionCondition(), null)
+}
+
