@@ -68,6 +68,7 @@ object ThemeDictionary {
             is FontRes -> return "@font"
             is DimenRes -> return "@dimen"
             is DimensionAttribute -> return "@dimen"
+            is StyleableEnumAndDimensionAttribute -> return "@dimen"
         }
         return "null"
     }
@@ -82,6 +83,7 @@ object ThemeDictionary {
             is FontRes -> return "font"
             is DimenRes -> return "dimen"
             is DimensionAttribute -> return "dimen"
+            is StyleableEnumAndDimensionAttribute -> return "dimen"
         }
         return "null"
     }
