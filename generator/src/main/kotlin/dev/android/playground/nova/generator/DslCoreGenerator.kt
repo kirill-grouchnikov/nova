@@ -762,7 +762,7 @@ fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<
         inlineAttributeName: String,
         writer: PrintWriter) {
 
-    val stylesToRender: MutableSet<KClass<out BaseStyleable>> = HashSet()
+    val stylesToRender: MutableList<KClass<out BaseStyleable>> = ArrayList()
 
     writer.println("open class $styleClassname : $superStyleClassname {")
     writer.println("\tconstructor() : super(\"$inlineAttributeName\")")
@@ -807,16 +807,21 @@ fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<
     writer.println()
 
     // Also render the super class if it's present
-    if (superklass != null) {
+    if ((superklass != null) && !stylesToRender.contains(superklass)) {
         stylesToRender.add(superklass)
     }
 
     val layoutStyleableClass = getLayoutStyleableClass(klass)
-    if (layoutStyleableClass != null) {
+    if ((layoutStyleableClass != null) && !stylesToRender.contains(layoutStyleableClass)) {
         stylesToRender.add(layoutStyleableClass)
     }
 
-    stylesToRender.addAll(getInnerStyleableClasses(klass))
+    val innerStyleableClasses = getInnerStyleableClasses(klass)
+    for (innerStyleableClass in innerStyleableClasses) {
+        if (!stylesToRender.contains(innerStyleableClass)) {
+            stylesToRender.add(innerStyleableClass)
+        }
+    }
 
     for (styleToRender in stylesToRender) {
         if (styleToRender == CoreThemeStyleable::class || renderedClasses.contains(styleToRender)) {
