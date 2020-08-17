@@ -699,6 +699,8 @@ open class CoreStyle : BaseBag("style") {
 
 	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_height::class)
 	open var layout_height: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutHeightEnum>(CoreViewGroup_LayoutStyleable.LayoutHeightEnum::class, Dimension::class, DimensionContainer::class)
+	open fun layout_height(init: StyleableEnumAndDimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_LayoutStyleable.layout_height::class, init)
 
 	@DefinedBy(CoreResolverDrawerLayout_LayoutParamsStyleable.layout_ignoreOffset::class)
 	open var layout_ignoreOffset: Any? by GenericDelegate(Boolean::class,BooleanContainer::class)
@@ -792,6 +794,8 @@ open class CoreStyle : BaseBag("style") {
 
 	@DefinedBy(CoreViewGroup_LayoutStyleable.layout_width::class)
 	open var layout_width: Any? by GenericEnumDelegate<CoreViewGroup_LayoutStyleable.LayoutWidthEnum>(CoreViewGroup_LayoutStyleable.LayoutWidthEnum::class, Dimension::class, DimensionContainer::class)
+	open fun layout_width(init: StyleableEnumAndDimensionAttribute.() -> Unit)
+		= initAttr(CoreViewGroup_LayoutStyleable.layout_width::class, init)
 
 	@DefinedBy(CoreTextAppearanceStyleable.letterSpacing::class)
 	open var letterSpacing: Any? by GenericDelegate(Float::class,FloatContainer::class)

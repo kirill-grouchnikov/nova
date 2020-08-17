@@ -234,7 +234,7 @@ fun getAttributeRenderInfo(attributeClass: KClass<*>): AttributeRenderInfo? {
         val enumClass = getEnumAndDimensionClass(attributeClass)
         val enumClassNameForRendering = getEnumClassNameForRendering(enumClass!!)
         return AttributeRenderInfo("Any", "GenericEnumDelegate<$enumClassNameForRendering>",
-                null, "$enumClassNameForRendering::class, Dimension::class, DimensionContainer::class")
+                "StyleableEnumAndDimensionAttribute", "$enumClassNameForRendering::class, Dimension::class, DimensionContainer::class")
     }
 
     if (isFlag(attributeClass)) {
