@@ -15,7 +15,7 @@
  */
 package dev.android.playground.nova.core.base
 
-@ThemeMarker
+@NovaMarker
 abstract class BaseCondition<T>(vararg val conditions: ResourceQualifier) {
     var value: AttributeValue<T>? = null
 }
@@ -117,7 +117,7 @@ open class FloatCondition(vararg conditions: ResourceQualifier) : BaseCondition<
     }
 }
 
-@ThemeMarker
+@NovaMarker
 class ParentCondition {
     var conditionalValue = arrayListOf<StringCondition>()
 

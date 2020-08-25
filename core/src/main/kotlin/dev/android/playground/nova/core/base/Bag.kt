@@ -20,7 +20,7 @@ import kotlin.reflect.KProperty
 import kotlin.reflect.full.findAnnotation
 import kotlin.reflect.full.isSubclassOf
 
-@ThemeMarker
+@NovaMarker
 abstract class Bag(var xmlTag: String) {
     var attributes = arrayListOf<Attribute<out Any>>()
     var styles = arrayListOf<InlineStyle>()

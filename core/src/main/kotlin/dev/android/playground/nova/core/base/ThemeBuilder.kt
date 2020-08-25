@@ -19,7 +19,7 @@ import kotlin.reflect.KClass
 import kotlin.reflect.full.findAnnotation
 
 @DslMarker
-annotation class ThemeMarker
+annotation class NovaMarker
 
 // **************************************************************
 // Dealing with attributes in general

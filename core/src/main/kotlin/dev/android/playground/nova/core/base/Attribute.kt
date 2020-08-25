@@ -15,7 +15,7 @@
  */
 package dev.android.playground.nova.core.base
 
-@ThemeMarker
+@NovaMarker
 abstract class Attribute<T>(val name: String) {
     var value: AttributeValue<*>? = null
     var useAndroidNamespace: Boolean = false
