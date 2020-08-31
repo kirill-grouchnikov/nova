@@ -18,7 +18,7 @@ version = '0.1-SNAPSHOT'
 
 buildscript {
     ext {
-        gradle_version                  =      '6.6'
+        gradle_version                  =    '6.6.1'
         dokka_plugin_version            =   '0.10.1'
         kotlin_version                  =    '1.4.0'
     }
