@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.android.playground.nova.appcompat
+package dev.android.playground.nova.appcompat.manual
 
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.manual.CoreActionModeStyleManual

@@ -15,7 +15,7 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.appCompatStyle
+import dev.android.playground.nova.appcompat.manual.appCompatStyle
 import dev.android.playground.nova.core.base.dp
 import dev.android.playground.nova.core.framework.styleables.CoreViewGroup_LayoutStyleable
 

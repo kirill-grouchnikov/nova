@@ -15,18 +15,17 @@
  */
 package dev.android.playground.nova.usage
 
-import dev.android.playground.nova.appcompat.appCompatTheme
+import dev.android.playground.nova.appcompat.manual.appCompatThemeManual
 import dev.android.playground.nova.core.base.color
 import dev.android.playground.nova.core.base.postInit
 import dev.android.playground.nova.core.framework.generated.android
 import dev.android.playground.nova.core.framework.generated.background_light
 import dev.android.playground.nova.core.framework.generated.colorAccent
-import dev.android.playground.nova.core.framework.styleables.CoreViewStyleable
 import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
 
 fun simpleAppCompat() {
 
-    appCompatTheme(name = "MyMainTheme", parent = "Theme.AppCompat.Light") {
+    appCompatThemeManual(name = "MyMainTheme", parent = "Theme.AppCompat.Light") {
         // Simple boolean attributes. The first two will be from the android:
         // namespace, while the third will be in the app: (implicit) namespace.
         windowDrawsSystemBarBackgrounds = true

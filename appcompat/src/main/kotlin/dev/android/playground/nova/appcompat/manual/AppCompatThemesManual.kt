@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.android.playground.nova.appcompat
+package dev.android.playground.nova.appcompat.manual
 
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.manual.CoreActionModeStyleManual
 import dev.android.playground.nova.core.framework.manual.CoreThemeManual
 import dev.android.playground.nova.core.framework.manual.CoreToolbarStyleManual
 
-open class AppCompatTheme: CoreThemeManual() {
+open class AppCompatThemeManual: CoreThemeManual() {
     @DefinedBy(AppCompatThemeStyleable.windowActionModeOverlay::class)
     override var windowActionModeOverlay: Boolean? by BooleanDelegate()
     override fun windowActionModeOverlay(init: BooleanAttribute.() -> Unit)
@@ -42,8 +42,8 @@ open class AppCompatTheme: CoreThemeManual() {
             = initInlineStyle(AppCompatToolbarStyleManual(), "toolbarStyle", init)
 }
 
-fun appCompatTheme(name: String, parent: String, init: AppCompatTheme.() -> Unit): AppCompatTheme {
-    val theme = AppCompatTheme()
+fun appCompatThemeManual(name: String, parent: String, init: AppCompatThemeManual.() -> Unit): AppCompatThemeManual {
+    val theme = AppCompatThemeManual()
     theme.init()
     theme.myName = name
     theme.parentName = parent
@@ -51,8 +51,8 @@ fun appCompatTheme(name: String, parent: String, init: AppCompatTheme.() -> Unit
     return theme
 }
 
-fun appCompatTheme(name: String, parent: ParentCondition, init: AppCompatTheme.() -> Unit): AppCompatTheme {
-    val theme = AppCompatTheme()
+fun appCompatThemeManual(name: String, parent: ParentCondition, init: AppCompatThemeManual.() -> Unit): AppCompatThemeManual {
+    val theme = AppCompatThemeManual()
     theme.init()
     theme.myName = name
     theme.parentCondition = parent
