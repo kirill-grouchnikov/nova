@@ -458,6 +458,27 @@ And the output:
 
 Note how relevant attributes get "placed" in correct namespaces.
 
+## Getting started
+
+Add the following repositories for the Nova snapshots builds:
+
+```
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+```
+
+and the Nova snapshot dependency itself:
+
+```
+dependencies {
+    implementation 'org.pushing-pixels:nova-core:0.1-SNAPSHOT'
+}
+```
+
 ## Notes
 
 Nova is a layer of syntactic sugar on top of the existing Android resource system. It aims to bring more structure, readability and expressiveness to working with themes and styles.
