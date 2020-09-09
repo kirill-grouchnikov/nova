@@ -33,3 +33,57 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     implementation project(':core')
 }
+
+apply plugin: 'com.bmuschko.nexus'
+
+modifyPom {
+    project {
+        name 'generator'
+        description 'Nova DSL for Android themes and styles'
+        url 'https://github.com/kirill-grouchnikov/nova'
+        inceptionYear '2020'
+        scm {
+            url 'https://github.com/kirill-grouchnikov/nova'
+            connection 'scm:https://github.com/kirill-grouchnikov/nova.git'
+            developerConnection 'scm:git://github.com/kirill-grouchnikov/nova.git'
+        }
+        licenses {
+            license {
+                name 'Apache License 2.0'
+                url 'https://www.apache.org/licenses/LICENSE-2.0'
+                distribution 'repo'
+            }
+        }
+        developers {
+            developer {
+                id 'kirill-grouchnikov'
+                name 'Kirill Grouchnikov'
+                email 'kirill.grouchnikov@gmail.com'
+            }
+        }
+        dependencies {
+            dependency {
+                groupId = 'org.jetbrains.kotlin'
+                artifactId = 'kotlin-stdlib'
+                version = kotlin_version
+            }
+            dependency {
+                groupId = project.group
+                artifactId = project.archivesBaseName + '-core'
+                version = project.version
+            }
+        }
+    }
+}
+
+extraArchive {
+    sources = true
+    tests = false
+    javadoc = rootProject.ext.isRelease
+}
+
+nexus {
+    sign = rootProject.ext.isRelease
+    repositoryUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+    snapshotRepositoryUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
+}

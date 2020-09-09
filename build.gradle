@@ -15,12 +15,14 @@
  */
 
 version = '0.1-SNAPSHOT'
+ext.isRelease = false
 
 buildscript {
     ext {
         gradle_version                  =    '6.6.1'
         dokka_plugin_version            =    '1.4.0'
         kotlin_version                  =    '1.4.0'
+        gradle_nexus_plugin_version     =    '2.3.1'
     }
     repositories {
         mavenCentral()
@@ -28,6 +30,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.ext.kotlin_version}"
+        classpath "com.bmuschko:gradle-nexus-plugin:${rootProject.ext.gradle_nexus_plugin_version}"
     }
 }
 
