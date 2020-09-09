@@ -21,7 +21,6 @@ import dev.android.playground.nova.core.base.postInit
 import dev.android.playground.nova.core.framework.generated.android
 import dev.android.playground.nova.core.framework.generated.background_light
 import dev.android.playground.nova.core.framework.generated.colorAccent
-import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
 
 fun simpleAppCompat() {
 
@@ -49,7 +48,6 @@ fun simpleAppCompat() {
 }
 
 fun main() {
-    initializeCoreDictionary()
     simpleAppCompat()
     for (entry in postInit()) {
         println("*** " + entry.key + " ***")

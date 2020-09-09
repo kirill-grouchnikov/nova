@@ -18,7 +18,6 @@ package dev.android.playground.nova.usage
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.generated.*
 import dev.android.playground.nova.core.framework.styleables.*
-import dev.android.playground.nova.core.framework.themes.*
 
 fun simpleCoreGenerated() {
 
@@ -81,7 +80,6 @@ fun simpleCoreGenerated() {
 }
 
 fun main() {
-    initializeCoreDictionary()
     simpleCoreGenerated()
     for (entry in postInit()) {
         println("*** ${entry.key} ***")

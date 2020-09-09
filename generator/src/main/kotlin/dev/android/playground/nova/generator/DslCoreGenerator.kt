@@ -513,6 +513,7 @@ fun main(args: Array<String>) {
     writerThemes.println("import dev.android.playground.nova.core.base.*")
     writerThemes.println("import dev.android.playground.nova.core.framework.*")
     writerThemes.println("import dev.android.playground.nova.core.framework.styleables.*")
+    writerThemes.println("import dev.android.playground.nova.core.framework.themes.*")
     writerThemes.println()
     renderAll(writerThemes, topStyleables)
 
@@ -526,6 +527,7 @@ fun main(args: Array<String>) {
 
     writerThemes.println("")
     writerThemes.println("fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerThemes.println("    initializeCoreDictionary()")
     writerThemes.println("    val theme = CoreThemeStyle()")
     writerThemes.println("    theme.init()")
     writerThemes.println("    theme.myName = name")
@@ -536,6 +538,7 @@ fun main(args: Array<String>) {
 
     writerThemes.println("")
     writerThemes.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerThemes.println("    initializeCoreDictionary()")
     writerThemes.println("    val theme = CoreThemeStyle()")
     writerThemes.println("    theme.init()")
     writerThemes.println("    theme.myName = name")
@@ -559,6 +562,7 @@ fun main(args: Array<String>) {
     writerStyles.println("import dev.android.playground.nova.core.base.*")
     writerStyles.println("import dev.android.playground.nova.core.framework.*")
     writerStyles.println("import dev.android.playground.nova.core.framework.styleables.*")
+    writerStyles.println("import dev.android.playground.nova.core.framework.themes.*")
     writerStyles.println()
     writerStyles.println("open class CoreStyle : BaseBag(\"style\") {")
     writerStyles.println("    fun asReference(): StringContainer {")
@@ -574,6 +578,7 @@ fun main(args: Array<String>) {
     writerStyles.println("")
     writerStyles.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,")
     writerStyles.println("        init: CoreStyle.() -> Unit): CoreStyle {")
+    writerStyles.println("    initializeCoreDictionary()")
     writerStyles.println("    val style = CoreStyle()")
     writerStyles.println("    style.init()")
     writerStyles.println("    style.myName = name")
@@ -601,7 +606,6 @@ fun main(args: Array<String>) {
     writerSample.println("import dev.android.playground.nova.core.base.*")
     writerSample.println("import dev.android.playground.nova.core.framework.generated.*")
     writerSample.println("import dev.android.playground.nova.core.framework.styleables.*")
-    writerSample.println("import dev.android.playground.nova.core.framework.themes.*")
     writerSample.println()
 
     writerSample.println("fun simpleCoreGenerated() {")
@@ -666,7 +670,6 @@ fun main(args: Array<String>) {
     writerSample.println()
 
     writerSample.println("fun main() {")
-    writerSample.println("    initializeCoreDictionary()")
     writerSample.println("    simpleCoreGenerated()")
     writerSample.println("    for (entry in postInit()) {")
     writerSample.println("        println(\"*** \${entry.key} ***\")")

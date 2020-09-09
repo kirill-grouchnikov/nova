@@ -24,7 +24,6 @@ public class DriverSimpleAppCompat {
     public static void main(String... args) {
         System.out.println("Hello");
 
-        CoreDictionaryKt.initializeCoreDictionary();
         SimpleAppCompatKt.simpleAppCompat();
 
         // And now we can run the post-init step that resolves all themes / styles and

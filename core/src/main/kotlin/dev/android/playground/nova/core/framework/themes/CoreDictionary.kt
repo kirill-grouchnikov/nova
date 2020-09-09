@@ -15,9 +15,15 @@
  */
 package dev.android.playground.nova.core.framework.themes
 
+internal var coreDictionaryInitialized = false
+
 fun initializeCoreDictionary() {
+    if (coreDictionaryInitialized) {
+        return
+    }
     initializeCoreDictionaryBase()
     initializeCoreDictionaryHolo()
     initializeCoreDictionaryMaterial()
     initializeCoreDictionaryDeviceDefault()
+    coreDictionaryInitialized = true
 }

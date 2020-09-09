@@ -18,6 +18,7 @@ package dev.android.playground.nova.core.framework.generated
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.*
 import dev.android.playground.nova.core.framework.styleables.*
+import dev.android.playground.nova.core.framework.themes.*
 
 open class CoreStyle : BaseBag("style") {
     fun asReference(): StringContainer {
@@ -1463,6 +1464,7 @@ open class CoreStyle : BaseBag("style") {
 
 fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,
         init: CoreStyle.() -> Unit): CoreStyle {
+    initializeCoreDictionary()
     val style = CoreStyle()
     style.init()
     style.myName = name

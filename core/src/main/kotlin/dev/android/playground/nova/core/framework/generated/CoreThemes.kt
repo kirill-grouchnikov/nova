@@ -18,6 +18,7 @@ package dev.android.playground.nova.core.framework.generated
 import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.*
 import dev.android.playground.nova.core.framework.styleables.*
+import dev.android.playground.nova.core.framework.themes.*
 
 open class CoreThemeStyle : CoreWindowStyle {
 	constructor() : super("style")
@@ -10463,6 +10464,7 @@ fun <T : CoreThemeStyle> T.version(version: Int, init: T.() -> Unit) {
 }
 
 fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    initializeCoreDictionary()
     val theme = CoreThemeStyle()
     theme.init()
     theme.myName = name
@@ -10472,6 +10474,7 @@ fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreTh
 }
 
 fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    initializeCoreDictionary()
     val theme = CoreThemeStyle()
     theme.init()
     theme.myName = name

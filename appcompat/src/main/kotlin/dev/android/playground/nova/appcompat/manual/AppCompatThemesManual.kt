@@ -19,6 +19,7 @@ import dev.android.playground.nova.core.base.*
 import dev.android.playground.nova.core.framework.manual.CoreActionModeStyleManual
 import dev.android.playground.nova.core.framework.manual.CoreThemeManual
 import dev.android.playground.nova.core.framework.manual.CoreToolbarStyleManual
+import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
 
 open class AppCompatThemeManual: CoreThemeManual() {
     @DefinedBy(AppCompatThemeStyleable.windowActionModeOverlay::class)
@@ -43,6 +44,7 @@ open class AppCompatThemeManual: CoreThemeManual() {
 }
 
 fun appCompatThemeManual(name: String, parent: String, init: AppCompatThemeManual.() -> Unit): AppCompatThemeManual {
+    initializeCoreDictionary()
     val theme = AppCompatThemeManual()
     theme.init()
     theme.myName = name
@@ -52,6 +54,7 @@ fun appCompatThemeManual(name: String, parent: String, init: AppCompatThemeManua
 }
 
 fun appCompatThemeManual(name: String, parent: ParentCondition, init: AppCompatThemeManual.() -> Unit): AppCompatThemeManual {
+    initializeCoreDictionary()
     val theme = AppCompatThemeManual()
     theme.init()
     theme.myName = name

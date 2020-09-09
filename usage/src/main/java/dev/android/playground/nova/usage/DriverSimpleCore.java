@@ -16,7 +16,6 @@
 package dev.android.playground.nova.usage;
 
 import dev.android.playground.nova.core.base.DictionaryKt;
-import dev.android.playground.nova.core.framework.themes.CoreDictionaryKt;
 
 import java.util.Map;
 
@@ -24,7 +23,6 @@ public class DriverSimpleCore {
     public static void main(String... args) {
         System.out.println("Hello");
 
-        CoreDictionaryKt.initializeCoreDictionary();
         SimpleCoreKt.simpleCore();
 
         // And now we can run the post-init step that resolves all themes / styles and
