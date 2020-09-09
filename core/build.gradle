@@ -68,6 +68,11 @@ modifyPom {
                 artifactId = 'kotlin-stdlib'
                 version = kotlin_version
             }
+            dependency {
+                groupId = 'org.jetbrains.kotlin'
+                artifactId = 'kotlin-reflect'
+                version = kotlin_version
+            }
         }
     }
 }
