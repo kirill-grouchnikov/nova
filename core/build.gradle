@@ -33,9 +33,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
 
-group = 'org.pushing-pixels'
-
 apply plugin: 'com.bmuschko.nexus'
+
+group = 'org.pushing-pixels'
 
 modifyPom {
     project {

@@ -36,6 +36,8 @@ dependencies {
 
 apply plugin: 'com.bmuschko.nexus'
 
+group = 'org.pushing-pixels'
+
 modifyPom {
     project {
         name 'appcompat'
