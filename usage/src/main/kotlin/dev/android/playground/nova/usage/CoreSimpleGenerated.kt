@@ -84,9 +84,9 @@ fun main() {
     initializeCoreDictionary()
     simpleCoreGenerated()
     for (entry in postInit()) {
-        System.out.println("*** " + entry.key + " ***")
-        System.out.println(entry.value)
-        System.out.println()
+        println("*** ${entry.key} ***")
+        println(entry.value)
+        println()
     }
 
 }
