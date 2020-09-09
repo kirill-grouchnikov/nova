@@ -10461,3 +10461,21 @@ fun <T : CoreThemeStyle> T.extralarge(init: T.() -> Unit) {
 fun <T : CoreThemeStyle> T.version(version: Int, init: T.() -> Unit) {
     conditionalBag(PlatformVersion(version), init)
 }
+
+fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    val theme = CoreThemeStyle()
+    theme.init()
+    theme.myName = name
+    theme.parentName = parent
+    theme.addToDictionary()
+    return theme
+}
+
+fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
+    val theme = CoreThemeStyle()
+    theme.init()
+    theme.myName = name
+    theme.parentCondition = parent
+    theme.addToDictionary()
+    return theme
+}

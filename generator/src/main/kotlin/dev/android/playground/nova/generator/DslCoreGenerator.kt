@@ -16,6 +16,8 @@
 package dev.android.playground.nova.generator
 
 import dev.android.playground.nova.core.base.*
+import dev.android.playground.nova.core.framework.generated.CoreStyle
+import dev.android.playground.nova.core.framework.generated.CoreThemeStyle
 import dev.android.playground.nova.core.framework.styleables.*
 import java.io.File
 import java.io.PrintWriter
@@ -522,6 +524,26 @@ fun main(args: Array<String>) {
     writerThemes.println("    conditionalBag(PlatformVersion(version), init)")
     writerThemes.println("}")
 
+    writerThemes.println("")
+    writerThemes.println("fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerThemes.println("    val theme = CoreThemeStyle()")
+    writerThemes.println("    theme.init()")
+    writerThemes.println("    theme.myName = name")
+    writerThemes.println("    theme.parentName = parent")
+    writerThemes.println("    theme.addToDictionary()")
+    writerThemes.println("    return theme")
+    writerThemes.println("}")
+
+    writerThemes.println("")
+    writerThemes.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
+    writerThemes.println("    val theme = CoreThemeStyle()")
+    writerThemes.println("    theme.init()")
+    writerThemes.println("    theme.myName = name")
+    writerThemes.println("    theme.parentCondition = parent")
+    writerThemes.println("    theme.addToDictionary()")
+    writerThemes.println("    return theme")
+    writerThemes.println("}")
+
     writerThemes.close()
 
     for (styleable in topStyleables) {
@@ -548,6 +570,25 @@ fun main(args: Array<String>) {
         writerStyles.println()
     }
     writerStyles.println("}")
+
+    writerStyles.println("")
+    writerStyles.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,")
+    writerStyles.println("        init: CoreStyle.() -> Unit): CoreStyle {")
+    writerStyles.println("    val style = CoreStyle()")
+    writerStyles.println("    style.init()")
+    writerStyles.println("    style.myName = name")
+    writerStyles.println("    if ((parentName != null) && (parentStyle != null)) {")
+    writerStyles.println("        throw IllegalArgumentException(\"Should only specify one parent\")")
+    writerStyles.println("    }")
+    writerStyles.println("    if (parentName != null) {")
+    writerStyles.println("        style.parentName = parentName")
+    writerStyles.println("    } else if (parentStyle != null) {")
+    writerStyles.println("        style.parentName = parentStyle.myName")
+    writerStyles.println("    }")
+    writerStyles.println("    style.addToDictionary()")
+    writerStyles.println("    return style")
+    writerStyles.println("}")
+
     writerStyles.close()
 
 
@@ -561,44 +602,6 @@ fun main(args: Array<String>) {
     writerSample.println("import dev.android.playground.nova.core.framework.generated.*")
     writerSample.println("import dev.android.playground.nova.core.framework.styleables.*")
     writerSample.println("import dev.android.playground.nova.core.framework.themes.*")
-    writerSample.println()
-
-    writerSample.println("fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,")
-    writerSample.println("           init: CoreStyle.() -> Unit): CoreStyle {")
-    writerSample.println("    val style = CoreStyle()")
-    writerSample.println("    style.init()")
-    writerSample.println("    style.myName = name")
-    writerSample.println("    if ((parentName != null) && (parentStyle != null)) {")
-    writerSample.println("        throw IllegalArgumentException(\"Should only specify one parent\")")
-    writerSample.println("    }")
-    writerSample.println("    if (parentName != null) {")
-    writerSample.println("        style.parentName = parentName")
-    writerSample.println("    } else if (parentStyle != null) {")
-    writerSample.println("        style.parentName = parentStyle.myName")
-    writerSample.println("    }")
-    writerSample.println("    style.addToDictionary()")
-    writerSample.println("    return style")
-    writerSample.println("}")
-    writerSample.println()
-
-    writerSample.println("fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
-    writerSample.println("    val theme = CoreThemeStyle()")
-    writerSample.println("    theme.init()")
-    writerSample.println("    theme.myName = name")
-    writerSample.println("    theme.parentName = parent")
-    writerSample.println("    theme.addToDictionary()")
-    writerSample.println("    return theme")
-    writerSample.println("}")
-    writerSample.println()
-
-    writerSample.println("fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {")
-    writerSample.println("    val theme = CoreThemeStyle()")
-    writerSample.println("    theme.init()")
-    writerSample.println("    theme.myName = name")
-    writerSample.println("    theme.parentCondition = parent")
-    writerSample.println("    theme.addToDictionary()")
-    writerSample.println("    return theme")
-    writerSample.println("}")
     writerSample.println()
 
     writerSample.println("fun simpleCoreGenerated() {")

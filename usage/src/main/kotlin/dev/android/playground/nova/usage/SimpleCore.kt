@@ -20,6 +20,7 @@ import dev.android.playground.nova.core.base.postInit
 import dev.android.playground.nova.core.framework.generated.android
 import dev.android.playground.nova.core.framework.generated.background_light
 import dev.android.playground.nova.core.framework.generated.colorAccent
+import dev.android.playground.nova.core.framework.generated.theme
 import dev.android.playground.nova.core.framework.themes.initializeCoreDictionary
 
 fun simpleCore() {

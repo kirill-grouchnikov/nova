@@ -1460,3 +1460,20 @@ open class CoreStyle : BaseBag("style") {
 		= initAttr(CoreTextViewStyleable.width::class, init)
 
 }
+
+fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,
+        init: CoreStyle.() -> Unit): CoreStyle {
+    val style = CoreStyle()
+    style.init()
+    style.myName = name
+    if ((parentName != null) && (parentStyle != null)) {
+        throw IllegalArgumentException("Should only specify one parent")
+    }
+    if (parentName != null) {
+        style.parentName = parentName
+    } else if (parentStyle != null) {
+        style.parentName = parentStyle.myName
+    }
+    style.addToDictionary()
+    return style
+}

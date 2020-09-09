@@ -20,41 +20,6 @@ import dev.android.playground.nova.core.framework.generated.*
 import dev.android.playground.nova.core.framework.styleables.*
 import dev.android.playground.nova.core.framework.themes.*
 
-fun style(name: String, parentName: String? = null, parentStyle: CoreStyle? = null,
-           init: CoreStyle.() -> Unit): CoreStyle {
-    val style = CoreStyle()
-    style.init()
-    style.myName = name
-    if ((parentName != null) && (parentStyle != null)) {
-        throw IllegalArgumentException("Should only specify one parent")
-    }
-    if (parentName != null) {
-        style.parentName = parentName
-    } else if (parentStyle != null) {
-        style.parentName = parentStyle.myName
-    }
-    style.addToDictionary()
-    return style
-}
-
-fun theme(name: String, parent: String, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
-    val theme = CoreThemeStyle()
-    theme.init()
-    theme.myName = name
-    theme.parentName = parent
-    theme.addToDictionary()
-    return theme
-}
-
-fun theme(name: String, parent: ParentCondition, init: CoreThemeStyle.() -> Unit): CoreThemeStyle {
-    val theme = CoreThemeStyle()
-    theme.init()
-    theme.myName = name
-    theme.parentCondition = parent
-    theme.addToDictionary()
-    return theme
-}
-
 fun simpleCoreGenerated() {
 
     theme(name = "MyMainTheme", parent = "Theme.Material") {
@@ -119,8 +84,9 @@ fun main() {
     initializeCoreDictionary()
     simpleCoreGenerated()
     for (entry in postInit()) {
-        println("*** " + entry.key + " ***")
-        println(entry.value)
-        println()
+        System.out.println("*** " + entry.key + " ***")
+        System.out.println(entry.value)
+        System.out.println()
     }
+
 }
