@@ -468,7 +468,7 @@ At the present moment this is done by placing the Nova snippet(s) into the [buil
 
 First, add the following repositories for the Nova snapshots builds to your `buildSrc/build.gradle` file:
 
-```
+```groovy
 repositories {
     mavenCentral()
     maven {
@@ -485,7 +485,7 @@ dependencies {
 
 Next, [add your Nova snippet(s)](https://github.com/kirill-grouchnikov/nova-sample/blob/master/buildSrc/src/main/kotlin/com/example/novasample/Sample.kt) in the `src` folder:
 
-```
+```kotlin
 fun helloWorldNova() {
     theme(name = "MyMainTheme", parent = "Theme.Material") {
         // Simple attributes (can use primitive values or reference framework
@@ -505,7 +505,7 @@ fun helloWorldNova() {
 
 The next step is to decide on the location of Nova-generated resource files for the styles and themes. As your Nova snippet is the "source of truth", you will probably want to have the generated resource file reside somewhere in the `build` folder:
 
-```
+```groovy
 sourceSets {
     main {
         // Add the location of Nova-generated resources to be processed
@@ -519,7 +519,7 @@ The directive above tells Gradle to add `build/generated/res/custom` to the reso
 
 Now add the same Nova dependencies to your main module as above (`repositories` and `dependencies`). Finally, add and configure the custom Gradle task to process your Nova DSL snippet:
 
-```
+```groovy
 import com.example.novasample.Sample
 import dev.android.playground.nova.core.base.DictionaryKt
 
