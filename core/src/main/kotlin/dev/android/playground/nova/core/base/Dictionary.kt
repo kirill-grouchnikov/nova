@@ -15,6 +15,8 @@
  */
 package dev.android.playground.nova.core.base
 
+import java.io.File
+
 object ThemeDictionary {
     private val themeDefinitions = hashMapOf<String, HashMap<String, ThemeDefinition>>()
     private val appBags = hashMapOf<String, HashMap<String, BaseBag>>()
@@ -300,4 +302,17 @@ fun postInit(): Map<String, String> {
     ThemeDictionary.resolve()
 
     return ThemeDictionary.output()
+}
+
+fun write(folder: String, verbose: Boolean = false) {
+    for (entry in postInit()) {
+        val outputPath = folder + "/" + entry.key
+        val lastSlash = outputPath.lastIndexOf('/')
+        val outputFolder = File(outputPath.substring(0, lastSlash))
+        outputFolder.mkdirs()
+        val outputFile = File(outputFolder, outputPath.substring(lastSlash + 1))
+        if (verbose) println("*** $outputFile in progress! ***")
+        outputFile.writeText(entry.value)
+        if (verbose) println("*** $outputFile generated! ***")
+    }
 }
