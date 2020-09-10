@@ -211,9 +211,15 @@ object ThemeDictionary {
                             appConditionalResources[resourceQualifiers] =
                                     arrayListOf()
                         }
+                        val attrName = attribute.generatedConditionalResourceName!!
+                        // Do we already have this attribute there? If so, remove the
+                        // existing info
+                        appConditionalResources[resourceQualifiers]?.removeIf { it ->
+                            it.name == attrName
+                        }
                         appConditionalResources[resourceQualifiers]?.add(
                                 ResourceDefinition(getResourceTag(attribute),
-                                        attribute.generatedConditionalResourceName!!,
+                                        attrName,
                                         attribute.conditionalResourcePrefix!!,
                                         conditional.value))
                     }
