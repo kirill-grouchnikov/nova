@@ -460,7 +460,13 @@ Note how relevant attributes get "placed" in correct namespaces.
 
 ## Getting started
 
-Add the following repositories for the Nova snapshots builds:
+The [nova-sample](https://github.com/kirill-grouchnikov/nova-sample) Github project has the full sample that you can use to start experimenting with Nova.
+
+The main idea is to process the Nova snippet(s) **before** your *R* class gets generated so that any themes or styles defined in Nova are "visible" to the rest of your codebase.
+
+At the present moment this is done by placing the Nova snippet(s) into the [buildSrc](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources) folder of your Gradle Android project.
+
+First, add the following repositories for the Nova snapshots builds to your `buildSrc/build.gradle` file:
 
 ```
 repositories {
@@ -469,15 +475,76 @@ repositories {
         url 'http://oss.sonatype.org/content/repositories/snapshots'
     }
 }
-```
 
-and the Nova snapshot dependency itself:
-
-```
 dependencies {
     implementation 'org.pushing-pixels:nova-core:0.1-SNAPSHOT'
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.72")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.72")
 }
 ```
+
+Next, [add your Nova snippet(s)](https://github.com/kirill-grouchnikov/nova-sample/blob/master/buildSrc/src/main/kotlin/com/example/novasample/Sample.kt) in the `src` folder:
+
+```
+fun helloWorldNova() {
+    theme(name = "MyMainTheme", parent = "Theme.Material") {
+        // Simple attributes (can use primitive values or reference framework
+        // application resources)
+        windowActionModeOverlay = true
+        actionMenuTextColor = android.color.background_light
+
+        // Inline widget style (no need for a separate style object)
+        actionModeStyle {
+            background = android.color.background_dark
+            height = 48.dp
+        }
+    }
+    ...
+}
+```
+
+The next step is to decide on the location of Nova-generated resource files for the styles and themes. As your Nova snippet is the "source of truth", you will probably want to have the generated resource file reside somewhere in the `build` folder:
+
+```
+sourceSets {
+    main {
+        // Add the location of Nova-generated resources to be processed
+        // for generating the R references
+        res.srcDirs += ['build/generated/res/custom',]
+    }
+}
+```
+
+The directive above tells Gradle to add `build/generated/res/custom` to the resource source directory list of your Android module.
+
+Now add the same Nova dependencies to your main module as above (`repositories` and `dependencies`). Finally, add and configure the custom Gradle task to process your Nova DSL snippet:
+
+```
+import com.example.novasample.Sample
+import dev.android.playground.nova.core.base.DictionaryKt
+
+task runNova {
+    // Run our theme/style DSL snippet
+    Sample.helloWorldNova()
+    // And write the resulting <style> blocks into build/generated location
+    DictionaryKt.write(new File(projectDir, "build/generated/res/custom").path, true)
+}
+
+gradle.projectsEvaluated {
+    preBuild.dependsOn('runNova')
+}
+```
+
+What do we have here?
+* We import the Kotlin class (`Sample`) with the DSL snippet, as well as Nova's core `DictionaryKt` class
+* We add a `runNova` task that "runs" the snippet and outputs all the matching `<style>` XML resource blocks to the `build/generated` location that we've configured in the previous step
+* Finally, we mark our custom task to run before all the "regular" build steps performed on our Android module
+
+This is the content of the `build/generated` folder after building our main module:
+
+<img src="https://raw.githubusercontent.com/kirill-grouchnikov/nova/master/docs/generated.png" width="342" height="259" border=0>
+
+As these files are generated at the very beginning of the build process, the generated `R` class will have all the expected `R.style` references for usage in the rest of your codebase.
 
 ## Notes
 
