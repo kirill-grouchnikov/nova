@@ -20,6 +20,7 @@ import dev.android.playground.nova.core.framework.*
 import dev.android.playground.nova.core.framework.styleables.*
 import dev.android.playground.nova.core.framework.themes.*
 
+@DefinedBy(CoreThemeStyleable::class)
 open class CoreThemeStyle : CoreWindowStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -1508,6 +1509,7 @@ open class CoreThemeStyle : CoreWindowStyle {
 
 }
 
+@DefinedBy(CoreAbsListViewStyleable::class)
 open class CoreAbsListViewStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -1570,6 +1572,7 @@ open class CoreAbsListViewStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreFastScrollStyleable::class)
 open class CoreFastScrollStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -1642,6 +1645,7 @@ open class CoreFastScrollStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTextAppearanceStyleable::class)
 open class CoreTextAppearanceStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -1724,6 +1728,7 @@ open class CoreTextAppearanceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreViewGroupStyleable::class)
 open class CoreViewGroupStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -1789,6 +1794,7 @@ open class CoreViewGroupStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreViewStyleable::class)
 open class CoreViewStyle : CoreWidgetStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2246,12 +2252,14 @@ open class CoreViewStyle : CoreWidgetStyle {
 
 }
 
+@DefinedBy(CoreWidgetStyleable::class)
 open class CoreWidgetStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreViewGroup_LayoutStyleable::class)
 open class CoreViewGroup_LayoutStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2268,6 +2276,7 @@ open class CoreViewGroup_LayoutStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreActionBarStyleable::class)
 open class CoreActionBarStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2415,6 +2424,7 @@ open class CoreActionBarStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreProgressBarStyleable::class)
 open class CoreProgressBarStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2544,6 +2554,7 @@ open class CoreProgressBarStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreActionBar_LayoutParamsStyleable::class)
 open class CoreActionBar_LayoutParamsStyle : CoreViewGroup_MarginLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2553,6 +2564,7 @@ open class CoreActionBar_LayoutParamsStyle : CoreViewGroup_MarginLayoutStyle {
 
 }
 
+@DefinedBy(CoreViewGroup_MarginLayoutStyleable::class)
 open class CoreViewGroup_MarginLayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2614,6 +2626,7 @@ open class CoreViewGroup_MarginLayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreWindowStyleable::class)
 open class CoreWindowStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -2903,6 +2916,7 @@ open class CoreWindowStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreWindowAnimationStyleable::class)
 open class CoreWindowAnimationStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3044,6 +3058,7 @@ open class CoreWindowAnimationStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreActionModeStyleable::class)
 open class CoreActionModeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3080,6 +3095,7 @@ open class CoreActionModeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreActivityChooserViewStyleable::class)
 open class CoreActivityChooserViewStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3096,6 +3112,7 @@ open class CoreActivityChooserViewStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreAlertDialogStyleable::class)
 open class CoreAlertDialogStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3210,6 +3227,7 @@ open class CoreAlertDialogStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAutoCompleteTextViewStyleable::class)
 open class CoreAutoCompleteTextViewStyle : CoreEditTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3259,12 +3277,14 @@ open class CoreAutoCompleteTextViewStyle : CoreEditTextViewStyle {
 
 }
 
+@DefinedBy(CoreEditTextViewStyleable::class)
 open class CoreEditTextViewStyle : CoreTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreTextViewStyleable::class)
 open class CoreTextViewStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3692,12 +3712,14 @@ open class CoreTextViewStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreButtonStyleable::class)
 open class CoreButtonStyle : CoreTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreToggleButtonStyleable::class)
 open class CoreToggleButtonStyle : CoreCompoundButtonStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3719,6 +3741,7 @@ open class CoreToggleButtonStyle : CoreCompoundButtonStyle {
 
 }
 
+@DefinedBy(CoreCompoundButtonStyleable::class)
 open class CoreCompoundButtonStyle : CoreButtonStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3743,6 +3766,7 @@ open class CoreCompoundButtonStyle : CoreButtonStyle {
 
 }
 
+@DefinedBy(CoreCalendarViewStyleable::class)
 open class CoreCalendarViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3832,6 +3856,7 @@ open class CoreCalendarViewStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreFrameLayoutStyleable::class)
 open class CoreFrameLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3843,6 +3868,7 @@ open class CoreFrameLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreFrameLayout_LayoutStyleable::class)
 open class CoreFrameLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3852,6 +3878,7 @@ open class CoreFrameLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreCheckBoxPreferenceStyleable::class)
 open class CoreCheckBoxPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3873,6 +3900,7 @@ open class CoreCheckBoxPreferenceStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CorePreferenceStyleable::class)
 open class CorePreferenceStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3964,6 +3992,7 @@ open class CorePreferenceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreCheckedTextViewStyleable::class)
 open class CoreCheckedTextViewStyle : CoreTextViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -3991,6 +4020,7 @@ open class CoreCheckedTextViewStyle : CoreTextViewStyle {
 
 }
 
+@DefinedBy(CoreDatePickerStyleable::class)
 open class CoreDatePickerStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4102,6 +4132,7 @@ open class CoreDatePickerStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreDialogPreferenceStyleable::class)
 open class CoreDialogPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4138,6 +4169,7 @@ open class CoreDialogPreferenceStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CoreExpandableListViewStyleable::class)
 open class CoreExpandableListViewStyle : CoreListViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4199,6 +4231,7 @@ open class CoreExpandableListViewStyle : CoreListViewStyle {
 
 }
 
+@DefinedBy(CoreListViewStyleable::class)
 open class CoreListViewStyle : CoreAbsListViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4240,6 +4273,7 @@ open class CoreListViewStyle : CoreAbsListViewStyle {
 
 }
 
+@DefinedBy(CoreFragmentBreadCrumbsStyleable::class)
 open class CoreFragmentBreadCrumbsStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4259,6 +4293,7 @@ open class CoreFragmentBreadCrumbsStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreGalleryStyleable::class)
 open class CoreGalleryStyle : CoreAbsSpinnerStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4283,6 +4318,7 @@ open class CoreGalleryStyle : CoreAbsSpinnerStyle {
 
 }
 
+@DefinedBy(CoreAbsSpinnerStyleable::class)
 open class CoreAbsSpinnerStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4294,6 +4330,7 @@ open class CoreAbsSpinnerStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreGestureOverlayViewStyleable::class)
 open class CoreGestureOverlayViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4356,6 +4393,7 @@ open class CoreGestureOverlayViewStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreGridViewStyleable::class)
 open class CoreGridViewStyle : CoreAbsListViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4386,6 +4424,7 @@ open class CoreGridViewStyle : CoreAbsListViewStyle {
 
 }
 
+@DefinedBy(CoreHorizontalScrollViewStyleable::class)
 open class CoreHorizontalScrollViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4397,6 +4436,7 @@ open class CoreHorizontalScrollViewStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreListPopupWindowStyleable::class)
 open class CoreListPopupWindowStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4413,6 +4453,7 @@ open class CoreListPopupWindowStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMapViewStyleable::class)
 open class CoreMapViewStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4424,6 +4465,7 @@ open class CoreMapViewStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreMediaRouteButtonStyleable::class)
 open class CoreMediaRouteButtonStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4448,6 +4490,7 @@ open class CoreMediaRouteButtonStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreNumberPickerStyleable::class)
 open class CoreNumberPickerStyle : CoreLinearLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4509,6 +4552,7 @@ open class CoreNumberPickerStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreLinearLayoutStyleable::class)
 open class CoreLinearLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4554,6 +4598,7 @@ open class CoreLinearLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreLinearLayout_LayoutStyleable::class)
 open class CoreLinearLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4578,6 +4623,7 @@ open class CoreLinearLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CorePopupWindowStyleable::class)
 open class CorePopupWindowStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4614,6 +4660,7 @@ open class CorePopupWindowStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePreferenceActivityStyleable::class)
 open class CorePreferenceActivityStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4635,6 +4682,7 @@ open class CorePreferenceActivityStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePreferenceFragmentStyleable::class)
 open class CorePreferenceFragmentStyle : CoreFragmentStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4651,6 +4699,7 @@ open class CorePreferenceFragmentStyle : CoreFragmentStyle {
 
 }
 
+@DefinedBy(CoreFragmentStyleable::class)
 open class CoreFragmentStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4712,6 +4761,7 @@ open class CoreFragmentStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePreferenceFrameLayoutStyleable::class)
 open class CorePreferenceFrameLayoutStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4738,6 +4788,7 @@ open class CorePreferenceFrameLayoutStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreListPreferenceStyleable::class)
 open class CoreListPreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4754,6 +4805,7 @@ open class CoreListPreferenceStyle : CoreDialogPreferenceStyle {
 
 }
 
+@DefinedBy(CorePreferenceScreenStyleable::class)
 open class CorePreferenceScreenStyle : CorePreferenceGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4770,6 +4822,7 @@ open class CorePreferenceScreenStyle : CorePreferenceGroupStyle {
 
 }
 
+@DefinedBy(CorePreferenceGroupStyleable::class)
 open class CorePreferenceGroupStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4781,6 +4834,7 @@ open class CorePreferenceGroupStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CoreQuickContactBadgeStyleable::class)
 open class CoreQuickContactBadgeStyle : CoreImageViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4790,6 +4844,7 @@ open class CoreQuickContactBadgeStyle : CoreImageViewStyle {
 
 }
 
+@DefinedBy(CoreImageViewStyleable::class)
 open class CoreImageViewStyle : CoreViewStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4847,6 +4902,7 @@ open class CoreImageViewStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreRatingBarStyleable::class)
 open class CoreRatingBarStyle : CoreProgressBarStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4873,6 +4929,7 @@ open class CoreRatingBarStyle : CoreProgressBarStyle {
 
 }
 
+@DefinedBy(CoreRingtonePreferenceStyleable::class)
 open class CoreRingtonePreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4892,6 +4949,7 @@ open class CoreRingtonePreferenceStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CoreScrollViewStyleable::class)
 open class CoreScrollViewStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4903,6 +4961,7 @@ open class CoreScrollViewStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreSearchViewStyleable::class)
 open class CoreSearchViewStyle : CoreLinearLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -4985,6 +5044,7 @@ open class CoreSearchViewStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreSeekBarPreferenceStyleable::class)
 open class CoreSeekBarPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5006,6 +5066,7 @@ open class CoreSeekBarPreferenceStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CoreSeekBarStyleable::class)
 open class CoreSeekBarStyle : CoreProgressBarStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5053,6 +5114,7 @@ open class CoreSeekBarStyle : CoreProgressBarStyle {
 
 }
 
+@DefinedBy(CoreSpinnerStyleable::class)
 open class CoreSpinnerStyle : CoreAbsSpinnerStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5105,6 +5167,7 @@ open class CoreSpinnerStyle : CoreAbsSpinnerStyle {
 
 }
 
+@DefinedBy(CoreStackViewStyleable::class)
 open class CoreStackViewStyle : CoreAdapterViewAnimatorStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5121,6 +5184,7 @@ open class CoreStackViewStyle : CoreAdapterViewAnimatorStyle {
 
 }
 
+@DefinedBy(CoreAdapterViewAnimatorStyleable::class)
 open class CoreAdapterViewAnimatorStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5147,6 +5211,7 @@ open class CoreAdapterViewAnimatorStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreSwitchPreferenceStyleable::class)
 open class CoreSwitchPreferenceStyle : CorePreferenceStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5178,6 +5243,7 @@ open class CoreSwitchPreferenceStyle : CorePreferenceStyle {
 
 }
 
+@DefinedBy(CoreSwitchStyleable::class)
 open class CoreSwitchStyle : CoreCompoundButtonStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5250,6 +5316,7 @@ open class CoreSwitchStyle : CoreCompoundButtonStyle {
 
 }
 
+@DefinedBy(CoreTabWidgetStyleable::class)
 open class CoreTabWidgetStyle : CoreLinearLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5281,6 +5348,7 @@ open class CoreTabWidgetStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreTimePickerStyleable::class)
 open class CoreTimePickerStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5355,6 +5423,7 @@ open class CoreTimePickerStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreToolbarStyleable::class)
 open class CoreToolbarStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5492,6 +5561,7 @@ open class CoreToolbarStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreToolbar_LayoutParamsStyleable::class)
 open class CoreToolbar_LayoutParamsStyle : CoreActionBar_LayoutParamsStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5501,6 +5571,7 @@ open class CoreToolbar_LayoutParamsStyle : CoreActionBar_LayoutParamsStyle {
 
 }
 
+@DefinedBy(CoreFragmentAnimationStyleable::class)
 open class CoreFragmentAnimationStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5537,6 +5608,7 @@ open class CoreFragmentAnimationStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreButtonBarLayoutStyleable::class)
 open class CoreButtonBarLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5548,6 +5620,7 @@ open class CoreButtonBarLayoutStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreViewTagStyleable::class)
 open class CoreViewTagStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5564,6 +5637,7 @@ open class CoreViewTagStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreIncludeStyleable::class)
 open class CoreIncludeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5578,6 +5652,7 @@ open class CoreIncludeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreActionMenuItemViewStyleable::class)
 open class CoreActionMenuItemViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5589,18 +5664,21 @@ open class CoreActionMenuItemViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreImageSwitcherStyleable::class)
 open class CoreImageSwitcherStyle : CoreViewSwitcherStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreViewSwitcherStyleable::class)
 open class CoreViewSwitcherStyle : CoreViewAnimatorStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreViewAnimatorStyleable::class)
 open class CoreViewAnimatorStyle : CoreFrameLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5622,6 +5700,7 @@ open class CoreViewAnimatorStyle : CoreFrameLayoutStyle {
 
 }
 
+@DefinedBy(CoreTextClockStyleable::class)
 open class CoreTextClockStyle : CoreTextViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5643,6 +5722,7 @@ open class CoreTextClockStyle : CoreTextViewStyle {
 
 }
 
+@DefinedBy(CoreGridLayoutStyleable::class)
 open class CoreGridLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5680,6 +5760,7 @@ open class CoreGridLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreGridLayout_LayoutStyleable::class)
 open class CoreGridLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5719,6 +5800,7 @@ open class CoreGridLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreViewFlipperStyleable::class)
 open class CoreViewFlipperStyle : CoreViewAnimatorStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5735,6 +5817,7 @@ open class CoreViewFlipperStyle : CoreViewAnimatorStyle {
 
 }
 
+@DefinedBy(CoreAdapterViewFlipperStyleable::class)
 open class CoreAdapterViewFlipperStyle : CoreAdapterViewAnimatorStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5751,6 +5834,7 @@ open class CoreAdapterViewFlipperStyle : CoreAdapterViewAnimatorStyle {
 
 }
 
+@DefinedBy(CoreRadioGroupStyleable::class)
 open class CoreRadioGroupStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5765,6 +5849,7 @@ open class CoreRadioGroupStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreTableLayoutStyleable::class)
 open class CoreTableLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5786,12 +5871,14 @@ open class CoreTableLayoutStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreTableRowStyleable::class)
 open class CoreTableRowStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreTableRow_CellStyleable::class)
 open class CoreTableRow_CellStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5808,12 +5895,14 @@ open class CoreTableRow_CellStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTextSwitcherStyleable::class)
 open class CoreTextSwitcherStyle : CoreViewSwitcherStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreTwoLineListItemStyleable::class)
 open class CoreTwoLineListItemStyle : CoreRelativeLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5823,6 +5912,7 @@ open class CoreTwoLineListItemStyle : CoreRelativeLayoutStyle {
 
 }
 
+@DefinedBy(CoreRelativeLayoutStyleable::class)
 open class CoreRelativeLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5837,6 +5927,7 @@ open class CoreRelativeLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreRelativeLayout_LayoutStyleable::class)
 open class CoreRelativeLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -5958,6 +6049,7 @@ open class CoreRelativeLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreSlidingDrawerStyleable::class)
 open class CoreSlidingDrawerStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -5997,6 +6089,7 @@ open class CoreSlidingDrawerStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CorePreferenceFrameLayout_LayoutStyleable::class)
 open class CorePreferenceFrameLayout_LayoutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6008,6 +6101,7 @@ open class CorePreferenceFrameLayout_LayoutStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePreferenceHeaderStyleable::class)
 open class CorePreferenceHeaderStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6049,6 +6143,7 @@ open class CorePreferenceHeaderStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMultiSelectListPreferenceStyleable::class)
 open class CoreMultiSelectListPreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6065,6 +6160,7 @@ open class CoreMultiSelectListPreferenceStyle : CoreDialogPreferenceStyle {
 
 }
 
+@DefinedBy(CoreVolumePreferenceStyleable::class)
 open class CoreVolumePreferenceStyle : CoreDialogPreferenceStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6074,6 +6170,7 @@ open class CoreVolumePreferenceStyle : CoreDialogPreferenceStyle {
 
 }
 
+@DefinedBy(CoreIconMenuViewStyleable::class)
 open class CoreIconMenuViewStyle : CoreMenuViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6105,6 +6202,7 @@ open class CoreIconMenuViewStyle : CoreMenuViewStyle {
 
 }
 
+@DefinedBy(CoreMenuViewStyleable::class)
 open class CoreMenuViewStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6153,6 +6251,7 @@ open class CoreMenuViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAbsoluteLayout_LayoutStyleable::class)
 open class CoreAbsoluteLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6169,6 +6268,7 @@ open class CoreAbsoluteLayout_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreVerticalSlider_LayoutStyleable::class)
 open class CoreVerticalSlider_LayoutStyle : CoreViewGroup_LayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6180,6 +6280,7 @@ open class CoreVerticalSlider_LayoutStyle : CoreViewGroup_LayoutStyle {
 
 }
 
+@DefinedBy(CoreWeightedLinearLayoutStyleable::class)
 open class CoreWeightedLinearLayoutStyle : CoreLinearLayoutStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6206,12 +6307,14 @@ open class CoreWeightedLinearLayoutStyle : CoreLinearLayoutStyle {
 
 }
 
+@DefinedBy(CoreVoiceInteractionSessionStyleable::class)
 open class CoreVoiceInteractionSessionStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreKeyboardViewStyleable::class)
 open class CoreKeyboardViewStyle : CoreViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6278,6 +6381,7 @@ open class CoreKeyboardViewStyle : CoreViewStyle {
 
 }
 
+@DefinedBy(CoreKeyboardViewPreviewStateStyleable::class)
 open class CoreKeyboardViewPreviewStateStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6289,6 +6393,7 @@ open class CoreKeyboardViewPreviewStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyboardStyleable::class)
 open class CoreKeyboardStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6315,6 +6420,7 @@ open class CoreKeyboardStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyboard_RowStyleable::class)
 open class CoreKeyboard_RowStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6329,6 +6435,7 @@ open class CoreKeyboard_RowStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyboard_KeyStyleable::class)
 open class CoreKeyboard_KeyStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6393,6 +6500,7 @@ open class CoreKeyboard_KeyStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreInputMethodStyleable::class)
 open class CoreInputMethodStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6419,6 +6527,7 @@ open class CoreInputMethodStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreInputMethod_SubtypeStyleable::class)
 open class CoreInputMethod_SubtypeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6475,6 +6584,7 @@ open class CoreInputMethod_SubtypeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSpellCheckerStyleable::class)
 open class CoreSpellCheckerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6491,6 +6601,7 @@ open class CoreSpellCheckerStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSpellChecker_SubtypeStyleable::class)
 open class CoreSpellChecker_SubtypeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6517,6 +6628,7 @@ open class CoreSpellChecker_SubtypeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAccessibilityServiceStyleable::class)
 open class CoreAccessibilityServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6592,6 +6704,7 @@ open class CoreAccessibilityServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePrintServiceStyleable::class)
 open class CorePrintServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6618,6 +6731,7 @@ open class CorePrintServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreHostApduServiceStyleable::class)
 open class CoreHostApduServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6644,6 +6758,7 @@ open class CoreHostApduServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAidGroupStyleable::class)
 open class CoreAidGroupStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6660,6 +6775,7 @@ open class CoreAidGroupStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreOffHostApduServiceStyleable::class)
 open class CoreOffHostApduServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6681,6 +6797,7 @@ open class CoreOffHostApduServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreHostNfcFServiceStyleable::class)
 open class CoreHostNfcFServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6692,6 +6809,7 @@ open class CoreHostNfcFServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSystemCodeFilterStyleable::class)
 open class CoreSystemCodeFilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6703,6 +6821,7 @@ open class CoreSystemCodeFilterStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreNfcid2FilterStyleable::class)
 open class CoreNfcid2FilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6714,6 +6833,7 @@ open class CoreNfcid2FilterStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreT3tPmmFilterStyleable::class)
 open class CoreT3tPmmFilterStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6725,6 +6845,7 @@ open class CoreT3tPmmFilterStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreInputMethodServiceStyleable::class)
 open class CoreInputMethodServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6746,6 +6867,7 @@ open class CoreInputMethodServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreWallpaperStyleable::class)
 open class CoreWallpaperStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6787,6 +6909,7 @@ open class CoreWallpaperStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDreamStyleable::class)
 open class CoreDreamStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6798,6 +6921,7 @@ open class CoreDreamStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTrustAgentStyleable::class)
 open class CoreTrustAgentStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6824,6 +6948,7 @@ open class CoreTrustAgentStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAutofillServiceStyleable::class)
 open class CoreAutofillServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6835,6 +6960,7 @@ open class CoreAutofillServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSettingInjectorServiceStyleable::class)
 open class CoreSettingInjectorServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6856,6 +6982,7 @@ open class CoreSettingInjectorServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRecognitionServiceStyleable::class)
 open class CoreRecognitionServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6867,6 +6994,7 @@ open class CoreRecognitionServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreVoiceInteractionServiceStyleable::class)
 open class CoreVoiceInteractionServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6903,6 +7031,7 @@ open class CoreVoiceInteractionServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTextToSpeechEngineStyleable::class)
 open class CoreTextToSpeechEngineStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6914,6 +7043,7 @@ open class CoreTextToSpeechEngineStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTvInputServiceStyleable::class)
 open class CoreTvInputServiceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -6940,6 +7070,7 @@ open class CoreTvInputServiceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRatingSystemDefinitionStyleable::class)
 open class CoreRatingSystemDefinitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6966,6 +7097,7 @@ open class CoreRatingSystemDefinitionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRatingDefinitionStyleable::class)
 open class CoreRatingDefinitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -6992,6 +7124,7 @@ open class CoreRatingDefinitionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreStateListDrawableStyleable::class)
 open class CoreStateListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7033,6 +7166,7 @@ open class CoreStateListDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreDrawableStyleable::class)
 open class CoreDrawableStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7049,6 +7183,7 @@ open class CoreDrawableStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDrawableStatesStyleable::class)
 open class CoreDrawableStatesStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7145,6 +7280,7 @@ open class CoreDrawableStatesStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreStateListDrawableItemStyleable::class)
 open class CoreStateListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7156,6 +7292,7 @@ open class CoreStateListDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreStateListAnimatorItemStyleable::class)
 open class CoreStateListAnimatorItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7167,6 +7304,7 @@ open class CoreStateListAnimatorItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreBitmapDrawableStyleable::class)
 open class CoreBitmapDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7228,6 +7366,7 @@ open class CoreBitmapDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreAnimatedStateListDrawableStyleable::class)
 open class CoreAnimatedStateListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7269,6 +7408,7 @@ open class CoreAnimatedStateListDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreAnimatedStateListDrawableItemStyleable::class)
 open class CoreAnimatedStateListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7285,6 +7425,7 @@ open class CoreAnimatedStateListDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnimatedStateListDrawableTransitionStyleable::class)
 open class CoreAnimatedStateListDrawableTransitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7311,6 +7452,7 @@ open class CoreAnimatedStateListDrawableTransitionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnimationDrawableStyleable::class)
 open class CoreAnimationDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7332,6 +7474,7 @@ open class CoreAnimationDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreAnimationDrawableItemStyleable::class)
 open class CoreAnimationDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7348,12 +7491,14 @@ open class CoreAnimationDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnimationScaleListDrawableStyleable::class)
 open class CoreAnimationScaleListDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreAnimationScaleListDrawableItemStyleable::class)
 open class CoreAnimationScaleListDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7365,6 +7510,7 @@ open class CoreAnimationScaleListDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawableStyleable::class)
 open class CoreGradientDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7437,6 +7583,7 @@ open class CoreGradientDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawableSizeStyleable::class)
 open class CoreGradientDrawableSizeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7453,6 +7600,7 @@ open class CoreGradientDrawableSizeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawableGradientStyleable::class)
 open class CoreGradientDrawableGradientStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7502,6 +7650,7 @@ open class CoreGradientDrawableGradientStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawableSolidStyleable::class)
 open class CoreGradientDrawableSolidStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7513,6 +7662,7 @@ open class CoreGradientDrawableSolidStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawableStrokeStyleable::class)
 open class CoreGradientDrawableStrokeStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7539,6 +7689,7 @@ open class CoreGradientDrawableStrokeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDrawableCornersStyleable::class)
 open class CoreDrawableCornersStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7570,6 +7721,7 @@ open class CoreDrawableCornersStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientDrawablePaddingStyleable::class)
 open class CoreGradientDrawablePaddingStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7596,6 +7748,7 @@ open class CoreGradientDrawablePaddingStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreLayerDrawableStyleable::class)
 open class CoreLayerDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7643,6 +7796,7 @@ open class CoreLayerDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreLayerDrawableItemStyleable::class)
 open class CoreLayerDrawableItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -7702,6 +7856,7 @@ open class CoreLayerDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRotateDrawableStyleable::class)
 open class CoreRotateDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7738,6 +7893,7 @@ open class CoreRotateDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreAnimatedRotateDrawableStyleable::class)
 open class CoreAnimatedRotateDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7774,6 +7930,7 @@ open class CoreAnimatedRotateDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreMaterialProgressDrawableStyleable::class)
 open class CoreMaterialProgressDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7810,6 +7967,7 @@ open class CoreMaterialProgressDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreInsetDrawableStyleable::class)
 open class CoreInsetDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7851,6 +8009,7 @@ open class CoreInsetDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreNinePatchDrawableStyleable::class)
 open class CoreNinePatchDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7887,6 +8046,7 @@ open class CoreNinePatchDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreColorDrawableStyleable::class)
 open class CoreColorDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7898,6 +8058,7 @@ open class CoreColorDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreRippleDrawableStyleable::class)
 open class CoreRippleDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7914,6 +8075,7 @@ open class CoreRippleDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreScaleDrawableStyleable::class)
 open class CoreScaleDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7948,6 +8110,7 @@ open class CoreScaleDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreClipDrawableStyleable::class)
 open class CoreClipDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -7965,6 +8128,7 @@ open class CoreClipDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreShapeDrawableStyleable::class)
 open class CoreShapeDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8001,6 +8165,7 @@ open class CoreShapeDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreShapeDrawablePaddingStyleable::class)
 open class CoreShapeDrawablePaddingStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8027,6 +8192,7 @@ open class CoreShapeDrawablePaddingStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreVectorDrawableStyleable::class)
 open class CoreVectorDrawableStyle : CoreDrawableStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8096,6 +8262,7 @@ open class CoreVectorDrawableStyle : CoreDrawableStyle {
 
 }
 
+@DefinedBy(CoreVectorDrawableGroupStyleable::class)
 open class CoreVectorDrawableGroupStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8142,6 +8309,7 @@ open class CoreVectorDrawableGroupStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreVectorDrawablePathStyleable::class)
 open class CoreVectorDrawablePathStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8212,6 +8380,7 @@ open class CoreVectorDrawablePathStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreVectorDrawableClipPathStyleable::class)
 open class CoreVectorDrawableClipPathStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8228,6 +8397,7 @@ open class CoreVectorDrawableClipPathStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientColorStyleable::class)
 open class CoreGradientColorStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8290,6 +8460,7 @@ open class CoreGradientColorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGradientColorItemStyleable::class)
 open class CoreGradientColorItemStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8306,6 +8477,7 @@ open class CoreGradientColorItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreLayoutAnimationStyleable::class)
 open class CoreLayoutAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8330,6 +8502,7 @@ open class CoreLayoutAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreAnimationStyleable::class)
 open class CoreAnimationStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8385,6 +8558,7 @@ open class CoreAnimationStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRotateAnimationStyleable::class)
 open class CoreRotateAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8411,6 +8585,7 @@ open class CoreRotateAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreScaleAnimationStyleable::class)
 open class CoreScaleAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8447,6 +8622,7 @@ open class CoreScaleAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreTranslateAnimationStyleable::class)
 open class CoreTranslateAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8473,6 +8649,7 @@ open class CoreTranslateAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreAlphaAnimationStyleable::class)
 open class CoreAlphaAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8489,6 +8666,7 @@ open class CoreAlphaAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreGridLayoutAnimationStyleable::class)
 open class CoreGridLayoutAnimationStyle : CoreAnimationStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8511,6 +8689,7 @@ open class CoreGridLayoutAnimationStyle : CoreAnimationStyle {
 
 }
 
+@DefinedBy(CoreAnimationSetStyleable::class)
 open class CoreAnimationSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8545,6 +8724,7 @@ open class CoreAnimationSetStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAccelerateInterpolatorStyleable::class)
 open class CoreAccelerateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8556,6 +8736,7 @@ open class CoreAccelerateInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDecelerateInterpolatorStyleable::class)
 open class CoreDecelerateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8567,6 +8748,7 @@ open class CoreDecelerateInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreCycleInterpolatorStyleable::class)
 open class CoreCycleInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8578,6 +8760,7 @@ open class CoreCycleInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnticipateInterpolatorStyleable::class)
 open class CoreAnticipateInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8589,6 +8772,7 @@ open class CoreAnticipateInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreOvershootInterpolatorStyleable::class)
 open class CoreOvershootInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8600,6 +8784,7 @@ open class CoreOvershootInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnticipateOvershootInterpolatorStyleable::class)
 open class CoreAnticipateOvershootInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8616,6 +8801,7 @@ open class CoreAnticipateOvershootInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePathInterpolatorStyleable::class)
 open class CorePathInterpolatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8647,6 +8833,7 @@ open class CorePathInterpolatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDrawableWrapperStyleable::class)
 open class CoreDrawableWrapperStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8658,6 +8845,7 @@ open class CoreDrawableWrapperStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreColorStateListItemStyleable::class)
 open class CoreColorStateListItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8674,6 +8862,7 @@ open class CoreColorStateListItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreLevelListDrawableItemStyleable::class)
 open class CoreLevelListDrawableItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8695,6 +8884,7 @@ open class CoreLevelListDrawableItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAdaptiveIconDrawableLayerStyleable::class)
 open class CoreAdaptiveIconDrawableLayerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8706,6 +8896,7 @@ open class CoreAdaptiveIconDrawableLayerStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTextViewAppearanceStyleable::class)
 open class CoreTextViewAppearanceStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8717,6 +8908,7 @@ open class CoreTextViewAppearanceStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSelectionModeDrawablesStyleable::class)
 open class CoreSelectionModeDrawablesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8743,6 +8935,7 @@ open class CoreSelectionModeDrawablesStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSuggestionSpanStyleable::class)
 open class CoreSuggestionSpanStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8759,12 +8952,14 @@ open class CoreSuggestionSpanStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreInputExtrasStyleable::class)
 open class CoreInputExtrasStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreEpicenterTranslateClipRevealStyleable::class)
 open class CoreEpicenterTranslateClipRevealStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8786,6 +8981,7 @@ open class CoreEpicenterTranslateClipRevealStyle : CoreVisibilityTransitionStyle
 
 }
 
+@DefinedBy(CoreVisibilityTransitionStyleable::class)
 open class CoreVisibilityTransitionStyle : CoreTransitionStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8795,6 +8991,7 @@ open class CoreVisibilityTransitionStyle : CoreTransitionStyle {
 
 }
 
+@DefinedBy(CoreTransitionStyleable::class)
 open class CoreTransitionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8821,6 +9018,7 @@ open class CoreTransitionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTransitionTargetStyleable::class)
 open class CoreTransitionTargetStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8857,6 +9055,7 @@ open class CoreTransitionTargetStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreArcMotionStyleable::class)
 open class CoreArcMotionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8878,6 +9077,7 @@ open class CoreArcMotionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePatternPathMotionStyleable::class)
 open class CorePatternPathMotionStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -8889,6 +9089,7 @@ open class CorePatternPathMotionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreFadeStyleable::class)
 open class CoreFadeStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8898,6 +9099,7 @@ open class CoreFadeStyle : CoreVisibilityTransitionStyle {
 
 }
 
+@DefinedBy(CoreSlideStyleable::class)
 open class CoreSlideStyle : CoreVisibilityTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8907,6 +9109,7 @@ open class CoreSlideStyle : CoreVisibilityTransitionStyle {
 
 }
 
+@DefinedBy(CoreTransitionSetStyleable::class)
 open class CoreTransitionSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8916,6 +9119,7 @@ open class CoreTransitionSetStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreChangeTransformStyleable::class)
 open class CoreChangeTransformStyle : CoreTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8932,6 +9136,7 @@ open class CoreChangeTransformStyle : CoreTransitionStyle {
 
 }
 
+@DefinedBy(CoreChangeBoundsStyleable::class)
 open class CoreChangeBoundsStyle : CoreTransitionStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8943,6 +9148,7 @@ open class CoreChangeBoundsStyle : CoreTransitionStyle {
 
 }
 
+@DefinedBy(CoreTransitionManagerStyleable::class)
 open class CoreTransitionManagerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -8964,6 +9170,7 @@ open class CoreTransitionManagerStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnimatorStyleable::class)
 open class CoreAnimatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9004,6 +9211,7 @@ open class CoreAnimatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePropertyValuesHolderStyleable::class)
 open class CorePropertyValuesHolderStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9028,6 +9236,7 @@ open class CorePropertyValuesHolderStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyframeStyleable::class)
 open class CoreKeyframeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9052,6 +9261,7 @@ open class CoreKeyframeStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePropertyAnimatorStyleable::class)
 open class CorePropertyAnimatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9078,6 +9288,7 @@ open class CorePropertyAnimatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAnimatorSetStyleable::class)
 open class CoreAnimatorSetStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9087,6 +9298,7 @@ open class CoreAnimatorSetStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreViewDrawableStatesStyleable::class)
 open class CoreViewDrawableStatesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9143,6 +9355,7 @@ open class CoreViewDrawableStatesStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuItemCheckedStateStyleable::class)
 open class CoreMenuItemCheckedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9159,6 +9372,7 @@ open class CoreMenuItemCheckedStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuItemUncheckedStateStyleable::class)
 open class CoreMenuItemUncheckedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9170,6 +9384,7 @@ open class CoreMenuItemUncheckedStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuItemCheckedFocusedStateStyleable::class)
 open class CoreMenuItemCheckedFocusedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9191,6 +9406,7 @@ open class CoreMenuItemCheckedFocusedStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuItemUncheckedFocusedStateStyleable::class)
 open class CoreMenuItemUncheckedFocusedStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9207,6 +9423,7 @@ open class CoreMenuItemUncheckedFocusedStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreExpandableListChildIndicatorStateStyleable::class)
 open class CoreExpandableListChildIndicatorStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9218,6 +9435,7 @@ open class CoreExpandableListChildIndicatorStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreExpandableListGroupIndicatorStateStyleable::class)
 open class CoreExpandableListGroupIndicatorStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9234,6 +9452,7 @@ open class CoreExpandableListGroupIndicatorStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePopupWindowBackgroundStateStyleable::class)
 open class CorePopupWindowBackgroundStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9245,6 +9464,7 @@ open class CorePopupWindowBackgroundStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreTextViewMultiLineBackgroundStateStyleable::class)
 open class CoreTextViewMultiLineBackgroundStateStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9256,6 +9476,7 @@ open class CoreTextViewMultiLineBackgroundStateStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSearchableStyleable::class)
 open class CoreSearchableStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9364,6 +9585,7 @@ open class CoreSearchableStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSearchableActionKeyStyleable::class)
 open class CoreSearchableActionKeyStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9387,12 +9609,14 @@ open class CoreSearchableActionKeyStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuStyleable::class)
 open class CoreMenuStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
 
 }
 
+@DefinedBy(CoreMenuGroupStyleable::class)
 open class CoreMenuGroupStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9425,6 +9649,7 @@ open class CoreMenuGroupStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreMenuItemStyleable::class)
 open class CoreMenuItemStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9536,6 +9761,7 @@ open class CoreMenuItemStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAppWidgetProviderInfoStyleable::class)
 open class CoreAppWidgetProviderInfoStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9601,6 +9827,7 @@ open class CoreAppWidgetProviderInfoStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreWallpaperPreviewInfoStyleable::class)
 open class CoreWallpaperPreviewInfoStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9612,6 +9839,7 @@ open class CoreWallpaperPreviewInfoStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreDeviceAdminStyleable::class)
 open class CoreDeviceAdminStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9623,6 +9851,7 @@ open class CoreDeviceAdminStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreAccountAuthenticatorStyleable::class)
 open class CoreAccountAuthenticatorStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9659,6 +9888,7 @@ open class CoreAccountAuthenticatorStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSyncAdapterStyleable::class)
 open class CoreSyncAdapterStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9700,6 +9930,7 @@ open class CoreSyncAdapterStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreIconStyleable::class)
 open class CoreIconStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9716,6 +9947,7 @@ open class CoreIconStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreIconDefaultStyleable::class)
 open class CoreIconDefaultStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9727,6 +9959,7 @@ open class CoreIconDefaultStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreContactsDataKindStyleable::class)
 open class CoreContactsDataKindStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9763,6 +9996,7 @@ open class CoreContactsDataKindStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreSlidingTabStyleable::class)
 open class CoreSlidingTabStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9772,6 +10006,7 @@ open class CoreSlidingTabStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreGlowPadViewStyleable::class)
 open class CoreGlowPadViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9788,6 +10023,7 @@ open class CoreGlowPadViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreLockPatternViewStyleable::class)
 open class CoreLockPatternViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9819,6 +10055,7 @@ open class CoreLockPatternViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreVoiceEnrollmentApplicationStyleable::class)
 open class CoreVoiceEnrollmentApplicationStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9843,6 +10080,7 @@ open class CoreVoiceEnrollmentApplicationStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePointerStyleable::class)
 open class CorePointerStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -9969,6 +10207,7 @@ open class CorePointerStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePointerIconStyleable::class)
 open class CorePointerIconStyle : InlineStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -9990,6 +10229,7 @@ open class CorePointerIconStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreStorageStyleable::class)
 open class CoreStorageStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10036,6 +10276,7 @@ open class CoreStorageStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyboardLayoutStyleable::class)
 open class CoreKeyboardLayoutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10072,6 +10313,7 @@ open class CoreKeyboardLayoutStyle : InlineStyle {
 
 }
 
+@DefinedBy(CorePagedViewStyleable::class)
 open class CorePagedViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10093,6 +10335,7 @@ open class CorePagedViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreKeyguardGlowStripViewStyleable::class)
 open class CoreKeyguardGlowStripViewStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10119,6 +10362,7 @@ open class CoreKeyguardGlowStripViewStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreEdgeEffectStyleable::class)
 open class CoreEdgeEffectStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10130,6 +10374,7 @@ open class CoreEdgeEffectStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreResolverDrawerLayoutStyleable::class)
 open class CoreResolverDrawerLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10156,6 +10401,7 @@ open class CoreResolverDrawerLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreResolverDrawerLayout_LayoutParamsStyleable::class)
 open class CoreResolverDrawerLayout_LayoutParamsStyle : CoreViewGroup_MarginLayoutStyle {
 	constructor() : super("")
 	constructor(name : String) : super(name)
@@ -10180,6 +10426,7 @@ open class CoreResolverDrawerLayout_LayoutParamsStyle : CoreViewGroup_MarginLayo
 
 }
 
+@DefinedBy(CoreMessagingLinearLayoutStyleable::class)
 open class CoreMessagingLinearLayoutStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10191,6 +10438,7 @@ open class CoreMessagingLinearLayoutStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreDateTimeViewStyleable::class)
 open class CoreDateTimeViewStyle : CoreTextViewStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10202,6 +10450,7 @@ open class CoreDateTimeViewStyle : CoreTextViewStyle {
 
 }
 
+@DefinedBy(CoreLightingStyleable::class)
 open class CoreLightingStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10233,6 +10482,7 @@ open class CoreLightingStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRestrictionEntryStyleable::class)
 open class CoreRestrictionEntryStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10272,6 +10522,7 @@ open class CoreRestrictionEntryStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreActivityTaskDescriptionStyleable::class)
 open class CoreActivityTaskDescriptionStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10298,6 +10549,7 @@ open class CoreActivityTaskDescriptionStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreShortcutStyleable::class)
 open class CoreShortcutStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10334,6 +10586,7 @@ open class CoreShortcutStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreShortcutCategoriesStyleable::class)
 open class CoreShortcutCategoriesStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10345,6 +10598,7 @@ open class CoreShortcutCategoriesStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreFontFamilyFontStyleable::class)
 open class CoreFontFamilyFontStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10374,6 +10628,7 @@ open class CoreFontFamilyFontStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreFontFamilyStyleable::class)
 open class CoreFontFamilyStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10400,6 +10655,7 @@ open class CoreFontFamilyStyle : InlineStyle {
 
 }
 
+@DefinedBy(CoreRecyclerViewStyleable::class)
 open class CoreRecyclerViewStyle : CoreViewGroupStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)
@@ -10432,6 +10688,7 @@ open class CoreRecyclerViewStyle : CoreViewGroupStyle {
 
 }
 
+@DefinedBy(CoreNotificationThemeStyleable::class)
 open class CoreNotificationThemeStyle : InlineStyle {
 	constructor() : super("style")
 	constructor(name : String) : super(name)

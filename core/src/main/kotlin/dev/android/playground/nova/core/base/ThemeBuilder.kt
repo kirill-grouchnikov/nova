@@ -61,7 +61,7 @@ annotation class SkipForDSL
 @Target(AnnotationTarget.CLASS)
 annotation class LocalizationSuggested
 
-@Target(AnnotationTarget.CLASS)
+@Target(AnnotationTarget.CLASS, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION)
 annotation class UseAndroidNamespace
 
 @Target(AnnotationTarget.CLASS, AnnotationTarget.PROPERTY)
@@ -122,7 +122,14 @@ abstract class InlineStyle(name: String) : BaseBag(name), Cloneable {
             }
             for (nested in styles) {
                 if (!nested.shouldSkipRender) {
-                    builder.append("$indent    <item name=\"${nested.xmlTag}\">")
+                    var inlineStylePrefix = ""
+                    val styleDefinedBy = nested::class.findAnnotation<DefinedBy>()
+                    if (styleDefinedBy != null) {
+                        if (styleDefinedBy.klass.findAnnotation<UseAndroidNamespace>() != null) {
+                            inlineStylePrefix = "android:"
+                        }
+                    }
+                    builder.append("$indent    <item name=\"$inlineStylePrefix${nested.xmlTag}\">")
                     builder.append("@style/${generatedName}_${nested.xmlTag}")
                     builder.append("</item>\n")
                 }

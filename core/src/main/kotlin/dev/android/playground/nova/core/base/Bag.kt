@@ -455,7 +455,14 @@ open class BaseBag(name: String) : Bag(name), Cloneable {
             }
             for (c in styles) {
                 if (!c.shouldSkipRender) {
-                    builder.append("$indent    <item name=\"${c.xmlTag}\">")
+                    var inlineStylePrefix = ""
+                    val styleDefinedBy = c::class.findAnnotation<DefinedBy>()
+                    if (styleDefinedBy != null) {
+                        if (styleDefinedBy.klass.findAnnotation<UseAndroidNamespace>() != null) {
+                           inlineStylePrefix = "android:"
+                        }
+                    }
+                    builder.append("$indent    <item name=\"${inlineStylePrefix}${c.xmlTag}\">")
                     builder.append("@style/${this.myName}_${c.xmlTag}")
                     builder.append("</item>\n")
                 }

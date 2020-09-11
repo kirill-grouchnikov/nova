@@ -770,6 +770,7 @@ fun renderStyleableContent(klass: KClass<out BaseStyleable>, superklass: KClass<
 
     val stylesToRender: MutableList<KClass<out BaseStyleable>> = ArrayList()
 
+    writer.println("@DefinedBy(${klass.simpleName}::class)")
     writer.println("open class $styleClassname : $superStyleClassname {")
     writer.println("\tconstructor() : super(\"$inlineAttributeName\")")
     writer.println("\tconstructor(name : String) : super(name)")
